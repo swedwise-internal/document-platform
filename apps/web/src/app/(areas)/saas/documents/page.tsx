@@ -38,7 +38,7 @@ export default async function SaaSDocumentsPage() {
           </p>
         </div>
       ) : (
-        <DocumentsPageClient documents={documents} categories={SAAS_CATEGORIES} />
+        <DocumentsPageClient documents={documents} categories={SAAS_CATEGORIES} basePath="/saas/documents" />
       )}
     </div>
   );

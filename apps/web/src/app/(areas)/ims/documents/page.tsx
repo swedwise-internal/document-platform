@@ -30,7 +30,7 @@ export default async function IMSDocumentsPage() {
         </div>
       )}
 
-      <DocumentsPageClient documents={documents} categories={IMS_CATEGORIES} />
+      <DocumentsPageClient documents={documents} categories={IMS_CATEGORIES} basePath="/ims/documents" />
     </div>
   );
 }

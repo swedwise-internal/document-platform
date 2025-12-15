@@ -16,9 +16,10 @@ interface CategoryWithDocuments {
 
 interface DocumentListProps {
   categories: CategoryWithDocuments[];
+  basePath?: string; // e.g., '/ims/documents' or '/saas/documents'
 }
 
-export function DocumentList({ categories }: DocumentListProps) {
+export function DocumentList({ categories, basePath = '/ims/documents' }: DocumentListProps) {
   return (
     <div className="space-y-4">
       {categories.map(category => (
@@ -34,7 +35,7 @@ export function DocumentList({ categories }: DocumentListProps) {
               {category.documents.map(doc => (
                 <Link
                   key={doc.slug}
-                  href={`/documents/${doc.slug}`}
+                  href={`${basePath}/${doc.slug}`}
                   className="block px-6 py-4 hover:bg-slate-50 transition-colors"
                 >
                   <div className="flex justify-between items-start">

@@ -10,9 +10,10 @@ import { DocumentListItem, DocumentCategory, CLASSIFICATION_STYLES, Classificati
 interface DocumentsPageClientProps {
   documents: DocumentListItem[];
   categories: DocumentCategory[];
+  basePath?: string; // e.g., '/ims/documents' or '/saas/documents'
 }
 
-export function DocumentsPageClient({ documents, categories }: DocumentsPageClientProps) {
+export function DocumentsPageClient({ documents, categories, basePath = '/ims/documents' }: DocumentsPageClientProps) {
   const [selectedStandards, setSelectedStandards] = useState<string[]>([]);
   const [selectedClassifications, setSelectedClassifications] = useState<string[]>([]);
   const [selectedStatuses, setSelectedStatuses] = useState<string[]>([]);
@@ -228,7 +229,7 @@ export function DocumentsPageClient({ documents, categories }: DocumentsPageClie
       )}
 
       {/* Document List */}
-      <DocumentList categories={documentsByCategory} />
+      <DocumentList categories={documentsByCategory} basePath={basePath} />
     </>
   );
 }
