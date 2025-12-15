@@ -1,9 +1,13 @@
 /**
  * Document Link Resolver
  * Resolves document IDs to metadata for link enhancement
+ *
+ * This module provides a unified interface for document resolution,
+ * combining the legacy loader-based approach with the new index-based approach.
  */
 
 import { listAllDocuments } from './loader';
+import { getDocumentById as getDocByIdFromIndex, getDocumentsByIds as getDocsByIdsFromIndex } from './document-index';
 import type { DocumentListItem, DocumentType } from '@/types/document';
 
 /**
@@ -39,20 +43,72 @@ export function clearDocumentCache(): void {
 
 /**
  * Resolve a document ID to its metadata
+ * Uses the new document index for improved performance
  */
 export async function resolveDocumentId(
   documentId: string
 ): Promise<DocumentListItem | null> {
+  try {
+    // Try the new index-based approach first
+    const indexEntry = await getDocByIdFromIndex(documentId);
+    if (indexEntry) {
+      // Convert to DocumentListItem format
+      return {
+        document_id: indexEntry.document_id,
+        title: indexEntry.title,
+        doc_type: indexEntry.docType,
+        status: indexEntry.status,
+        classification: 'internal', // Default - this info is not in the index
+        path: indexEntry.path,
+        slug: indexEntry.slug,
+      };
+    }
+  } catch (error) {
+    console.error('Error resolving document from index:', error);
+  }
+
+  // Fallback to cache-based approach
   const cache = await loadDocumentCache();
   return cache.get(documentId) || null;
 }
 
 /**
  * Resolve multiple document IDs at once
+ * Uses the new document index for improved performance
  */
 export async function resolveDocumentIds(
   documentIds: string[]
 ): Promise<Map<string, DocumentListItem | null>> {
+  try {
+    // Try the new index-based approach first
+    const indexEntries = await getDocsByIdsFromIndex(documentIds);
+    const results = new Map<string, DocumentListItem | null>();
+
+    // Convert to array to avoid iteration issues
+    const entries = Array.from(indexEntries.entries());
+
+    for (const [id, entry] of entries) {
+      if (entry) {
+        results.set(id, {
+          document_id: entry.document_id,
+          title: entry.title,
+          doc_type: entry.docType,
+          status: entry.status,
+          classification: 'internal', // Default - this info is not in the index
+          path: entry.path,
+          slug: entry.slug,
+        });
+      } else {
+        results.set(id, null);
+      }
+    }
+
+    return results;
+  } catch (error) {
+    console.error('Error resolving documents from index:', error);
+  }
+
+  // Fallback to cache-based approach
   const cache = await loadDocumentCache();
   const results = new Map<string, DocumentListItem | null>();
 
@@ -92,3 +148,18 @@ export function getDocumentStatusClass(status: string): string {
 
   return statusClasses[status] || '';
 }
+
+// Re-export document index functions for convenience
+export {
+  getDocumentById,
+  getDocumentsByIds,
+  getAllDocuments,
+  searchDocuments,
+  getDocumentsByType,
+  getDocumentsByStatus,
+  getDocumentsByCategory,
+  getIndexStats,
+  rebuildIndex,
+  clearIndex,
+  isIndexBuilt,
+} from './document-index';

@@ -6,6 +6,7 @@
 import { visit } from 'unist-util-visit';
 import type { Root, Text, Link } from 'mdast';
 import type { Plugin } from 'unified';
+import { getDocumentById } from '../document-index';
 
 // Document ID pattern: SW-[A-Z]{2,6}-[A-Z]{2,6}-\d{3}
 const DOC_ID_REGEX = /\b(SW-[A-Z]{2,6}-[A-Z]{2,6}-\d{3})\b/g;
@@ -17,7 +18,40 @@ const WIKILINK_REGEX = /\[\[(SW-[A-Z]{2,6}-[A-Z]{2,6}-\d{3})(?:\|([^\]]+))?\]\]/
  * Remark plugin to detect and convert document references to links
  */
 export const remarkDocLinks: Plugin<[], Root> = () => {
-  return (tree) => {
+  return async (tree) => {
+    // Collect all document IDs first
+    const documentIds = new Set<string>();
+
+    visit(tree, 'text', (node: Text) => {
+      const text = node.value;
+
+      // Collect WikiLink document IDs
+      const wikiLinkMatches = Array.from(text.matchAll(WIKILINK_REGEX));
+      for (const match of wikiLinkMatches) {
+        documentIds.add(match[1]);
+      }
+
+      // Collect bare document IDs
+      const docIdMatches = Array.from(text.matchAll(DOC_ID_REGEX));
+      for (const match of docIdMatches) {
+        documentIds.add(match[1]);
+      }
+    });
+
+    // Resolve all document IDs to get their slugs
+    const resolvedDocs = new Map<string, string>();
+
+    // Convert Set to Array to avoid iteration issues
+    const docIdArray = Array.from(documentIds);
+
+    for (const docId of docIdArray) {
+      const doc = await getDocumentById(docId);
+      if (doc) {
+        resolvedDocs.set(docId, doc.slug);
+      }
+    }
+
+    // Now process the text nodes and create links
     visit(tree, 'text', (node: Text, index, parent) => {
       if (!parent || index === undefined) return;
 
@@ -46,10 +80,14 @@ export const remarkDocLinks: Plugin<[], Root> = () => {
             });
           }
 
+          // Generate URL using slug from index, or fallback to document ID
+          const slug = resolvedDocs.get(docId);
+          const url = slug ? `/documents/${slug}` : `/documents/${docId}`;
+
           // Add the link node
           newNodes.push({
             type: 'link',
-            url: `/documents/${docId}`,
+            url,
             title: null,
             data: {
               hProperties: {
@@ -94,10 +132,14 @@ export const remarkDocLinks: Plugin<[], Root> = () => {
               });
             }
 
+            // Generate URL using slug from index, or fallback to document ID
+            const slug = resolvedDocs.get(docId);
+            const url = slug ? `/documents/${slug}` : `/documents/${docId}`;
+
             // Add the link node
             newNodes.push({
               type: 'link',
-              url: `/documents/${docId}`,
+              url,
               title: null,
               data: {
                 hProperties: {
