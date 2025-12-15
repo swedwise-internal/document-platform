@@ -5,6 +5,15 @@ import { STATUS_STYLES, CLASSIFICATION_STYLES, ISO_STANDARD_STYLES, DocumentStat
 
 export const dynamic = 'force-dynamic';
 
+// Format date to string (handles both Date objects and strings)
+function formatDate(date: Date | string | undefined): string {
+  if (!date) return '';
+  if (date instanceof Date) {
+    return date.toISOString().split('T')[0];
+  }
+  return String(date);
+}
+
 interface PageProps {
   params: Promise<{ slug: string[] }>;
 }
@@ -71,13 +80,13 @@ export default async function SaaSDocumentPage({ params }: PageProps) {
               {frontmatter.effective_date && (
                 <div>
                   <p className="text-slate-500">Effective Date</p>
-                  <p className="font-medium">{frontmatter.effective_date}</p>
+                  <p className="font-medium">{formatDate(frontmatter.effective_date)}</p>
                 </div>
               )}
               {frontmatter.review_date && (
                 <div>
                   <p className="text-slate-500">Review Date</p>
-                  <p className="font-medium">{frontmatter.review_date}</p>
+                  <p className="font-medium">{formatDate(frontmatter.review_date)}</p>
                 </div>
               )}
             </div>
