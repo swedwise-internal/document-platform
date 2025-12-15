@@ -4,6 +4,7 @@ import { loadDocumentBySlug } from '@/lib/markdown/loader';
 import { STATUS_STYLES, CLASSIFICATION_STYLES, ISO_STANDARD_STYLES, DocumentStatus, Classification } from '@/types/document';
 import { TableOfContentsDrawer } from '@/components/TableOfContentsDrawer';
 import { RelatedDocuments } from '@/components/RelatedDocuments';
+import { PdfExportButton } from '@/components/PdfExportButton';
 
 export const dynamic = 'force-dynamic';
 
@@ -37,11 +38,16 @@ export default async function SaaSDocumentPage({ params }: PageProps) {
 
   return (
     <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      {/* Back link */}
-      <div className="mb-6">
+      {/* Navigation bar */}
+      <div className="mb-6 flex items-center justify-between">
         <Link href="/saas/documents" className="text-emerald-600 hover:text-emerald-800 text-sm">
           ← Back to SaaS Documents
         </Link>
+        <PdfExportButton
+          slug={slugPath}
+          area="saas"
+          documentId={frontmatter.document_id}
+        />
       </div>
 
       <div className="lg:grid lg:grid-cols-12 lg:gap-6">
