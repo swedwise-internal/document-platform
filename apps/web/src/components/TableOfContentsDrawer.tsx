@@ -16,11 +16,14 @@ export function TableOfContentsDrawer({ items, defaultOpen = true }: TableOfCont
   }
 
   return (
-    <div className="card sticky top-20">
+    <div
+      className="card sticky top-20 flex flex-col"
+      style={{ maxHeight: 'calc(100vh - 10rem)' }}
+    >
       {/* Header with toggle */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between p-4 text-left hover:bg-slate-50 transition-colors"
+        className="w-full flex items-center justify-between p-4 text-left hover:bg-slate-50 transition-colors flex-shrink-0"
         aria-expanded={isOpen}
         aria-controls="toc-content"
       >
@@ -60,11 +63,11 @@ export function TableOfContentsDrawer({ items, defaultOpen = true }: TableOfCont
       {/* Collapsible content */}
       <div
         id="toc-content"
-        className={`overflow-hidden transition-all duration-200 ${
-          isOpen ? 'max-h-[70vh] opacity-100' : 'max-h-0 opacity-0'
+        className={`overflow-hidden transition-all duration-200 flex-1 min-h-0 ${
+          isOpen ? 'opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <nav className="px-4 pb-4 space-y-1 overflow-y-auto max-h-[60vh]">
+        <nav className="px-4 pb-4 space-y-1 overflow-y-auto h-full">
           {items.map((item) => (
             <a
               key={item.id}
