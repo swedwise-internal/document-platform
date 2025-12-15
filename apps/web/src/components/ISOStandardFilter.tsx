@@ -1,13 +1,13 @@
 'use client';
 
-import { ISOStandard, AVAILABLE_STANDARDS } from '@/types/document';
-
 interface ISOStandardFilterProps {
-  selectedStandards: ISOStandard[];
-  onFilterChange: (standards: ISOStandard[]) => void;
+  availableStandards: string[];
+  selectedStandards: string[];
+  onFilterChange: (standards: string[]) => void;
 }
 
-const STANDARD_COLORS: Record<ISOStandard, { selected: string; unselected: string }> = {
+// Color mapping for known standards, with a default for unknown ones
+const STANDARD_COLORS: Record<string, { selected: string; unselected: string }> = {
   'ISO 9001': {
     selected: 'bg-blue-600 text-white border-blue-600 shadow-sm',
     unselected: 'hover:border-blue-400 hover:bg-blue-50',
@@ -20,12 +20,21 @@ const STANDARD_COLORS: Record<ISOStandard, { selected: string; unselected: strin
     selected: 'bg-purple-600 text-white border-purple-600 shadow-sm',
     unselected: 'hover:border-purple-400 hover:bg-purple-50',
   },
+  'ISO 22301': {
+    selected: 'bg-orange-600 text-white border-orange-600 shadow-sm',
+    unselected: 'hover:border-orange-400 hover:bg-orange-50',
+  },
 };
 
-export function ISOStandardFilter({ selectedStandards, onFilterChange }: ISOStandardFilterProps) {
+const DEFAULT_COLORS = {
+  selected: 'bg-slate-600 text-white border-slate-600 shadow-sm',
+  unselected: 'hover:border-slate-400 hover:bg-slate-50',
+};
+
+export function ISOStandardFilter({ availableStandards, selectedStandards, onFilterChange }: ISOStandardFilterProps) {
   const isAllSelected = selectedStandards.length === 0;
 
-  const toggleStandard = (standard: ISOStandard) => {
+  const toggleStandard = (standard: string) => {
     if (selectedStandards.includes(standard)) {
       onFilterChange(selectedStandards.filter(s => s !== standard));
     } else {
@@ -54,10 +63,10 @@ export function ISOStandardFilter({ selectedStandards, onFilterChange }: ISOStan
         All
       </button>
 
-      {/* Standard filter buttons */}
-      {AVAILABLE_STANDARDS.map(standard => {
+      {/* Standard filter buttons - dynamically generated */}
+      {availableStandards.map(standard => {
         const isSelected = selectedStandards.includes(standard);
-        const colors = STANDARD_COLORS[standard];
+        const colors = STANDARD_COLORS[standard] || DEFAULT_COLORS;
 
         return (
           <button

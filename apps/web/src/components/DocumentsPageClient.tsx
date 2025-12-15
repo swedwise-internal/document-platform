@@ -3,14 +3,23 @@
 import { useState, useMemo } from 'react';
 import { DocumentList } from './DocumentList';
 import { ISOStandardFilter } from './ISOStandardFilter';
-import { DocumentListItem, DOCUMENT_CATEGORIES, ISOStandard } from '@/types/document';
+import { DocumentListItem, DOCUMENT_CATEGORIES } from '@/types/document';
 
 interface DocumentsPageClientProps {
   documents: DocumentListItem[];
 }
 
 export function DocumentsPageClient({ documents }: DocumentsPageClientProps) {
-  const [selectedStandards, setSelectedStandards] = useState<ISOStandard[]>([]);
+  const [selectedStandards, setSelectedStandards] = useState<string[]>([]);
+
+  // Extract unique standards from all documents, sorted alphabetically
+  const availableStandards = useMemo(() => {
+    const standards = new Set<string>();
+    documents.forEach(doc => {
+      doc.standard?.forEach(std => standards.add(std));
+    });
+    return Array.from(standards).sort();
+  }, [documents]);
 
   // Filter documents based on selected standards
   const filteredDocuments = useMemo(() => {
@@ -38,14 +47,17 @@ export function DocumentsPageClient({ documents }: DocumentsPageClientProps) {
 
   return (
     <>
-      {/* Filter Section */}
-      <div className="mb-6">
-        <h2 className="text-sm font-semibold text-slate-700 mb-3">Filter by ISO Standard</h2>
-        <ISOStandardFilter
-          selectedStandards={selectedStandards}
-          onFilterChange={setSelectedStandards}
-        />
-      </div>
+      {/* Filter Section - only show if there are standards to filter by */}
+      {availableStandards.length > 0 && (
+        <div className="mb-6">
+          <h2 className="text-sm font-semibold text-slate-700 mb-3">Filter by Standard</h2>
+          <ISOStandardFilter
+            availableStandards={availableStandards}
+            selectedStandards={selectedStandards}
+            onFilterChange={setSelectedStandards}
+          />
+        </div>
+      )}
 
       {/* Statistics */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">

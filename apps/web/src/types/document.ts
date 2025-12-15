@@ -142,11 +142,13 @@ export const CLASSIFICATION_STYLES: Record<Classification, { bg: string; text: s
 
 /**
  * ISO Standard badge styling
+ * Uses Record<string, ...> to support any standard dynamically
  */
-export const ISO_STANDARD_STYLES: Record<ISOStandard, { bg: string; text: string; border: string }> = {
+export const ISO_STANDARD_STYLES: Record<string, { bg: string; text: string; border: string }> = {
   'ISO 9001': { bg: 'bg-blue-100', text: 'text-blue-800', border: 'border-blue-600' },
   'ISO 14001': { bg: 'bg-green-100', text: 'text-green-800', border: 'border-green-600' },
   'ISO 27001': { bg: 'bg-purple-100', text: 'text-purple-800', border: 'border-purple-600' },
+  'ISO 22301': { bg: 'bg-orange-100', text: 'text-orange-800', border: 'border-orange-600' },
 };
 
 /**
