@@ -54,14 +54,20 @@ export function DocumentList({ categories }: DocumentListProps) {
                       {/* ISO Standard badges */}
                       {doc.standard && doc.standard.length > 0 && (
                         <div className="flex gap-1.5 mt-2">
-                          {doc.standard.map(std => (
-                            <span
-                              key={std}
-                              className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${ISO_STANDARD_STYLES[std].bg} ${ISO_STANDARD_STYLES[std].text}`}
-                            >
-                              {std}
-                            </span>
-                          ))}
+                          {doc.standard.map(std => {
+                            const style = ISO_STANDARD_STYLES[std];
+                            // Fallback for unknown standards
+                            const bg = style?.bg ?? 'bg-slate-100';
+                            const text = style?.text ?? 'text-slate-700';
+                            return (
+                              <span
+                                key={std}
+                                className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${bg} ${text}`}
+                              >
+                                {std}
+                              </span>
+                            );
+                          })}
                         </div>
                       )}
                     </div>
