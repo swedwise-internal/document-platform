@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for the IMS Platform */
+
+@layer base {
+  :root {
+    --color-primary: 14 165 233; /* sky-500 */
+    --color-background: 255 255 255;
+    --color-foreground: 15 23 42; /* slate-900 */
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased;
+  }
+}
+
+@layer components {
+  /* Document status badges */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-draft {
+    @apply bg-amber-100 text-amber-800;
+  }
+
+  .badge-review {
+    @apply bg-blue-100 text-blue-800;
+  }
+
+  .badge-approved {
+    @apply bg-green-100 text-green-800;
+  }
+
+  .badge-obsolete {
+    @apply bg-gray-100 text-gray-600;
+  }
+
+  /* Classification badges */
+  .badge-public {
+    @apply bg-green-100 text-green-800;
+  }
+
+  .badge-internal {
+    @apply bg-blue-100 text-blue-800;
+  }
+
+  .badge-confidential {
+    @apply bg-amber-100 text-amber-800;
+  }
+
+  .badge-restricted {
+    @apply bg-red-100 text-red-800;
+  }
+
+  /* Card component */
+  .card {
+    @apply bg-white rounded-lg border border-slate-200 shadow-sm;
+  }
+
+  .card-header {
+    @apply px-6 py-4 border-b border-slate-200;
+  }
+
+  .card-body {
+    @apply px-6 py-4;
+  }
+
+  /* Button styles */
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-md font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply bg-sky-600 text-white hover:bg-sky-700 focus:ring-sky-500;
+  }
+
+  .btn-secondary {
+    @apply bg-slate-100 text-slate-700 hover:bg-slate-200 focus:ring-slate-500;
+  }
+
+  .btn-outline {
+    @apply border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 focus:ring-slate-500;
+  }
+
+  /* Navigation */
+  .nav-link {
+    @apply flex items-center gap-2 px-3 py-2 text-sm font-medium text-slate-600 rounded-md hover:bg-slate-100 hover:text-slate-900 transition-colors;
+  }
+
+  .nav-link-active {
+    @apply bg-sky-50 text-sky-700;
+  }
+}
+
+/* Prose styles for rendered markdown */
+@layer utilities {
+  .prose-document {
+    @apply prose prose-slate max-w-none;
+  }
+
+  .prose-document h1 {
+    @apply text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4;
+  }
+
+  .prose-document h2 {
+    @apply text-xl font-semibold text-slate-800 mt-8 mb-4;
+  }
+
+  .prose-document h3 {
+    @apply text-lg font-semibold text-slate-700 mt-6 mb-3;
+  }
+
+  .prose-document table {
+    @apply w-full border-collapse;
+  }
+
+  .prose-document th {
+    @apply bg-slate-100 text-left font-semibold text-sm text-slate-700 px-4 py-2 border border-slate-200;
+  }
+
+  .prose-document td {
+    @apply px-4 py-2 border border-slate-200 text-sm;
+  }
+
+  .prose-document tr:hover {
+    @apply bg-slate-50;
+  }
+
+  .prose-document code {
+    @apply bg-slate-100 rounded px-1.5 py-0.5 text-sm text-slate-800;
+  }
+
+  .prose-document pre {
+    @apply bg-slate-900 text-slate-100 rounded-lg p-4 overflow-x-auto;
+  }
+
+  .prose-document pre code {
+    @apply bg-transparent p-0 text-inherit;
+  }
+
+  .prose-document blockquote {
+    @apply border-l-4 border-sky-500 pl-4 italic text-slate-600;
+  }
+
+  .prose-document ul {
+    @apply list-disc pl-6 space-y-1;
+  }
+
+  .prose-document ol {
+    @apply list-decimal pl-6 space-y-1;
+  }
+
+  /* TBD placeholder highlighting */
+  .prose-document .tbd,
+  .prose-document [data-tbd] {
+    @apply bg-amber-100 text-amber-800 px-1 rounded;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .prose-document {
+    @apply text-black;
+  }
+
+  .prose-document table {
+    page-break-inside: avoid;
+  }
+}
