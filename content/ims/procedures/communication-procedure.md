@@ -636,7 +636,7 @@ Current tools (update as platforms change):
 - **SW-IMS-PRO-001** - Document Control Procedure
 - **SW-IMS-PRO-003** - Incident Management Procedure
 - **SW-IMS-PRO-005** - Management Review Procedure
-- **SW-IMS-PRO-006** - Competence and Training Procedure
+- **SW-IMS-PRO-012 - Competence and Training Procedure
 - **SW-IMS-FRM-002** - Improvement Suggestion Form
 - **SW-IMS-FRM-010** - Communication Plan Template
 

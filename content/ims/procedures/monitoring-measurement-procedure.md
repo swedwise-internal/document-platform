@@ -410,7 +410,7 @@ Is performance meeting target?
           │                 Monitor closely
           │                 Implement enhancements
           │
-          └── NO (Red) → Initiate Corrective Action (SW-IMS-PRO-003)
+          └── NO (Red) → Initiate Corrective Action (SW-IMS-PRO-009)
                         Escalate to management
                         Implement immediate actions
                         Root cause analysis
@@ -420,10 +420,10 @@ Is performance meeting target?
 
 | Performance Situation | Action Type | Procedure |
 |---------------------|-------------|-----------|
-| Consistently exceeding target | Optimization, best practice sharing | Continual Improvement (SW-IMS-PRO-004) |
+| Consistently exceeding target | Optimization, best practice sharing | Continual Improvement (SW-IMS-PRO-010) |
 | Meeting target | Maintain, monitor | This procedure |
-| Below target (Amber) | Improvement initiative | Continual Improvement (SW-IMS-PRO-004) |
-| Below threshold (Red) | Corrective action | Corrective Action (SW-IMS-PRO-003) |
+| Below target (Amber) | Improvement initiative | Continual Improvement (SW-IMS-PRO-010) |
+| Below threshold (Red) | Corrective action | Corrective Action (SW-IMS-PRO-009) |
 | Negative trend | Proactive intervention | Risk Assessment (SW-IMS-PRO-002) |
 
 **Action Tracking**:
@@ -657,9 +657,9 @@ All security incidents logged and tracked:
 
 - **SW-IMS-POL-001** - Integrated Management System Policy
 - **SW-IMS-PRO-002** - Risk Assessment Procedure
-- **SW-IMS-PRO-003** - Corrective Action Procedure
-- **SW-IMS-PRO-004** - Continual Improvement Procedure
-- **SW-IMS-PRO-005** - Context and Interested Parties Procedure
+- **SW-IMS-PRO-009 - Corrective Action Procedure
+- **SW-IMS-PRO-010 - Continual Improvement Procedure
+- **SW-IMS-PRO-011 - Context and Interested Parties Procedure
 - **SW-IMS-PRO-XXX** - Management Review Procedure (when created)
 - **SW-IMS-PRO-XXX** - Customer Complaint Procedure (when created)
 - **SW-IMS-REG-004** - KPI Register

@@ -396,7 +396,7 @@ This policy is:
 - SW-IMS-POL-001: Integrated Management System Policy
 - SW-ISMS-POL-001: Information Security Policy
 - SW-EMS-POL-001: Environmental Policy
-- SW-IMS-POL-002: Business Continuity Policy
+- SW-IMS-POL-005: Business Continuity Policy
 
 **Procedures:**
 - [TBD - SW-IMS-PRO-004: Supplier Selection and Evaluation Procedure]

@@ -1,5 +1,5 @@
 ---
-document_id: SW-IMS-POL-002
+document_id: SW-IMS-POL-005
 title: Business Continuity Policy
 doc_type: policy
 version: "1.0"

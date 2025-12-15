@@ -14,7 +14,7 @@ standard:
 related_documents:
   - SW-IMS-POL-001
   - SW-ISMS-POL-001
-  - SW-IMS-POL-003
+  - SW-IMS-POL-006
 ---
 
 # Customer Communication Policy
@@ -571,7 +571,7 @@ This policy is:
 **Policies:**
 - SW-IMS-POL-001: Integrated Management System Policy
 - SW-ISMS-POL-001: Information Security Policy
-- SW-IMS-POL-003: Service Continuity Policy
+- SW-IMS-POL-006: Service Continuity Policy
 - [TBD - SW-ISMS-POL-XXX: Data Protection and Privacy Policy]
 
 **Procedures:**

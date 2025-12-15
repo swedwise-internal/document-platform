@@ -399,7 +399,7 @@ Employee input is welcome and considered in policy reviews.
 **Policies:**
 - SW-IMS-POL-001: Integrated Management System Policy
 - SW-ISMS-POL-001: Information Security Policy
-- SW-IMS-POL-002: Business Continuity Policy
+- SW-IMS-POL-005: Business Continuity Policy
 - [TBD - SW-ISMS-POL-002: Acceptable Use Policy]
 - [TBD - SW-ISMS-POL-003: Data Protection and Privacy Policy]
 

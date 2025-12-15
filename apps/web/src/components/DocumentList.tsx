@@ -33,7 +33,7 @@ export function DocumentList({ categories }: DocumentListProps) {
             <div className="divide-y divide-slate-100">
               {category.documents.map(doc => (
                 <Link
-                  key={doc.document_id}
+                  key={doc.slug}
                   href={`/documents/${doc.slug}`}
                   className="block px-6 py-4 hover:bg-slate-50 transition-colors"
                 >

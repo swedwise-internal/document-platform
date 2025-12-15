@@ -1,5 +1,5 @@
 ---
-document_id: SW-IMS-PRO-003
+document_id: SW-IMS-PRO-009
 title: Corrective Action Procedure
 doc_type: procedure
 version: "1.0"
@@ -20,7 +20,7 @@ related_documents:
 
 # Corrective Action Procedure
 
-**Document ID**: SW-IMS-PRO-003-v1.0
+**Document ID**: SW-IMS-PRO-009-v1.0
 **Effective Date**: [TBD]
 **Review Date**: [TBD]
 **Owner**: IMS Owner
@@ -54,7 +54,7 @@ This procedure applies to all Swedwise locations, all business activities, and a
 ### Related But Separate Processes:
 - **Immediate containment actions**: Covered by Incident Management Procedure
 - **Preventive actions**: Integrated into Risk Assessment Procedure (SW-IMS-PRO-002)
-- **Continual improvement**: Covered by Continual Improvement Procedure (SW-IMS-PRO-004)
+- **Continual improvement**: Covered by Continual Improvement Procedure (SW-IMS-PRO-010)
 
 ## 3. Definitions
 
@@ -600,7 +600,7 @@ Results reported in Management Review and used to improve this procedure.
 - **SW-IMS-POL-001** - Integrated Management System Policy
 - **SW-IMS-PRO-001** - Document Control Procedure
 - **SW-IMS-PRO-002** - Risk Assessment Procedure
-- **SW-IMS-PRO-004** - Continual Improvement Procedure
+- **SW-IMS-PRO-010 - Continual Improvement Procedure
 - **SW-IMS-PRO-XXX** - Incident Management Procedure (when created)
 - **SW-IMS-PRO-XXX** - Internal Audit Procedure (when created)
 - **SW-IMS-FRM-003** - Corrective Action Request (CAR) Form

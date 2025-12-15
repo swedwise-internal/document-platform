@@ -1,5 +1,5 @@
 ---
-document_id: SW-IMS-POL-003
+document_id: SW-IMS-POL-006
 title: Service Continuity Policy
 doc_type: policy
 version: "1.0"

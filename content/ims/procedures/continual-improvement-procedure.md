@@ -1,5 +1,5 @@
 ---
-document_id: SW-IMS-PRO-004
+document_id: SW-IMS-PRO-010
 title: Continual Improvement Procedure
 doc_type: procedure
 version: "1.0"
@@ -21,7 +21,7 @@ related_documents:
 
 # Continual Improvement Procedure
 
-**Document ID**: SW-IMS-PRO-004-v1.0
+**Document ID**: SW-IMS-PRO-010-v1.0
 **Effective Date**: [TBD]
 **Review Date**: [TBD]
 **Owner**: IMS Owner
@@ -55,7 +55,7 @@ This procedure applies to all Swedwise locations, all management systems (QMS, E
 
 ### Relationship to Other Procedures:
 
-- **Corrective Action (SW-IMS-PRO-003)**: Addresses nonconformities and root causes; **reactive**
+- **Corrective Action (SW-IMS-PRO-009)**: Addresses nonconformities and root causes; **reactive**
 - **Continual Improvement (this procedure)**: Proactive enhancements to improve performance; **proactive**
 - **Risk Assessment (SW-IMS-PRO-002)**: Preventive actions to avoid future problems
 
@@ -671,7 +671,7 @@ Results reported in Management Review.
 - **SW-IMS-POL-001** - Integrated Management System Policy
 - **SW-IMS-PRO-001** - Document Control Procedure
 - **SW-IMS-PRO-002** - Risk Assessment Procedure
-- **SW-IMS-PRO-003** - Corrective Action Procedure
+- **SW-IMS-PRO-009 - Corrective Action Procedure
 - **SW-IMS-PRO-006** - Monitoring and Measurement Procedure
 - **SW-IMS-PRO-XXX** - Management Review Procedure (when created)
 - **SW-IMS-FRM-002** - Improvement Suggestion Form
