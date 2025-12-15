@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Link from 'next/link';
+import { AreaNavigation } from '@/components/AreaNavigation';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -34,14 +35,9 @@ export default function RootLayout({
                 </div>
 
                 {/* Navigation */}
-                <nav className="hidden md:flex items-center gap-6">
-                  <Link href="/ims" className="text-sm font-medium text-slate-600 hover:text-slate-900">
-                    IMS
-                  </Link>
-                  <Link href="/saas" className="text-sm font-medium text-slate-600 hover:text-slate-900">
-                    SaaS
-                  </Link>
-                </nav>
+                <div className="hidden md:block">
+                  <AreaNavigation />
+                </div>
 
                 {/* User menu placeholder */}
                 <div className="flex items-center gap-4">
