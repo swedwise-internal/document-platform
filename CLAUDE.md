@@ -137,6 +137,47 @@ content/ims/
 └── ims-manual/         # IMS manual sections (clauses 4-10)
 ```
 
+## Development Plans
+
+The project is organized into two separate development tracks that can be worked on independently:
+
+### Plan Structure
+
+```
+docs/plans/
+├── ims-plan.md           # IMS development plan (ISO certification)
+├── saas-plan.md          # SaaS development plan (Swedwise Communications)
+└── architecture-plan.md  # Web platform architecture decisions
+```
+
+### Working with Plans
+
+Use these slash commands to switch between development contexts:
+
+| Command | Description |
+|---------|-------------|
+| `/ims` | Switch to IMS development context |
+| `/saas` | Switch to SaaS development context |
+| `/plan-status` | View status of both plans |
+
+### IMS Plan (`docs/plans/ims-plan.md`)
+- **Focus**: ISO 9001, 14001, 27001 certification documentation
+- **Content**: `content/ims/` (policies, procedures, guidelines, roles)
+- **Web Routes**: `/ims/*`
+- **Status**: Phase 2 complete (65 documents created)
+
+### SaaS Plan (`docs/plans/saas-plan.md`)
+- **Focus**: Swedwise Communications service documentation
+- **Content**: `content/saas/` (service docs, operations, sales)
+- **Web Routes**: `/saas/*`
+- **Status**: Phase 1 pending (documentation foundation)
+
+### Plan Updates
+When completing tasks:
+1. Mark items as `[x]` in the plan file
+2. Update status counts
+3. Add notes for any blockers or dependencies
+
 ## Commands
 
 ### IMS Commands
