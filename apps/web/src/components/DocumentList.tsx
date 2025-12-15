@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { CollapsibleSection } from './CollapsibleSection';
-import { STATUS_STYLES, CLASSIFICATION_STYLES, DocumentListItem } from '@/types/document';
+import { STATUS_STYLES, CLASSIFICATION_STYLES, ISO_STANDARD_STYLES, DocumentListItem } from '@/types/document';
 
 interface CategoryWithDocuments {
   id: string;
@@ -11,6 +11,7 @@ interface CategoryWithDocuments {
   path: string;
   documents: DocumentListItem[];
   count: number;
+  totalCount?: number;
 }
 
 interface DocumentListProps {
@@ -37,7 +38,7 @@ export function DocumentList({ categories }: DocumentListProps) {
                   className="block px-6 py-4 hover:bg-slate-50 transition-colors"
                 >
                   <div className="flex justify-between items-start">
-                    <div>
+                    <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 flex-wrap">
                         <span className="font-mono text-sm text-slate-500">
                           {doc.document_id}
@@ -50,8 +51,21 @@ export function DocumentList({ categories }: DocumentListProps) {
                         </span>
                       </div>
                       <h3 className="font-medium text-slate-900 mt-1">{doc.title}</h3>
+                      {/* ISO Standard badges */}
+                      {doc.standard && doc.standard.length > 0 && (
+                        <div className="flex gap-1.5 mt-2">
+                          {doc.standard.map(std => (
+                            <span
+                              key={std}
+                              className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${ISO_STANDARD_STYLES[std].bg} ${ISO_STANDARD_STYLES[std].text}`}
+                            >
+                              {std}
+                            </span>
+                          ))}
+                        </div>
+                      )}
                     </div>
-                    <svg className="w-5 h-5 text-slate-400 flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-5 h-5 text-slate-400 flex-shrink-0 ml-4 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </div>

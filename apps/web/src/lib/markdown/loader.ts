@@ -130,6 +130,7 @@ export async function listDocuments(category: string): Promise<DocumentListItem[
         doc_type: frontmatter.doc_type,
         status: frontmatter.status,
         classification: frontmatter.classification,
+        standard: frontmatter.standard,
         path: relativePath,
         slug: relativePath.replace(/\.md$/, '').replace(/\//g, '--'),
       });
@@ -163,6 +164,7 @@ export async function listAllDocuments(): Promise<DocumentListItem[]> {
           doc_type: frontmatter.doc_type,
           status: frontmatter.status,
           classification: frontmatter.classification,
+          standard: frontmatter.standard,
           path: relativePath,
           slug: relativePath.replace(/\.md$/, '').replace(/\//g, '--'),
         });

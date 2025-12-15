@@ -1,6 +1,6 @@
 import { listAllDocuments } from '@/lib/markdown/loader';
-import { DOCUMENT_CATEGORIES, DocumentListItem } from '@/types/document';
-import { DocumentList } from '@/components/DocumentList';
+import { DocumentListItem } from '@/types/document';
+import { DocumentsPageClient } from '@/components/DocumentsPageClient';
 
 export const dynamic = 'force-dynamic'; // Always fetch fresh data
 
@@ -14,13 +14,6 @@ export default async function DocumentsPage() {
     error = 'Unable to load documents. Content directory may not be configured.';
     documents = [];
   }
-
-  // Group documents by category
-  const documentsByCategory = DOCUMENT_CATEGORIES.map(category => ({
-    ...category,
-    documents: documents.filter(doc => doc.path.startsWith(category.path)),
-    count: documents.filter(doc => doc.path.startsWith(category.path)).length,
-  }));
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -37,34 +30,7 @@ export default async function DocumentsPage() {
         </div>
       )}
 
-      {/* Document statistics */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-        <div className="card p-4">
-          <p className="text-sm text-slate-500">Total Documents</p>
-          <p className="text-2xl font-bold text-slate-900">{documents.length}</p>
-        </div>
-        <div className="card p-4">
-          <p className="text-sm text-slate-500">Approved</p>
-          <p className="text-2xl font-bold text-green-600">
-            {documents.filter(d => d.status === 'approved').length}
-          </p>
-        </div>
-        <div className="card p-4">
-          <p className="text-sm text-slate-500">Draft</p>
-          <p className="text-2xl font-bold text-amber-600">
-            {documents.filter(d => d.status === 'draft').length}
-          </p>
-        </div>
-        <div className="card p-4">
-          <p className="text-sm text-slate-500">In Review</p>
-          <p className="text-2xl font-bold text-blue-600">
-            {documents.filter(d => d.status === 'review').length}
-          </p>
-        </div>
-      </div>
-
-      {/* Documents by category - Collapsible sections */}
-      <DocumentList categories={documentsByCategory} />
+      <DocumentsPageClient documents={documents} />
     </div>
   );
 }
