@@ -9,19 +9,19 @@ import { parseMarkdown, processDocument } from './processor';
 import {
   ParsedDocument,
   DocumentListItem,
-  DocumentFrontmatter,
   DocumentType
 } from '@/types/document';
+import { ContentArea } from '@/types/area';
+import { getCategoriesForArea } from '@/lib/areas/categories';
 
-// Content directory path (relative to project root)
-// Default: ../../content/ims for monorepo structure (apps/web -> content/ims)
-const CONTENT_DIR = process.env.CONTENT_DIR || '../../content/ims';
+// Base content directory path (relative to project root)
+const CONTENT_BASE_DIR = process.env.CONTENT_BASE_DIR || '../../content';
 
 /**
- * Get the absolute path to the content directory
+ * Get the absolute path to the content directory for an area
  */
-function getContentPath(): string {
-  return path.resolve(process.cwd(), CONTENT_DIR);
+function getContentPath(area: ContentArea = 'ims'): string {
+  return path.resolve(process.cwd(), CONTENT_BASE_DIR, area);
 }
 
 /**
@@ -65,10 +65,10 @@ async function getMarkdownFiles(dir: string): Promise<string[]> {
 /**
  * Load a single document by path
  */
-export async function loadDocument(filePath: string): Promise<ParsedDocument | null> {
+export async function loadDocument(filePath: string, area: ContentArea = 'ims'): Promise<ParsedDocument | null> {
   try {
     const content = await fs.readFile(filePath, 'utf-8');
-    const relativePath = path.relative(getContentPath(), filePath);
+    const relativePath = path.relative(getContentPath(area), filePath);
     return await processDocument(content, relativePath);
   } catch (error) {
     console.error(`Error loading document ${filePath}:`, error);
@@ -80,36 +80,37 @@ export async function loadDocument(filePath: string): Promise<ParsedDocument | n
  * Load a document by slug
  * Slug format: category--filename (double hyphen separates path segments)
  */
-export async function loadDocumentBySlug(slug: string): Promise<ParsedDocument | null> {
+export async function loadDocumentBySlug(slug: string, area: ContentArea = 'ims'): Promise<ParsedDocument | null> {
   // Convert slug back to path (-- becomes /)
   const filePath = path.join(
-    getContentPath(),
+    getContentPath(area),
     slug.replace(/--/g, '/') + '.md'
   );
 
-  return loadDocument(filePath);
+  return loadDocument(filePath, area);
 }
 
 /**
  * Load a document by document ID (e.g., SW-ISMS-POL-001)
  */
-export async function loadDocumentById(documentId: string): Promise<ParsedDocument | null> {
-  const documents = await listAllDocuments();
+export async function loadDocumentById(documentId: string, area: ContentArea = 'ims'): Promise<ParsedDocument | null> {
+  const documents = await listAllDocuments(area);
   const doc = documents.find(d => d.document_id === documentId);
 
   if (!doc) {
     return null;
   }
 
-  const filePath = path.join(getContentPath(), doc.path);
-  return loadDocument(filePath);
+  const filePath = path.join(getContentPath(area), doc.path);
+  return loadDocument(filePath, area);
 }
 
 /**
  * List all documents in a category
  */
-export async function listDocuments(category: string): Promise<DocumentListItem[]> {
-  const categoryPath = path.join(getContentPath(), category);
+export async function listDocuments(category: string, area: ContentArea = 'ims'): Promise<DocumentListItem[]> {
+  const contentPath = getContentPath(area);
+  const categoryPath = path.join(contentPath, category);
 
   if (!await isDirectory(categoryPath)) {
     return [];
@@ -122,7 +123,7 @@ export async function listDocuments(category: string): Promise<DocumentListItem[
     try {
       const content = await fs.readFile(filePath, 'utf-8');
       const { frontmatter } = parseMarkdown(content);
-      const relativePath = path.relative(getContentPath(), filePath);
+      const relativePath = path.relative(contentPath, filePath);
 
       documents.push({
         document_id: frontmatter.document_id,
@@ -133,6 +134,7 @@ export async function listDocuments(category: string): Promise<DocumentListItem[
         standard: frontmatter.standard,
         path: relativePath,
         slug: relativePath.replace(/\.md$/, '').replace(/\//g, '--'),
+        area,
       });
     } catch (error) {
       console.error(`Error parsing ${filePath}:`, error);
@@ -146,8 +148,8 @@ export async function listDocuments(category: string): Promise<DocumentListItem[
 /**
  * List all documents across all categories
  */
-export async function listAllDocuments(): Promise<DocumentListItem[]> {
-  const contentPath = getContentPath();
+export async function listAllDocuments(area: ContentArea = 'ims'): Promise<DocumentListItem[]> {
+  const contentPath = getContentPath(area);
   const files = await getMarkdownFiles(contentPath);
   const documents: DocumentListItem[] = [];
 
@@ -167,6 +169,7 @@ export async function listAllDocuments(): Promise<DocumentListItem[]> {
           standard: frontmatter.standard,
           path: relativePath,
           slug: relativePath.replace(/\.md$/, '').replace(/\//g, '--'),
+          area,
         });
       }
     } catch (error) {
@@ -178,15 +181,15 @@ export async function listAllDocuments(): Promise<DocumentListItem[]> {
 }
 
 /**
- * Get document counts by category
+ * Get document counts by category for an area
  */
-export async function getDocumentCounts(): Promise<Record<string, number>> {
-  const categories = ['policies', 'procedures', 'guidelines', 'role-descriptions', 'training', 'forms', 'registers'];
+export async function getDocumentCounts(area: ContentArea = 'ims'): Promise<Record<string, number>> {
+  const categories = getCategoriesForArea(area);
   const counts: Record<string, number> = {};
 
   for (const category of categories) {
-    const docs = await listDocuments(category);
-    counts[category] = docs.length;
+    const docs = await listDocuments(category.path, area);
+    counts[category.id] = docs.length;
   }
 
   return counts;
@@ -195,8 +198,8 @@ export async function getDocumentCounts(): Promise<Record<string, number>> {
 /**
  * Search documents by title or content
  */
-export async function searchDocuments(query: string): Promise<DocumentListItem[]> {
-  const allDocs = await listAllDocuments();
+export async function searchDocuments(query: string, area: ContentArea = 'ims'): Promise<DocumentListItem[]> {
+  const allDocs = await listAllDocuments(area);
   const lowerQuery = query.toLowerCase();
 
   return allDocs.filter(doc =>
@@ -208,15 +211,15 @@ export async function searchDocuments(query: string): Promise<DocumentListItem[]
 /**
  * Get documents by type
  */
-export async function getDocumentsByType(type: DocumentType): Promise<DocumentListItem[]> {
-  const allDocs = await listAllDocuments();
+export async function getDocumentsByType(type: DocumentType, area: ContentArea = 'ims'): Promise<DocumentListItem[]> {
+  const allDocs = await listAllDocuments(area);
   return allDocs.filter(doc => doc.doc_type === type);
 }
 
 /**
  * Get documents by status
  */
-export async function getDocumentsByStatus(status: string): Promise<DocumentListItem[]> {
-  const allDocs = await listAllDocuments();
+export async function getDocumentsByStatus(status: string, area: ContentArea = 'ims'): Promise<DocumentListItem[]> {
+  const allDocs = await listAllDocuments(area);
   return allDocs.filter(doc => doc.status === status);
 }

@@ -1,0 +1,132 @@
+import { notFound } from 'next/navigation';
+import Link from 'next/link';
+import { loadDocumentBySlug } from '@/lib/markdown/loader';
+import { STATUS_STYLES, CLASSIFICATION_STYLES, ISO_STANDARD_STYLES, DocumentStatus, Classification } from '@/types/document';
+
+export const dynamic = 'force-dynamic';
+
+interface PageProps {
+  params: Promise<{ slug: string[] }>;
+}
+
+export default async function SaaSDocumentPage({ params }: PageProps) {
+  const { slug } = await params;
+  const slugPath = slug.join('--');
+  const document = await loadDocumentBySlug(slugPath, 'saas');
+
+  if (!document) {
+    notFound();
+  }
+
+  const { frontmatter, content, tableOfContents } = document;
+  const statusStyle = STATUS_STYLES[frontmatter.status as DocumentStatus];
+  const classificationStyle = CLASSIFICATION_STYLES[frontmatter.classification as Classification];
+
+  return (
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      {/* Back link */}
+      <div className="mb-6">
+        <Link href="/saas/documents" className="text-emerald-600 hover:text-emerald-800 text-sm">
+          ← Back to SaaS Documents
+        </Link>
+      </div>
+
+      <div className="lg:grid lg:grid-cols-4 lg:gap-8">
+        {/* Main content */}
+        <div className="lg:col-span-3">
+          {/* Document header */}
+          <div className="card p-6 mb-6">
+            <div className="flex flex-wrap items-center gap-2 mb-4">
+              <span className={`px-2 py-1 rounded text-xs font-medium ${statusStyle?.bg} ${statusStyle?.text}`}>
+                {statusStyle?.label || frontmatter.status}
+              </span>
+              <span className={`px-2 py-1 rounded text-xs font-medium ${classificationStyle?.bg} ${classificationStyle?.text}`}>
+                {classificationStyle?.label || frontmatter.classification}
+              </span>
+              {frontmatter.standard?.map((std) => {
+                const style = ISO_STANDARD_STYLES[std];
+                return (
+                  <span
+                    key={std}
+                    className={`px-2 py-1 rounded text-xs font-medium ${style?.bg ?? 'bg-slate-100'} ${style?.text ?? 'text-slate-800'}`}
+                  >
+                    {std}
+                  </span>
+                );
+              })}
+            </div>
+
+            <p className="text-sm text-slate-500 font-mono mb-2">{frontmatter.document_id}</p>
+            <h1 className="text-2xl font-bold text-slate-900 mb-4">{frontmatter.title}</h1>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+              <div>
+                <p className="text-slate-500">Version</p>
+                <p className="font-medium">{frontmatter.version}</p>
+              </div>
+              <div>
+                <p className="text-slate-500">Owner</p>
+                <p className="font-medium">{frontmatter.owner}</p>
+              </div>
+              {frontmatter.effective_date && (
+                <div>
+                  <p className="text-slate-500">Effective Date</p>
+                  <p className="font-medium">{frontmatter.effective_date}</p>
+                </div>
+              )}
+              {frontmatter.review_date && (
+                <div>
+                  <p className="text-slate-500">Review Date</p>
+                  <p className="font-medium">{frontmatter.review_date}</p>
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* Document content */}
+          <div className="card p-6">
+            <div
+              className="prose prose-slate max-w-none"
+              dangerouslySetInnerHTML={{ __html: content }}
+            />
+          </div>
+        </div>
+
+        {/* Sidebar */}
+        <div className="lg:col-span-1 mt-6 lg:mt-0">
+          {tableOfContents.length > 0 && (
+            <div className="card p-4 sticky top-4">
+              <h3 className="font-semibold text-slate-900 mb-3">Contents</h3>
+              <nav className="space-y-1">
+                {tableOfContents.map((item) => (
+                  <a
+                    key={item.id}
+                    href={`#${item.id}`}
+                    className={`block text-sm text-slate-600 hover:text-slate-900 ${
+                      item.level === 2 ? 'pl-0' : item.level === 3 ? 'pl-3' : 'pl-6'
+                    }`}
+                  >
+                    {item.text}
+                  </a>
+                ))}
+              </nav>
+            </div>
+          )}
+
+          {frontmatter.related_documents && frontmatter.related_documents.length > 0 && (
+            <div className="card p-4 mt-4">
+              <h3 className="font-semibold text-slate-900 mb-3">Related Documents</h3>
+              <ul className="space-y-1 text-sm">
+                {frontmatter.related_documents.map((docId) => (
+                  <li key={docId}>
+                    <span className="text-slate-600 font-mono">{docId}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}

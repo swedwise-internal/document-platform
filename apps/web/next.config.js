@@ -16,6 +16,32 @@ const nextConfig = {
     config.resolve.fallback = { fs: false, path: false };
     return config;
   },
+
+  // Redirect old routes to new area-based routes
+  async redirects() {
+    return [
+      {
+        source: '/documents',
+        destination: '/ims/documents',
+        permanent: false,
+      },
+      {
+        source: '/documents/:path*',
+        destination: '/ims/documents/:path*',
+        permanent: false,
+      },
+      {
+        source: '/training',
+        destination: '/ims/training',
+        permanent: false,
+      },
+      {
+        source: '/registers',
+        destination: '/ims/registers',
+        permanent: false,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
