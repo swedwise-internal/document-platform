@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Link from 'next/link';
 import { AreaNavigation } from '@/components/AreaNavigation';
+import { SearchBarCompact } from '@/components/SearchBar';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -39,8 +40,9 @@ export default function RootLayout({
                   <AreaNavigation />
                 </div>
 
-                {/* User menu placeholder */}
+                {/* Search and User menu */}
                 <div className="flex items-center gap-4">
+                  <SearchBarCompact />
                   <span className="text-sm text-slate-400">[User Login]</span>
                 </div>
               </div>
