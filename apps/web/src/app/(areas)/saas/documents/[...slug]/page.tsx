@@ -2,6 +2,8 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { loadDocumentBySlug } from '@/lib/markdown/loader';
 import { STATUS_STYLES, CLASSIFICATION_STYLES, ISO_STANDARD_STYLES, DocumentStatus, Classification } from '@/types/document';
+import { TableOfContentsDrawer } from '@/components/TableOfContentsDrawer';
+import { RelatedDocuments } from '@/components/RelatedDocuments';
 
 export const dynamic = 'force-dynamic';
 
@@ -30,9 +32,11 @@ export default async function SaaSDocumentPage({ params }: PageProps) {
   const { frontmatter, content, tableOfContents } = document;
   const statusStyle = STATUS_STYLES[frontmatter.status as DocumentStatus];
   const classificationStyle = CLASSIFICATION_STYLES[frontmatter.classification as Classification];
+  const hasRelatedDocs = frontmatter.related_documents && frontmatter.related_documents.length > 0;
+  const hasToc = tableOfContents.length > 0;
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Back link */}
       <div className="mb-6">
         <Link href="/saas/documents" className="text-emerald-600 hover:text-emerald-800 text-sm">
@@ -40,9 +44,16 @@ export default async function SaaSDocumentPage({ params }: PageProps) {
         </Link>
       </div>
 
-      <div className="lg:grid lg:grid-cols-4 lg:gap-8">
+      <div className="lg:grid lg:grid-cols-12 lg:gap-6">
+        {/* Left sidebar - Table of Contents */}
+        <div className={`hidden lg:block ${hasToc ? 'lg:col-span-2' : ''}`}>
+          {hasToc && (
+            <TableOfContentsDrawer items={tableOfContents} defaultOpen={true} />
+          )}
+        </div>
+
         {/* Main content */}
-        <div className="lg:col-span-3">
+        <div className={`${hasToc && hasRelatedDocs ? 'lg:col-span-7' : hasToc || hasRelatedDocs ? 'lg:col-span-9' : 'lg:col-span-12'}`}>
           {/* Document header */}
           <div className="card p-6 mb-6">
             <div className="flex flex-wrap items-center gap-2 mb-4">
@@ -92,6 +103,13 @@ export default async function SaaSDocumentPage({ params }: PageProps) {
             </div>
           </div>
 
+          {/* Mobile TOC - shown above content on small screens */}
+          {hasToc && (
+            <div className="lg:hidden mb-6">
+              <TableOfContentsDrawer items={tableOfContents} defaultOpen={false} />
+            </div>
+          )}
+
           {/* Document content */}
           <div className="card p-6">
             <div
@@ -99,40 +117,25 @@ export default async function SaaSDocumentPage({ params }: PageProps) {
               dangerouslySetInnerHTML={{ __html: content }}
             />
           </div>
-        </div>
 
-        {/* Sidebar */}
-        <div className="lg:col-span-1 mt-6 lg:mt-0">
-          {tableOfContents.length > 0 && (
-            <div className="card p-4 sticky top-4">
-              <h3 className="font-semibold text-slate-900 mb-3">Contents</h3>
-              <nav className="space-y-1">
-                {tableOfContents.map((item) => (
-                  <a
-                    key={item.id}
-                    href={`#${item.id}`}
-                    className={`block text-sm text-slate-600 hover:text-slate-900 ${
-                      item.level === 2 ? 'pl-0' : item.level === 3 ? 'pl-3' : 'pl-6'
-                    }`}
-                  >
-                    {item.text}
-                  </a>
-                ))}
-              </nav>
+          {/* Mobile Related Documents - shown below content on small screens */}
+          {hasRelatedDocs && (
+            <div className="lg:hidden mt-6">
+              <RelatedDocuments
+                documentIds={frontmatter.related_documents!}
+                currentArea="saas"
+              />
             </div>
           )}
+        </div>
 
-          {frontmatter.related_documents && frontmatter.related_documents.length > 0 && (
-            <div className="card p-4 mt-4">
-              <h3 className="font-semibold text-slate-900 mb-3">Related Documents</h3>
-              <ul className="space-y-1 text-sm">
-                {frontmatter.related_documents.map((docId) => (
-                  <li key={docId}>
-                    <span className="text-slate-600 font-mono">{docId}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+        {/* Right sidebar - Related Documents */}
+        <div className={`hidden lg:block ${hasRelatedDocs ? 'lg:col-span-3' : ''}`}>
+          {hasRelatedDocs && (
+            <RelatedDocuments
+              documentIds={frontmatter.related_documents!}
+              currentArea="saas"
+            />
           )}
         </div>
       </div>
