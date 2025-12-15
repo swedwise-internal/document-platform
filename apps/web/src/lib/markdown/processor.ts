@@ -16,6 +16,8 @@ import {
   TrainingFrontmatter,
   ParsedDocument
 } from '@/types/document';
+import { remarkDocLinks } from './plugins/remark-doc-links';
+import { rehypeDocLinks } from './plugins/rehype-doc-links';
 
 /**
  * Create the unified processor pipeline
@@ -24,7 +26,9 @@ function createProcessor() {
   return unified()
     .use(remarkParse) // Parse markdown to mdast
     .use(remarkGfm) // Support GitHub Flavored Markdown (tables, strikethrough, etc.)
+    .use(remarkDocLinks) // Convert document IDs to links (remark plugin)
     .use(remarkRehype, { allowDangerousHtml: true }) // Convert to hast
+    .use(rehypeDocLinks) // Enhance document links with metadata (rehype plugin)
     .use(rehypeSlug) // Add IDs to headings
     .use(rehypeAutolinkHeadings, { behavior: 'wrap' }) // Link headings
     .use(rehypeStringify, { allowDangerousHtml: true }); // Convert to HTML string

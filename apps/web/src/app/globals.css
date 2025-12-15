@@ -93,6 +93,50 @@
   .nav-link-active {
     @apply bg-sky-50 text-sky-700;
   }
+
+  /* Document Links */
+  .doc-link {
+    @apply font-medium no-underline border-b-2 transition-colors hover:opacity-80;
+  }
+
+  /* Document type color coding */
+  .doc-link-policy {
+    @apply text-purple-700 border-purple-300 hover:border-purple-500;
+  }
+
+  .doc-link-procedure {
+    @apply text-blue-700 border-blue-300 hover:border-blue-500;
+  }
+
+  .doc-link-guideline {
+    @apply text-green-700 border-green-300 hover:border-green-500;
+  }
+
+  .doc-link-role {
+    @apply text-orange-700 border-orange-300 hover:border-orange-500;
+  }
+
+  .doc-link-form {
+    @apply text-cyan-700 border-cyan-300 hover:border-cyan-500;
+  }
+
+  .doc-link-training {
+    @apply text-indigo-700 border-indigo-300 hover:border-indigo-500;
+  }
+
+  /* Broken document links */
+  .doc-link-broken {
+    @apply text-red-700 border-red-300 hover:border-red-500 cursor-not-allowed opacity-60;
+  }
+
+  /* Status indicators (subtle background) */
+  .doc-link-draft {
+    @apply bg-amber-50;
+  }
+
+  .doc-link-obsolete {
+    @apply bg-gray-100 line-through opacity-60;
+  }
 }
 
 /* Prose styles for rendered markdown */
@@ -153,6 +197,11 @@
     @apply list-decimal pl-6 space-y-1;
   }
 
+  /* Document links within prose content */
+  .prose-document .doc-link {
+    @apply inline-flex items-center;
+  }
+
   /* TBD placeholder highlighting */
   .prose-document .tbd,
   .prose-document [data-tbd] {
@@ -172,5 +221,10 @@
 
   .prose-document table {
     page-break-inside: avoid;
+  }
+
+  /* Simplify links for print */
+  .doc-link {
+    @apply border-b border-slate-400;
   }
 }
