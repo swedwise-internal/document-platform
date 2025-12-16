@@ -2,6 +2,7 @@ import { DocumentCategory } from '@/types/document';
 import { ContentArea } from '@/types/area';
 
 export const IMS_CATEGORIES: DocumentCategory[] = [
+  { id: 'ims-manual', name: 'IMS Manual', description: 'System manual (Clauses 4-10)', path: 'ims-manual', count: 0 },
   { id: 'policies', name: 'Policies', description: 'Management policies', path: 'policies', count: 0 },
   { id: 'procedures', name: 'Procedures', description: 'Operational procedures', path: 'procedures', count: 0 },
   { id: 'guidelines', name: 'Guidelines', description: 'Non-mandatory guidance', path: 'guidelines', count: 0 },
@@ -32,6 +33,7 @@ export function getCategoriesForArea(area: ContentArea): DocumentCategory[] {
 
 export function getCategoryIcon(categoryId: string): string {
   const icons: Record<string, string> = {
+    'ims-manual': '📘',
     policies: '📋',
     procedures: '📝',
     guidelines: '📖',
@@ -51,6 +53,7 @@ export function getCategoryIcon(categoryId: string): string {
 
 export function getCategoryColor(categoryId: string): string {
   const colors: Record<string, string> = {
+    'ims-manual': 'bg-sky-50 border-sky-200',
     policies: 'bg-blue-50 border-blue-200',
     procedures: 'bg-green-50 border-green-200',
     guidelines: 'bg-purple-50 border-purple-200',
