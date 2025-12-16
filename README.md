@@ -1,172 +1,278 @@
-# Swedwise ISO Certification Project
+# Swedwise IMS Documentation Platform
 
-An AI-assisted project for implementing an Integrated Management System (IMS) and achieving ISO certification.
+An integrated documentation platform for ISO certification and SaaS service management, featuring a Next.js web application with document rendering, filtering, and Learning Management System (LMS) capabilities.
 
 ## Overview
 
-This project supports Swedwise AB in achieving certification against:
-- **ISO 9001:2015** - Quality Management System
-- **ISO 14001:2015** - Environmental Management System
-- **ISO 27001:2022** - Information Security Management System
+This platform supports Swedwise AB in:
 
-Projektet inkluderar en **webbapplikation** (Next.js) för att visa och hantera IMS-dokumentation med integrerat LMS (Learning Management System) för utbildning.
+1. **ISO Certification** - Integrated Management System (IMS) for:
+   - **ISO 9001:2015** - Quality Management System
+   - **ISO 14001:2015** - Environmental Management System
+   - **ISO 27001:2022** - Information Security Management System
+
+2. **SaaS Service Documentation** - Swedwise Communications:
+   - OpenText Exstream (document generation)
+   - Notifications (multi-channel delivery)
+
+## Quick Start
+
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+
+### Development
+
+```bash
+# Install dependencies
+make install
+
+# Start development server
+make dev
+
+# Or run in background
+make start
+make stop
+```
+
+Open http://localhost:3000 to view the platform.
+
+### Available Make Commands
+
+```bash
+make help          # Show all available commands
+make dev           # Start dev server (foreground)
+make start         # Start dev server (background)
+make stop          # Stop background server
+make build         # Build for production
+make docs-count    # Count documents by category
+make docs-status   # Show document status summary
+```
 
 ## Project Structure
 
 ```
 iso-certification/
 ├── apps/
-│   └── web/                     # Next.js IMS/LMS webbapplikation
+│   └── web/                        # Next.js web application
 │       ├── src/
-│       ├── prisma/
-│       └── package.json
+│       │   ├── app/                # App router pages
+│       │   │   └── (areas)/
+│       │   │       ├── ims/        # IMS document pages
+│       │   │       └── saas/       # SaaS document pages
+│       │   ├── components/         # React components
+│       │   ├── lib/                # Utilities and helpers
+│       │   └── types/              # TypeScript definitions
+│       └── prisma/                 # Database schema
+│
 ├── content/
-│   └── ims/                     # IMS-dokumentation (Markdown)
-│       ├── policies/
-│       ├── procedures/
-│       ├── guidelines/
-│       ├── role-descriptions/
-│       ├── training/
-│       ├── forms/
-│       ├── registers/
-│       └── ims-manual/
-├── packages/                    # Delad kod (för framtida bruk)
-├── templates/                   # Dokumentmallar
-├── docs/                        # Projektdokumentation
-├── reference/                   # Referensmaterial
+│   ├── ims/                        # IMS documentation (128 documents)
+│   │   ├── policies/               # 20 policies
+│   │   ├── procedures/             # 25 procedures
+│   │   ├── guidelines/             # 6 guidelines
+│   │   ├── role-descriptions/      # 11 role descriptions
+│   │   ├── forms/                  # 41 forms
+│   │   ├── training/               # 13 training courses
+│   │   ├── registers/              # 4 registers
+│   │   └── ims-manual/             # 8 manual sections (Clauses 4-10)
+│   │
+│   └── saas/                       # SaaS documentation (23 documents)
+│       ├── service-description/    # Service overview
+│       ├── service-components/     # Communications & Notifications specs
+│       ├── operations/             # Operational procedures
+│       ├── onboarding/             # Customer onboarding
+│       ├── pricing/                # Pricing framework
+│       ├── sales-materials/        # Sales guides
+│       └── training/               # Staff training
+│
+├── docs/
+│   ├── plans/                      # Development plans
+│   └── project-plan/               # Status reports
+│
 ├── .claude/
-│   ├── commands/               # Slash-kommandon för IMS-arbetsflöden
-│   └── agents/                 # Specialiserade AI-agenter
-├── CLAUDE.md                    # AI-agentinstruktioner
-└── README.md                    # Denna fil
+│   ├── commands/                   # Slash commands
+│   └── agents/                     # Specialized AI agents
+│
+├── Makefile                        # Development utilities
+├── CLAUDE.md                       # AI agent instructions
+└── README.md                       # This file
 ```
 
-## Getting Started
+## Web Application Features
 
-### Prerequisites
+### Document Management
+- **Dynamic Rendering**: Markdown documents render on-the-fly (no rebuild required)
+- **Filtering**: Filter by ISO standard, classification, status, and service component
+- **Search**: Full-text search across all documents
+- **Navigation**: Collapsible sections with persistent state (remembered between visits)
+- **Anchor Links**: Direct links to document sections from dashboards
 
-- Node.js 18+ (för webbapplikationen)
-- Claude Code CLI (för dokumentgenerering)
+### Document Metadata
+All documents include YAML frontmatter with:
+- `document_id`: Unique identifier (e.g., SW-IMS-POL-001)
+- `title`: Document title
+- `status`: draft | review | approved | obsolete
+- `classification`: public | internal | confidential | restricted
+- `standard`: ISO standards covered (9001, 14001, 27001)
+- `owner`: Responsible role
 
-### Starta webbapplikationen
+### Export Capabilities
+- PDF export with consistent styling
+- Print-friendly layouts
 
-```bash
-cd apps/web
-npm install
-npm run dev
-```
+### LMS Integration (Training)
+- Course metadata in frontmatter
+- Assessment questions with pass/fail scoring
+- Progress tracking support
+- Validity periods for certifications
 
-Öppna http://localhost:3000 för att se IMS-plattformen.
+## Documentation Summary
 
-### Dokumentgenerering med Claude Code
+### IMS Documents (128 total)
 
-1. Starta Claude Code i projektroten:
-   ```bash
-   claude
-   ```
+| Category | Count | Description |
+|----------|-------|-------------|
+| Policies | 20 | IMS, Quality, Environmental, Security policies |
+| Procedures | 25 | Operational procedures for all processes |
+| Guidelines | 6 | Practical how-to guidance |
+| Role Descriptions | 11 | Responsibilities and authorities |
+| Forms | 41 | Templates for operational use |
+| Training | 13 | Awareness and role-specific training |
+| Registers | 4 | Risk, asset, environmental registers |
+| IMS Manual | 8 | Clauses 4-10 system documentation |
 
-2. Kör gap-analys:
-   ```
-   /ims:gap-analysis all
-   ```
+### SaaS Documents (23 total)
 
-3. Generera dokument:
-   ```
-   /ims:generate-policy information-security
-   /ims:generate-procedure incident-management
-   ```
-
-## Available Commands
-
-| Command | Description |
-|---------|-------------|
-| `/ims:generate-policy [topic]` | Generate a policy document |
-| `/ims:generate-procedure [topic]` | Generate a procedure document |
-| `/ims:generate-role [role-name]` | Generate a role description |
-| `/ims:gap-analysis [standard]` | Perform gap analysis |
-| `/ims:create-training [topic]` | Create training material |
-| `/ims:project-status` | Review implementation status |
-| `/ims:audit-checklist [standard]` | Generate audit preparation checklist |
-
-## AI Agents
-
-Specialized agents are available for specific tasks:
-
-- **isms-analyst**: ISO requirements analysis and gap assessment
-- **document-writer**: Formal policy and procedure writing
-- **training-creator**: Engaging training material development
-- **risk-analyst**: Risk assessment and treatment planning
-
-## Reference Documentation
-
-The following reference materials are available in `../project-scaffolder/docs/`:
-
-### Sample ISMS (Foxway)
-- `Sample Documentation/` - Complete ISMS example to use as inspiration
-  - Plan, Do, Check, Act structure
-  - Policies and Guidelines
-  - Processes and Procedures
-
-### Swedwise Context
-- `Context Documents/` - Company-specific context
-  - Draft ISMS content
-  - PMO documentation
-  - "The Machine" organizational framework
-  - Existing quality/environmental management drafts
-
-## Implementation Approach
-
-### Phase 1: Foundation
-- Gap analysis
-- Context documentation
-- Planning
-
-### Phase 2: Design
-- Policies and procedures
-- Risk assessment
-- Role definitions
-
-### Phase 3: Implementation
-- Training
-- Process rollout
-- Control implementation
-
-### Phase 4: Verification
-- Internal audits
-- Management review
-- Improvement actions
-
-### Phase 5: Certification
-- Stage 1 audit
-- Stage 2 audit
-- Certificate achievement
-
-## Key Principles
-
-1. **Proportionate**: Solutions fit a 35-person company
-2. **Integrated**: Single system covering quality, environment, and security
-3. **Practical**: Processes that staff will actually follow
-4. **Risk-based**: Focus effort where risk is highest
-5. **Cultural fit**: Align with Swedwise's learning organization values
+| Category | Count | Description |
+|----------|-------|-------------|
+| Service Description | 4 | Service overview and architecture |
+| Service Components | 4 | Communications & Notifications specs |
+| Operations | 3 | Support and incident procedures |
+| Onboarding | 3 | Customer onboarding guides |
+| Pricing | 3 | Pricing framework and packages |
+| Sales Materials | 3 | Sales guides and collateral |
+| Training | 3 | Staff training materials |
 
 ## Document Naming Convention
 
 ```
-SW-[SYSTEM]-[TYPE]-[NUMBER]-v[VERSION]
+SW-[SYSTEM]-[TYPE]-[NUMBER]
 
-SYSTEM: IMS, QMS, EMS, ISMS
-TYPE: POL (Policy), PRO (Procedure), GUI (Guideline), ROLE (Role), FRM (Form)
+SYSTEM:
+  IMS   - Integrated Management System
+  QMS   - Quality Management System
+  EMS   - Environmental Management System
+  ISMS  - Information Security Management System
+
+TYPE:
+  POL   - Policy
+  PRO   - Procedure
+  GUI   - Guideline
+  ROLE  - Role Description
+  FRM   - Form
+  TRN   - Training
+  MAN   - Manual
+  REG   - Register
+
 NUMBER: 001-999
-VERSION: Major.Minor
 ```
 
-## Support
+**Examples:**
+- `SW-IMS-POL-001` - Integrated Management System Policy
+- `SW-ISMS-PRO-002` - Incident Management Procedure
+- `SW-QMS-FRM-005` - Customer Satisfaction Survey
 
-For questions about this project:
-- Review `CLAUDE.md` for AI agent guidance
-- Check the project plan in `docs/project-plan/`
-- Reference sample documentation for examples
-- Run `npm run dev` in `apps/web/` to explore the IMS platform
+## AI-Assisted Development
+
+### Slash Commands
+
+| Command | Description |
+|---------|-------------|
+| `/ims` | Switch to IMS development context |
+| `/saas` | Switch to SaaS development context |
+| `/project-status` | Generate project status report |
+
+### Specialized Agents
+
+| Agent | Purpose |
+|-------|---------|
+| `isms-analyst` | ISO requirements analysis, gap assessment |
+| `document-writer` | Formal policy and procedure writing |
+| `training-creator` | Training material development |
+| `risk-analyst` | Risk assessment and treatment |
+| `webapp-architect` | Web application architecture |
+| `lms-developer` | LMS feature implementation |
+
+## Technology Stack
+
+| Component | Technology |
+|-----------|------------|
+| Framework | Next.js 14 (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS |
+| Markdown | unified/remark/rehype |
+| Database | PostgreSQL + Prisma |
+| PDF Export | Puppeteer |
+
+## Key Principles
+
+1. **Proportionate** - Solutions fit a 35-person company
+2. **Integrated** - Single system covering quality, environment, and security
+3. **Practical** - Processes that staff will actually follow
+4. **Risk-based** - Focus effort where risk is highest
+5. **Cultural fit** - Align with Swedwise's "learning organization" values
+
+## Project Status
+
+**Phase 2: COMPLETE** - Documentation foundation established
+
+- 151 documents created
+- Web platform operational
+- IMS Manual complete (Clauses 4-10)
+- All forms created
+- Training materials developed
+
+**Next Phase**: Document review and approval process
+
+See `docs/project-plan/status-report-2025-12-16.md` for detailed status.
+
+## Development
+
+### Code Quality
+
+```bash
+make lint        # Run ESLint
+make typecheck   # Run TypeScript checks
+make check       # Run all checks
+```
+
+### Database
+
+```bash
+make db-generate  # Generate Prisma client
+make db-push      # Push schema to database
+make db-studio    # Open Prisma Studio
+```
+
+### Documentation Utilities
+
+```bash
+make docs-count     # Count documents by category
+make docs-status    # Show draft/review/approved counts
+make docs-validate  # Validate frontmatter
+make docs-tbd       # List documents with [TBD] placeholders
+make docs-ids       # List all document IDs
+```
+
+## Company Context
+
+**Swedwise AB**
+- ~35 employees across 3 offices (Karlstad HQ, Stockholm, Uddevalla)
+- Business: Software licenses, consulting, implementation projects
+- Target market: Large public and private organizations in Nordic region
+- Philosophy: "Learning organization" following "The Machine" framework
+- Tagline: "Make Time For The Good"
 
 ## License
 
