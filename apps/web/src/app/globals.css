@@ -166,6 +166,31 @@
     @apply text-lg font-semibold text-slate-700 mt-6 mb-3;
   }
 
+  .prose-document h4 {
+    @apply text-base font-semibold text-slate-700 mt-4 mb-2;
+  }
+
+  /* Remove underline from heading anchor links */
+  .prose-document h1 a,
+  .prose-document h2 a,
+  .prose-document h3 a,
+  .prose-document h4 a,
+  .prose-document h5 a,
+  .prose-document h6 a {
+    @apply no-underline text-inherit hover:text-inherit;
+  }
+
+  /* Style for document metadata / definition-style lists */
+  .prose-document .doc-info,
+  .prose-document .document-info {
+    @apply space-y-1;
+  }
+
+  .prose-document .doc-info p,
+  .prose-document .document-info p {
+    @apply my-1;
+  }
+
   .prose-document table {
     @apply w-full border-collapse;
   }

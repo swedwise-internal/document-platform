@@ -6,6 +6,7 @@
 import { unified } from 'unified';
 import remarkParse from 'remark-parse';
 import remarkGfm from 'remark-gfm';
+import remarkBreaks from 'remark-breaks';
 import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
 import rehypeSlug from 'rehype-slug';
@@ -26,6 +27,7 @@ function createProcessor() {
   return unified()
     .use(remarkParse) // Parse markdown to mdast
     .use(remarkGfm) // Support GitHub Flavored Markdown (tables, strikethrough, etc.)
+    .use(remarkBreaks) // Convert single line breaks to <br> (like GitHub)
     .use(remarkDocLinks) // Convert document IDs to links (remark plugin)
     .use(remarkRehype, { allowDangerousHtml: true }) // Convert to hast
     .use(rehypeDocLinks) // Enhance document links with metadata (rehype plugin)
