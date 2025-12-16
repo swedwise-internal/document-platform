@@ -13,6 +13,7 @@ export const IMS_CATEGORIES: DocumentCategory[] = [
 
 export const SAAS_CATEGORIES: DocumentCategory[] = [
   { id: 'service-description', name: 'Service Description', description: 'Technical service documentation', path: 'service-description', count: 0 },
+  { id: 'service-components', name: 'Service Components', description: 'Component specifications and architecture', path: 'service-components', count: 0 },
   { id: 'operations', name: 'Operations', description: 'Operational procedures', path: 'operations', count: 0 },
   { id: 'onboarding', name: 'Onboarding', description: 'Customer onboarding guides', path: 'onboarding', count: 0 },
   { id: 'sales-materials', name: 'Sales Materials', description: 'Sales collateral', path: 'sales-materials', count: 0 },
@@ -39,6 +40,7 @@ export function getCategoryIcon(categoryId: string): string {
     forms: '📄',
     registers: '📊',
     'service-description': '📑',
+    'service-components': '🧩',
     operations: '⚙️',
     onboarding: '🚀',
     'sales-materials': '💼',
@@ -57,6 +59,7 @@ export function getCategoryColor(categoryId: string): string {
     forms: 'bg-slate-50 border-slate-200',
     registers: 'bg-red-50 border-red-200',
     'service-description': 'bg-cyan-50 border-cyan-200',
+    'service-components': 'bg-violet-50 border-violet-200',
     operations: 'bg-orange-50 border-orange-200',
     onboarding: 'bg-teal-50 border-teal-200',
     'sales-materials': 'bg-indigo-50 border-indigo-200',

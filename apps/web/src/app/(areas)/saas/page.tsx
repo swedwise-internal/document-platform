@@ -30,7 +30,7 @@ export default async function SaaSPage() {
           SaaS Service Documentation
         </h1>
         <p className="mt-2 text-lg text-slate-600">
-          Swedwise Communications - OpenText Exstream + Notifications as a Service
+          Swedwise SaaS Platform
         </p>
       </div>
 
@@ -39,9 +39,9 @@ export default async function SaaSPage() {
         <div className="flex items-start gap-3">
           <span className="text-emerald-500 text-xl">☁️</span>
           <div>
-            <h3 className="font-semibold text-emerald-800">Swedwise Communications</h3>
+            <h3 className="font-semibold text-emerald-800">Swedwise SaaS Platform</h3>
             <p className="text-sm text-emerald-700 mt-1">
-              High-volume document generation and multi-channel notifications for enterprise customers.
+              A multi-tenant, cloud-based infrastructure platform that provides the foundation for delivering enterprise-grade business applications as Software-as-a-Service.
             </p>
           </div>
         </div>
@@ -73,7 +73,7 @@ export default async function SaaSPage() {
         {categories.map((category) => (
           <Link
             key={category.id}
-            href={`/saas/documents?category=${category.id}`}
+            href={`/saas/documents#${category.id}`}
             className={`card p-6 border-2 ${category.color} hover:shadow-md transition-shadow`}
           >
             <div className="flex items-start gap-4">

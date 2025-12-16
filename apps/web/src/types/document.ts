@@ -29,6 +29,15 @@ export type ISOStandard =
   | 'ISO 27001';
 
 /**
+ * SaaS service component
+ * Used to categorize SaaS documents by service component
+ */
+export type ServiceComponent =
+  | 'general'
+  | 'communications'
+  | 'notifications';
+
+/**
  * Document frontmatter schema
  */
 export interface DocumentFrontmatter {
@@ -43,6 +52,7 @@ export interface DocumentFrontmatter {
   review_date?: string;
   standard?: ISOStandard[];
   related_documents?: string[];
+  component?: ServiceComponent; // SaaS-specific: service component
 }
 
 /**
@@ -94,6 +104,7 @@ export interface DocumentListItem {
   status: DocumentStatus;
   classification: Classification;
   standard?: ISOStandard[];
+  component?: ServiceComponent; // SaaS-specific: service component
   path: string;
   slug: string;
   updated_at?: Date;
@@ -156,3 +167,13 @@ export const ISO_STANDARD_STYLES: Record<string, { bg: string; text: string; bor
  * Available ISO standards for filtering
  */
 export const AVAILABLE_STANDARDS: ISOStandard[] = ['ISO 9001', 'ISO 14001', 'ISO 27001'];
+
+/**
+ * Service component badge styling
+ * For SaaS documents to indicate which service component they belong to
+ */
+export const COMPONENT_STYLES: Record<ServiceComponent, { bg: string; text: string; label: string }> = {
+  general: { bg: 'bg-slate-100', text: 'text-slate-800', label: 'General' },
+  communications: { bg: 'bg-cyan-100', text: 'text-cyan-800', label: 'Communications' },
+  notifications: { bg: 'bg-purple-100', text: 'text-purple-800', label: 'Notifications' },
+};

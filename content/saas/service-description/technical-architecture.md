@@ -1,20 +1,23 @@
 ---
 document_id: SW-SAAS-ARCH-001
-title: Swedwise Communications Technical Architecture
+title: Swedwise SaaS Platform - Technical Architecture
 doc_type: guideline
 version: "1.0"
 status: draft
 classification: confidential
 owner: Technical Lead
+component: general
 effective_date: 2025-01-15
 review_date: 2026-01-15
 related_documents:
   - SW-SAAS-SVC-001
+  - SW-SAAS-ARCH-COMP-001
+  - SW-SAAS-ARCH-COMP-002
 ---
 
-# Swedwise Communications Technical Architecture
+# Swedwise SaaS Platform - Technical Architecture
 
-**Service:** Swedwise Communications (OpenText Communications + Notifications)
+**Platform:** Swedwise SaaS Platform
 **Date:** 2025-01-15
 **Version:** 1.0
 **Classification:** Confidential
@@ -23,14 +26,23 @@ related_documents:
 
 ## Executive Summary
 
-This document describes the technical architecture of the **Swedwise Communications** SaaS platform, built on OpenText Experience Cloud and deployed on a Kubernetes-based infrastructure in a Swedish data center. The architecture is designed for multi-tenancy, high availability, security, and scalability to support enterprise-grade document generation and notification delivery services.
+This document describes the technical architecture of the **Swedwise SaaS Platform**, deployed on a Kubernetes-based infrastructure in a Swedish data center. The architecture is designed for multi-tenancy, high availability, security, and scalability to support enterprise-grade SaaS service components.
 
-**Key Characteristics:**
+**Platform Characteristics:**
 - Multi-tenant SaaS architecture with strict data isolation
 - Kubernetes orchestration for automatic scaling and resilience
 - 99.9% availability SLA with redundant components
 - Swedish data residency for GDPR compliance
 - ISO 27001 certified security controls
+
+**Service Components:**
+The platform hosts multiple service components, each documented in separate technical architecture addendums:
+
+| Component | Document ID | Description |
+|-----------|-------------|-------------|
+| **Communications** | SW-SAAS-ARCH-COMP-001 | OpenText Exstream document generation |
+| **Notifications** | SW-SAAS-ARCH-COMP-002 | Multi-channel notification delivery (Email, SMS) |
+| **[Future]** | - | Additional service components |
 
 ---
 
@@ -97,9 +109,9 @@ This document describes the technical architecture of the **Swedwise Communicati
 │  │  │  APPLICATION POD LAYER                                  │  │  │
 │  │  │                                                         │  │  │
 │  │  │  ┌───────────────┐  ┌───────────────┐  ┌─────────────┐│  │  │
-│  │  │  │  OpenText     │  │  OpenText     │  │  Tenant     ││  │  │
-│  │  │  │  Comms        │  │  Notifications│  │  Management ││  │  │
-│  │  │  │  (Exstream)   │  │               │  │  Services   ││  │  │
+│  │  │  │  Service      │  │  Service      │  │  Tenant     ││  │  │
+│  │  │  │  Component A  │  │  Component B  │  │  Management ││  │  │
+│  │  │  │  (Pods)       │  │  (Pods)       │  │  Services   ││  │  │
 │  │  │  │               │  │               │  │             ││  │  │
 │  │  │  │  Multi-tenant │  │  Multi-tenant │  │             ││  │  │
 │  │  │  └───────┬───────┘  └───────┬───────┘  └──────┬──────┘│  │  │
@@ -148,25 +160,29 @@ This document describes the technical architecture of the **Swedwise Communicati
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
-### 1.2. Technology Stack
+### 1.2. Platform Technology Stack
 
 | Layer | Technology | Purpose |
 |-------|------------|---------|
 | **Orchestration** | Kubernetes | Container orchestration, auto-scaling, self-healing |
 | **Container Runtime** | Docker | Application containerization |
-| **Core Platform** | OpenText Experience Cloud | Multi-tenant SaaS foundation |
-| **Document Generation** | OpenText Communications (Exstream) | High-volume document composition |
-| **Notifications** | OpenText Notifications | Multi-channel delivery (Email, SMS) |
 | **Database** | PostgreSQL (HA cluster) | Relational data storage |
 | **Object Storage** | S3-compatible storage | Document, template, and asset storage |
+| **Cache** | Redis Cluster | Session management, caching |
+| **Message Queue** | RabbitMQ/Kafka | Asynchronous job processing |
 | **Load Balancing** | Kubernetes Ingress / NGINX | Traffic distribution, SSL/TLS termination |
 | **Firewall** | Fortinet Next-Gen Firewall | Network security, IDS/IPS |
 | **Monitoring** | Prometheus + Grafana | Metrics collection and visualization |
 | **Logging** | ELK Stack (Elasticsearch, Logstash, Kibana) | Centralized logging and analysis |
+| **Secrets Management** | Kubernetes Secrets / HashiCorp Vault | Secure credential storage |
+
+**Service Component Technologies** (see component addendums for details):
+- Communications: OpenText Communications (Exstream)
+- Notifications: OpenText Notifications + Email/SMS Gateways
 
 ---
 
-## 2. Component Overview
+## 2. Platform Component Overview
 
 ### 2.1. Kubernetes Cluster Architecture
 
@@ -188,15 +204,21 @@ The platform runs on a **dedicated Kubernetes cluster** with the following chara
 #### Pod Architecture
 Each application component runs as a **microservice in a pod**:
 
+**Platform Services:**
+
 | Pod Type | Replicas | Resources | Purpose |
 |----------|----------|-----------|---------|
-| **OpenText Comms API** | 3+ | 4 CPU, 16 GB RAM | Document generation API |
-| **OpenText Comms Designer** | 2+ | 2 CPU, 8 GB RAM | Template designer interface |
-| **OpenText Notifications** | 3+ | 2 CPU, 8 GB RAM | Notification delivery engine |
 | **Tenant Management** | 2+ | 2 CPU, 4 GB RAM | Multi-tenant orchestration |
 | **API Gateway** | 3+ | 2 CPU, 4 GB RAM | API routing and rate limiting |
 | **Auth Service** | 3+ | 2 CPU, 4 GB RAM | Authentication and SSO |
 | **Integration Broker** | 2+ | 2 CPU, 8 GB RAM | External system integration |
+
+**Service Component Pods** (see component addendums for detailed specifications):
+
+| Service Component | Document | Pod Types |
+|-------------------|----------|-----------|
+| **Communications** | SW-SAAS-ARCH-COMP-001 | Exstream API, Designer |
+| **Notifications** | SW-SAAS-ARCH-COMP-002 | Notification Engine, Queue Workers |
 
 ### 2.2. Database Layer
 
@@ -247,22 +269,31 @@ Each application component runs as a **microservice in a pod**:
   └── uploads/            # Customer-uploaded content
 ```
 
-### 2.3. OpenText Experience Cloud Platform
+### 2.3. Platform Services
 
-The **OpenText Experience Cloud** provides the foundational multi-tenant SaaS capabilities:
+The Swedwise SaaS Platform provides foundational multi-tenant capabilities:
 
-#### Platform Services
+#### Core Platform Services
 - **Tenant Provisioning**: Automated tenant creation and configuration
 - **Identity Management**: Centralized authentication with SSO/SAML support
 - **API Management**: Rate limiting, throttling, API versioning
 - **Usage Metering**: Transaction tracking for billing
-- **Analytics Engine**: Customer journey analytics and reporting
+- **Analytics Engine**: Usage analytics and reporting
 
 #### Integration Framework
 - **REST API**: Standard RESTful APIs for all services
 - **Webhooks**: Event-driven integrations
 - **File Transfer**: SFTP/FTPS for batch processing
 - **Message Queue**: Asynchronous job processing (Kafka/RabbitMQ)
+
+#### Service Component Integration
+Each service component integrates with the platform through:
+- Shared authentication and authorization
+- Common API gateway routing
+- Unified monitoring and logging
+- Centralized configuration management
+
+For component-specific integration details, see the respective architecture addendums.
 
 ---
 
@@ -885,9 +916,12 @@ readinessProbe:
 | API response time (p95) | > 2 seconds | Warning |
 | API response time (p99) | > 5 seconds | Critical |
 | Error rate | > 1% | Warning, > 5% Critical |
-| Document generation success | < 99% | Warning |
-| Notification delivery rate | < 99% | Warning |
 | Queue depth | > 1000 jobs | Warning |
+| Authentication failures | > 10/min | Warning |
+
+**Service Component Metrics** (see component addendums):
+- Communications: Document generation success rate, template load time
+- Notifications: Delivery rate, bounce rate, queue depth
 
 #### Business Metrics
 | Metric | Purpose |
@@ -1177,17 +1211,15 @@ Request → Queue → Worker Pool → Template Cache → Generate → S3 Upload
 
 ### 11.2. Capacity Planning
 
-**Current Capacity (Launch):**
+**Current Platform Capacity (Launch):**
 - **Tenants**: Up to 50 active tenants
 - **Users**: Up to 5,000 concurrent users
-- **Documents**: 1 million documents/month
-- **Notifications**: 5 million notifications/month
+- **API Requests**: 10,000 requests/minute
 
 **12-Month Projection:**
 - **Tenants**: 100-150 active tenants
 - **Users**: 10,000-15,000 concurrent users
-- **Documents**: 5 million documents/month
-- **Notifications**: 25 million notifications/month
+- **API Requests**: 50,000 requests/minute
 
 **Scaling Path:**
 - **Compute**: Add 3-5 worker nodes per quarter
@@ -1195,11 +1227,33 @@ Request → Queue → Worker Pool → Template Cache → Generate → S3 Upload
 - **Storage**: Linear scaling with object storage (no limits)
 - **Network**: Upgrade bandwidth as needed (10 Gbps → 40 Gbps)
 
+**Service Component Capacity** (see component addendums):
+- Communications: Document generation throughput
+- Notifications: Delivery throughput by channel
+
 ---
 
-## 12. Appendices
+## 12. Service Component Architecture Addendums
 
-### 12.1. Technology Version Matrix
+This platform architecture document is supplemented by component-specific technical architecture addendums:
+
+| Document ID | Title | Description |
+|-------------|-------|-------------|
+| **SW-SAAS-ARCH-COMP-001** | Communications Technical Architecture | OpenText Exstream document generation architecture |
+| **SW-SAAS-ARCH-COMP-002** | Notifications Technical Architecture | Multi-channel notification delivery architecture |
+
+Each addendum provides:
+- Component-specific pod configurations and resource requirements
+- Component-specific APIs and integration patterns
+- Component-specific monitoring, metrics, and alerting
+- Component-specific performance tuning and optimization
+- Component-specific backup and recovery procedures
+
+---
+
+## 13. Appendices
+
+### 13.1. Technology Version Matrix
 
 | Component | Version | EOL Date |
 |-----------|---------|----------|
@@ -1211,7 +1265,7 @@ Request → Queue → Worker Pool → Template Cache → Generate → S3 Upload
 | Grafana | 10.2.x | Ongoing support |
 | OpenText Comms | [Version TBD] | Per OpenText support policy |
 
-### 12.2. Network Ports and Protocols
+### 13.2. Network Ports and Protocols
 
 | Port | Protocol | Purpose | Access |
 |------|----------|---------|--------|
@@ -1224,7 +1278,7 @@ Request → Queue → Worker Pool → Template Cache → Generate → S3 Upload
 | 3000 | Grafana | Monitoring dashboards | VPN only |
 | 5601 | Kibana | Log visualization | VPN only |
 
-### 12.3. DNS Configuration
+### 13.3. DNS Configuration
 
 | Record Type | Name | Value | TTL |
 |-------------|------|-------|-----|
@@ -1235,7 +1289,7 @@ Request → Queue → Worker Pool → Template Cache → Generate → S3 Upload
 | TXT | _dmarc.swedwise.com | [DMARC policy] | 3600 |
 | TXT | swedwise.com | [SPF record] | 3600 |
 
-### 12.4. SSL/TLS Configuration
+### 13.4. SSL/TLS Configuration
 
 - **Certificate Authority**: Let's Encrypt (automated renewal)
 - **Certificate Type**: Wildcard (*.swedwise.com)
@@ -1244,7 +1298,7 @@ Request → Queue → Worker Pool → Template Cache → Generate → S3 Upload
 - **HSTS**: Enabled with 1-year max-age
 - **OCSP Stapling**: Enabled
 
-### 12.5. Contact Information
+### 13.5. Contact Information
 
 | Role | Responsibility | Contact |
 |------|----------------|---------|
@@ -1259,7 +1313,8 @@ Request → Queue → Worker Pool → Template Cache → Generate → S3 Upload
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 1.0 | 2025-01-15 | Technical Lead | Initial architecture document |
+| 1.0 | 2025-01-15 | Technical Lead | Initial platform architecture document |
+| 1.1 | 2025-01-15 | Technical Lead | Refactored to platform-level; Communications and Notifications moved to addendums |
 
 ---
 
@@ -1267,4 +1322,8 @@ Request → Queue → Worker Pool → Template Cache → Generate → S3 Upload
 **Distribution:** Internal use and customer NDAs only
 **Review Date:** 2026-01-15
 
-*This document contains confidential technical information about Swedwise Communications architecture. Unauthorized distribution or disclosure is prohibited.*
+**Related Documents:**
+- SW-SAAS-ARCH-COMP-001: Communications Technical Architecture Addendum
+- SW-SAAS-ARCH-COMP-002: Notifications Technical Architecture Addendum
+
+*This document contains confidential technical information about the Swedwise SaaS Platform architecture. Unauthorized distribution or disclosure is prohibited.*

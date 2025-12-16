@@ -73,7 +73,7 @@ export default async function IMSPage() {
         {categories.map((category) => (
           <Link
             key={category.id}
-            href={`/ims/documents?category=${category.id}`}
+            href={`/ims/documents#${category.id}`}
             className={`card p-6 border-2 ${category.color} hover:shadow-md transition-shadow`}
           >
             <div className="flex items-start gap-4">

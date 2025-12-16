@@ -13,6 +13,7 @@ standard:
 related_documents:
   - SW-ISMS-POL-001
   - SW-IMS-PRO-002
+  - SW-IMS-REG-001
 ---
 
 # Information Asset Register

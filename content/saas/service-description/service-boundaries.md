@@ -6,6 +6,7 @@ version: "1.0"
 status: draft
 classification: internal
 owner: SaaS Service Manager
+component: general
 effective_date: 2025-01-15
 review_date: 2026-01-15
 related_documents:

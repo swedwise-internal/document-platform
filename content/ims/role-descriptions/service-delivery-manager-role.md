@@ -29,7 +29,7 @@ related_documents:
 
 ## Role Summary
 
-The Service Delivery Manager is responsible for the operational delivery of Swedwise's SaaS service (Swedwise Communications - OpenText Communications/Exstream + Notifications). This role ensures service availability, performance, and quality meet SLA commitments, manages customer relationships, coordinates operational teams, and drives service improvement initiatives.
+The Service Delivery Manager is responsible for the operational delivery of Swedwise's SaaS Platform service. This role ensures service availability, performance, and quality meet SLA commitments, manages customer relationships, coordinates operational teams, and drives service improvement initiatives.
 
 This role is the "service owner" accountable for end-to-end SaaS service delivery, bridging customers, technical operations, support teams, and management.
 

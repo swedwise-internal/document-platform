@@ -25,6 +25,7 @@ export function DocumentList({ categories, basePath = '/ims/documents' }: Docume
       {categories.map(category => (
         <CollapsibleSection
           key={category.id}
+          id={category.id}
           title={category.name}
           description={category.description}
           count={category.count}
@@ -44,12 +45,22 @@ export function DocumentList({ categories, basePath = '/ims/documents' }: Docume
                         <span className="font-mono text-sm text-slate-500">
                           {doc.document_id}
                         </span>
-                        <span className={`badge ${STATUS_STYLES[doc.status].bg} ${STATUS_STYLES[doc.status].text}`}>
-                          {STATUS_STYLES[doc.status].label}
-                        </span>
-                        <span className={`badge ${CLASSIFICATION_STYLES[doc.classification].bg} ${CLASSIFICATION_STYLES[doc.classification].text}`}>
-                          {CLASSIFICATION_STYLES[doc.classification].label}
-                        </span>
+                        {(() => {
+                          const statusStyle = STATUS_STYLES[doc.status] ?? { bg: 'bg-slate-100', text: 'text-slate-700', label: doc.status || 'Unknown' };
+                          return (
+                            <span className={`badge ${statusStyle.bg} ${statusStyle.text}`}>
+                              {statusStyle.label}
+                            </span>
+                          );
+                        })()}
+                        {(() => {
+                          const classStyle = CLASSIFICATION_STYLES[doc.classification] ?? { bg: 'bg-slate-100', text: 'text-slate-700', label: doc.classification || 'Unknown' };
+                          return (
+                            <span className={`badge ${classStyle.bg} ${classStyle.text}`}>
+                              {classStyle.label}
+                            </span>
+                          );
+                        })()}
                       </div>
                       <h3 className="font-medium text-slate-900 mt-1">{doc.title}</h3>
                       {/* ISO Standard badges */}

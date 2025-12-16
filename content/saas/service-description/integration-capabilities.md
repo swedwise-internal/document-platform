@@ -1,22 +1,23 @@
 ---
 document_id: SW-SAAS-INT-001
-title: Swedwise Communications Integration Capabilities
+title: Swedwise SaaS Platform - Integration Capabilities
 doc_type: guideline
 version: "1.0"
 status: draft
 classification: internal
 owner: Technical Lead
+component: general
 effective_date: 2025-01-15
 review_date: 2026-01-15
 related_documents:
   - SW-SAAS-SVC-001
 ---
 
-# Swedwise Communications Integration Capabilities
+# Swedwise SaaS Platform - Integration Capabilities
 
 **Date:** 2025-01-15
 **Version:** 1.0
-**Service:** Swedwise Communications (SaaS)
+**Service:** Swedwise SaaS Platform (SaaS)
 
 ---
 
@@ -24,11 +25,11 @@ related_documents:
 
 ### 1.1. Purpose
 
-This document describes the integration capabilities of Swedwise Communications, enabling customers to connect the service with their existing systems, automate workflows, and deliver personalized customer communications at scale.
+This document describes the integration capabilities of Swedwise SaaS Platform, enabling customers to connect the service with their existing systems, automate workflows, and deliver personalized customer communications at scale.
 
 ### 1.2. Integration Philosophy
 
-Swedwise Communications is built on the **OpenText Experience Cloud platform**, which provides:
+Swedwise SaaS Platform is built on the **OpenText Experience Cloud platform**, which provides:
 
 - **API-first architecture**: All functionality accessible through modern REST APIs
 - **Flexible integration patterns**: Support for batch, real-time, and event-driven integrations
@@ -63,7 +64,7 @@ Swedwise Communications is built on the **OpenText Experience Cloud platform**, 
 
 ### 2.2. OAuth 2.0 Implementation
 
-Swedwise Communications supports the following OAuth 2.0 flows:
+Swedwise SaaS Platform supports the following OAuth 2.0 flows:
 
 #### Client Credentials Flow (Recommended for Server-to-Server)
 
@@ -115,7 +116,7 @@ grant_type=authorization_code
 
 API keys provide a simpler authentication method for server-to-server integrations:
 
-- **Generation**: Created through the Swedwise Communications admin portal
+- **Generation**: Created through the Swedwise SaaS Platform admin portal
 - **Rotation**: Keys should be rotated every 90 days (enforced via expiration)
 - **Scope**: Keys can be scoped to specific tenants and operations
 - **Usage**: Pass as `X-API-Key` header in requests
@@ -142,7 +143,7 @@ X-API-Key: sw_live_abc123def456ghi789
 #### Azure AD Integration (Recommended)
 
 1. **Azure AD Configuration:**
-   - Register Swedwise Communications as Enterprise Application
+   - Register Swedwise SaaS Platform as Enterprise Application
    - Configure SAML-based sign-on
    - Assign users and groups
 
@@ -527,7 +528,7 @@ CUST-002,customer2@example.com,INV-2025-002,8500.00,SEK,2025-02-15
 
 #### REST API Push
 
-Customer systems push data to Swedwise Communications in real-time.
+Customer systems push data to Swedwise SaaS Platform in real-time.
 
 **Use Cases:**
 - Immediate document generation (e.g., contract signing)
@@ -554,7 +555,7 @@ Content-Type: application/json
 
 #### Webhook Consumption
 
-Swedwise Communications can consume webhooks from customer systems.
+Swedwise SaaS Platform can consume webhooks from customer systems.
 
 **Configuration:**
 1. Customer provides webhook endpoint URL
@@ -630,7 +631,7 @@ For customers requiring direct database connectivity:
 
 ### 6.1. Webhook Overview
 
-Swedwise Communications can send real-time event notifications to customer systems via webhooks.
+Swedwise SaaS Platform can send real-time event notifications to customer systems via webhooks.
 
 **Supported Events:**
 - Document generation completed
@@ -1193,7 +1194,7 @@ All integrations must comply with Swedwise's Information Security Management Sys
 
 ### 12.2. Frequently Asked Questions
 
-**Q: Can I use Swedwise Communications APIs from mobile apps?**
+**Q: Can I use Swedwise SaaS Platform APIs from mobile apps?**
 A: Yes, but we recommend using a backend proxy to protect API credentials. Mobile apps should authenticate users via OAuth and call your backend, which then calls Swedwise APIs.
 
 **Q: What is the maximum file size for document attachments?**
@@ -1242,7 +1243,7 @@ We actively incorporate customer feedback into our roadmap. Submit feature reque
 
 ## Related Documents
 
-- **SW-SAAS-SVC-001**: Swedwise Communications Service Description
+- **SW-SAAS-SVC-001**: Swedwise SaaS Platform Service Description
 - **SW-ISMS-POL-001**: Information Security Policy
 - **SW-ISMS-PRO-003**: Access Control Procedure
 - **SW-QMS-PRO-005**: Supplier Management Procedure

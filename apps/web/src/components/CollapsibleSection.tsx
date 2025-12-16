@@ -1,9 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronDown, ChevronRight } from 'lucide-react';
 
 interface CollapsibleSectionProps {
+  id?: string;
   title: string;
   description?: string;
   count?: number;
@@ -12,18 +13,55 @@ interface CollapsibleSectionProps {
 }
 
 export function CollapsibleSection({
+  id,
   title,
   description,
   count,
   defaultOpen = true,
   children,
 }: CollapsibleSectionProps) {
+  // Initialize with defaultOpen to avoid hydration mismatch
   const [isOpen, setIsOpen] = useState(defaultOpen);
+  const [isHydrated, setIsHydrated] = useState(false);
+
+  // Restore state from localStorage after hydration
+  useEffect(() => {
+    if (id) {
+      try {
+        const storageKey = `collapsible-section-${id}`;
+        const savedState = localStorage.getItem(storageKey);
+
+        if (savedState !== null) {
+          setIsOpen(savedState === 'true');
+        }
+      } catch (error) {
+        // localStorage not available (e.g., SSR, private browsing)
+        console.warn('localStorage not available:', error);
+      }
+    }
+    setIsHydrated(true);
+  }, [id]);
+
+  const handleToggle = () => {
+    const newState = !isOpen;
+    setIsOpen(newState);
+
+    // Save to localStorage if id is provided
+    if (id) {
+      try {
+        const storageKey = `collapsible-section-${id}`;
+        localStorage.setItem(storageKey, String(newState));
+      } catch (error) {
+        // localStorage not available (e.g., quota exceeded, private browsing)
+        console.warn('Failed to save to localStorage:', error);
+      }
+    }
+  };
 
   return (
-    <div className="card">
+    <div id={id} className="card scroll-mt-24">
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={handleToggle}
         className="w-full card-header flex justify-between items-center cursor-pointer hover:bg-slate-50 transition-colors"
         aria-expanded={isOpen}
       >
