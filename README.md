@@ -67,24 +67,26 @@ iso-certification/
 │       └── prisma/                 # Database schema
 │
 ├── content/
-│   ├── ims/                        # IMS documentation (128 documents)
+│   ├── ims/                        # IMS documentation (129 documents)
 │   │   ├── policies/               # 20 policies
 │   │   ├── procedures/             # 25 procedures
 │   │   ├── guidelines/             # 6 guidelines
 │   │   ├── role-descriptions/      # 11 role descriptions
 │   │   ├── forms/                  # 41 forms
-│   │   ├── training/               # 13 training courses
+│   │   ├── training/               # 14 training courses
 │   │   ├── registers/              # 4 registers
 │   │   └── ims-manual/             # 8 manual sections (Clauses 4-10)
 │   │
-│   └── saas/                       # SaaS documentation (23 documents)
+│   └── saas/                       # SaaS documentation (44 documents)
 │       ├── service-description/    # Service overview
 │       ├── service-components/     # Communications & Notifications specs
 │       ├── operations/             # Operational procedures
 │       ├── onboarding/             # Customer onboarding
 │       ├── pricing/                # Pricing framework
 │       ├── sales-materials/        # Sales guides
-│       └── training/               # Staff training
+│       ├── training/               # Staff training
+│       ├── contracts/              # Contract templates
+│       └── project/                # Project documentation
 │
 ├── docs/
 │   ├── plans/                      # Development plans
@@ -129,7 +131,7 @@ All documents include YAML frontmatter with:
 
 ## Documentation Summary
 
-### IMS Documents (128 total)
+### IMS Documents (129 total)
 
 | Category | Count | Description |
 |----------|-------|-------------|
@@ -138,21 +140,23 @@ All documents include YAML frontmatter with:
 | Guidelines | 6 | Practical how-to guidance |
 | Role Descriptions | 11 | Responsibilities and authorities |
 | Forms | 41 | Templates for operational use |
-| Training | 13 | Awareness and role-specific training |
+| Training | 14 | Awareness and role-specific training |
 | Registers | 4 | Risk, asset, environmental registers |
 | IMS Manual | 8 | Clauses 4-10 system documentation |
 
-### SaaS Documents (23 total)
+### SaaS Documents (44 total)
 
 | Category | Count | Description |
 |----------|-------|-------------|
 | Service Description | 4 | Service overview and architecture |
-| Service Components | 4 | Communications & Notifications specs |
-| Operations | 3 | Support and incident procedures |
-| Onboarding | 3 | Customer onboarding guides |
-| Pricing | 3 | Pricing framework and packages |
-| Sales Materials | 3 | Sales guides and collateral |
-| Training | 3 | Staff training materials |
+| Service Components | 8 | Communications & Notifications specs |
+| Operations | 4 | Support and incident procedures |
+| Onboarding | 4 | Customer onboarding guides |
+| Pricing | 4 | Pricing framework and packages |
+| Sales Materials | 4 | Sales guides and collateral |
+| Training | 9 | Staff training materials |
+| Contracts | 6 | Contract templates and terms |
+| Project | 1 | Project documentation |
 
 ## Document Naming Convention
 
@@ -227,7 +231,7 @@ NUMBER: 001-999
 
 **Phase 2: COMPLETE** - Documentation foundation established
 
-- 151 documents created
+- 173 documents created
 - Web platform operational
 - IMS Manual complete (Clauses 4-10)
 - All forms created
