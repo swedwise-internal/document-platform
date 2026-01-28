@@ -9,7 +9,9 @@ export type DocumentType =
   | 'guideline'
   | 'role'
   | 'form'
-  | 'training';
+  | 'training'
+  | 'contract'
+  | 'service-component';
 
 export type DocumentStatus =
   | 'draft'
@@ -35,7 +37,9 @@ export type ISOStandard =
 export type ServiceComponent =
   | 'general'
   | 'communications'
-  | 'notifications';
+  | 'notifications'
+  | 'wopi'
+  | 'cloud-print';
 
 /**
  * Document frontmatter schema
@@ -53,6 +57,7 @@ export interface DocumentFrontmatter {
   standard?: ISOStandard[];
   related_documents?: string[];
   component?: ServiceComponent; // SaaS-specific: service component
+  required_for_certification?: boolean; // IMS-specific: mandatory for certification
 }
 
 /**
@@ -105,6 +110,7 @@ export interface DocumentListItem {
   classification: Classification;
   standard?: ISOStandard[];
   component?: ServiceComponent; // SaaS-specific: service component
+  required_for_certification?: boolean; // IMS-specific: mandatory for certification
   path: string;
   slug: string;
   updated_at?: Date;
@@ -176,4 +182,6 @@ export const COMPONENT_STYLES: Record<ServiceComponent, { bg: string; text: stri
   general: { bg: 'bg-slate-100', text: 'text-slate-800', label: 'General' },
   communications: { bg: 'bg-cyan-100', text: 'text-cyan-800', label: 'Communications' },
   notifications: { bg: 'bg-purple-100', text: 'text-purple-800', label: 'Notifications' },
+  wopi: { bg: 'bg-orange-100', text: 'text-orange-800', label: 'WOPI' },
+  'cloud-print': { bg: 'bg-emerald-100', text: 'text-emerald-800', label: 'Cloud Print' },
 };

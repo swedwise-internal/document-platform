@@ -12,7 +12,7 @@ standard:
   - ISO 9001
   - ISO 14001
   - ISO 27001
-  - ISO 31000
+required_for_certification: true  - ISO 31000
 related_documents:
   - SW-IMS-POL-001
   - SW-IMS-ROLE-001

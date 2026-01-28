@@ -10,6 +10,7 @@ effective_date: 2025-01-01
 review_date: 2026-01-01
 standard:
   - ISO 27001
+required_for_certification: true
 related_documents:
   - SW-ISMS-POL-001
   - SW-ISMS-REG-001

@@ -6,6 +6,7 @@ import { ISOStandardFilter } from './ISOStandardFilter';
 import { ClassificationFilter } from './ClassificationFilter';
 import { StatusFilter } from './StatusFilter';
 import { ComponentFilter } from './ComponentFilter';
+import { RequirementFilter, RequirementFilterValue } from './RequirementFilter';
 import { DocumentListItem, DocumentCategory, CLASSIFICATION_STYLES, Classification, STATUS_STYLES, DocumentStatus, COMPONENT_STYLES, ServiceComponent } from '@/types/document';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
@@ -22,6 +23,7 @@ export function DocumentsPageClient({ documents, categories, basePath = '/ims/do
   const [selectedClassifications, setSelectedClassifications] = useState<string[]>([]);
   const [selectedStatuses, setSelectedStatuses] = useState<string[]>([]);
   const [selectedComponents, setSelectedComponents] = useState<string[]>([]);
+  const [selectedRequirement, setSelectedRequirement] = useState<RequirementFilterValue>('all');
   const [isFiltersCollapsed, setIsFiltersCollapsed] = useState(false);
 
   // Determine if this is a SaaS area (for component filtering)
@@ -160,8 +162,25 @@ export function DocumentsPageClient({ documents, categories, basePath = '/ims/do
       });
     }
 
+    // Filter by certification requirement (IMS only, excluding training)
+    if (!isSaaSArea && selectedRequirement !== 'all') {
+      result = result.filter(doc => {
+        // Exclude training documents from certification requirement filtering
+        if (doc.doc_type === 'training') {
+          return true; // Always show training regardless of requirement filter
+        }
+
+        if (selectedRequirement === 'required') {
+          return doc.required_for_certification === true;
+        } else if (selectedRequirement === 'optional') {
+          return doc.required_for_certification !== true;
+        }
+        return true;
+      });
+    }
+
     return result;
-  }, [documents, selectedStandards, selectedClassifications, selectedStatuses, selectedComponents, isSaaSArea]);
+  }, [documents, selectedStandards, selectedClassifications, selectedStatuses, selectedComponents, selectedRequirement, isSaaSArea]);
 
   // Group filtered documents by category
   const documentsByCategory = useMemo(() => {
@@ -173,7 +192,7 @@ export function DocumentsPageClient({ documents, categories, basePath = '/ims/do
     }));
   }, [filteredDocuments, documents, categories]);
 
-  const isFiltering = selectedStandards.length > 0 || selectedClassifications.length > 0 || selectedStatuses.length > 0 || selectedComponents.length > 0;
+  const isFiltering = selectedStandards.length > 0 || selectedClassifications.length > 0 || selectedStatuses.length > 0 || selectedComponents.length > 0 || selectedRequirement !== 'all';
 
   // Build filter description for the indicator
   const getFilterDescription = () => {
@@ -199,6 +218,10 @@ export function DocumentsPageClient({ documents, categories, basePath = '/ims/do
       );
       parts.push(labels.join(', '));
     }
+    if (selectedRequirement !== 'all') {
+      const label = selectedRequirement === 'required' ? 'Required for Certification' : 'Optional';
+      parts.push(label);
+    }
     return parts.join(' + ');
   };
 
@@ -207,13 +230,14 @@ export function DocumentsPageClient({ documents, categories, basePath = '/ims/do
     setSelectedClassifications([]);
     setSelectedStatuses([]);
     setSelectedComponents([]);
+    setSelectedRequirement('all');
   };
 
   // Check if there are any filters available to show
   const hasFiltersAvailable = availableStandards.length > 0 || availableClassifications.length > 0 || availableStatuses.length > 0 || availableComponents.length > 0;
 
   // Count active filters
-  const activeFilterCount = selectedStandards.length + selectedClassifications.length + selectedStatuses.length + selectedComponents.length;
+  const activeFilterCount = selectedStandards.length + selectedClassifications.length + selectedStatuses.length + selectedComponents.length + (selectedRequirement !== 'all' ? 1 : 0);
 
   return (
     <>
@@ -254,6 +278,17 @@ export function DocumentsPageClient({ documents, categories, basePath = '/ims/do
             }}
           >
             <div className="space-y-4 pb-2">
+              {/* Requirement filter - IMS only, placed FIRST */}
+              {!isSaaSArea && (
+                <div>
+                  <h3 className="text-sm font-semibold text-slate-700 mb-3">Filter by Certification Requirement</h3>
+                  <RequirementFilter
+                    selectedRequirement={selectedRequirement}
+                    onFilterChange={setSelectedRequirement}
+                  />
+                </div>
+              )}
+
               {/* Component filter - only show for SaaS area */}
               {isSaaSArea && availableComponents.length > 0 && (
                 <div>

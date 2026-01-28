@@ -12,6 +12,7 @@ standard:
   - ISO 9001
   - ISO 14001
   - ISO 27001
+required_for_certification: true
 related_documents:
   - SW-IMS-MAN-001
   - SW-IMS-POL-001

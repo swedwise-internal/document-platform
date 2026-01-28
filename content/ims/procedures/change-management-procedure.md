@@ -12,6 +12,7 @@ standard:
   - ISO 9001
   - ISO 14001
   - ISO 27001
+required_for_certification: true
 related_documents:
   - SW-IMS-POL-001
   - SW-ISMS-POL-001
@@ -305,6 +306,18 @@ For SaaS services and shared infrastructure, changes should occur during designa
 - **Weekly Maintenance Window**: Wednesdays 22:00-02:00 (CET) - for low-risk changes
 - **Monthly Extended Window**: First Sunday 00:00-06:00 (CET) - for higher-risk changes
 - **Emergency**: Anytime, with customer notification
+
+**SaaS Service Change Windows (Swedwise Communications Platform)**:
+
+For services with customer SLA commitments, changes must occur during designated change windows unless emergency change procedure is followed:
+
+| Window Type | Schedule | Duration | Use |
+|-------------|----------|----------|-----|
+| **Weekly Maintenance** | Saturday 18:00-20:00 CET | 2 hours | Low-risk changes (patches, configuration tweaks) |
+| **Monthly Extended** | Saturday 18:00 - Sunday 02:00 CET | 8 hours | Higher-risk changes (version upgrades, infrastructure) |
+| **Emergency** | Anytime | As required | Critical incidents or security vulnerabilities only |
+
+**Note:** SaaS change windows are specified in customer-facing Service Description (SW-SAAS-SVC-001) and form part of SLA commitments.
 
 **Customer Notification Requirements** (for SaaS services):
 - **Planned Maintenance** (no service impact): 3 business days advance notice

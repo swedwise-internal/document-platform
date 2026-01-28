@@ -10,6 +10,7 @@ effective_date: 2024-01-15
 review_date: 2025-01-15
 standard:
   - ISO 14001
+required_for_certification: true
 related_documents:
   - SW-EMS-POL-001
   - SW-EMS-PRO-001

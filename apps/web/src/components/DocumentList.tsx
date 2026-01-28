@@ -61,6 +61,16 @@ export function DocumentList({ categories, basePath = '/ims/documents' }: Docume
                             </span>
                           );
                         })()}
+                        {/* Certification requirement badge - not shown for training documents */}
+                        {doc.doc_type !== 'training' && (
+                          <span className={`badge ${
+                            doc.required_for_certification
+                              ? 'bg-red-100 text-red-800'
+                              : 'bg-indigo-100 text-indigo-800'
+                          }`}>
+                            {doc.required_for_certification ? 'Required' : 'Optional'}
+                          </span>
+                        )}
                       </div>
                       <h3 className="font-medium text-slate-900 mt-1">{doc.title}</h3>
                       {/* ISO Standard badges */}

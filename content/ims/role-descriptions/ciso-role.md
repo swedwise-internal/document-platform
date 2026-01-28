@@ -10,6 +10,7 @@ effective_date: [TBD]
 review_date: [TBD]
 standard:
   - ISO 27001
+required_for_certification: true
 related_documents:
   - SW-ISMS-POL-001
   - SW-IMS-POL-001

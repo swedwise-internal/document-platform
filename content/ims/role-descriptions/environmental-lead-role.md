@@ -10,6 +10,7 @@ effective_date: [TBD]
 review_date: [TBD]
 standard:
   - ISO 14001
+required_for_certification: true
 related_documents:
   - SW-EMS-POL-001
   - SW-IMS-POL-001
