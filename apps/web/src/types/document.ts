@@ -114,7 +114,7 @@ export interface DocumentListItem {
   path: string;
   slug: string;
   updated_at?: Date;
-  area?: 'ims' | 'saas';
+  area?: 'ims' | 'saas' | 'operating-model';
 }
 
 /**

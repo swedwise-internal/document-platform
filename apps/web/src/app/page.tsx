@@ -1,15 +1,18 @@
 import { AreaSelector } from '@/components/AreaSelector';
 import { getDocumentCounts } from '@/lib/markdown/loader';
+import { listOmDocuments } from '@/lib/markdown/om-loader';
 
 export const dynamic = 'force-dynamic';
 
 export default async function HomePage() {
   let imsCounts: Record<string, number> = {};
   let saasCounts: Record<string, number> = {};
+  let omTotal = 0;
 
   try {
     imsCounts = await getDocumentCounts('ims');
     saasCounts = await getDocumentCounts('saas');
+    omTotal = (await listOmDocuments()).length;
   } catch (error) {
     console.error('Error loading document counts:', error);
   }
@@ -33,7 +36,7 @@ export default async function HomePage() {
       </div>
 
       {/* Area selection */}
-      <AreaSelector counts={{ ims: imsTotal, saas: saasTotal }} />
+      <AreaSelector counts={{ ims: imsTotal, saas: saasTotal, 'operating-model': omTotal }} />
 
       {/* Info section */}
       <div className="mt-16 text-center">

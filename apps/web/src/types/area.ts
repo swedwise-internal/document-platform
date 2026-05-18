@@ -1,4 +1,4 @@
-export type ContentArea = 'ims' | 'saas';
+export type ContentArea = 'ims' | 'saas' | 'operating-model';
 
 export interface AreaConfig {
   id: ContentArea;

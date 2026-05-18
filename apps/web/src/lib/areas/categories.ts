@@ -22,12 +22,21 @@ export const SAAS_CATEGORIES: DocumentCategory[] = [
   { id: 'training', name: 'Training', description: 'Staff training', path: 'training', count: 0 },
 ];
 
+export const OPERATING_MODEL_CATEGORIES: DocumentCategory[] = [
+  { id: 'objects', name: 'Affärsobjekt', description: 'Alla objekt vi arbetar med', path: '', count: 0 },
+  { id: 'service-catalog', name: 'Service Catalog', description: 'Tjänster och erbjudanden', path: '11-service-catalog', count: 0 },
+  { id: 'processes', name: 'Processer', description: 'Mermaid-processdiagram', path: '12-processes', count: 0 },
+  { id: 'playbooks', name: 'Playbooks', description: 'Operativa riktlinjer', path: '06-playbooks', count: 0 },
+];
+
 export function getCategoriesForArea(area: ContentArea): DocumentCategory[] {
   switch (area) {
     case 'ims':
       return IMS_CATEGORIES;
     case 'saas':
       return SAAS_CATEGORIES;
+    case 'operating-model':
+      return OPERATING_MODEL_CATEGORIES;
   }
 }
 

@@ -1,0 +1,14 @@
+node_modules/
+.svelte-kit/
+.git/
+.gitignore
+.DS_Store
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+coverage/
+test-results/
+playwright-report/
+dist/
+build/

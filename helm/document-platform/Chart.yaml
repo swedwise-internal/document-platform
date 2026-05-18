@@ -1,0 +1,14 @@
+apiVersion: v2
+name: document-platform
+description: Swedwise Document Platform — IMS/LMS web app with Mermaid editor
+type: application
+version: 0.1.0
+appVersion: "0.1.0"
+keywords:
+  - ims
+  - lms
+  - nextjs
+  - documentation
+maintainers:
+  - name: Swedwise AB
+    email: jonas.kallin@gmail.com

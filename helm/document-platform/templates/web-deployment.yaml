@@ -1,0 +1,155 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "document-platform.fullname" . }}-web
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "document-platform.labels" . | nindent 4 }}
+    {{- include "document-platform.web.selectorLabels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.web.replicaCount }}
+  selector:
+    matchLabels:
+      {{- include "document-platform.web.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        {{- include "document-platform.web.selectorLabels" . | nindent 8 }}
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+    spec:
+      serviceAccountName: {{ include "document-platform.serviceAccountName" . }}
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.podSecurityContext }}
+      securityContext:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+
+      # ── Init container: populate content PVC from git on first install ──────
+      {{- if .Values.content.gitInit.enabled }}
+      initContainers:
+        - name: git-init
+          image: alpine/git:latest
+          command:
+            - sh
+            - -c
+            - |
+              set -e
+              TARGET="{{ .Values.content.mountPath }}/ims"
+              if [ -d "$TARGET" ]; then
+                echo "Content already present, skipping clone."
+                exit 0
+              fi
+              echo "Cloning repository..."
+              {{- if .Values.content.gitInit.sparsePath }}
+              git clone --depth=1 --filter=blob:none --sparse \
+                "{{ .Values.content.gitInit.repoUrl }}" /tmp/repo
+              cd /tmp/repo
+              git sparse-checkout set {{ .Values.content.gitInit.sparsePath }}
+              cp -r {{ .Values.content.gitInit.sparsePath }}/. {{ .Values.content.mountPath }}/
+              {{- else }}
+              git clone --depth=1 "{{ .Values.content.gitInit.repoUrl }}" /tmp/repo
+              cp -r /tmp/repo/content/. {{ .Values.content.mountPath }}/
+              {{- end }}
+              echo "Done."
+          volumeMounts:
+            - name: content
+              mountPath: {{ .Values.content.mountPath }}
+      {{- end }}
+
+      containers:
+        - name: web
+          {{- with .Values.securityContext }}
+          securityContext:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          image: "{{ .Values.image.web.repository }}:{{ .Values.image.web.tag }}"
+          imagePullPolicy: {{ .Values.image.web.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: 3000
+              protocol: TCP
+          env:
+            # Static env vars from values
+            {{- range $key, $val := .Values.web.env }}
+            - name: {{ $key }}
+              value: {{ $val | quote }}
+            {{- end }}
+            # Mermaid editor service URL (auto-derived from release name)
+            - name: MERMAID_EDITOR_URL
+              value: {{ include "document-platform.mermaidEditorUrl" . | quote }}
+            # NextAuth URL — default to ingress hostname if configured
+            - name: NEXTAUTH_URL
+              value: {{ if .Values.ingress.enabled -}}
+                       {{ printf "https://%s" .Values.ingress.hostname | quote }}
+                     {{- else -}}
+                       "http://localhost:3000"
+                     {{- end }}
+            # Secrets
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "document-platform.secretName" . }}
+                  key: DATABASE_URL
+            - name: NEXTAUTH_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "document-platform.secretName" . }}
+                  key: NEXTAUTH_SECRET
+            {{- if .Values.secrets.googleClientId }}
+            - name: GOOGLE_CLIENT_ID
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "document-platform.secretName" . }}
+                  key: GOOGLE_CLIENT_ID
+            - name: GOOGLE_CLIENT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "document-platform.secretName" . }}
+                  key: GOOGLE_CLIENT_SECRET
+            {{- end }}
+            # Extra env vars
+            {{- with .Values.web.extraEnv }}
+            {{- toYaml . | nindent 12 }}
+            {{- end }}
+          volumeMounts:
+            - name: content
+              mountPath: {{ .Values.content.mountPath }}
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+            initialDelaySeconds: 30
+            periodSeconds: 30
+            failureThreshold: 3
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+            initialDelaySeconds: 15
+            periodSeconds: 10
+          resources:
+            {{- toYaml .Values.web.resources | nindent 12 }}
+
+      volumes:
+        - name: content
+          persistentVolumeClaim:
+            claimName: {{ include "document-platform.fullname" . }}-content
+
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}

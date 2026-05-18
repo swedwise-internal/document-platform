@@ -5,6 +5,8 @@ import { STATUS_STYLES, CLASSIFICATION_STYLES, ISO_STANDARD_STYLES, DocumentStat
 import { TableOfContentsDrawer } from '@/components/TableOfContentsDrawer';
 import { RelatedDocuments } from '@/components/RelatedDocuments';
 import { PdfExportButton } from '@/components/PdfExportButton';
+import { MermaidInit } from '@/components/MermaidInit';
+import { MermaidEditor } from '@/components/MermaidEditor';
 
 export const dynamic = 'force-dynamic';
 
@@ -30,7 +32,8 @@ export default async function IMSDocumentPage({ params }: PageProps) {
     notFound();
   }
 
-  const { frontmatter, content, tableOfContents } = document;
+  const { frontmatter, content, tableOfContents, path: docPath } = document;
+  const contentFilePath = `ims/${docPath}`;
   const statusStyle = STATUS_STYLES[frontmatter.status as DocumentStatus];
   const classificationStyle = CLASSIFICATION_STYLES[frontmatter.classification as Classification];
   const hasRelatedDocs = frontmatter.related_documents && frontmatter.related_documents.length > 0;
@@ -38,6 +41,8 @@ export default async function IMSDocumentPage({ params }: PageProps) {
 
   return (
     <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <MermaidInit />
+      <MermaidEditor filePath={contentFilePath} />
       {/* Navigation bar */}
       <div className="mb-6 flex items-center justify-between">
         <Link href="/ims/documents" className="text-blue-600 hover:text-blue-800 text-sm">

@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "document-platform.fullname" . }}-mermaid
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "document-platform.labels" . | nindent 4 }}
+    {{- include "document-platform.mermaid.selectorLabels" . | nindent 4 }}
+spec:
+  type: {{ .Values.mermaid.service.type }}
+  ports:
+    - port: {{ .Values.mermaid.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "document-platform.mermaid.selectorLabels" . | nindent 4 }}

@@ -1,0 +1,132 @@
+# ── Images ────────────────────────────────────────────────────────────────────
+image:
+  web:
+    repository: ghcr.io/swedwise/document-platform-web
+    tag: latest
+    pullPolicy: IfNotPresent
+  mermaid:
+    repository: ghcr.io/swedwise/document-platform-mermaid
+    tag: latest
+    pullPolicy: IfNotPresent
+
+imagePullSecrets: []
+
+# ── Web application (Next.js) ──────────────────────────────────────────────────
+web:
+  replicaCount: 1
+
+  resources:
+    requests:
+      cpu: 200m
+      memory: 512Mi
+    limits:
+      cpu: 1000m
+      memory: 1Gi
+
+  service:
+    type: ClusterIP
+    port: 3000
+
+  # Environment variables injected into the web pod.
+  # DATABASE_URL and NEXTAUTH_SECRET are read from the secret (see below).
+  env:
+    NODE_ENV: production
+    NEXT_TELEMETRY_DISABLED: "1"
+    PUPPETEER_SKIP_DOWNLOAD: "true"
+    PUPPETEER_EXECUTABLE_PATH: /usr/bin/chromium
+    # Path where the content PVC is mounted
+    CONTENT_BASE_DIR: /content
+
+  # Extra env vars — add any overrides here, e.g. NEXTAUTH_URL
+  extraEnv: []
+  # - name: NEXTAUTH_URL
+  #   value: https://docs.example.com
+
+# ── Mermaid editor (nginx static) ─────────────────────────────────────────────
+mermaid:
+  replicaCount: 1
+
+  resources:
+    requests:
+      cpu: 50m
+      memory: 64Mi
+    limits:
+      cpu: 200m
+      memory: 128Mi
+
+  service:
+    type: ClusterIP
+    port: 8080
+
+# ── Content persistent volume ──────────────────────────────────────────────────
+content:
+  # Size of the PVC
+  size: 2Gi
+  # Leave empty to use the cluster default storage class
+  storageClassName: ""
+  # Access mode — use ReadWriteMany if you run multiple web replicas
+  accessMode: ReadWriteOnce
+  mountPath: /content
+
+  # Optional: populate the PVC on first install by cloning a git repo.
+  # Only clones if /content/ims does not already exist (idempotent).
+  gitInit:
+    enabled: false
+    # Full URL including credentials if needed, e.g.:
+    # https://token@github.com/org/repo.git
+    repoUrl: ""
+    # Sparse checkout path inside the repo that contains the content/ dir
+    # Set to "" to clone the full repo
+    sparsePath: "content"
+
+# ── Ingress ────────────────────────────────────────────────────────────────────
+ingress:
+  enabled: true
+  className: nginx
+  # Hostname for the platform
+  hostname: docs.example.com
+  # TLS — set enabled: true and provide a cert-manager clusterIssuer or
+  # an existing secret name.
+  tls:
+    enabled: false
+    secretName: ""
+    # cert-manager annotation — remove if not using cert-manager
+    certManagerIssuer: ""
+
+  annotations: {}
+  # kubernetes.io/ingress.class: nginx
+  # cert-manager.io/cluster-issuer: letsencrypt-prod
+
+# ── Secret values (CHANGE BEFORE DEPLOYING) ───────────────────────────────────
+# These are base64-encoded in the rendered secret.
+# You can also manage secrets externally (Vault, ESO) and set
+# existingSecret to your secret name — in that case these values are ignored.
+secrets:
+  existingSecret: ""
+
+  # Required: PostgreSQL connection string
+  databaseUrl: "postgresql://user:password@host:5432/document_platform"
+
+  # Required: random string, min 32 chars
+  # Generate: openssl rand -base64 32
+  nextauthSecret: "REPLACE_ME"
+
+  # Optional: OAuth providers
+  # googleClientId: ""
+  # googleClientSecret: ""
+
+# ── Service account ────────────────────────────────────────────────────────────
+serviceAccount:
+  create: true
+  name: ""
+  annotations: {}
+
+# ── Pod security ───────────────────────────────────────────────────────────────
+podAnnotations: {}
+podSecurityContext: {}
+securityContext: {}
+
+# ── Node placement ─────────────────────────────────────────────────────────────
+nodeSelector: {}
+tolerations: []
+affinity: {}

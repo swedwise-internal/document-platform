@@ -1,6 +1,20 @@
 import { AreaConfig, ContentArea } from '@/types/area';
 
 export const AREA_CONFIGS: Record<ContentArea, AreaConfig> = {
+  'operating-model': {
+    id: 'operating-model',
+    name: 'Operating Model',
+    tagline: 'Affärsmodell & Datamodell',
+    description: 'Servicekatalog, processer, datamodell och affärsobjekt',
+    icon: '⚙️',
+    href: '/operating-model',
+    color: {
+      bg: 'bg-violet-50',
+      border: 'border-violet-200',
+      text: 'text-violet-900',
+      accent: 'text-violet-600',
+    },
+  },
   ims: {
     id: 'ims',
     name: 'IMS',
@@ -36,5 +50,5 @@ export function getAreaConfig(area: ContentArea): AreaConfig {
 }
 
 export function isValidArea(area: string): area is ContentArea {
-  return area === 'ims' || area === 'saas';
+  return area === 'ims' || area === 'saas' || area === 'operating-model';
 }

@@ -8,7 +8,7 @@ export function AreaBreadcrumb() {
   const pathname = usePathname();
 
   // Extract area from pathname
-  const match = pathname.match(/^\/(ims|saas)/);
+  const match = pathname.match(/^\/(ims|saas|operating-model)/);
   if (!match) return null;
 
   const area = match[1];

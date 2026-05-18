@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ include "document-platform.fullname" . }}-content
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "document-platform.labels" . | nindent 4 }}
+  annotations:
+    # Retain the PVC if the release is deleted so content is not lost
+    helm.sh/resource-policy: keep
+spec:
+  accessModes:
+    - {{ .Values.content.accessMode }}
+  resources:
+    requests:
+      storage: {{ .Values.content.size }}
+  {{- if .Values.content.storageClassName }}
+  storageClassName: {{ .Values.content.storageClassName }}
+  {{- end }}

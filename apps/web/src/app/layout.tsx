@@ -3,6 +3,8 @@ import { Inter } from 'next/font/google';
 import Link from 'next/link';
 import { AreaNavigation } from '@/components/AreaNavigation';
 import { SearchBarCompact } from '@/components/SearchBar';
+import { AuthProvider } from '@/components/AuthProvider';
+import { UserMenu } from '@/components/UserMenu';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -20,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+      <AuthProvider>
         <div className="min-h-screen bg-slate-50 flex flex-col">
           {/* Header */}
           <header className="bg-white border-b border-slate-200 sticky top-0 z-50">
@@ -43,7 +46,7 @@ export default function RootLayout({
                 {/* Search and User menu */}
                 <div className="flex items-center gap-4">
                   <SearchBarCompact />
-                  <span className="text-sm text-slate-400">[User Login]</span>
+                  <UserMenu />
                 </div>
               </div>
             </div>
@@ -66,6 +69,7 @@ export default function RootLayout({
             </div>
           </footer>
         </div>
+      </AuthProvider>
       </body>
     </html>
   );

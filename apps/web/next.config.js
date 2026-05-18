@@ -1,20 +1,32 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Enable static exports if needed
-  // output: 'export',
+  // Standalone output bundles everything needed for container deployment
+  output: 'standalone',
 
-  // Disable strict mode for development (enable for production)
   reactStrictMode: true,
 
-  // Configure content directory access
   experimental: {
-    // Allow importing from outside src directory (for content)
+    // Ensure Prisma engine binaries are included in standalone trace
+    outputFileTracingIncludes: {
+      '/api/**': ['./node_modules/.prisma/**/*'],
+    },
   },
 
   // Custom webpack config for markdown processing
   webpack: (config) => {
     config.resolve.fallback = { fs: false, path: false };
     return config;
+  },
+
+  // Proxy mermaid-live-editor — configurable for Kubernetes service discovery
+  async rewrites() {
+    const mermaidUrl = process.env.MERMAID_EDITOR_URL || 'http://localhost:3001';
+    return [
+      {
+        source: '/editor/:path*',
+        destination: `${mermaidUrl}/:path*`,
+      },
+    ];
   },
 
   // Redirect old routes to new area-based routes

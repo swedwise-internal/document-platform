@@ -1,0 +1,34 @@
+Swedwise Document Platform has been deployed!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+{{- if .Values.ingress.enabled }}
+Platform URL:
+  {{ if .Values.ingress.tls.enabled }}https{{ else }}http{{ end }}://{{ .Values.ingress.hostname }}
+{{- else }}
+Access via port-forward:
+  kubectl port-forward -n {{ .Release.Namespace }} \
+    svc/{{ include "document-platform.fullname" . }}-web 3000:3000
+  Then open: http://localhost:3000
+{{- end }}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+IMPORTANT — run database migrations after install:
+
+  kubectl exec -n {{ .Release.Namespace }} \
+    deploy/{{ include "document-platform.fullname" . }}-web -- \
+    npx prisma migrate deploy
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CONTENT — copy your markdown files to the persistent volume:
+
+  # Option A: copy from local machine
+  kubectl cp content/ {{ .Release.Namespace }}/$(kubectl get pod -n {{ .Release.Namespace }} \
+    -l app.kubernetes.io/name={{ include "document-platform.name" . }}-web \
+    -o jsonpath='{.items[0].metadata.name}'):{{ .Values.content.mountPath }}/
+
+  # Option B: enable gitInit in values.yaml and redeploy
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

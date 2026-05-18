@@ -1,0 +1,12 @@
+{
+	"/": [
+		"src/routes/+layout.ts",
+		"src/routes/+layout.ts"
+	],
+	"/edit": [
+		"src/routes/+layout.ts"
+	],
+	"/view": [
+		"src/routes/+layout.ts"
+	]
+}

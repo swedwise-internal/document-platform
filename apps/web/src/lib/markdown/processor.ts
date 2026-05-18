@@ -19,6 +19,7 @@ import {
 } from '@/types/document';
 import { remarkDocLinks } from './plugins/remark-doc-links';
 import { rehypeDocLinks } from './plugins/rehype-doc-links';
+import { rehypeMermaid } from './plugins/rehype-mermaid';
 
 /**
  * Create the unified processor pipeline
@@ -31,6 +32,7 @@ function createProcessor() {
     .use(remarkDocLinks) // Convert document IDs to links (remark plugin)
     .use(remarkRehype, { allowDangerousHtml: true }) // Convert to hast
     .use(rehypeDocLinks) // Enhance document links with metadata (rehype plugin)
+    .use(rehypeMermaid) // Convert mermaid code blocks to div.mermaid for client-side rendering
     .use(rehypeSlug) // Add IDs to headings
     .use(rehypeAutolinkHeadings, { behavior: 'wrap' }) // Link headings
     .use(rehypeStringify, { allowDangerousHtml: true }); // Convert to HTML string

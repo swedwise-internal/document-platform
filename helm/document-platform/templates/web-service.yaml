@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "document-platform.fullname" . }}-web
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "document-platform.labels" . | nindent 4 }}
+    {{- include "document-platform.web.selectorLabels" . | nindent 4 }}
+spec:
+  type: {{ .Values.web.service.type }}
+  ports:
+    - port: {{ .Values.web.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "document-platform.web.selectorLabels" . | nindent 4 }}

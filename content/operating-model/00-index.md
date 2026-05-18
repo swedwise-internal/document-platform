@@ -1,0 +1,48 @@
+# Swedwise Operating Model – Dokumentation
+
+## Snabbnavigering
+- [Syfte & scope](01-purpose-scope.md)
+- [Principer & begreppslista](02-principles-glossary.md)
+- [Land → Use → Expand](03-land-expand.md)
+- Domäner:
+  - [CRM](04-domains/crm.md)
+  - [Commercial Package](04-domains/commercial.md)
+  - [Contracts](04-domains/contracts.md)
+  - [Delivery](04-domains/delivery.md)
+  - [Time](04-domains/time.md)
+  - [ERP](04-domains/erp.md)
+  - [Support](04-domains/support.md)
+  - [Catalog](04-domains/catalog.md)
+  - [Environments](04-domains/environments.md)
+  - [Licenses](04-domains/licenses.md)
+  - [Initiatives](04-domains/initiatives.md)
+  - [Work Items](04-domains/work-items.md)
+  - [Customer Health](04-domains/customer-health.md)
+  - [ISO/GRC](07-iso-grc/overview.md)
+- KPI:
+  - [KPI-katalog](05-kpis/kpi-catalog.md)
+  - [Land](05-kpis/land.md) • [Onboard](05-kpis/onboard.md) • [Use](05-kpis/use.md) • [Expand](05-kpis/expand.md)
+  - [Board view](05-kpis/board-view.md)
+- Playbooks:
+  - [Customer Program](06-playbooks/customer-program.md)
+  - [Tidsregistrering & fakturering](06-playbooks/time-and-billing.md)
+  - [Delivery templates](06-playbooks/delivery-templates.md)
+  - [Support ops](06-playbooks/support-ops.md)
+  - [ISO ops](06-playbooks/iso-ops.md)
+- Objekt & relationer:
+  - [Affärsobjekt – komplett överblick](09-objects.md)
+  - [Relationsflöde: Sälja → Leverera](10-object-relations-sell-to-deliver.md)
+- Service Catalog:
+  - [Översikt](11-service-catalog/00-overview.md)
+  - [Consulting](11-service-catalog/consulting.md) • [Support](11-service-catalog/support.md) • [License](11-service-catalog/license.md)
+  - [Managed Services](11-service-catalog/managed-services.md) • [SaaS](11-service-catalog/saas.md) • [Training](11-service-catalog/training.md)
+  - [Mall för ny tjänst](11-service-catalog/_template.md)
+- Processer (Mermaid-diagram):
+  - [Översikt](12-processes/00-overview.md)
+  - [Deal → Kontrakt](12-processes/01-deal-to-contract.md)
+  - [Kontrakt → Leverans](12-processes/02-contract-to-delivery.md)
+  - [Leverans → Faktura](12-processes/03-delivery-to-invoice.md)
+  - [Support-flöde](12-processes/04-support-flow.md)
+  - [Objektlivscykler](12-processes/05-object-lifecycles.md)
+- Data contracts (minimikrav per domän):
+  - [Översikt](08-data-contracts/overview.md)

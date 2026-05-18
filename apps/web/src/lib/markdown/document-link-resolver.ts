@@ -130,6 +130,8 @@ export function getDocumentTypeClass(docType: DocumentType): string {
     role: 'doc-link-role',
     form: 'doc-link-form',
     training: 'doc-link-training',
+    contract: 'doc-link-contract',
+    'service-component': 'doc-link-service-component',
   };
 
   return typeClasses[docType] || 'doc-link-default';
