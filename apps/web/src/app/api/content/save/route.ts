@@ -24,16 +24,35 @@ async function gitCommit(
   userName: string,
   userEmail: string,
   message: string
-): Promise<void> {
+): Promise<boolean> {
   const rel = path.relative(root, filePath);
   const gitConfig = ['-c', `user.name=${userName}`, '-c', `user.email=${userEmail}`];
   await execFileAsync('git', [...gitConfig, 'add', rel], { cwd: root });
+
+  try {
+    await execFileAsync('git', ['diff', '--cached', '--quiet'], { cwd: root });
+    return false;
+  } catch {
+    // git diff --quiet exits 1 when there are staged changes.
+  }
+
   await execFileAsync('git', [...gitConfig, 'commit', '-m', message], { cwd: root });
+  return true;
+}
+
+async function gitPush(root: string): Promise<void> {
+  await execFileAsync('git', ['push'], { cwd: root });
+}
+
+function canEditContent(role?: string): boolean {
+  return ['ADMIN', 'IMS_OWNER', 'QUALITY_LEAD', 'CISO'].includes(role ?? '');
 }
 
 export async function POST(req: NextRequest) {
   const session = await getServerSession(authOptions);
   if (!session) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  const role = (session.user as { role?: string } | undefined)?.role;
+  if (!canEditContent(role)) return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
 
   let body: { area?: string; slug?: string; content?: string; newPath?: string };
   try {
@@ -86,17 +105,21 @@ export async function POST(req: NextRequest) {
 
   // Best-effort git commit
   let committed = false;
+  let pushed = false;
   try {
     if (await isGitRepo(root)) {
       const userName = session.user?.name ?? session.user?.email ?? 'Unknown';
       const userEmail = session.user?.email ?? 'noreply@swedwise.se';
       const message = isNew ? `docs: create ${slug}` : `docs: update ${slug}`;
-      await gitCommit(root, filePath, userName, userEmail, message);
-      committed = true;
+      committed = await gitCommit(root, filePath, userName, userEmail, message);
+      if (committed) {
+        await gitPush(root);
+        pushed = true;
+      }
     }
   } catch (err) {
-    console.warn('git commit skipped:', (err as Error).message);
+    console.warn('git commit/push skipped:', (err as Error).message);
   }
 
-  return NextResponse.json({ ok: true, committed, slug, viewUrl: docViewUrl });
+  return NextResponse.json({ ok: true, committed, pushed, slug, viewUrl: docViewUrl });
 }

@@ -1,21 +1,15 @@
-# ── Stage 1: install dependencies ────────────────────────────────────────────
-FROM node:20-slim AS deps
+# ── Stage 1: build ────────────────────────────────────────────────────────────
+FROM node:20-slim AS builder
 WORKDIR /app
+ENV PUPPETEER_SKIP_DOWNLOAD=true
 
 # Chromium needed at build time for Puppeteer (optional, avoids CI download)
 RUN apt-get update && apt-get install -y --no-install-recommends \
     chromium \
     && rm -rf /var/lib/apt/lists/*
 
-COPY package*.json ./
-RUN npm ci
-
-# ── Stage 2: build ────────────────────────────────────────────────────────────
-FROM deps AS builder
-WORKDIR /app
-
-COPY --from=deps /app/node_modules ./node_modules
 COPY . .
+RUN npm ci
 
 # Generate Prisma client for linux (target platform)
 RUN npx prisma generate
@@ -26,7 +20,7 @@ ENV PUPPETEER_SKIP_DOWNLOAD=true
 RUN mkdir -p public
 RUN npm run build
 
-# ── Stage 3: production runtime ───────────────────────────────────────────────
+# ── Stage 2: production runtime ───────────────────────────────────────────────
 FROM node:20-slim AS runner
 WORKDIR /app
 

@@ -7,9 +7,7 @@ RUN corepack enable pnpm
 
 WORKDIR /app
 
-COPY ./package.json .
-COPY ./pnpm-lock.yaml .
-
+COPY . ./
 RUN pnpm install
 
 FROM mermaid-live-editor-dependencies AS mermaid-live-editor-builder
@@ -19,8 +17,6 @@ ARG MERMAID_KROKI_RENDERER_URL
 ARG MERMAID_ANALYTICS_URL
 ARG MERMAID_DOMAIN
 ARG MERMAID_IS_ENABLED_MERMAID_CHART_LINKS
-
-COPY . ./
 
 RUN pnpm build
 
