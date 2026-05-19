@@ -3,6 +3,7 @@
  *
  * Usage:
  *   node scripts/create-admin.mjs <email> <password> [name]
+ *   ADMIN_EMAIL=<email> ADMIN_PASSWORD=<password> ADMIN_NAME=<name> node scripts/create-admin.mjs
  *
  * Example:
  *   node scripts/create-admin.mjs jonas@swedwise.se mitt-lösenord "Jonas Kallin"
@@ -23,10 +24,14 @@ const require = createRequire(import.meta.url);
 const { PrismaClient } = require('@prisma/client');
 const bcrypt = require('bcryptjs');
 
-const [,, email, password, name] = process.argv;
+const [,, emailArg, passwordArg, nameArg] = process.argv;
+const email = emailArg ?? process.env.ADMIN_EMAIL;
+const password = passwordArg ?? process.env.ADMIN_PASSWORD;
+const name = nameArg ?? process.env.ADMIN_NAME;
 
 if (!email || !password) {
   console.error('Usage: node scripts/create-admin.mjs <email> <password> [name]');
+  console.error('   or: ADMIN_EMAIL=<email> ADMIN_PASSWORD=<password> ADMIN_NAME=<name> node scripts/create-admin.mjs');
   process.exit(1);
 }
 

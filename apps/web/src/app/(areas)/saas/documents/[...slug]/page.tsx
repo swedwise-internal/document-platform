@@ -5,6 +5,7 @@ import { STATUS_STYLES, CLASSIFICATION_STYLES, ISO_STANDARD_STYLES, DocumentStat
 import { TableOfContentsDrawer } from '@/components/TableOfContentsDrawer';
 import { RelatedDocuments } from '@/components/RelatedDocuments';
 import { PdfExportButton } from '@/components/PdfExportButton';
+import { EditDocumentButton } from '@/components/EditDocumentButton';
 import { MermaidInit } from '@/components/MermaidInit';
 import { MermaidEditor } from '@/components/MermaidEditor';
 
@@ -48,11 +49,14 @@ export default async function SaaSDocumentPage({ params }: PageProps) {
         <Link href="/saas/documents" className="text-emerald-600 hover:text-emerald-800 text-sm">
           ← Back to SaaS Documents
         </Link>
-        <PdfExportButton
-          slug={slugPath}
-          area="saas"
-          documentId={frontmatter.document_id}
-        />
+        <div className="flex items-center gap-2">
+          <EditDocumentButton area="saas" slug={slugPath} />
+          <PdfExportButton
+            slug={slugPath}
+            area="saas"
+            documentId={frontmatter.document_id}
+          />
+        </div>
       </div>
 
       <div className="lg:grid lg:grid-cols-12 lg:gap-6">

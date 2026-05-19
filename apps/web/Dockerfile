@@ -38,6 +38,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libatk-bridge2.0-0 \
     libgtk-3-0 \
     libxss1 \
+    git \
     && rm -rf /var/lib/apt/lists/*
 
 ENV NODE_ENV=production
@@ -59,6 +60,7 @@ COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 # Prisma query engine binaries (not always traced automatically)
 COPY --from=builder --chown=nextjs:nodejs /app/node_modules/.prisma ./node_modules/.prisma
 COPY --from=builder --chown=nextjs:nodejs /app/prisma ./prisma
+COPY --from=builder --chown=nextjs:nodejs /app/scripts ./scripts
 
 USER nextjs
 

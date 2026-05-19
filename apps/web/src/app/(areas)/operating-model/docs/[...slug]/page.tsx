@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { loadOmDocumentBySlug } from '@/lib/markdown/om-loader';
 import { TableOfContentsDrawer } from '@/components/TableOfContentsDrawer';
+import { EditDocumentButton } from '@/components/EditDocumentButton';
 import { MermaidInit } from '@/components/MermaidInit';
 import { MermaidEditor } from '@/components/MermaidEditor';
 
@@ -25,13 +26,14 @@ export default async function OperatingModelDocPage({ params }: PageProps) {
       <MermaidInit />
       <MermaidEditor filePath={`operating-model/${doc.path}`} />
 
-      <div className="mb-6">
+      <div className="mb-6 flex items-center justify-between">
         <Link
           href="/operating-model"
           className="text-violet-600 hover:text-violet-800 text-sm"
         >
           ← Tillbaka till Operating Model
         </Link>
+        <EditDocumentButton area="operating-model" slug={slugPath} />
       </div>
 
       <div className="lg:grid lg:grid-cols-12 lg:gap-6">

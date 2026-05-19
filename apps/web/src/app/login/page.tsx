@@ -1,10 +1,18 @@
 'use client';
 
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
 import { signIn } from 'next-auth/react';
 import { useRouter, useSearchParams } from 'next/navigation';
 
 export default function LoginPage() {
+  return (
+    <Suspense fallback={<LoginShell />}>
+      <LoginForm />
+    </Suspense>
+  );
+}
+
+function LoginForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const callbackUrl = searchParams.get('callbackUrl') ?? '/';
@@ -116,6 +124,22 @@ export default function LoginPage() {
         <p className="text-center text-xs text-slate-400 mt-6">
           Kontakta din systemadministratör för åtkomst.
         </p>
+      </div>
+    </div>
+  );
+}
+
+function LoginShell() {
+  return (
+    <div className="min-h-screen bg-slate-50 flex items-center justify-center px-4">
+      <div className="w-full max-w-sm">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center justify-center w-12 h-12 bg-sky-600 rounded-xl mb-4">
+            <span className="text-white font-bold text-lg">SW</span>
+          </div>
+          <h1 className="text-2xl font-semibold text-slate-900">Swedwise</h1>
+          <p className="text-sm text-slate-500 mt-1">Documentation Platform</p>
+        </div>
       </div>
     </div>
   );

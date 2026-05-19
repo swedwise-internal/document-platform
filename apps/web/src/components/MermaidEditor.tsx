@@ -87,8 +87,8 @@ export function MermaidEditor({ filePath }: MermaidEditorProps) {
   if (!editRequest) return null;
 
   const hash = encodeState(editRequest.code);
-  // Point directly to the mermaid-editor dev server to avoid asset proxy issues
-  const editorUrl = `http://localhost:3001/edit?embedded#${hash}`;
+  // Route through the /editor proxy (configured in next.config.js → MERMAID_EDITOR_URL)
+  const editorUrl = `/editor/edit?embedded#${hash}`;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
