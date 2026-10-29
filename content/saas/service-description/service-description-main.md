@@ -2,7 +2,7 @@
 document_id: SW-SAAS-SVC-001
 title: Swedwise SaaS Platform - Service Description
 doc_type: service-description
-version: "1.0"
+version: "1.1"
 status: draft
 classification: confidential
 owner: SaaS Service Manager
@@ -21,7 +21,7 @@ related_documents:
 
 **Service Provider:** Swedwise AB
 **Date:** 2025-01-01
-**Version:** 1.0
+**Version:** 1.1
 **Classification:** Confidential
 
 ---
@@ -838,8 +838,10 @@ Karlstad, Sweden
 
 ### 12.3. Legal and Compliance
 
-**Data Protection Officer (DPO):**
-Email: dpo@swedwise.com
+**Data protection contact (Privacy Lead):**
+Email: [to confirm: privacy contact address]
+
+Swedwise has not designated a Data Protection Officer under GDPR Article 37; it is not required. Data protection is held by the Privacy Lead.
 
 **Legal Inquiries:**
 Email: legal@swedwise.com
@@ -856,6 +858,7 @@ Email: compliance@swedwise.com
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | 2025-01-01 | SaaS Service Manager | Initial version - Platform foundation document |
+| 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Data Protection Officer contact replaced by the Privacy Lead; no DPO designated (not required) |
 
 ### 13.2. Review and Approval
 

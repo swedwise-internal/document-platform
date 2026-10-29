@@ -260,7 +260,7 @@ The Privacy Lead is accountable for data protection:
 - Maintain records of processing activities
 - Own the content of data protection training
 
-The Privacy Lead is not a Data Protection Officer under GDPR Articles 37–39. Swedwise's assessment is that a DPO is not mandatory [to confirm: the assessment is recorded in SW-IMS-PRO-013 and re-assessed yearly]; if that changes, an external DPO is designated.
+The Privacy Lead is not a Data Protection Officer under GDPR Articles 37–39. A DPO is not mandatory for Swedwise (decided by the owner 2026-10-29: «Vi måste inte ha ombud» (we do not have to have a DPO)); the assessment is recorded in SW-IMS-PRO-013 and re-assessed yearly, and if it changes an external DPO is designated. The CFO is the Privacy Lead's stand-in.
 
 ### 6.3a Chief Information Security Officer (CISO)
 

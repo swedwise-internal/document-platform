@@ -27,6 +27,7 @@ related_documents:
 **Review Date**: [TBD]
 **Held by**: CEO
 **Reports to**: The board
+**Stand-in**: CFO
 **Current Assignment**: [TBD - the person who holds the CEO job, confirmed by management]
 
 ## Role Summary
@@ -44,9 +45,9 @@ that decides the purposes and means of processing; a member of management cannot
 
 - **Assessment against Article 37:** Swedwise is not a public authority, and its core activities are neither
   large-scale regular and systematic monitoring of individuals nor large-scale processing of special categories of
-  data. Swedwise is therefore not required to designate a DPO. [to confirm: the assessment is recorded in the
+  data. Swedwise is therefore not required to designate a DPO (decided by the owner 2026-10-29: «Vi måste inte ha ombud» (we do not have to have a DPO)). The assessment is recorded in the
   compliance obligation register (SW-IMS-PRO-013) and re-assessed yearly and whenever a new service or customer
-  assignment changes the processing.]
+  assignment changes the processing.
 - **If the assessment changes:** Swedwise designates an external DPO, who reports to the CEO and is published as the
   contact point. The Privacy Lead remains the internal owner of data protection.
 
@@ -109,7 +110,7 @@ The Privacy Lead has authority to:
 |---|---|---|
 | **CISO** (COO, proposed) | Security of personal data, access control, breach assessment | Monthly and at every breach |
 | **HR / People & Culture** | Employee and candidate data, HR systems | Quarterly |
-| **CFO** | Data processing agreements with ordinary suppliers; payroll and finance data | As needed |
+| **CFO** (stand-in) | Data processing agreements with ordinary suppliers; payroll and finance data; stand-in during absence | Quarterly and during absence |
 | **CCO** | Customer and partner contracts; marketing and CRM data | As needed |
 | **CSO** | Customers' personal data in consulting assignments | As needed |
 | **Risk Manager** | Privacy risks in the risk register | Quarterly |
@@ -127,15 +128,15 @@ The Privacy Lead has authority to:
 
 ## Delegation and Backup
 
-During planned absence the Privacy Lead names a stand-in from management **other than the CISO**. Breach decisions
-cannot wait: the stand-in decides on notification within the 72 hours. [to confirm: the named stand-in job.]
+The **CFO** is the Privacy Lead's stand-in (owner 2026-10-29) and takes over during absence, including the decision on
+breach notifications within the 72 hours. The stand-in is never the CISO.
 
 ## Document Control
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | [TBD] | [Author] | Initial release (as Data Protection Officer) |
-| 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Role changed from Data Protection Officer to Privacy Lead (Dataskyddsansvarig), held by the CEO; not a GDPR DPO, with the Article 37 assessment to confirm; never held by the same person as the CISO (owner 2026-10-29) |
+| 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Role changed from Data Protection Officer to Privacy Lead (Dataskyddsansvarig), held by the CEO; not a GDPR DPO (no DPO required, owner 2026-10-29); CFO as stand-in; never held by the same person as the CISO (owner 2026-10-29) |
 
 ---
 

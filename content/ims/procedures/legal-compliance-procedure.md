@@ -412,7 +412,7 @@ The **Compliance Obligation Register** is a centralized list of all compliance o
 5. **Records of Processing Activities**: Maintain register of all personal data processing
 6. **Data Protection by Design and Default**: Build privacy into systems and processes
 7. **Data Processing Agreements**: With third-party processors (e.g., Entiros AB, Microsoft)
-8. **Data Protection Officer (DPO)**: Swedwise's assessment is that a DPO is not mandatory (not a public authority; no large-scale monitoring or large-scale special-category processing as core activity) [to confirm]. Data protection is held by the Privacy Lead (SW-IMS-ROLE-006). If the assessment changes, an external DPO is designated.
+8. **Data Protection Officer (DPO)**: Swedwise's assessment is that a DPO is not mandatory (not a public authority; no large-scale monitoring or large-scale special-category processing as core activity), decided by the owner 2026-10-29: «Vi måste inte ha ombud» (we do not have to have a DPO). Data protection is held by the Privacy Lead (SW-IMS-ROLE-006). If the assessment changes, an external DPO is designated.
 
 **Compliance Actions**:
 - Maintain **Records of Processing Activities** (ROPA) - document all personal data processing

@@ -808,8 +808,9 @@ Roles marked *proposed* are not yet decided by top management. One job can hold 
 
 **Held by**: CEO
 **Reports to**: The board
+**Stand-in**: CFO
 
-**Note**: The Privacy Lead is not a Data Protection Officer under GDPR Articles 37–39. Swedwise's assessment is that a DPO is not mandatory [to confirm: assessment recorded in SW-IMS-PRO-013]; if that changes, an external DPO is designated. The Privacy Lead and the CISO are never held by the same person.
+**Note**: The Privacy Lead is not a Data Protection Officer under GDPR Articles 37–39. A DPO is not mandatory for Swedwise (decided by the owner 2026-10-29: «Vi måste inte ha ombud» (we do not have to have a DPO)); the assessment is recorded in SW-IMS-PRO-013 and re-assessed yearly, and if it changes an external DPO is designated. Stand-in: CFO. The Privacy Lead and the CISO are never held by the same person.
 
 **Responsibilities**:
 - Own the data protection policy and the records of processing activities
