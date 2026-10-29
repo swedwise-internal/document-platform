@@ -2,7 +2,7 @@
 document_id: SW-IMS-ROLE-009
 title: Employee IMS Responsibilities
 doc_type: role
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: IMS Owner
@@ -20,7 +20,7 @@ related_documents:
 
 # Role: Employee IMS Responsibilities
 
-**Document ID**: SW-IMS-ROLE-009-v1.0
+**Document ID**: SW-IMS-ROLE-009-v1.1
 **Effective Date**: [TBD]
 **Review Date**: [TBD]
 **Applies to**: All Swedwise employees, contractors, and consultants
@@ -387,7 +387,7 @@ Every Swedwise employee is expected to:
 - **CISO**: Information security questions or incidents
 - **Quality Lead**: Quality or customer satisfaction issues
 - **Environmental Lead**: Environmental questions or incidents
-- **DPO**: Personal data or GDPR questions
+- **Privacy Lead**: Personal data or GDPR questions
 - **HR**: Personnel or employment-related questions
 
 **What this means in practice**:
@@ -499,6 +499,7 @@ Upon receiving this role description during onboarding or following updates, emp
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | [TBD] | [Author] | Initial release |
+| 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Data Protection Officer replaced by the Privacy Lead (SW-IMS-ROLE-006, held by the CEO; never the same person as the CISO) |
 
 ---
 
@@ -532,6 +533,6 @@ Upon receiving this role description during onboarding or following updates, emp
 - **CISO**: [TBD]
 - **Quality Lead**: [TBD]
 - **Environmental Lead**: [TBD]
-- **DPO**: [TBD]
+- **Privacy Lead**: [TBD]
 
 **Emergency Security Incidents**: Call CISO immediately at [TBD]

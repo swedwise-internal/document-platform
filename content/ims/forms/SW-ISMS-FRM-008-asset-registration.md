@@ -2,7 +2,7 @@
 document_id: SW-ISMS-FRM-008
 title: Asset Registration Form
 doc_type: form
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: CISO
@@ -125,7 +125,7 @@ This form is used to register new information assets in Swedwise's asset invento
 If Yes, specify:
 - ☐ Personal data (names, addresses, etc.)
 - ☐ Sensitive personal data (health, financial, etc.)
-- ☐ Special category data (requires DPO review)
+- ☐ Special category data (requires Privacy Lead review)
 
 ---
 
@@ -468,6 +468,7 @@ Asset registration reviewed and approved:
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | | | Initial registration |
+| 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Data Protection Officer replaced by the Privacy Lead (SW-IMS-ROLE-006, held by the CEO; never the same person as the CISO) |
 
 ---
 

@@ -300,7 +300,7 @@ A comprehensive PESTLE analysis is conducted annually (see SW-IMS-PRO-011). Key 
 
 | Regulation | Impact | Compliance Approach |
 |-----------|--------|---------------------|
-| **GDPR** | High - All customer and employee data processing | ISMS controls, Data Protection Policy, DPO, privacy by design |
+| **GDPR** | High - All customer and employee data processing | ISMS controls, Data Protection Policy, Privacy Lead, privacy by design |
 | **Public Procurement Act** | High - Required for public sector tenders | ISO certifications, quality and environmental documentation |
 | **NIS2 (Swedish implementation)** | [to confirm] - directly, or through customers' supplier requirements | ISMS controls; supplier security clauses in customer contracts |
 | **EU AI Act** | [to confirm] - depends on the role per AI use | AI use inventory [to confirm: owner], see the ISO/IEC 42001 proposal in 4.1.5 |
@@ -851,7 +851,7 @@ The IMS is not a separate "compliance system" but is integrated with business st
 | Version | Date | Author | Changes | Approved By |
 |---------|------|--------|---------|-------------|
 | 1.0 | [TBD] | IMS Owner | Initial creation for ISO certification | [TBD] |
-| 1.1 | 2026-10-29 | IMS Owner (COO) | Company profile updated (~60 employees, current units, offices, Nexta Hub and Matrix); scope re-read against the current business; standard editions set (ISO 9001:2026, ISO 14001:2026, ISO/IEC 27001:2022 + Amd 1:2024) with transition note; ISO/IEC 42001 proposed, not decided; process model rewritten from the process register (26 processes, three groups, owners as jobs, procedure ids, interaction table); SW-IMS-REG-006 created. Open points marked [to confirm]. | [TBD] |
+| 1.1 | 2026-10-29 | IMS Owner (COO) | Company profile updated (~60 employees, current units, offices, Nexta Hub and Matrix); scope re-read against the current business; standard editions set (ISO 9001:2026, ISO 14001:2026, ISO/IEC 27001:2022 + Amd 1:2024) with transition note; ISO/IEC 42001 proposed, not decided; process model rewritten from the process register (26 processes, three groups, owners as jobs, procedure ids, interaction table); SW-IMS-REG-006 created. Open points marked [to confirm].; Data Protection Officer replaced by the Privacy Lead (SW-IMS-ROLE-006, held by the CEO; never the same person as the CISO) | [TBD] |
 
 ### 7.3 Approval
 

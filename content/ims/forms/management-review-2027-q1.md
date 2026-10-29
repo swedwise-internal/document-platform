@@ -2,7 +2,7 @@
 document_id: SW-IMS-REC-001
 title: Management Review 2027 Q1 (draft pack)
 doc_type: form
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: IMS Owner
@@ -26,7 +26,7 @@ related_documents:
 
 # Management Review 2027 Q1 — Draft Pack
 
-**Document ID**: SW-IMS-REC-001-v1.0
+**Document ID**: SW-IMS-REC-001-v1.1
 **Review ID**: MR-2027-Q1
 **Effective Date**: [TBD]
 **Owner**: IMS Owner (COO)
@@ -87,7 +87,7 @@ SW-IMS-FRM-006 with an owner job and a due date.
 | ID | Decision | Proposal | Action owner (job) if decided |
 |---|---|---|---|
 | D-01 | **Approve the IMS documents**, all at once or in stages | Approve in stages: first the IMS policy, the manual (clauses 4–10) and the eight procedures the system cannot run without (document control, risk assessment, internal audit, management review, nonconformity, monitoring and measurement, competence, communication); the rest by the Q2 review. Each approval sets effective and review dates | COO (IMS Owner) |
-| D-02 | **Appoint IMS roles to named people**, recorded in the manual (SW-IMS-MAN-005) and the role descriptions | Confirm the jobs settled 2026-10-29: IMS Owner = COO; Quality Lead = Head of PMO & CI; Environmental Lead = CFO; Service Delivery Manager, Customer Success Lead, Resource Management Lead = CSO; Customer Acquisition and Customer Development Lead = CCO; IT Manager = COO; HR Lead = HR / People & Culture; continual improvement = Head of PMO & CI. **Decide** the two that are only proposed: CISO = COO, and communication owner = CEO. Then name the person in each job. Also decide whether DPO and Risk Manager (role descriptions exist) are needed, and who holds them | CEO |
+| D-02 | **Appoint IMS roles to named people**, recorded in the manual (SW-IMS-MAN-005) and the role descriptions | Confirm the jobs settled 2026-10-29: IMS Owner = COO; Quality Lead = Head of PMO & CI; Environmental Lead = CFO; Service Delivery Manager, Customer Success Lead, Resource Management Lead = CSO; Customer Acquisition and Customer Development Lead = CCO; IT Manager = COO; HR Lead = HR / People & Culture; continual improvement = Head of PMO & CI. **Decide** the two that are only proposed: CISO = COO, and communication owner = CEO. Then name the person in each job. Confirm the Privacy Lead = CEO (not a GDPR DPO; never the same person as the CISO) and the Article 37 assessment; decide who holds the Risk Manager role | CEO |
 | D-03 | **Confirm the scope** of the IMS (SW-IMS-MAN-004 4.3) | Re-read against today's company: units, offices [to confirm], services sold (consulting, licences, support, and which SaaS services, if any), hosting partners, and the 2026 editions of ISO 9001 and 14001. Decide which standards to certify against and in which order | COO |
 | D-04 | **Update the organisation in the manual** | Replace the 2025 organisation chart in SW-IMS-MAN-005 with the 2026 units and jobs from CompanyIT `organisation.toml` | COO |
 | D-05 | **One owner for communication** | CEO (proposed in session), instead of "the management team" | CEO |
@@ -135,6 +135,7 @@ SW-IMS-FRM-006 with an owner job and a due date.
 | Version | Date | Author | Changes |
 |---|---|---|---|
 | 1.0 | 2026-10-29 | IMS Owner (drafted in session) | First draft pack for MR-2027-Q1 |
+| 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Data Protection Officer replaced by the Privacy Lead (SW-IMS-ROLE-006, held by the CEO; never the same person as the CISO) |
 
 ---
 

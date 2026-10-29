@@ -2,7 +2,7 @@
 document_id: SW-IMS-MAN-001
 title: IMS Manual - Introduction and Overview
 doc_type: ims-manual
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: CEO
@@ -440,7 +440,8 @@ This IMS Manual is based on the following international standards:
 | **SLA** | Service Level Agreement |
 | **CISO** | Chief Information Security Officer |
 | **CEO** | Chief Executive Officer |
-| **DPO** | Data Protection Officer |
+| **DPO** | Data Protection Officer (GDPR Articles 37–39; Swedwise has not designated one) |
+| **Privacy Lead** | Dataskyddsansvarig: the role accountable for data protection (SW-IMS-ROLE-006) |
 | **PDCA** | Plan-Do-Check-Act (continuous improvement cycle) |
 | **KPI** | Key Performance Indicator |
 | **PESTLE** | Political, Economic, Social, Technological, Legal, Environmental (analysis framework) |
@@ -468,6 +469,7 @@ This IMS Manual is based on the following international standards:
 | Version | Date | Author | Changes | Approved By |
 |---------|------|--------|---------|-------------|
 | 1.0 | [TBD] | [IMS Owner name] | Initial creation for ISO certification | [CEO name] |
+| 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Data Protection Officer replaced by the Privacy Lead (SW-IMS-ROLE-006, held by the CEO; never the same person as the CISO) | [TBD] |
 
 ### 6.3 Distribution
 

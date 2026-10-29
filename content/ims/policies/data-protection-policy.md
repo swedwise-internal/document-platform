@@ -2,10 +2,10 @@
 document_id: SW-ISMS-POL-004
 title: Data Protection Policy
 doc_type: policy
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
-owner: CISO
+owner: Privacy Lead
 effective_date: "[TBD]"
 review_date: "[TBD]"
 standard:
@@ -246,22 +246,27 @@ When processing personal data on behalf of customers (SaaS platform operations):
 - Return or delete data at end of service contract
 - Maintain records of processing activities
 
-### 6.3 Chief Information Security Officer (CISO)
+### 6.3 Privacy Lead (Dataskyddsansvarig)
 
-**Assigned to**: [TBD - Name]
+**Held by**: CEO (SW-IMS-ROLE-006)
 
-The CISO serves as **Data Protection Officer (DPO)** function:
+The Privacy Lead is accountable for data protection:
 
 - Inform and advise on data protection obligations
 - Monitor compliance with GDPR and this policy
-- Provide advice on data protection impact assessments
-- Cooperate with supervisory authority (IMY)
-- Act as contact point for IMY and data subjects
-- Coordinate data breach response and notifications
+- Decide on and approve data protection impact assessments
+- Cooperate with the supervisory authority (IMY) and act as contact point for IMY and data subjects
+- Decide on personal data breach notifications, after assessment with the CISO
 - Maintain records of processing activities
-- Oversee data protection training
+- Own the content of data protection training
 
-Note: Formal DPO designation required if processing meets GDPR criteria. [TBD - assess if formal DPO appointment needed]
+The Privacy Lead is not a Data Protection Officer under GDPR Articles 37–39. Swedwise's assessment is that a DPO is not mandatory [to confirm: the assessment is recorded in SW-IMS-PRO-013 and re-assessed yearly]; if that changes, an external DPO is designated.
+
+### 6.3a Chief Information Security Officer (CISO)
+
+**Held by**: COO (proposed) (SW-ISMS-ROLE-001)
+
+The CISO protects personal data as information: security controls, access, and the technical assessment of breaches. **The CISO and the Privacy Lead are never the same person.**
 
 ### 6.4 Management Team
 
@@ -296,7 +301,7 @@ Note: Formal DPO designation required if processing meets GDPR criteria. [TBD - 
 Privacy notices inform individuals about data processing and must include:
 
 - Identity and contact details of controller (Swedwise)
-- Contact details of DPO/CISO
+- Contact details of the Privacy Lead
 - Purposes and legal basis for processing
 - Categories of personal data processed
 - Recipients or categories of recipients
@@ -622,7 +627,7 @@ A breach of security leading to accidental or unlawful destruction, loss, altera
 
 **Report Contents:**
 - Nature of breach (categories and approximate numbers affected)
-- Contact point (DPO/CISO)
+- Contact point (the Privacy Lead)
 - Likely consequences
 - Measures taken or proposed to address breach
 
@@ -789,7 +794,8 @@ Data protection performance reviewed in management reviews:
 ## 16. Contact Information
 
 **Data Protection Queries:**
-- CISO / Data Protection Officer: [TBD - email and phone]
+- Privacy Lead: [to confirm: privacy contact address]
+- CISO: [TBD - email and phone]
 
 **Data Subject Rights Requests:**
 - Email: [TBD - privacy@swedwise.se]
@@ -810,6 +816,7 @@ Data protection performance reviewed in management reviews:
 | Version | Date | Author | Changes | Approved By |
 |---------|------|--------|---------|-------------|
 | 1.0 | [TBD] | [TBD - CISO name] | Initial policy creation | [TBD - CEO name] |
+| 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Data Protection Officer replaced by the Privacy Lead (SW-IMS-ROLE-006, held by the CEO; never the same person as the CISO) | [TBD] |
 
 **Next Review Date**: [TBD - typically 12 months from effective date]
 

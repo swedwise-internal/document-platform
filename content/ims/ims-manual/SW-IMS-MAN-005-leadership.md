@@ -440,12 +440,12 @@ Management team: CEO, COO, CFO, CSO, CCO
 | Communication (process owner) | CEO (proposed) | — | — |
 | Department Manager (unit head) | COO, CFO, CSO, CCO for their unit | Each unit | SW-IMS-ROLE-008 |
 | Internal Auditor | Designated, trained employees | Any unit | SW-IMS-ROLE-002 |
-| Data Protection Officer | [to confirm: which job holds the DPO role, or whether a DPO is required] | — | SW-IMS-ROLE-006 |
+| Privacy Lead (Dataskyddsansvarig; not a GDPR DPO) | CEO | — | SW-IMS-ROLE-006 |
 | Risk Manager | [to confirm: which job holds the Risk Manager role] | — | SW-IMS-ROLE-007 |
 | Asset Owner | The unit head who owns the asset | Each unit | SW-ISMS-ROLE-002 |
 | All employees | Everyone | All units | SW-IMS-ROLE-009 |
 
-Roles marked *proposed* are not yet decided by top management. One job can hold several IMS roles; where it does (the COO as IMS Owner, IT Manager and proposed CISO), the holder records each role's decisions in that role's name.
+Roles marked *proposed* are not yet decided by top management. One job can hold several IMS roles; where it does (the COO as IMS Owner, IT Manager and proposed CISO), the holder records each role's decisions in that role's name. **The Privacy Lead and the CISO are never held by the same person** (owner, 2026-10-29).
 
 ### 4.2 Key IMS Roles and Responsibilities
 
@@ -712,7 +712,7 @@ Roles marked *proposed* are not yet decided by top management. One job can hold 
 **Compliance**:
 - Ensure compliance with information security legal and regulatory requirements (GDPR, etc.)
 - Monitor compliance with customer security requirements
-- Coordinate with Data Protection Officer (DPO) on privacy matters
+- Coordinate with the Privacy Lead on privacy matters; assess personal data breaches together
 
 **Security Audits**:
 - Plan and coordinate information security audits
@@ -804,27 +804,20 @@ Roles marked *proposed* are not yet decided by top management. One job can hold 
 
 **Detailed Role Description**: SW-IMS-ROLE-002 (Internal Auditor)
 
-#### 4.2.9 Data Protection Officer (DPO)
+#### 4.2.9 Privacy Lead (Dataskyddsansvarig)
 
-**Current Assignee**: [to confirm: which job holds the DPO role, or whether a DPO is required]
-**Reports to**: CEO (with functional independence)
-**Time Allocation**: [TBD - e.g., 10-20%]
+**Held by**: CEO
+**Reports to**: The board
 
-**Note**: This role may be combined with CISO or assigned separately. DPO has specific legal responsibilities under GDPR.
+**Note**: The Privacy Lead is not a Data Protection Officer under GDPR Articles 37–39. Swedwise's assessment is that a DPO is not mandatory [to confirm: assessment recorded in SW-IMS-PRO-013]; if that changes, an external DPO is designated. The Privacy Lead and the CISO are never held by the same person.
 
 **Responsibilities**:
-- Ensure GDPR compliance
-- Advise on data protection impact assessments (DPIAs)
-- Cooperate with supervisory authority (IMY - Swedish Authority for Privacy Protection)
-- Act as contact point for data subjects and authority
-- Monitor GDPR compliance and training
+- Own the data protection policy and the records of processing activities
+- Decide on and approve data protection impact assessments (DPIAs)
+- Own data subject requests and be the contact point for IMY and data subjects
+- Decide on personal data breach notifications, after assessment with the CISO
 
-**Authority**:
-- Independence in carrying out DPO tasks
-- Direct reporting to highest management level
-- Not to be dismissed or penalized for performing DPO duties
-
-**Detailed Role Description**: SW-IMS-ROLE-006 (Data Protection Officer)
+**Detailed Role Description**: SW-IMS-ROLE-006 (Privacy Lead)
 
 #### 4.2.10 All Employees
 
@@ -900,7 +893,7 @@ Detailed role descriptions are maintained for key IMS roles:
 - SW-ISMS-ROLE-001: Chief Information Security Officer (CISO)
 - SW-QMS-ROLE-002: Service Delivery Manager (SaaS)
 - SW-IMS-ROLE-002: Internal Auditor
-- SW-IMS-ROLE-006: Data Protection Officer (DPO)
+- SW-IMS-ROLE-006: Privacy Lead (Dataskyddsansvarig)
 - SW-IMS-ROLE-007: Risk Manager
 - SW-IMS-ROLE-008: Department Manager
 - SW-IMS-ROLE-009: Employee IMS Responsibilities
@@ -935,7 +928,7 @@ Role descriptions include:
 | Version | Date | Author | Changes | Approved By |
 |---------|------|--------|---------|-------------|
 | 1.0 | [TBD] | IMS Owner | Initial creation for ISO certification | [TBD] |
-| 1.1 | 2026-10-29 | IMS Owner | Organisation chart replaced with today's units; IMS roles mapped to the jobs that hold them (4.1.2); role description ids filled in; authority matrix names the job-holders | [TBD] |
+| 1.1 | 2026-10-29 | IMS Owner | Organisation chart replaced with today's units; IMS roles mapped to the jobs that hold them (4.1.2); role description ids filled in; authority matrix names the job-holders; Data Protection Officer replaced by the Privacy Lead (SW-IMS-ROLE-006, held by the CEO; never the same person as the CISO) | [TBD] |
 
 ### 5.3 Approval
 
@@ -969,7 +962,7 @@ Role descriptions include:
 - SW-ISMS-ROLE-001: Chief Information Security Officer (CISO)
 - SW-QMS-ROLE-002: Service Delivery Manager (SaaS)
 - SW-IMS-ROLE-002: Internal Auditor
-- SW-IMS-ROLE-006: Data Protection Officer (DPO)
+- SW-IMS-ROLE-006: Privacy Lead (Dataskyddsansvarig)
 - SW-IMS-ROLE-007: Risk Manager
 - SW-IMS-ROLE-008: Department Manager
 - SW-IMS-ROLE-009: Employee IMS Responsibilities

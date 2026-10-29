@@ -2,10 +2,10 @@
 document_id: SW-IMS-TRN-004
 title: GDPR and Data Protection Training
 doc_type: training
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
-owner: DPO
+owner: Privacy Lead
 effective_date: [TBD]
 review_date: [TBD]
 standard:
@@ -110,7 +110,7 @@ The GDPR is built on seven fundamental principles. Every time you process person
 
 **In Practice**:
 - Be clear about WHY you're collecting data
-- Don't repurpose data without checking with the DPO
+- Don't repurpose data without checking with the Privacy Lead
 - Document the purpose when collecting data
 
 ### 3. Data Minimization
@@ -223,7 +223,7 @@ Consent is often misunderstood. For consent to be valid under GDPR:
 | Website analytics | Swedwise | Consent (cookies) | Requires cookie consent banner |
 | Security monitoring | Swedwise | Legitimate Interests | Protecting systems and data |
 
-**When Unsure**: Contact the DPO before processing. Choosing the wrong lawful basis can invalidate your processing.
+**When Unsure**: Contact the Privacy Lead before processing. Choosing the wrong lawful basis can invalidate your processing.
 
 ---
 
@@ -309,13 +309,13 @@ GDPR gives individuals strong rights over their personal data. You need to know 
 
 **If you receive a data subject rights request**:
 
-1. **Don't ignore it** - Forward immediately to the DPO
+1. **Don't ignore it** - Forward immediately to the Privacy Lead
 2. **Don't delay** - We have strict deadlines (typically 1 month)
-3. **Don't handle it yourself** - The DPO coordinates the response
-4. **Verify identity** - Ensure it's the actual data subject (DPO will guide)
+3. **Don't handle it yourself** - The Privacy Lead coordinates the response
+4. **Verify identity** - Ensure it's the actual data subject (Privacy Lead will guide)
 
 **How to Forward**:
-- Email: [DPO email - TBD]
+- Email: [Privacy Lead email - to confirm]
 - Include: Original request, date received, any context
 - Mark as: "URGENT: Data Subject Rights Request"
 
@@ -366,7 +366,7 @@ Some data is **extra sensitive** and requires additional protection:
 - Health data
 - Sex life or sexual orientation
 
-**At Swedwise, Minimize Collection**: We should rarely need special category data. If you encounter a situation requiring it, contact the DPO immediately.
+**At Swedwise, Minimize Collection**: We should rarely need special category data. If you encounter a situation requiring it, contact the Privacy Lead immediately.
 
 **Extra Requirements**:
 - Usually requires explicit consent
@@ -507,9 +507,9 @@ Some data is **extra sensitive** and requires additional protection:
 - Example: Wrong email sent? Ask recipient not to open/delete it
 
 **Step 2: Report Immediately**
-- **Email**: [DPO Email - TBD] + [CISO Email - TBD]
+- **Email**: [Privacy Lead email - to confirm] + [CISO Email - TBD]
 - **Subject**: "URGENT: Potential Data Breach"
-- **Phone**: [DPO Phone - TBD] (for serious incidents)
+- **Phone**: [Privacy Lead phone - to confirm] (for serious incidents)
 - **After Hours**: [Emergency Contact - TBD]
 
 **Step 3: Document**
@@ -526,7 +526,7 @@ Some data is **extra sensitive** and requires additional protection:
 - ❌ Don't try to fix it without reporting (unless containing)
 
 **What Happens Next**:
-1. DPO and CISO assess the breach
+1. Privacy Lead and CISO assess the breach
 2. Breach response team activated
 3. Investigation and containment
 4. Notification to IMY (if required - within 72 hours)
@@ -550,12 +550,12 @@ Some data is **extra sensitive** and requires additional protection:
 - Nature of the breach
 - Likely consequences
 - Measures taken to address it
-- Contact point (DPO)
+- Contact point (Privacy Lead)
 - Recommendations to mitigate harm
 
 **Example Notification**:
 
-> We are writing to inform you of a security incident affecting your personal data. On [date], [brief description of what happened]. The incident affected [type of data]. We have taken immediate action to [containment measures]. We are notifying you because [reason/risk]. We recommend you [protective actions]. If you have questions, please contact our Data Protection Officer at [contact].
+> We are writing to inform you of a security incident affecting your personal data. On [date], [brief description of what happened]. The incident affected [type of data]. We have taken immediate action to [containment measures]. We are notifying you because [reason/risk]. We recommend you [protective actions]. If you have questions, please contact our Privacy Lead at [contact].
 
 ---
 
@@ -576,7 +576,7 @@ Some data is **extra sensitive** and requires additional protection:
 **At Project Start**:
 - Will this involve personal data?
 - What data do we actually need?
-- Do we need a DPIA? (Ask the DPO)
+- Do we need a DPIA? (Ask the Privacy Lead)
 - How will we secure the data?
 
 **During Development**:
@@ -588,7 +588,7 @@ Some data is **extra sensitive** and requires additional protection:
 - Encrypt sensitive data
 
 **Before Launch**:
-- Review with DPO
+- Review with Privacy Lead
 - Update privacy notices
 - Test data subject rights procedures
 - Security testing
@@ -612,7 +612,7 @@ Some data is **extra sensitive** and requires additional protection:
 - Large-scale monitoring or analytics
 - AI/machine learning using personal data
 
-**Who Conducts It**: DPO coordinates, with input from:
+**Who Conducts It**: Privacy Lead coordinates, with input from:
 - Project team
 - CISO
 - Legal (if needed)
@@ -623,11 +623,11 @@ Some data is **extra sensitive** and requires additional protection:
 2. Assess necessity and proportionality
 3. Identify risks to individuals
 4. Identify measures to address risks
-5. DPO reviews and advises
+5. Privacy Lead reviews and advises
 6. Document the assessment
 7. Consult IMY if high risk remains
 
-**Your Role**: If you're involved in a project requiring DPIA, cooperate with the DPO and provide accurate information about the processing.
+**Your Role**: If you're involved in a project requiring DPIA, cooperate with the Privacy Lead and provide accurate information about the processing.
 
 ### Third-Party Data Sharing
 
@@ -674,7 +674,7 @@ Some data is **extra sensitive** and requires additional protection:
 - Cloud services: Review carefully - many are US-based
 - Consulting: Customer data usually stays in their systems
 
-**If You're Unsure**: Contact the DPO before transferring data internationally
+**If You're Unsure**: Contact the Privacy Lead before transferring data internationally
 
 ---
 
@@ -707,7 +707,7 @@ Some data is **extra sensitive** and requires additional protection:
    - Report security concerns
 
 5. **Respect Data Subject Rights**
-   - Forward requests to DPO
+   - Forward requests to Privacy Lead
    - Don't ignore or delay
    - Maintain confidentiality
 
@@ -721,7 +721,7 @@ Some data is **extra sensitive** and requires additional protection:
 **Consultants at Client Sites**:
 - Follow both Swedwise and customer data protection policies
 - Don't remove customer data without authorization
-- Report breaches to both Swedwise DPO and customer
+- Report breaches to both Swedwise Privacy Lead and customer
 - Don't use customer data for Swedwise purposes
 - Understand if you're acting as Swedwise representative or customer's team
 
@@ -757,7 +757,7 @@ Some data is **extra sensitive** and requires additional protection:
 - Access management
 - Secure backups
 - Audit logging
-- Coordinate with DPO on security measures
+- Coordinate with Privacy Lead on security measures
 
 ### The "Do I Need This Data?" Question
 
@@ -788,7 +788,7 @@ Some data is **extra sensitive** and requires additional protection:
 - When will I delete it?
 - Is it documented?
 
-**If you can't answer these questions clearly → Contact the DPO before proceeding**
+**If you can't answer these questions clearly → Contact the Privacy Lead before proceeding**
 
 ### Secure Deletion
 
@@ -817,9 +817,9 @@ Some data is **extra sensitive** and requires additional protection:
 - Delete from backups when retention period ends
 - Or document why backups can't be deleted (acceptable for security)
 
-### Contacting the DPO
+### Contacting the Privacy Lead
 
-**When to Contact the DPO**:
+**When to Contact the Privacy Lead**:
 
 **Always Contact**:
 - Data subject rights request received
@@ -839,9 +839,9 @@ Some data is **extra sensitive** and requires additional protection:
 - Privacy policy question
 
 **Contact Information**:
-- **Email**: [DPO Email - TBD]
-- **Phone**: [DPO Phone - TBD]
-- **Teams**: [DPO Teams - TBD]
+- **Email**: [Privacy Lead email - to confirm]
+- **Phone**: [Privacy Lead phone - to confirm]
+- **Teams**: [Privacy Lead teams - to confirm]
 
 **Expected Response Time**:
 - Urgent (breach, rights request): Same day
@@ -900,7 +900,7 @@ Some data is **extra sensitive** and requires additional protection:
 - ✓ Encrypt sensitive data
 - ✓ Report breaches immediately
 - ✓ Follow retention schedules
-- ✓ Ask the DPO when unsure
+- ✓ Ask the Privacy Lead when unsure
 - ✓ Document your decisions
 - ✓ Keep training current
 
@@ -998,7 +998,7 @@ When does the 72-hour clock start for reporting a data breach to the supervisory
 A) When the breach occurred
 B) When you become aware of the breach
 C) When you've finished investigating the breach
-D) When the DPO confirms it's a breach
+D) When the Privacy Lead confirms it's a breach
 
 **Correct Answer**: B
 
@@ -1008,7 +1008,7 @@ D) When the DPO confirms it's a breach
 You're setting up a new project tracking tool. What should you do BEFORE collecting any personal data?
 
 A) Start collecting data, you can figure out privacy later
-B) Contact the DPO to discuss lawful basis, minimization, and security
+B) Contact the Privacy Lead to discuss lawful basis, minimization, and security
 C) Get consent from everyone whose data you'll collect
 D) Wait for the annual data protection review
 
@@ -1021,7 +1021,7 @@ You're a consultant working at a customer site. You discover a spreadsheet on th
 
 A) Nothing - it's the customer's problem
 B) Download it to report to your manager at Swedwise
-C) Report it to the customer's IT team AND Swedwise DPO
+C) Report it to the customer's IT team AND Swedwise Privacy Lead
 D) Delete the spreadsheet
 
 **Correct Answer**: C
@@ -1045,7 +1045,7 @@ A customer emails asking for a copy of all personal data Swedwise holds about th
 
 A) Send them whatever data you can find
 B) Ignore it - they should already know what data we have
-C) Forward the request to the DPO immediately
+C) Forward the request to the Privacy Lead immediately
 D) Tell them you'll get back to them in 3 months
 
 **Correct Answer**: C
@@ -1090,11 +1090,11 @@ D) Designing products that collect as much data as possible
 1. **GDPR is Serious**: Fines up to 20M EUR or 4% of turnover, plus reputational damage
 2. **Seven Principles**: Lawful, Purpose, Proportionate, Storage, Accurate, Integrity, Accountability
 3. **Six Lawful Bases**: Always know which basis you're relying on
-4. **Data Subject Rights**: Forward all requests to the DPO immediately
+4. **Data Subject Rights**: Forward all requests to the Privacy Lead immediately
 5. **72-Hour Rule**: Breaches must be reported to IMY within 72 hours
 6. **Minimize Data**: Only collect what you actually need
 7. **Privacy by Design**: Build privacy in from the start
-8. **When in Doubt, Ask**: The DPO is here to help
+8. **When in Doubt, Ask**: The Privacy Lead is here to help
 
 ### Your Three Most Important Actions
 
@@ -1107,20 +1107,20 @@ D) Designing products that collect as much data as possible
 | Resource | Location |
 |----------|----------|
 | Information Security Policy | SW-ISMS-POL-001 |
-| DPO Role Description | SW-IMS-ROLE-006 |
+| Privacy Lead Role Description | SW-IMS-ROLE-006 |
 | Incident Reporting Procedure | SW-IMS-PRO-008 |
 | Data Classification Guideline | [TBD] |
 | Privacy Notices | [TBD] |
-| ROPA (Records of Processing) | [Internal - DPO] |
+| ROPA (Records of Processing) | [Internal - Privacy Lead] |
 
 ### Contact
 
-**Data Protection Officer (DPO)**
+**Privacy Lead**
 - Email: [TBD]
 - Phone: [TBD]
 - Teams: [TBD]
 
-**Questions?** Don't hesitate to contact the DPO. It's better to ask than to guess.
+**Questions?** Don't hesitate to contact the Privacy Lead. It's better to ask than to guess.
 
 ---
 
@@ -1148,6 +1148,7 @@ By completing this training and passing the assessment, I confirm that I underst
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | [TBD] | Training Team / DPO | Initial release |
+| 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Data Protection Officer replaced by the Privacy Lead (SW-IMS-ROLE-006, held by the CEO; never the same person as the CISO) |
 
 **Next Review**: [12 months from effective date]
 
@@ -1155,6 +1156,6 @@ By completing this training and passing the assessment, I confirm that I underst
 
 | Role | Name | Signature | Date |
 |------|------|-----------|------|
-| DPO | | | |
+| Privacy Lead | | | |
 | CISO | | | |
 | CEO | | | |

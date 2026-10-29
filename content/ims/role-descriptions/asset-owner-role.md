@@ -2,7 +2,7 @@
 document_id: SW-ISMS-ROLE-002
 title: Asset Owner
 doc_type: role
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: CISO
@@ -19,7 +19,7 @@ related_documents:
 
 # Role: Asset Owner
 
-**Document ID**: SW-ISMS-ROLE-002-v1.0
+**Document ID**: SW-ISMS-ROLE-002-v1.1
 **Effective Date**: [TBD]
 **Review Date**: [TBD]
 **Reports to**: Line Manager (with matrix reporting to CISO on security matters)
@@ -171,7 +171,7 @@ Asset ownership responsibilities are **integrated into the individual's primary 
   - Industry-specific regulations
 - Define and enforce retention requirements
 - Ensure proper consent or legal basis for personal data processing
-- Coordinate with DPO on privacy requirements
+- Coordinate with Privacy Lead on privacy requirements
 - Support audits and compliance reviews
 
 ### 11. Asset Documentation
@@ -234,7 +234,7 @@ The Asset Owner has authority to:
 - Cannot approve access that violates policy or law (e.g., segregation of duties)
 - High-value or critical assets may require CISO co-approval for certain decisions
 - Risk acceptance beyond defined threshold requires management approval
-- Cannot authorize processing of personal data without legal basis (DPO involvement)
+- Cannot authorize processing of personal data without legal basis (Privacy Lead involvement)
 
 ## Required Competencies
 
@@ -275,7 +275,7 @@ The Asset Owner has authority to:
 |-------------|----------------------|-----------|
 | **CISO** | Receives guidance; escalates security issues; coordinates on classification | As needed |
 | **IT/Technical Teams** | Coordinates technical access provisioning; implements controls | As needed |
-| **DPO** | Coordinates on personal data assets; GDPR compliance | As needed (for personal data) |
+| **Privacy Lead** | Coordinates on personal data assets; GDPR compliance | As needed (for personal data) |
 | **Users** | Authorizes access; provides guidance on asset use | As needed |
 | **Line Manager** | Reports to; escalates business issues | Regular |
 | **Internal Auditors** | Provides evidence of asset management | During audits |
@@ -291,12 +291,12 @@ The Asset Owner has authority to:
 - **Interaction**: Asset Owner seeks CISO guidance on complex security questions; CISO may override on security grounds
 - **Escalation**: Asset Owner escalates security concerns and high-risk decisions to CISO
 
-### DPO (for Personal Data Assets)
+### Privacy Lead (for Personal Data Assets)
 
-- **Collaboration Model**: Asset Owner manages personal data assets; DPO ensures GDPR compliance
-- **Division of Responsibility**: Asset Owner authorizes access and use; DPO ensures legal basis and compliance
-- **Interaction**: Close coordination on personal data assets; DPO advises on privacy requirements
-- **Note**: Asset Owners of personal data must involve DPO in processing decisions
+- **Collaboration Model**: Asset Owner manages personal data assets; Privacy Lead ensures GDPR compliance
+- **Division of Responsibility**: Asset Owner authorizes access and use; Privacy Lead ensures legal basis and compliance
+- **Interaction**: Close coordination on personal data assets; Privacy Lead advises on privacy requirements
+- **Note**: Asset Owners of personal data must involve Privacy Lead in processing decisions
 
 ### Risk Manager
 
@@ -367,7 +367,7 @@ The Asset Owner will be successful when:
 **Asset Owner Action**:
 1. Review classification criteria in classification policy
 2. Assess sensitivity and impact of disclosure
-3. Consider legal/regulatory requirements (consult DPO if personal data)
+3. Consider legal/regulatory requirements (consult Privacy Lead if personal data)
 4. Escalate to CISO if unclear
 5. Document classification decision and rationale
 6. Ensure classification is applied consistently
@@ -400,6 +400,7 @@ The Asset Owner will be successful when:
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | [TBD] | [Author] | Initial release |
+| 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Data Protection Officer replaced by the Privacy Lead (SW-IMS-ROLE-006, held by the CEO; never the same person as the CISO) |
 
 ---
 

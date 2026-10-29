@@ -2,7 +2,7 @@
 document_id: SW-ISMS-SOA-001
 title: Statement of Applicability
 doc_type: register
-version: "1.0"
+version: "1.1"
 status: draft
 classification: confidential
 owner: CISO
@@ -436,7 +436,7 @@ This Statement of Applicability (SoA) documents the information security control
 | **Applicable** | Yes |
 | **Status** | Implemented |
 | **Justification** | GDPR compliance mandatory |
-| **Implementation** | Data Protection Policy (SW-ISMS-POL-004). DPO role defined (SW-ISMS-ROLE-003). ROPA maintained. Privacy notices published. DPIA process in place. Data subject rights procedures. |
+| **Implementation** | Data Protection Policy (SW-ISMS-POL-004). Privacy Lead role defined (SW-IMS-ROLE-006). ROPA maintained. Privacy notices published. DPIA process in place. Data subject rights procedures. |
 | **Evidence** | SW-ISMS-POL-004, SW-ISMS-ROLE-003, ROPA, Privacy notices |
 
 ### A.5.35 Independent review of information security
@@ -1094,6 +1094,7 @@ This Statement of Applicability (SoA) documents the information security control
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | 2025-01-01 | CISO | Initial Statement of Applicability |
+| 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Data Protection Officer replaced by the Privacy Lead (SW-IMS-ROLE-006, held by the CEO; never the same person as the CISO) |
 
 ---
 

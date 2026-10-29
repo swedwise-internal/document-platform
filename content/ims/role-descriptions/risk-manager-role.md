@@ -2,7 +2,7 @@
 document_id: SW-IMS-ROLE-007
 title: Risk Manager
 doc_type: role
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: CEO
@@ -21,7 +21,7 @@ related_documents:
 
 # Role: Risk Manager
 
-**Document ID**: SW-IMS-ROLE-007-v1.0
+**Document ID**: SW-IMS-ROLE-007-v1.1
 **Effective Date**: [TBD]
 **Review Date**: [TBD]
 **Reports to**: CEO
@@ -136,7 +136,7 @@ This is a part-time functional role designed to be combined with other operation
 - Ensure quality risks are integrated into enterprise risk management
 - Coordinate with CISO on information security risk assessments
 - Work with Environmental Lead on environmental risks and compliance obligations
-- Support DPO on privacy risk assessments and DPIAs
+- Support Privacy Lead on privacy risk assessments and DPIAs
 - Ensure consistency of risk methodology across domains
 - Facilitate cross-domain risk discussions
 - Consolidate domain risks into enterprise view
@@ -307,7 +307,7 @@ The Risk Manager has authority to:
 | **CISO** | Information security risk assessments; security risk treatment | Weekly |
 | **Quality Lead** | Quality risk identification and management | Bi-weekly |
 | **Environmental Lead** | Environmental risks and compliance obligations | Bi-weekly |
-| **DPO** | Privacy risks and DPIA support | As needed |
+| **Privacy Lead** | Privacy risks and DPIA support | As needed |
 | **Risk Owners** | Risk assessment, treatment planning, monitoring | Monthly |
 | **Department Managers** | Departmental risk identification and management | Quarterly |
 | **Project Managers** | Project risk assessments and management | As needed |
@@ -343,10 +343,10 @@ The Risk Manager has authority to:
 - **Division of Responsibility**: Risk Manager provides risk methodology; Environmental Lead identifies and manages environmental risks
 - **Interaction**: Coordination on environmental compliance and operational risks
 
-### DPO (Data Protection Officer)
+### Privacy Lead
 
 - **Collaboration Model**: Complementary roles with overlap on privacy risk
-- **Division of Responsibility**: Risk Manager integrates privacy risks into enterprise view; DPO conducts DPIAs and manages privacy risks
+- **Division of Responsibility**: Risk Manager integrates privacy risks into enterprise view; Privacy Lead conducts DPIAs and manages privacy risks
 - **Interaction**: Privacy risks are escalated to enterprise risk register; coordinated approach to data breach risk
 
 ## Performance Indicators
@@ -408,6 +408,7 @@ The Risk Manager will be successful when:
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | [TBD] | [Author] | Initial release |
+| 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Data Protection Officer replaced by the Privacy Lead (SW-IMS-ROLE-006, held by the CEO; never the same person as the CISO) |
 
 ---
 

@@ -2,7 +2,7 @@
 document_id: SW-IMS-PRO-013
 title: Legal and Compliance Monitoring Procedure
 doc_type: procedure
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: IMS Owner
@@ -110,7 +110,8 @@ This procedure applies to:
 |------|------------------|
 | **IMS Owner** | - Maintain this procedure and overall compliance framework<br>- Maintain Compliance Obligation Register<br>- Coordinate compliance assessments<br>- Monitor legal horizon for changes<br>- Report compliance status to management<br>- Escalate compliance risks<br>- Coordinate with legal counsel |
 | **Compliance Owners** (by area) | - Monitor compliance in their area (see Section 6.2)<br>- Identify applicable requirements<br>- Assess compliance regularly<br>- Report compliance status to IMS Owner<br>- Implement corrective actions for non-compliance<br>- Provide training and awareness in their area |
-| **CISO** | - Compliance Owner for information security and data protection (GDPR, cybersecurity)<br>- Monitor security-related legal requirements<br>- Ensure GDPR compliance (Data Protection Officer role if required) |
+| **CISO** | - Compliance Owner for information security (cybersecurity, NIS2)<br>- Monitor security-related legal requirements |
+| **Privacy Lead** | - Compliance Owner for data protection (GDPR)<br>- Record and re-assess yearly whether a Data Protection Officer is required (Article 37)<br>- Never the same person as the CISO |
 | **Environmental Lead** | - Compliance Owner for environmental regulations<br>- Monitor environmental legal requirements<br>- Ensure environmental compliance (waste, energy, pollution) |
 | **Quality Lead** | - Compliance Owner for quality and customer-related regulations<br>- Monitor quality and consumer protection requirements |
 | **HR Manager** | - Compliance Owner for labor and employment law<br>- Monitor occupational health and safety requirements<br>- Ensure employee rights and workplace compliance |
@@ -411,7 +412,7 @@ The **Compliance Obligation Register** is a centralized list of all compliance o
 5. **Records of Processing Activities**: Maintain register of all personal data processing
 6. **Data Protection by Design and Default**: Build privacy into systems and processes
 7. **Data Processing Agreements**: With third-party processors (e.g., Entiros AB, Microsoft)
-8. **Data Protection Officer (DPO)**: Appoint if required (public authority or large-scale processing of sensitive data - assess if applicable for Swedwise)
+8. **Data Protection Officer (DPO)**: Swedwise's assessment is that a DPO is not mandatory (not a public authority; no large-scale monitoring or large-scale special-category processing as core activity) [to confirm]. Data protection is held by the Privacy Lead (SW-IMS-ROLE-006). If the assessment changes, an external DPO is designated.
 
 **Compliance Actions**:
 - Maintain **Records of Processing Activities** (ROPA) - document all personal data processing
@@ -785,7 +786,7 @@ This procedure is reviewed and improved based on:
 | **9. Training and Awareness** |
 | 9.1 | GDPR training provided to all staff | ☐ Compliant<br>☐ Non-Compliant | Training records | |
 | **10. Data Protection Officer (DPO)** |
-| 10.1 | DPO appointed if required (assess applicability) | ☐ Compliant<br>☐ Not Required | DPO appointment (if applicable) | |
+| 10.1 | Article 37 assessment recorded (DPO required or not); if required, an external DPO designated | ☐ Compliant<br>☐ Not Required | Assessment record (Privacy Lead) | |
 
 **Overall Assessment**:
 - Total Items: [#]
@@ -807,6 +808,7 @@ This procedure is reviewed and improved based on:
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | [TBD] | [Author] | Initial release |
+| 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Data Protection Officer replaced by the Privacy Lead (SW-IMS-ROLE-006, held by the CEO; never the same person as the CISO) |
 
 ---
 

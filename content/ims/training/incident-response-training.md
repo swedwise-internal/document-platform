@@ -2,7 +2,7 @@
 document_id: SW-ISMS-TRN-004
 title: Incident Response Training
 doc_type: training
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: CISO
@@ -425,7 +425,7 @@ CONFIDENCE: [High/Medium/Low]
 **When activated:** P1 incidents with customer impact
 
 #### Legal/Compliance
-**Who:** External legal counsel or DPO
+**Who:** External legal counsel or Privacy Lead
 **Role:** Regulatory notifications, legal implications, breach notification coordination
 **When activated:** P1 incidents involving data breaches
 
@@ -544,7 +544,7 @@ Swedwise Incident Response Team
 
 **GDPR Breach (Personal Data):**
 - **Timeline:** Within 72 hours to supervisory authority (IMY in Sweden)
-- **Who handles:** DPO with Legal
+- **Who handles:** Privacy Lead with Legal
 - **Incident team provides:** Technical details, scope, containment actions
 - **Notification to data subjects:** If high risk, without undue delay
 
@@ -1642,7 +1642,7 @@ Status: In Progress
 
 **Must Include (Article 34):**
 1. Description of the breach (what happened)
-2. Name and contact of DPO
+2. Name and contact of Privacy Lead
 3. Likely consequences of the breach
 4. Measures taken or proposed to address the breach
 5. Recommendations to mitigate potential adverse effects
@@ -1686,9 +1686,9 @@ We recommend you take the following precautions:
 - [Recommendation 3]
 
 CONTACT:
-If you have questions or concerns, please contact our Data Protection Officer:
-Email: dpo@swedwise.se
-Phone: [DPO phone]
+If you have questions or concerns, please contact our Privacy Lead:
+Email: [to confirm: privacy contact address]
+Phone: [Privacy Lead phone - to confirm]
 
 We sincerely apologize for this incident and any concern it may cause.
 
@@ -1804,7 +1804,7 @@ Everything is under control.
    - Approximate number of data subjects affected
    - Approximate number of personal data records concerned
 
-2. Name and contact details of DPO (or other contact point)
+2. Name and contact details of Privacy Lead (or other contact point)
 
 3. Likely consequences of the breach
 
@@ -1822,9 +1822,9 @@ Everything is under control.
 - Must document decision and rationale (accountability)
 
 **Process at Swedwise:**
-1. CISO and DPO assess breach (within 24 hours of detection)
+1. CISO and Privacy Lead assess breach (within 24 hours of detection)
 2. Determine if notification required
-3. DPO prepares notification (coordinate with Legal if needed)
+3. Privacy Lead prepares notification (coordinate with Legal if needed)
 4. Submit to IMY within 72 hours
 5. Document notification in breach register
 
@@ -2349,8 +2349,8 @@ Does it affect ISO certification?
 
 | Regulation | Deadline | Where | Who |
 |------------|----------|-------|-----|
-| GDPR (to IMY) | 72 hours | imy.se | DPO |
-| GDPR (to data subjects) | Without undue delay | Direct | DPO |
+| GDPR (to IMY) | 72 hours | imy.se | Privacy Lead |
+| GDPR (to data subjects) | Without undue delay | Direct | Privacy Lead |
 | NIS2 Early Warning | 24 hours | cert.se | CISO |
 | NIS2 Incident Notification | 72 hours | cert.se | CISO |
 | NIS2 Final Report | 1 month | cert.se | CISO |
@@ -2501,13 +2501,13 @@ D) Any member of the security team
 You accidentally email a spreadsheet containing 200 customer email addresses to the wrong recipient (external). What should you do?
 
 A) Email the recipient asking them to delete it and hope they do
-B) Immediately report this as a data breach to CISO and DPO
+B) Immediately report this as a data breach to CISO and Privacy Lead
 C) Don't report it since it's just email addresses (not very sensitive)
 D) Ask your manager first
 
 **Correct Answer:** B
 
-**Explanation:** This is a data breach (unauthorized disclosure of personal data). Email addresses are personal data under GDPR. Report immediately to CISO and DPO so they can assess GDPR notification requirements (72-hour clock has started). Also ask recipient to delete (but still report). Don't minimize or delay.
+**Explanation:** This is a data breach (unauthorized disclosure of personal data). Email addresses are personal data under GDPR. Report immediately to CISO and Privacy Lead so they can assess GDPR notification requirements (72-hour clock has started). Also ask recipient to delete (but still report). Don't minimize or delay.
 
 ---
 
@@ -2641,6 +2641,7 @@ Contact:
 | Version | Date | Author | Changes | Approved By |
 |---------|------|--------|---------|-------------|
 | 1.0 | [TBD] | CISO / Training Team | Initial release | CEO, CISO |
+| 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Data Protection Officer replaced by the Privacy Lead (SW-IMS-ROLE-006, held by the CEO; never the same person as the CISO) | [TBD] |
 
 **Next Review Date:** [12 months from effective date]
 
