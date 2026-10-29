@@ -2,7 +2,7 @@
 document_id: SW-SAAS-SAL-001
 title: Swedwise SaaS Platform - Sales Guide
 doc_type: sales-material
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: Sales Director
@@ -852,11 +852,11 @@ Savings: 150,000 SEK + no capital investment
 ### 12.4. Support Contacts
 
 **For Sales Assistance:**
-- **Technical Questions:** solution-architects@swedwise.com
-- **Pricing Questions:** sales-ops@swedwise.com
-- **Demo Environment:** demo-support@swedwise.com
-- **Contract Questions:** legal@swedwise.com
-- **Customer Success Handoff:** customer-success@swedwise.com
+- **Technical Questions:** solution-architects@swedwise.se
+- **Pricing Questions:** sales-ops@swedwise.se
+- **Demo Environment:** demo-support@swedwise.se
+- **Contract Questions:** legal@swedwise.se
+- **Customer Success Handoff:** customer-success@swedwise.se
 
 ---
 
@@ -922,11 +922,12 @@ Savings: 150,000 SEK + no capital investment
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | 2025-01-15 | Sales Director | Initial version |
+| 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Domain swedwise.com replaced by swedwise.se (owner 2026-10-29: «Allt ska vara se») |
 
 ---
 
 **Questions or Feedback?**
-Contact: sales-enablement@swedwise.com
+Contact: sales-enablement@swedwise.se
 
 ---
 

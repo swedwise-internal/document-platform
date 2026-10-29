@@ -249,8 +249,8 @@ All service and support requests shall be directed through the following channel
 
 | Channel | Details | Hours |
 |---------|---------|-------|
-| **Web Portal** | portal.swedwise.com (preferred channel) | 24/7 |
-| **Email** | support@swedwise.com | 24/7 |
+| **Web Portal** | portal.swedwise.se (preferred channel) | 24/7 |
+| **Email** | support@swedwise.se | 24/7 |
 | **Telephone** | +46 54 17 11 10 | Mon-Fri 08:00-17:00 CET |
 | **Emergency Hotline** | +46 XX XXX XX XX | 24/7 (critical incidents only) |
 
@@ -730,7 +730,7 @@ The following components are in development or planning stages:
 - Add-on services specific to the component
 
 **Getting Started:**
-Contact sales@swedwise.com or your Customer Success Manager to discuss specific component requirements and obtain the relevant Service Component Addendum documents.
+Contact sales@swedwise.se or your Customer Success Manager to discuss specific component requirements and obtain the relevant Service Component Addendum documents.
 
 ---
 
@@ -808,11 +808,11 @@ To successfully consume services on the Swedwise SaaS Platform, customers must m
 
 | Contact Type | Email | Phone |
 |-------------|-------|-------|
-| **Sales Inquiries** | sales@swedwise.com | +46 54 17 11 10 |
-| **Technical Support** | support@swedwise.com | +46 54 17 11 10 |
-| **Customer Success** | success@swedwise.com | +46 54 17 11 10 |
-| **Security Incidents** | security@swedwise.com | +46 XX XXX XX XX (24/7) |
-| **Billing Questions** | billing@swedwise.com | +46 54 17 11 10 |
+| **Sales Inquiries** | sales@swedwise.se | +46 54 17 11 10 |
+| **Technical Support** | support@swedwise.se | +46 54 17 11 10 |
+| **Customer Success** | success@swedwise.se | +46 54 17 11 10 |
+| **Security Incidents** | security@swedwise.se | +46 XX XXX XX XX (24/7) |
+| **Billing Questions** | billing@swedwise.se | +46 54 17 11 10 |
 
 ### 12.2. Company Information
 
@@ -828,9 +828,9 @@ Karlstad, Sweden
 - Uddevalla
 
 **Web:**
-- Corporate: www.swedwise.com
-- Customer Portal: portal.swedwise.com
-- Status Page: status.swedwise.com
+- Corporate: www.swedwise.se
+- Customer Portal: portal.swedwise.se
+- Status Page: status.swedwise.se
 
 **Business Information:**
 - Organization Number: [To be provided]
@@ -839,15 +839,15 @@ Karlstad, Sweden
 ### 12.3. Legal and Compliance
 
 **Data protection contact (Privacy Lead):**
-Email: [to confirm: privacy contact address]
+Email: dataskydd@swedwise.se
 
 Swedwise has not designated a Data Protection Officer under GDPR Article 37; it is not required. Data protection is held by the Privacy Lead.
 
 **Legal Inquiries:**
-Email: legal@swedwise.com
+Email: legal@swedwise.se
 
 **Compliance and Audit Requests:**
-Email: compliance@swedwise.com
+Email: compliance@swedwise.se
 
 ---
 
@@ -858,7 +858,7 @@ Email: compliance@swedwise.com
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | 2025-01-01 | SaaS Service Manager | Initial version - Platform foundation document |
-| 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Data Protection Officer contact replaced by the Privacy Lead; no DPO designated (not required) |
+| 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Data Protection Officer contact replaced by the Privacy Lead; no DPO designated (not required) |; Domain swedwise.com replaced by swedwise.se (owner 2026-10-29: «Allt ska vara se»)
 
 ### 13.2. Review and Approval
 
@@ -928,4 +928,4 @@ Unauthorized distribution, copying, or disclosure of this document or its conten
 
 **End of Document**
 
-*For questions about this service description, please contact your Swedwise Customer Success Manager or email sales@swedwise.com.*
+*For questions about this service description, please contact your Swedwise Customer Success Manager or email sales@swedwise.se.*

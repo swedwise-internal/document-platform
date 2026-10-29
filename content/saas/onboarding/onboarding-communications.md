@@ -2,7 +2,7 @@
 document_id: SW-SAAS-ONB-COMP-001
 title: Onboarding Addendum - Communications
 doc_type: procedure
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: Technical Architect
@@ -1128,19 +1128,19 @@ Prepare the following test data sets:
 | **Template Specialist** | [Name], [Email] | Template development, Designer issues |
 
 **Support Channels:**
-- Portal: https://support.swedwise.com
-- Email: support@swedwise.com
+- Portal: https://support.swedwise.se
+- Email: support@swedwise.se
 - Phone: +46 54 17 11 10
 
 ### Appendix E: Useful Resources
 
 | Resource | URL | Description |
 |----------|-----|-------------|
-| **API Documentation** | https://developers.swedwise.com | Complete API reference |
-| **Template Gallery** | https://templates.swedwise.com | Sample templates and examples |
-| **Designer Knowledge Base** | https://kb.swedwise.com/designer | How-to guides, best practices |
-| **Video Tutorials** | https://training.swedwise.com | Step-by-step video guides |
-| **Community Forum** | https://community.swedwise.com | Ask questions, share experiences |
+| **API Documentation** | https://developers.swedwise.se | Complete API reference |
+| **Template Gallery** | https://templates.swedwise.se | Sample templates and examples |
+| **Designer Knowledge Base** | https://kb.swedwise.se/designer | How-to guides, best practices |
+| **Video Tutorials** | https://training.swedwise.se | Step-by-step video guides |
+| **Community Forum** | https://community.swedwise.se | Ask questions, share experiences |
 
 ---
 
@@ -1149,12 +1149,13 @@ Prepare the following test data sets:
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | 2025-01-15 | Technical Architect | Initial version - split from combined addendum |
+| 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Domain swedwise.com replaced by swedwise.se (owner 2026-10-29: «Allt ska vara se») |
 
 ---
 
 **Questions or Need Assistance?**
 
-Contact your assigned Technical Architect or email: onboarding@swedwise.com
+Contact your assigned Technical Architect or email: onboarding@swedwise.se
 
 ---
 

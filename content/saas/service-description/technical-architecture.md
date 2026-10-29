@@ -2,7 +2,7 @@
 document_id: SW-SAAS-ARCH-001
 title: Swedwise SaaS Platform - Technical Architecture
 doc_type: guideline
-version: "1.0"
+version: "1.1"
 status: draft
 classification: confidential
 owner: Technical Lead
@@ -1282,17 +1282,17 @@ Each addendum provides:
 
 | Record Type | Name | Value | TTL |
 |-------------|------|-------|-----|
-| A | app.swedwise.com | [Load Balancer IP] | 300 |
-| CNAME | api.swedwise.com | app.swedwise.com | 300 |
-| CNAME | www.swedwise.com | app.swedwise.com | 300 |
-| MX | swedwise.com | [Mail server] | 3600 |
-| TXT | _dmarc.swedwise.com | [DMARC policy] | 3600 |
-| TXT | swedwise.com | [SPF record] | 3600 |
+| A | app.swedwise.se | [Load Balancer IP] | 300 |
+| CNAME | api.swedwise.se | app.swedwise.se | 300 |
+| CNAME | www.swedwise.se | app.swedwise.se | 300 |
+| MX | swedwise.se | [Mail server] | 3600 |
+| TXT | _dmarc.swedwise.se | [DMARC policy] | 3600 |
+| TXT | swedwise.se | [SPF record] | 3600 |
 
 ### 13.4. SSL/TLS Configuration
 
 - **Certificate Authority**: Let's Encrypt (automated renewal)
-- **Certificate Type**: Wildcard (*.swedwise.com)
+- **Certificate Type**: Wildcard (*.swedwise.se)
 - **TLS Version**: TLS 1.2+ (TLS 1.3 preferred)
 - **Cipher Suites**: Modern, secure ciphers only (no RC4, 3DES)
 - **HSTS**: Enabled with 1-year max-age
@@ -1302,9 +1302,9 @@ Each addendum provides:
 
 | Role | Responsibility | Contact |
 |------|----------------|---------|
-| **Technical Lead** | Architecture decisions | tech-lead@swedwise.com |
-| **Operations Manager** | 24/7 operations | ops@swedwise.com |
-| **Security Officer** | Security incidents | security@swedwise.com |
+| **Technical Lead** | Architecture decisions | tech-lead@swedwise.se |
+| **Operations Manager** | 24/7 operations | ops@swedwise.se |
+| **Security Officer** | Security incidents | security@swedwise.se |
 | **Data Center Partner** | Infrastructure | Entiros AB - support@entiros.se |
 
 ---
@@ -1314,6 +1314,7 @@ Each addendum provides:
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | 2025-01-15 | Technical Lead | Initial platform architecture document |
+| 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Domain swedwise.com replaced by swedwise.se (owner 2026-10-29: «Allt ska vara se») |
 | 1.1 | 2025-01-15 | Technical Lead | Refactored to platform-level; Communications and Notifications moved to addendums |
 
 ---

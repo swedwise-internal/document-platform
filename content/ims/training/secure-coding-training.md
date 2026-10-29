@@ -2,7 +2,7 @@
 document_id: SW-ISMS-TRN-003
 title: Secure Coding Training for Developers
 doc_type: training
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: CISO
@@ -2224,7 +2224,7 @@ Automated tools that test **running** application (black-box testing).
 - name: DAST Scan
   run: |
     docker run -t owasp/zap2docker-stable zap-baseline.py \
-      -t https://staging.swedwise.com \
+      -t https://staging.swedwise.se \
       -r zap-report.html
 
 - name: Upload Report

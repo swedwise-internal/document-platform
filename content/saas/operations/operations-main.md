@@ -2,7 +2,7 @@
 document_id: SW-SAAS-OPS-001
 title: Swedwise SaaS Platform - Operations Guide
 doc_type: procedure
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: SaaS Operations Manager
@@ -144,8 +144,8 @@ Incident → SOC → On-Call Primary → On-Call Secondary → Operations Manage
 
 | Tool | Purpose | Access |
 |------|---------|--------|
-| **Prometheus + Grafana** | Metrics collection and visualization | https://metrics.swedwise.com |
-| **ELK Stack** | Centralized logging and analysis | https://logs.swedwise.com |
+| **Prometheus + Grafana** | Metrics collection and visualization | https://metrics.swedwise.se |
+| **ELK Stack** | Centralized logging and analysis | https://logs.swedwise.se |
 | **AlertManager** | Alert routing and management | Integrated with PagerDuty |
 | **PagerDuty** | On-call alerting and incident tracking | Mobile app + web |
 | **Kubernetes Dashboard** | Container orchestration monitoring | VPN access only |
@@ -1136,6 +1136,7 @@ This document provides **platform-wide operations procedures**. For component-sp
 | Version | Date | Author | Changes | Approved By |
 |---------|------|--------|---------|-------------|
 | 1.0 | [TBD] | SaaS Operations Manager | Initial operations guide creation | Management Team |
+| 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Domain swedwise.com replaced by swedwise.se (owner 2026-10-29: «Allt ska vara se») | [TBD] |
 
 **Next Review Date**: [TBD - 6 months from effective date for initial version, then annually]
 

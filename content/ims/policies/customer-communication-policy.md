@@ -2,7 +2,7 @@
 document_id: SW-QMS-POL-002
 title: Customer Communication Policy
 doc_type: policy
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: Customer Success Lead
@@ -123,9 +123,9 @@ Swedwise provides multiple communication channels:
 #### Primary Channels
 
 **Email:**
-- General: [TBD - info@swedwise.com or similar]
-- Support: [TBD - support@swedwise.com or similar]
-- Sales: [TBD - sales@swedwise.com or similar]
+- General: [TBD - info@swedwise.se or similar]
+- Support: [TBD - support@swedwise.se or similar]
+- Sales: [TBD - sales@swedwise.se or similar]
 - Standard for non-urgent communication and documentation
 
 **Customer Portal:**
@@ -597,6 +597,7 @@ This policy is:
 | Version | Date | Author | Changes | Approved By |
 |---------|------|--------|---------|-------------|
 | 1.0 | [TBD] | [TBD - Customer Success Lead name] | Initial policy creation | [TBD - CEO name] |
+| 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Domain swedwise.com replaced by swedwise.se (owner 2026-10-29: «Allt ska vara se») | [TBD] |
 
 **Next Review Date**: [TBD - typically 12 months from effective date]
 

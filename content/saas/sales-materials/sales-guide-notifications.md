@@ -2,7 +2,7 @@
 document_id: SW-SAAS-SAL-COMP-002
 title: Sales Guide - Notifications
 doc_type: sales-material
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: Sales Director
@@ -699,11 +699,12 @@ Annual:                               564,000 SEK
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | 2025-01-15 | Sales Director | Initial version - split from combined guide |
+| 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Domain swedwise.com replaced by swedwise.se (owner 2026-10-29: «Allt ska vara se») |
 
 ---
 
 **Questions or Feedback?**
-Contact: sales-enablement@swedwise.com
+Contact: sales-enablement@swedwise.se
 
 ---
 

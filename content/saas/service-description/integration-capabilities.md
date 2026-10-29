@@ -2,7 +2,7 @@
 document_id: SW-SAAS-INT-001
 title: Swedwise SaaS Platform - Integration Capabilities
 doc_type: guideline
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: Technical Lead
@@ -69,7 +69,7 @@ Swedwise SaaS Platform supports the following OAuth 2.0 flows:
 #### Client Credentials Flow (Recommended for Server-to-Server)
 
 ```http
-POST https://api.swedwise.com/oauth/token
+POST https://api.swedwise.se/oauth/token
 Content-Type: application/x-www-form-urlencoded
 
 grant_type=client_credentials
@@ -92,7 +92,7 @@ grant_type=client_credentials
 
 1. **Authorization Request:**
 ```http
-GET https://api.swedwise.com/oauth/authorize?
+GET https://api.swedwise.se/oauth/authorize?
   response_type=code
   &client_id={CLIENT_ID}
   &redirect_uri={REDIRECT_URI}
@@ -102,7 +102,7 @@ GET https://api.swedwise.com/oauth/authorize?
 
 2. **Token Exchange:**
 ```http
-POST https://api.swedwise.com/oauth/token
+POST https://api.swedwise.se/oauth/token
 Content-Type: application/x-www-form-urlencoded
 
 grant_type=authorization_code
@@ -123,7 +123,7 @@ API keys provide a simpler authentication method for server-to-server integratio
 
 **Example:**
 ```http
-GET https://api.swedwise.com/v1/documents
+GET https://api.swedwise.se/v1/documents
 X-API-Key: sw_live_abc123def456ghi789
 ```
 
@@ -171,8 +171,8 @@ X-API-Key: sw_live_abc123def456ghi789
 
 | Environment | Base URL |
 |-------------|----------|
-| **Production** | `https://api.swedwise.com/v1` |
-| **Sandbox** | `https://sandbox-api.swedwise.com/v1` |
+| **Production** | `https://api.swedwise.se/v1` |
+| **Sandbox** | `https://sandbox-api.swedwise.se/v1` |
 
 ### 3.2. API Versioning
 
@@ -277,7 +277,7 @@ Generate documents from templates with dynamic data.
         "document_id": "doc_abc123",
         "format": "pdf",
         "size_bytes": 245678,
-        "download_url": "https://api.swedwise.com/v1/documents/doc_abc123/download",
+        "download_url": "https://api.swedwise.se/v1/documents/doc_abc123/download",
         "expires_at": "2025-01-22T10:34:23Z"
       }
     ]
@@ -538,7 +538,7 @@ Customer systems push data to Swedwise SaaS Platform in real-time.
 **Example: Generate Invoice on Order Completion**
 
 ```http
-POST https://api.swedwise.com/v1/documents/generate
+POST https://api.swedwise.se/v1/documents/generate
 Authorization: Bearer {ACCESS_TOKEN}
 Content-Type: application/json
 
@@ -645,7 +645,7 @@ Swedwise SaaS Platform can send real-time event notifications to customer system
 
 **Setup via API:**
 ```http
-POST https://api.swedwise.com/v1/webhooks
+POST https://api.swedwise.se/v1/webhooks
 Authorization: Bearer {ACCESS_TOKEN}
 Content-Type: application/json
 
@@ -688,7 +688,7 @@ Content-Type: application/json
     "status": "completed",
     "format": "pdf",
     "size_bytes": 245678,
-    "download_url": "https://api.swedwise.com/v1/documents/doc_abc123/download",
+    "download_url": "https://api.swedwise.se/v1/documents/doc_abc123/download",
     "metadata": {
       "customer_id": "CUST-12345",
       "invoice_number": "INV-2025-001"
@@ -808,7 +808,7 @@ X-RateLimit-Tier: Standard
     "code": "RATE_LIMIT_EXCEEDED",
     "message": "API rate limit exceeded. Please retry after 2025-01-15T10:30:00Z",
     "retry_after": 45,
-    "documentation_url": "https://docs.swedwise.com/api/rate-limits"
+    "documentation_url": "https://docs.swedwise.se/api/rate-limits"
   }
 }
 ```
@@ -949,7 +949,7 @@ All API requests are logged for security and compliance purposes:
 
 2. **Notification Request** (< 1 second)
    ```http
-   POST https://api.swedwise.com/v1/notifications/send
+   POST https://api.swedwise.se/v1/notifications/send
    Authorization: Bearer {TOKEN}
 
    {
@@ -1100,12 +1100,12 @@ app.post('/api/transactions', async (req, res) => {
 
 | Resource | URL | Description |
 |----------|-----|-------------|
-| **API Reference** | docs.swedwise.com/api | Complete API documentation |
-| **Developer Portal** | developers.swedwise.com | Sandbox, API keys, tutorials |
-| **Integration Guides** | docs.swedwise.com/guides | Step-by-step integration tutorials |
+| **API Reference** | docs.swedwise.se/api | Complete API documentation |
+| **Developer Portal** | developers.swedwise.se | Sandbox, API keys, tutorials |
+| **Integration Guides** | docs.swedwise.se/guides | Step-by-step integration tutorials |
 | **SDK Downloads** | github.com/swedwise/sdk | Client libraries and SDKs |
-| **Status Page** | status.swedwise.com | Real-time service status |
-| **Community Forum** | community.swedwise.com | Developer discussions |
+| **Status Page** | status.swedwise.se | Real-time service status |
+| **Community Forum** | community.swedwise.se | Developer discussions |
 
 ### 10.2. SDKs and Libraries
 
@@ -1126,7 +1126,7 @@ app.post('/api/transactions', async (req, res) => {
 - **Support**: Community forum support
 
 **Getting Started:**
-1. Register at developers.swedwise.com
+1. Register at developers.swedwise.se
 2. Create sandbox API keys
 3. Review API documentation
 4. Test integration in sandbox
@@ -1188,7 +1188,7 @@ All integrations must comply with Swedwise's Information Security Management Sys
 |-------|-------|------------|
 | **401 Unauthorized** | Invalid or expired token | Refresh OAuth token or regenerate API key |
 | **429 Rate Limit** | Too many requests | Implement exponential backoff, upgrade tier |
-| **500 Server Error** | Service unavailable | Check status.swedwise.com, retry with backoff |
+| **500 Server Error** | Service unavailable | Check status.swedwise.se, retry with backoff |
 | **Webhook not received** | Firewall blocking | Whitelist Swedwise IP ranges |
 | **Document generation timeout** | Large batch size | Split into smaller batches, use async processing |
 
@@ -1204,7 +1204,7 @@ A: 50 MB per document. For larger documents, contact support for alternatives.
 A: 7 days by default. Enterprise customers can configure longer retention periods.
 
 **Q: Can I test integrations without affecting production?**
-A: Yes, use the sandbox environment at sandbox-api.swedwise.com with separate credentials.
+A: Yes, use the sandbox environment at sandbox-api.swedwise.se with separate credentials.
 
 **Q: Do you support SOAP APIs?**
 A: Legacy SOAP endpoints are available for specific use cases (e.g., SAP integration) but REST APIs are recommended for new integrations.
@@ -1229,7 +1229,7 @@ A: Yes, we support VPN connectivity and on-premise integration components (optio
 
 ### 13.2. Customer Requests
 
-We actively incorporate customer feedback into our roadmap. Submit feature requests at developers.swedwise.com/feedback.
+We actively incorporate customer feedback into our roadmap. Submit feature requests at developers.swedwise.se/feedback.
 
 ---
 
@@ -1238,6 +1238,7 @@ We actively incorporate customer feedback into our roadmap. Submit feature reque
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | 2025-01-15 | Technical Lead | Initial version |
+| 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Domain swedwise.com replaced by swedwise.se (owner 2026-10-29: «Allt ska vara se») |
 
 ---
 
@@ -1254,14 +1255,14 @@ We actively incorporate customer feedback into our roadmap. Submit feature reque
 
 | Department | Contact |
 |------------|---------|
-| **Integration Support** | integration-support@swedwise.com |
-| **Technical Support** | support@swedwise.com |
-| **Sales** | sales@swedwise.com |
-| **Developer Relations** | developers@swedwise.com |
+| **Integration Support** | integration-support@swedwise.se |
+| **Technical Support** | support@swedwise.se |
+| **Sales** | sales@swedwise.se |
+| **Developer Relations** | developers@swedwise.se |
 
 **Phone:** +46 54 17 11 10
 **Address:** Swedwise AB, Karlstad, Sweden
-**Web:** www.swedwise.com
+**Web:** www.swedwise.se
 
 ---
 

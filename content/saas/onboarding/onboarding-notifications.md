@@ -2,7 +2,7 @@
 document_id: SW-SAAS-ONB-COMP-002
 title: Onboarding Addendum - Notifications
 doc_type: procedure
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: Technical Architect
@@ -950,18 +950,18 @@ def verify_webhook(payload, signature, secret):
 | **Technical Architect** | [Name], [Email] | Integration design, API questions |
 
 **Support Channels:**
-- Portal: https://support.swedwise.com
-- Email: support@swedwise.com
+- Portal: https://support.swedwise.se
+- Email: support@swedwise.se
 - Phone: +46 54 17 11 10
 
 ### Appendix C: Useful Resources
 
 | Resource | URL | Description |
 |----------|-----|-------------|
-| **API Documentation** | https://developers.swedwise.com/notifications | Complete notifications API reference |
-| **Email Best Practices** | https://kb.swedwise.com/email | Deliverability tips, templates |
-| **SMS Guidelines** | https://kb.swedwise.com/sms | Character limits, sender ID rules |
-| **Video Tutorials** | https://training.swedwise.com | Step-by-step guides |
+| **API Documentation** | https://developers.swedwise.se/notifications | Complete notifications API reference |
+| **Email Best Practices** | https://kb.swedwise.se/email | Deliverability tips, templates |
+| **SMS Guidelines** | https://kb.swedwise.se/sms | Character limits, sender ID rules |
+| **Video Tutorials** | https://training.swedwise.se | Step-by-step guides |
 
 ---
 
@@ -970,12 +970,13 @@ def verify_webhook(payload, signature, secret):
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | 2025-01-15 | Technical Architect | Initial version - split from combined addendum |
+| 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Domain swedwise.com replaced by swedwise.se (owner 2026-10-29: «Allt ska vara se») |
 
 ---
 
 **Questions or Need Assistance?**
 
-Contact your assigned Notifications Engineer or email: onboarding@swedwise.com
+Contact your assigned Notifications Engineer or email: onboarding@swedwise.se
 
 ---
 

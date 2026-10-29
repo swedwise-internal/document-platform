@@ -2,7 +2,7 @@
 document_id: SW-SAAS-COMP-002
 title: Service Component - Notifications
 doc_type: service-component
-version: "1.0"
+version: "1.1"
 status: draft
 classification: confidential
 owner: SaaS Service Manager
@@ -299,7 +299,7 @@ Notifications is priced based on:
 
 ### 7.1. API Integration
 
-**Base URL:** `https://api.swedwise.com/v1/notifications`
+**Base URL:** `https://api.swedwise.se/v1/notifications`
 
 **Authentication:** API Key or OAuth 2.0
 
@@ -468,6 +468,7 @@ Configure webhooks to receive delivery events:
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | 2025-01-15 | SaaS Service Manager | Initial Notifications component document |
+| 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Domain swedwise.com replaced by swedwise.se (owner 2026-10-29: «Allt ska vara se») |
 
 ---
 

@@ -2,7 +2,7 @@
 document_id: SW-SAAS-ARCH-COMP-002
 title: Notifications Technical Architecture Addendum
 doc_type: guideline
-version: "1.0"
+version: "1.1"
 status: draft
 classification: confidential
 owner: Technical Lead
@@ -913,8 +913,8 @@ All operations logged:
 
 | Role | Contact |
 |------|---------|
-| Technical Lead | tech-lead@swedwise.com |
-| Notifications Engineer | notifications@swedwise.com |
+| Technical Lead | tech-lead@swedwise.se |
+| Notifications Engineer | notifications@swedwise.se |
 | Provider Support | Per provider |
 
 ---
@@ -924,6 +924,7 @@ All operations logged:
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | 2025-01-15 | Technical Lead | Initial Notifications architecture addendum |
+| 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Domain swedwise.com replaced by swedwise.se (owner 2026-10-29: «Allt ska vara se») |
 
 ---
 

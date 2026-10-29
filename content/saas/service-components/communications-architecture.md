@@ -2,7 +2,7 @@
 document_id: SW-SAAS-ARCH-COMP-001
 title: Communications Technical Architecture Addendum
 doc_type: guideline
-version: "1.0"
+version: "1.1"
 status: draft
 classification: confidential
 owner: Technical Lead
@@ -332,7 +332,7 @@ template_v1.ptx/
   "status": "completed",
   "document": {
     "id": "doc_456def",
-    "url": "https://api.swedwise.com/v1/documents/doc_456def/download",
+    "url": "https://api.swedwise.se/v1/documents/doc_456def/download",
     "expires_at": "2024-01-16T10:00:00Z",
     "format": "pdf",
     "pages": 3,
@@ -657,8 +657,8 @@ All operations are logged:
 
 | Role | Contact |
 |------|---------|
-| Technical Lead | tech-lead@swedwise.com |
-| Communications Engineer | exstream@swedwise.com |
+| Technical Lead | tech-lead@swedwise.se |
+| Communications Engineer | exstream@swedwise.se |
 | OpenText Support | support.opentext.com |
 
 ---
@@ -668,6 +668,7 @@ All operations are logged:
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | 2025-01-15 | Technical Lead | Initial Communications architecture addendum |
+| 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Domain swedwise.com replaced by swedwise.se (owner 2026-10-29: «Allt ska vara se») |
 
 ---
 

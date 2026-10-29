@@ -2,7 +2,7 @@
 document_id: SW-SAAS-OPS-COMP-001
 title: Operations Addendum - Communications
 doc_type: procedure
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: SaaS Operations Manager
@@ -548,7 +548,7 @@ Monitor → Update → Deprecate → Archive
 4. Wait 60 seconds for graceful shutdown
 5. Scale up: `kubectl scale deployment exstream-api --replicas=3`
 6. Monitor pod startup: `kubectl get pods -w -l app=exstream`
-7. Verify health checks: `curl https://api.swedwise.com/health`
+7. Verify health checks: `curl https://api.swedwise.se/health`
 8. Test document generation with sample request
 9. Monitor error rates for 15 minutes post-restart
 10. Announce service restored (if maintenance was announced)
@@ -687,6 +687,7 @@ Monitor → Update → Deprecate → Archive
 | Version | Date | Author | Changes | Approved By |
 |---------|------|--------|---------|-------------|
 | 1.0 | [TBD] | SaaS Operations Manager | Initial Communications operations addendum | Operations Manager |
+| 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Domain swedwise.com replaced by swedwise.se (owner 2026-10-29: «Allt ska vara se») | [TBD] |
 
 **Next Review Date**: [TBD - 6 months from effective date, then annually]
 

@@ -315,7 +315,7 @@ GDPR gives individuals strong rights over their personal data. You need to know 
 4. **Verify identity** - Ensure it's the actual data subject (Privacy Lead will guide)
 
 **How to Forward**:
-- Email: [Privacy Lead email - to confirm]
+- Email: dataskydd@swedwise.se (proposed)
 - Include: Original request, date received, any context
 - Mark as: "URGENT: Data Subject Rights Request"
 
@@ -507,9 +507,9 @@ Some data is **extra sensitive** and requires additional protection:
 - Example: Wrong email sent? Ask recipient not to open/delete it
 
 **Step 2: Report Immediately**
-- **Email**: [Privacy Lead email - to confirm] + [CISO Email - TBD]
+- **Email**: dataskydd@swedwise.se (proposed) + [CISO Email - TBD]
 - **Subject**: "URGENT: Potential Data Breach"
-- **Phone**: [Privacy Lead phone - to confirm] (for serious incidents)
+- **Phone**: [to confirm: via dataskydd@swedwise.se] (for serious incidents)
 - **After Hours**: [Emergency Contact - TBD]
 
 **Step 3: Document**
@@ -839,9 +839,9 @@ Some data is **extra sensitive** and requires additional protection:
 - Privacy policy question
 
 **Contact Information**:
-- **Email**: [Privacy Lead email - to confirm]
-- **Phone**: [Privacy Lead phone - to confirm]
-- **Teams**: [Privacy Lead teams - to confirm]
+- **Email**: dataskydd@swedwise.se (proposed)
+- **Phone**: [to confirm: via dataskydd@swedwise.se]
+- **Teams**: [to confirm: via dataskydd@swedwise.se]
 
 **Expected Response Time**:
 - Urgent (breach, rights request): Same day

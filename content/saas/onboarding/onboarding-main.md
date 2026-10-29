@@ -2,7 +2,7 @@
 document_id: SW-SAAS-ONB-001
 title: Swedwise SaaS Platform - Customer Onboarding Guide
 doc_type: procedure
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: Customer Success Manager
@@ -161,7 +161,7 @@ Complete the following requirements documentation:
    ```
    Production:   https://[customer]-prod.swedwise-saas.com
    Development:  https://[customer]-dev.swedwise-saas.com
-   Support Portal: https://support.swedwise.com
+   Support Portal: https://support.swedwise.se
    ```
 
 **Customer Actions:**
@@ -397,7 +397,7 @@ The following documentation is provided:
 - [ ] **Troubleshooting Guide**
 - [ ] **FAQ Document**
 
-**Documentation Access:** Available via customer portal at https://support.swedwise.com
+**Documentation Access:** Available via customer portal at https://support.swedwise.se
 
 #### 2.4.3. Go-Live Preparation
 
@@ -477,7 +477,7 @@ The following documentation is provided:
 
 ### 3.1. Support Portal Access
 
-**Portal URL:** https://support.swedwise.com
+**Portal URL:** https://support.swedwise.se
 
 **Initial Setup:**
 
@@ -502,7 +502,7 @@ The following documentation is provided:
 | Channel | Use For | Availability |
 |---------|---------|--------------|
 | **Web Portal** | All requests (preferred) | 24/7 submission |
-| **Email** | support@swedwise.com | 24/7 submission |
+| **Email** | support@swedwise.se | 24/7 submission |
 | **Phone** | +46 54 17 11 10 | Critical incidents (24/7) |
 
 **Response Times:** See Service Description (SW-SAAS-SVC-001), Section 3.1
@@ -524,9 +524,9 @@ The following documentation is provided:
 3. **Technical response** per SLA (see Service Description)
 4. **Customer escalation** (if not satisfied):
    - Level 1: Assigned Support Engineer
-   - Level 2: Support Manager (support-manager@swedwise.com)
+   - Level 2: Support Manager (support-manager@swedwise.se)
    - Level 3: Customer Success Manager (your assigned CSM)
-   - Level 4: Service Delivery Manager (service-manager@swedwise.com)
+   - Level 4: Service Delivery Manager (service-manager@swedwise.se)
 
 ### 3.4. Change Management
 
@@ -710,11 +710,11 @@ Expected Resolution:
 
 | Resource | URL |
 |----------|-----|
-| Customer Portal | https://support.swedwise.com |
-| API Documentation | https://developers.swedwise.com |
-| Training Videos | https://training.swedwise.com |
-| Service Status Page | https://status.swedwise.com |
-| Knowledge Base | https://kb.swedwise.com |
+| Customer Portal | https://support.swedwise.se |
+| API Documentation | https://developers.swedwise.se |
+| Training Videos | https://training.swedwise.se |
+| Service Status Page | https://status.swedwise.se |
+| Knowledge Base | https://kb.swedwise.se |
 
 ### Appendix D: Glossary
 
@@ -735,12 +735,13 @@ Expected Resolution:
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | 2025-01-15 | Customer Success Team | Initial version |
+| 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Domain swedwise.com replaced by swedwise.se (owner 2026-10-29: «Allt ska vara se») |
 
 ---
 
 **Questions or Feedback?**
 
-Contact your Customer Success Manager or email: onboarding@swedwise.com
+Contact your Customer Success Manager or email: onboarding@swedwise.se
 
 ---
 

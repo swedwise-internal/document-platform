@@ -794,7 +794,7 @@ Data protection performance reviewed in management reviews:
 ## 16. Contact Information
 
 **Data Protection Queries:**
-- Privacy Lead: [to confirm: privacy contact address]
+- Privacy Lead: dataskydd@swedwise.se (proposed shared mailbox; members: CEO and CFO)
 - CISO: [TBD - email and phone]
 
 **Data Subject Rights Requests:**
