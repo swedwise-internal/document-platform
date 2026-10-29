@@ -2,7 +2,7 @@
 document_id: SW-IMS-POL-003
 title: Supplier Management Policy
 doc_type: policy
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: CEO
@@ -16,6 +16,9 @@ related_documents:
   - SW-IMS-POL-001
   - SW-ISMS-POL-001
   - SW-EMS-POL-001
+  - SW-IMS-PRO-015
+  - SW-QMS-PRO-007
+  - SW-ISMS-PRO-008
 ---
 
 # Supplier Management Policy
@@ -44,6 +47,17 @@ This policy applies to:
 | **Standard** | Regular suppliers; lower risk/value; alternatives available | Office supplies, travel services, equipment vendors |
 
 This policy applies most rigorously to Strategic and Important suppliers, with proportionate requirements for Standard suppliers.
+
+### Ordinary Suppliers and Partners
+
+Swedwise separates two kinds of external providers. Both follow this policy; each has its own owner and procedure:
+
+| Kind | What it covers | Owner | Procedure |
+|------|----------------|-------|-----------|
+| **Ordinary suppliers** | What the company buys for its own use: equipment, software and cloud services for internal work, office and facility services, travel, professional services | CFO (Finance) | SW-IMS-PRO-015 Purchasing Procedure |
+| **Partners and product vendors** | The vendors whose products Swedwise sells, implements or builds on (for example OpenText and Salesforce), their partner programmes, and the firms Swedwise delivers with | CCO (Sales & Marketing) | SW-QMS-PRO-007 Partner and Vendor Management Procedure |
+
+The security assessment of either kind is done under SW-ISMS-PRO-008 Supplier Security Assessment Procedure. The supplier categories above (Strategic, Important, Standard) apply to both kinds.
 
 ## 3. Supplier Management Objectives
 
@@ -399,10 +413,9 @@ This policy is:
 - SW-IMS-POL-005: Business Continuity Policy
 
 **Procedures:**
-- [TBD - SW-IMS-PRO-004: Supplier Selection and Evaluation Procedure]
-- [TBD - SW-IMS-PRO-005: Supplier Performance Review Procedure]
-- [TBD - SW-IMS-PRO-006: Contract Management Procedure]
-- [TBD - SW-ISMS-PRO-006: Third-Party Security Assessment Procedure]
+- SW-IMS-PRO-015: Purchasing Procedure (ordinary suppliers)
+- SW-QMS-PRO-007: Partner and Vendor Management Procedure (partners and product vendors)
+- SW-ISMS-PRO-008: Supplier Security Assessment Procedure
 
 **Guidelines:**
 - [TBD - SW-IMS-GUI-001: Supplier Selection Criteria and Scoring]
@@ -420,7 +433,8 @@ This policy is:
 
 | Version | Date | Author | Changes | Approved By |
 |---------|------|--------|---------|-------------|
-| 1.0 | [TBD] | [TBD] | Initial policy creation | [TBD - CEO name] |
+| 1.0 | [TBD] | [TBD] | Initial policy creation | [TBD - CEO] |
+| 1.1 | 2026-10-29 | IMS Owner (draft) | Ordinary suppliers (CFO) separated from partners and product vendors (CCO), with their procedures; procedure references corrected | [TBD] |
 
 **Next Review Date**: [TBD - typically 12 months from effective date]
 

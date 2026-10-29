@@ -1,8 +1,8 @@
 ---
-document_id: SW-IMS-TRN-005
+document_id: SW-IMS-TRN-007
 title: Internal Auditor Training
 doc_type: training
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: IMS Owner
@@ -1159,6 +1159,7 @@ You've completed the Internal Auditor Training. You're now ready to:
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | [TBD] | IMS Owner | Initial release |
+| 1.1 | 2026-10-29 | IMS Owner | Document id changed from SW-IMS-TRN-005 (duplicate) to SW-IMS-TRN-007 |
 
 ---
 

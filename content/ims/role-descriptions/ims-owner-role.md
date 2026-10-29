@@ -2,7 +2,7 @@
 document_id: SW-IMS-ROLE-001
 title: IMS Owner / Management Representative
 doc_type: role
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: CEO
@@ -19,11 +19,11 @@ related_documents:
 
 # Role: IMS Owner / Management Representative
 
-**Document ID**: SW-IMS-ROLE-001-v1.0
+**Document ID**: SW-IMS-ROLE-001-v1.1
 **Effective Date**: [TBD]
 **Review Date**: [TBD]
 **Reports to**: CEO
-**Current Assignment**: [TBD - Name to be assigned by management]
+**Held by**: COO (Operations)
 
 ## Role Summary
 
@@ -271,6 +271,7 @@ The IMS Owner will be successful when:
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | [TBD] | [Author] | Initial release |
+| 1.1 | 2026-10-29 | IMS Owner | Held by: COO (Operations) (IMS manual SW-IMS-MAN-005, 4.1.2) |
 
 ---
 

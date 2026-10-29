@@ -14,7 +14,7 @@ related_documents:
   - SW-QMS-POL-001
   - SW-QMS-PRO-005
   - SW-QMS-FRM-007
-  - SW-IMS-PRO-009
+  - SW-IMS-PRO-005
 ---
 
 # Complaint Register Template
@@ -47,7 +47,7 @@ This register is used to track all customer complaints from receipt through reso
 3. Acknowledge complaint to customer within 24 hours (use SW-QMS-FRM-007)
 4. Update status regularly as investigation proceeds
 5. Close complaint only when customer confirms resolution
-6. Review for need for corrective action (SW-IMS-PRO-009)
+6. Review for need for corrective action (SW-IMS-PRO-005)
 
 **Responsible**: Quality Lead (maintains register), Account Managers/Service Delivery Managers (resolve complaints)
 

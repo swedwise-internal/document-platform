@@ -1,8 +1,8 @@
 ---
-document_id: SW-ISMS-TRN-003
+document_id: SW-ISMS-TRN-005
 title: Developer Secure Coding Training
 doc_type: training
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: CISO
@@ -2105,6 +2105,7 @@ After completing this training:
 | Version | Date | Author | Changes | Approved By |
 |---------|------|--------|---------|-------------|
 | 1.0 | [TBD] | [TBD - CISO name] | Initial training creation | [TBD - CEO name] |
+| 1.1 | 2026-10-29 | CISO | Document id changed from SW-ISMS-TRN-003 (duplicate) to SW-ISMS-TRN-005 | [TBD] |
 
 **Next Review Date**: [TBD - 12 months from effective date]
 

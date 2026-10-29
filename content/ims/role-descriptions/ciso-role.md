@@ -2,7 +2,7 @@
 document_id: SW-ISMS-ROLE-001
 title: Chief Information Security Officer (CISO)
 doc_type: role
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: CEO
@@ -22,7 +22,7 @@ related_documents:
 
 The Chief Information Security Officer (CISO) is responsible for establishing, implementing, maintaining, and continually improving Swedwise AB's Information Security Management System (ISMS) in accordance with ISO 27001:2022 requirements. The CISO ensures that information security is appropriately managed across the organization, protecting the confidentiality, integrity, and availability of information assets.
 
-**Current Assignee**: [TBD - Name to be assigned by management]
+**Held by**: COO (Operations) — proposed, not yet decided by top management
 
 **Role Type**: Part-time functional role (estimated 20-30% time allocation)
 

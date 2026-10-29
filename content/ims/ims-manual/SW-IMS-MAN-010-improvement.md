@@ -17,7 +17,7 @@ related_documents:
   - SW-IMS-POL-001
   - SW-IMS-PRO-005
   - SW-IMS-PRO-006
-  - SW-IMS-PRO-009
+  - SW-IMS-PRO-010
 ---
 
 # IMS Manual - Clause 10: Improvement
@@ -376,7 +376,7 @@ Swedwise uses the **Plan-Do-Check-Act (PDCA)** cycle for continual improvement:
 
 ### 10.3.3 Continual Improvement Process
 
-**See SW-IMS-PRO-009** (Continual Improvement Procedure) for detailed process.
+**See SW-IMS-PRO-010** (Continual Improvement Procedure) for detailed process.
 
 **Summary of improvement process**:
 
@@ -655,7 +655,7 @@ Swedwise captures and shares knowledge to enable learning and improvement:
 - SW-IMS-PRO-003: Internal Audit Procedure
 - SW-IMS-PRO-004: Management Review Procedure
 - SW-IMS-PRO-005: Nonconformity and Corrective Action Procedure
-- SW-IMS-PRO-009: Continual Improvement Procedure
+- SW-IMS-PRO-010: Continual Improvement Procedure
 - SW-QMS-PRO-002: Customer Feedback Procedure
 
 **Policies**:

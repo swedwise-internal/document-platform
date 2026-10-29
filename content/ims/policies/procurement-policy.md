@@ -2,7 +2,7 @@
 document_id: SW-IMS-POL-002
 title: Procurement and Asset Acquisition Policy
 doc_type: policy
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: CEO
@@ -16,6 +16,9 @@ related_documents:
   - SW-IMS-POL-001
   - SW-ISMS-POL-001
   - SW-EMS-POL-001
+  - SW-IMS-POL-003
+  - SW-IMS-PRO-015
+  - SW-QMS-PRO-007
 ---
 
 # Procurement and Asset Acquisition Policy
@@ -38,6 +41,15 @@ This policy applies to:
 - Third-party services supporting SaaS operations (data center, monitoring, security)
 - All staff authorized to make procurement decisions
 - All locations (Karlstad HQ, Stockholm, Uddevalla offices)
+
+### Ordinary Purchasing and Purchasing for Resale
+
+Swedwise separates ordinary purchasing from purchasing tied to partners and the products it sells:
+
+- **Ordinary purchasing** — what the company buys for its own use — is owned by the CFO (Finance) and carried out under SW-IMS-PRO-015 Purchasing Procedure.
+- **Partners and product vendors** — the vendors whose products Swedwise sells (for example OpenText and Salesforce), their licences and partner terms, and the firms Swedwise delivers with — are owned by the CCO (Sales & Marketing) under SW-QMS-PRO-007 Partner and Vendor Management Procedure; what is bought for a customer deal is bought as part of the sale (SW-QMS-PRO-004 Sales Procedure).
+
+The principles, approval authority and security and environmental requirements of this policy apply to both.
 
 ## 3. Procurement Objectives
 
@@ -628,13 +640,13 @@ This policy is:
 - SW-IMS-POL-001: Integrated Management System Policy
 - SW-ISMS-POL-001: Information Security Policy
 - SW-EMS-POL-001: Environmental Policy
-- [TBD - SW-IMS-POL-XXX: Supplier Management Policy]
+- SW-IMS-POL-003: Supplier Management Policy
 - [TBD - SW-ISMS-POL-XXX: Data Protection and Privacy Policy]
 
 **Procedures:**
-- [TBD - SW-IMS-PRO-XXX: Procurement Procedure]
-- [TBD - SW-IMS-PRO-XXX: Supplier Evaluation and Management Procedure]
-- [TBD - SW-ISMS-PRO-XXX: Supplier Security Assessment Procedure]
+- SW-IMS-PRO-015: Purchasing Procedure (ordinary purchasing)
+- SW-QMS-PRO-007: Partner and Vendor Management Procedure (partners and product vendors)
+- SW-ISMS-PRO-008: Supplier Security Assessment Procedure
 - [TBD - SW-IMS-PRO-XXX: Contract Management Procedure]
 - [TBD - SW-IMS-PRO-XXX: Asset Management Procedure]
 
@@ -655,7 +667,8 @@ This policy is:
 
 | Version | Date | Author | Changes | Approved By |
 |---------|------|--------|---------|-------------|
-| 1.0 | [TBD] | [TBD] | Initial policy creation | [TBD - CEO name] |
+| 1.0 | [TBD] | [TBD] | Initial policy creation | [TBD - CEO] |
+| 1.1 | 2026-10-29 | IMS Owner (draft) | Ordinary purchasing (CFO) separated from partners and product vendors (CCO), with their procedures; procedure references corrected | [TBD] |
 
 **Next Review Date**: [TBD - typically 12 months from effective date]
 

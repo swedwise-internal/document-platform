@@ -2,7 +2,7 @@
 document_id: SW-IMS-ROLE-008
 title: Department Manager
 doc_type: role
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: CEO
@@ -20,11 +20,11 @@ related_documents:
 
 # Role: Department Manager
 
-**Document ID**: SW-IMS-ROLE-008-v1.0
+**Document ID**: SW-IMS-ROLE-008-v1.1
 **Effective Date**: [TBD]
 **Review Date**: [TBD]
 **Reports to**: CEO
-**Current Assignment**: [Multiple - Generic role for all department/unit managers]
+**Held by**: the unit heads — COO (Operations), CFO (Finance), CSO (Professional Services), CCO (Sales & Marketing)
 
 ## Role Summary
 
@@ -380,6 +380,7 @@ The Department Manager will be successful when:
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | [TBD] | [Author] | Initial release |
+| 1.1 | 2026-10-29 | IMS Owner | Held by: unit heads COO, CFO, CSO, CCO (IMS manual SW-IMS-MAN-005, 4.1.2) |
 
 ---
 

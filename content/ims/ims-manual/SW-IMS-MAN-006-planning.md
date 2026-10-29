@@ -293,7 +293,7 @@ Swedwise systematically determines and maintains awareness of compliance obligat
 
 **Step 4: Monitor and Review**
 - Track compliance status (compliant, non-compliant, not applicable)
-- Internal audits verify compliance (SW-IMS-PRO-004)
+- Internal audits verify compliance (SW-IMS-PRO-003)
 - Management review assesses compliance performance
 - Update register when regulations change
 
@@ -453,7 +453,7 @@ All IMS objectives are **SMART**:
 
 ### 6.2.2 IMS Objectives
 
-Swedwise's current IMS objectives are documented in **IMS Objectives Register** (SW-IMS-REG-003).
+Swedwise's current IMS objectives are documented in section 3 of the **KPI Register** (SW-IMS-REG-008), which serves as the IMS objectives register.
 
 **Example Organizational Objectives** (to be finalized and populated):
 
@@ -735,13 +735,13 @@ Certain changes must be communicated to ISO certification body:
 
 - **SW-IMS-POL-001** - Integrated Management System Policy
 - **SW-IMS-PRO-002** - Risk Assessment Procedure
-- **SW-IMS-PRO-004** - Context and Interested Parties Procedure
+- **SW-IMS-PRO-011** - Context and Interested Parties Procedure
 - **SW-IMS-PRO-006** - Non-Conformity and Corrective Action Procedure
 - **SW-IMS-PRO-008** - Change Management Procedure
 - **SW-ISMS-POL-007** - Information Classification Policy
 - **SW-IMS-REG-001** - Integrated Risk Register
 - **SW-IMS-REG-002** - Compliance Obligations Register
-- **SW-IMS-REG-003** - IMS Objectives Register
+- **SW-IMS-REG-008** - KPI Register (section 3: IMS objectives)
 - **SW-ISMS-REG-001** - Statement of Applicability (ISO 27001 Annex A Controls)
 - **SW-EMS-REG-001** - Environmental Aspects Register
 

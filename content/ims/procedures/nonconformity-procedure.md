@@ -2,7 +2,7 @@
 document_id: SW-IMS-PRO-005
 title: Nonconformity and Corrective Action Procedure
 doc_type: procedure
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: IMS Owner
@@ -18,11 +18,13 @@ related_documents:
   - SW-IMS-PRO-002
   - SW-IMS-PRO-003
   - SW-IMS-PRO-004
+  - SW-IMS-PRO-009
+  - SW-IMS-FRM-003
 ---
 
 # Nonconformity and Corrective Action Procedure
 
-**Document ID**: SW-IMS-PRO-005-v1.0
+**Document ID**: SW-IMS-PRO-005-v1.1
 **Effective Date**: [TBD]
 **Review Date**: [TBD]
 **Owner**: IMS Owner
@@ -41,6 +43,8 @@ This procedure establishes a systematic approach for identifying, recording, ana
 - Learn from mistakes and near-misses
 
 This procedure applies to quality, environmental, and information security nonconformities.
+
+This is Swedwise's one procedure for nonconformity and corrective action. It replaces SW-IMS-PRO-009 Corrective Action Procedure, which described the same process as an 8D method; the 8D method is kept here as the root-cause method for major and critical nonconformities (Step 4).
 
 ## 2. Scope
 
@@ -161,7 +165,7 @@ The process follows a structured 8-step approach:
 **Who**: Person identifying the NC, or delegated to IMS Owner/Department Head
 
 **Actions**:
-1. Initiate a **Corrective Action Request (CAR)** using form SW-IMS-FRM-007
+1. Initiate a **Corrective Action Request (CAR)** using form SW-IMS-FRM-003
 2. Assign a unique CAR ID: CAR-YYYY-### (e.g., CAR-2025-042)
 3. Document:
    - Description of the nonconformity (what, when, where)
@@ -221,6 +225,23 @@ The process follows a structured 8-step approach:
 6. Validate root cause with evidence (not assumptions)
 
 **Key question**: If we address this root cause, will the nonconformity be prevented from recurring?
+
+**Minor nonconformities**: the CAR Owner may work alone, using 5 Whys or a Fishbone diagram.
+
+**Major and critical nonconformities — 8D**: the CAR Owner runs the investigation as an 8D (Eight
+Disciplines) analysis, the method SW-IMS-PRO-009 described. The disciplines map onto this procedure's steps:
+
+| 8D discipline | What is done | Where in this procedure |
+|---------------|--------------|-------------------------|
+| D0 Prepare | Identify and record the nonconformity | Steps 1–2 |
+| D1 Team | The IMS Owner confirms the CAR Owner; the CAR Owner forms a cross-functional team of 3–5 people (process owner, people who do the work, a quality, security or environmental specialist as relevant, external experts if needed) and holds a kickoff | Step 4 |
+| D2 Describe | Describe the problem with 5W2H: what, when, where, who, why it matters, how, how many | Step 4 |
+| D3 Contain | Containment while the cause is found | Step 3 |
+| D4 Root cause | 5 Whys for single-cause problems, Fishbone (Method, Machine, Material, Manpower, Measurement, Environment) for multi-factor problems, Barrier Analysis for incidents and security breaches (which barrier was missing or failed); every root cause validated with evidence | Step 4 |
+| D5 Select actions | Corrective actions that remove each root cause | Step 5 |
+| D6 Implement | Carry out and evidence the actions | Step 6 |
+| D7 Prevent recurrence | Apply the fix to similar processes, locations and services; update the risk register (SW-IMS-PRO-002); share lessons learned | Steps 6 and 8 |
+| D8 Verify and close | Verify effectiveness, close, recognise the team | Steps 7–8 |
 
 **Example RCA** (5 Whys):
 - **NC**: Quarterly access reviews not performed for 6 accounts
@@ -423,7 +444,7 @@ If a nonconformity recurs after corrective action was supposedly implemented:
 
 ### 9.1 Nonconformity Register
 
-All CARs are recorded in the **Nonconformity Register** (SW-IMS-FRM-008):
+All CARs are recorded in the **Nonconformity Register** `[to confirm: where the register is kept — no register form exists yet; the hub's management system part for deviations and corrective actions is planned]`:
 
 | CAR ID | Date Raised | Description | Category | Severity | Source | CAR Owner | Status | Due Date | Closure Date |
 |--------|-------------|-------------|----------|----------|--------|-----------|--------|----------|--------------|
@@ -516,8 +537,9 @@ The following metrics are tracked and reported in Management Review:
 - **SW-IMS-PRO-002** - Risk Assessment Procedure
 - **SW-IMS-PRO-003** - Internal Audit Procedure
 - **SW-IMS-PRO-004** - Management Review Procedure
-- **SW-IMS-FRM-007** - Corrective Action Request (CAR) Form
-- **SW-IMS-FRM-008** - Nonconformity Register Template
+- **SW-IMS-PRO-009** - Corrective Action Procedure (superseded by this procedure)
+- **SW-IMS-PRO-010** - Continual Improvement Procedure
+- **SW-IMS-FRM-003** - Corrective Action Request (CAR) Form
 - **SW-IMS-FRM-002** - Improvement Suggestion Form
 
 ## 14. Continuous Improvement
@@ -814,6 +836,7 @@ This procedure and the corrective action process are continuously improved throu
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | [TBD] | [Author] | Initial release |
+| 1.1 | 2026-10-29 | IMS Owner (draft) | Made the one nonconformity and corrective action procedure: SW-IMS-PRO-009 superseded, its 8D method kept as the root-cause method for major and critical nonconformities (Step 4); CAR form reference corrected to SW-IMS-FRM-003 (SW-IMS-FRM-007 and -008 are training and competence forms) |
 
 ---
 

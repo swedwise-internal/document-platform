@@ -1,8 +1,8 @@
 ---
-document_id: SW-ISMS-TRN-004
+document_id: SW-ISMS-TRN-006
 title: Incident Response Team Training
 doc_type: training
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: CISO
@@ -1931,6 +1931,7 @@ Contact: CISO
 | Version | Date | Author | Changes | Approved By |
 |---------|------|--------|---------|-------------|
 | 1.0 | [TBD] | [TBD - CISO/Training Lead] | Initial training creation | [TBD - CISO] |
+| 1.1 | 2026-10-29 | CISO | Document id changed from SW-ISMS-TRN-004 (duplicate) to SW-ISMS-TRN-006 | [TBD] |
 
 **Next Review Date**: [TBD - typically 12 months from effective date]
 

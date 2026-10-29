@@ -2,7 +2,7 @@
 document_id: SW-IMS-MAN-005
 title: IMS Manual - Leadership (Clause 5)
 doc_type: ims-manual
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: CEO
@@ -21,6 +21,13 @@ related_documents:
   - SW-ISMS-POL-001
   - SW-ISMS-ROLE-001
   - SW-IMS-ROLE-001
+  - SW-QMS-ROLE-001
+  - SW-QMS-ROLE-002
+  - SW-EMS-ROLE-001
+  - SW-IMS-ROLE-002
+  - SW-IMS-ROLE-006
+  - SW-IMS-ROLE-008
+  - SW-IMS-ROLE-009
 ---
 
 # IMS Manual - Leadership (Clause 5)
@@ -28,7 +35,7 @@ related_documents:
 ## Document Information
 
 **Document ID**: SW-IMS-MAN-005
-**Version**: 1.0
+**Version**: 1.1
 **Status**: Draft
 **Effective Date**: [TBD]
 **Review Date**: [TBD]
@@ -373,49 +380,78 @@ All policies are cross-referenced and aligned to ensure consistency across the I
 
 ### 4.1 Organizational Structure
 
-Swedwise operates with a relatively flat organizational structure emphasizing autonomy, collaboration, and learning (aligned with "The Machine" framework).
+Swedwise is organised in units, each led by a member of the management team. IMS roles are not separate positions: each IMS role is held by a job in the line organisation (see 4.1.2). The organisation is declared in the company's organisation register (units and jobs); who holds each job is read from the HR and identity records, never written into IMS documents.
 
 #### 4.1.1 Organizational Chart
 
 ```
-┌─────────────────────────────────────────┐
-│                  CEO                     │
-│         (IMS Accountability)             │
-└────────────┬────────────────────────────┘
-             │
-┌────────────┴──────────────────────────────────────────┐
-│                 Management Team                        │
-│  (Strategic Leadership and Functional Management)     │
-└────┬──────┬──────┬──────┬──────┬──────┬──────┬───────┘
-     │      │      │      │      │      │      │
-   ┌─┴─┐  ┌┴──┐  ┌┴──┐  ┌┴──┐  ┌┴──┐  ┌┴──┐  ┌┴───┐
-   │Cus│  │Cus│  │Cus│  │Res│  │PMO│  │Sup│  │Disc│
-   │Acq│  │Dev│  │Suc│  │Mgmt│ │   │  │Fns│  │For│
-   └───┘  └───┘  └───┘  └───┘  └───┘  └───┘  └────┘
+                              ┌──────────────────────────┐
+                              │          Board           │
+                              └─────────────┬────────────┘
+                              ┌─────────────┴────────────┐
+                              │           CEO            │
+                              │   (IMS accountability)   │
+                              └─────────────┬────────────┘
+       ┌──────────────┬──────────────┬──────┴───────┬──────────────┬──────────────┐
+┌──────┴─────┐ ┌──────┴─────┐ ┌──────┴─────┐ ┌──────┴─────┐ ┌──────┴─────┐ ┌──────┴─────┐
+│ Operations │ │  Finance   │ │Professional│ │  Sales &   │ │HR / People │ │  Business  │
+│   (COO)    │ │   (CFO)    │ │  Services  │ │ Marketing  │ │ & Culture  │ │ developer  │
+│            │ │            │ │   (CSO)    │ │   (CCO)    │ │            │ │            │
+└──────┬─────┘ └────────────┘ └──────┬─────┘ └──────┬─────┘ └────────────┘ └────────────┘
+       │                             │              │
+Head of PMO &                 Group managers Account
+Continuous                    Consultants    managers
+Improvement                   (presale is a  Marketing lead
+Project managers              consultant's
+                              assignment)
 
-IMS Roles (Overlaid on Organizational Structure):
-- CEO: Overall IMS accountability
-- IMS Owner: IMS coordination (may be Quality Lead or separate)
-- Quality Lead: QMS coordination
-- Environmental Lead: EMS coordination
-- CISO: ISMS coordination
-- Department/Functional Heads: IMS implementation in their areas
+Management team: CEO, COO, CFO, CSO, CCO
 ```
 
 **Notes**:
-- Customer Acquisition (CusAcq): Sales and business development
-- Customer Development (CusDev): Account management
-- Customer Success (CusSuc): Delivery, support, onboarding
-- Resource Management (ResMgmt): Staffing, capacity, training
-- PMO: Project Management Office (internal projects, governance)
-- Support Functions (SupFns): Finance, HR, IT, Administration
-- Discipline Forums (DiscFor): Technical expertise groups (cross-functional)
+- **Operations (COO)**: operating model, processes and governance, internal IT, operational risk, quality and compliance; the project office (Head of PMO & Continuous Improvement, project managers).
+- **Finance (CFO)**: accounting, budget and reporting, ordinary purchasing and ordinary suppliers.
+- **Professional Services (CSO)**: consulting delivery and service delivery, resource planning and utilisation; group managers and consultants. Presale is an assignment a consultant takes in a business area, not a separate job.
+- **Sales & Marketing (CCO)**: sales, marketing, account management and customer relations; partners and the vendors whose products Swedwise sells.
+- **HR / People & Culture**: recruitment, onboarding, people development; reports to the CEO.
+- **Business developer**: packaged services, reports to the CEO.
+- Business areas (for example Content Management, Digital Experience, Integration, Service Management) run across the units; they are not units.
+- Size by unit (identity directory, 2026-10-19): Professional Services 50, Sales 6, Operations 3, Finance 2 people.
+
+#### 4.1.2 IMS Roles and the Jobs That Hold Them
+
+| IMS role | Held by (job) | Unit | Role description |
+|----------|---------------|------|------------------|
+| Top management (overall IMS accountability) | CEO | — (reports to the board) | — |
+| IMS Owner | COO | Operations | SW-IMS-ROLE-001 |
+| Quality Lead | Head of PMO & Continuous Improvement (reports to the COO) | Operations | SW-QMS-ROLE-001 |
+| Continual improvement | Head of PMO & Continuous Improvement | Operations | — |
+| Environmental Lead | CFO | Finance | SW-EMS-ROLE-001 |
+| CISO | COO (proposed) | Operations | SW-ISMS-ROLE-001 |
+| IT Manager | COO | Operations | — |
+| Service Delivery Manager | CSO | Professional Services | SW-QMS-ROLE-002 |
+| Customer Success Lead | CSO | Professional Services | — |
+| Resource Management Lead | CSO | Professional Services | — |
+| Customer Acquisition Lead | CCO | Sales & Marketing | — |
+| Customer Development Lead | CCO | Sales & Marketing | — |
+| Partners and vendors whose products Swedwise sells | CCO | Sales & Marketing | — |
+| Purchasing and ordinary suppliers | CFO | Finance | — |
+| HR Lead | HR / People & Culture | — (reports to the CEO) | — |
+| Communication (process owner) | CEO (proposed) | — | — |
+| Department Manager (unit head) | COO, CFO, CSO, CCO for their unit | Each unit | SW-IMS-ROLE-008 |
+| Internal Auditor | Designated, trained employees | Any unit | SW-IMS-ROLE-002 |
+| Data Protection Officer | [to confirm: which job holds the DPO role, or whether a DPO is required] | — | SW-IMS-ROLE-006 |
+| Risk Manager | [to confirm: which job holds the Risk Manager role] | — | SW-IMS-ROLE-007 |
+| Asset Owner | The unit head who owns the asset | Each unit | SW-ISMS-ROLE-002 |
+| All employees | Everyone | All units | SW-IMS-ROLE-009 |
+
+Roles marked *proposed* are not yet decided by top management. One job can hold several IMS roles; where it does (the COO as IMS Owner, IT Manager and proposed CISO), the holder records each role's decisions in that role's name.
 
 ### 4.2 Key IMS Roles and Responsibilities
 
 #### 4.2.1 Chief Executive Officer (CEO)
 
-**Current Assignee**: [TBD - Name]
+**Current Assignee**: CEO (reports to the board)
 
 **IMS Responsibilities**:
 
@@ -461,7 +497,7 @@ IMS Roles (Overlaid on Organizational Structure):
 
 #### 4.2.2 Management Team
 
-**Members**: [TBD - Names and functional areas]
+**Members**: CEO, COO (Operations), CFO (Finance), CSO (Professional Services), CCO (Sales & Marketing)
 
 **Collective Responsibilities**:
 - Support CEO in IMS leadership
@@ -484,11 +520,9 @@ IMS Roles (Overlaid on Organizational Structure):
 
 #### 4.2.3 IMS Owner
 
-**Current Assignee**: [TBD - Name]
+**Current Assignee**: COO (Operations)
 **Reports to**: CEO
 **Time Allocation**: [TBD - e.g., 25-40% depending on implementation phase]
-
-**Note**: This role may be combined with Quality Lead or assigned separately.
 
 **Responsibilities**:
 
@@ -537,12 +571,12 @@ IMS Roles (Overlaid on Organizational Structure):
 - Approve minor IMS document updates (within approved scope)
 - Coordinate corrective actions across departments
 
-**Detailed Role Description**: [TBD - SW-IMS-ROLE-XXX when created]
+**Detailed Role Description**: SW-IMS-ROLE-001 (IMS Owner)
 
 #### 4.2.4 Quality Lead
 
-**Current Assignee**: [TBD - Name]
-**Reports to**: CEO or Management Team member
+**Current Assignee**: Head of PMO & Continuous Improvement (Operations)
+**Reports to**: COO
 **Time Allocation**: [TBD - e.g., 20-30%]
 
 **Responsibilities**:
@@ -587,12 +621,12 @@ IMS Roles (Overlaid on Organizational Structure):
 - Stop processes that pose significant quality risks (pending management decision)
 - Escalate to CEO on quality matters
 
-**Detailed Role Description**: SW-IMS-ROLE-XXX (Quality Lead)
+**Detailed Role Description**: SW-QMS-ROLE-001 (Quality Lead)
 
 #### 4.2.5 Environmental Lead
 
-**Current Assignee**: [TBD - Name]
-**Reports to**: CEO or Management Team member
+**Current Assignee**: CFO (Finance)
+**Reports to**: CEO
 **Time Allocation**: [TBD - e.g., 10-20% given office-based operations]
 
 **Responsibilities**:
@@ -642,11 +676,11 @@ IMS Roles (Overlaid on Organizational Structure):
 - Recommend environmental investments and initiatives
 - Escalate to CEO on environmental matters
 
-**Detailed Role Description**: SW-IMS-ROLE-XXX (Environmental Lead)
+**Detailed Role Description**: SW-EMS-ROLE-001 (Environmental Lead)
 
 #### 4.2.6 Chief Information Security Officer (CISO)
 
-**Current Assignee**: [TBD - Name]
+**Current Assignee**: COO (proposed) (Operations)
 **Reports to**: CEO
 **Time Allocation**: [TBD - e.g., 20-30% steady state, 40-50% during implementation]
 
@@ -711,7 +745,7 @@ IMS Roles (Overlaid on Organizational Structure):
 
 #### 4.2.7 Department Heads / Functional Managers
 
-**Examples**: Customer Acquisition Lead, Customer Success Lead, Resource Management Lead, IT Manager, Finance Manager, etc.
+**Held by**: the unit heads — COO (Operations), CFO (Finance), CSO (Professional Services), CCO (Sales & Marketing) — and, for their areas, HR / People & Culture and the Head of PMO & Continuous Improvement. Functional IMS roles held this way include IT Manager (COO), Customer Success Lead and Resource Management Lead (CSO), Customer Acquisition Lead and Customer Development Lead (CCO); see 4.1.2.
 
 **Responsibilities**:
 
@@ -748,6 +782,8 @@ IMS Roles (Overlaid on Organizational Structure):
 - Escalate IMS issues, risks, and nonconformities
 - Report performance variances
 
+**Detailed Role Description**: SW-IMS-ROLE-008 (Department Manager)
+
 #### 4.2.8 Internal Auditors
 
 **Assignment**: Designated employees trained in internal auditing
@@ -766,11 +802,11 @@ IMS Roles (Overlaid on Organizational Structure):
 - Report findings directly to IMS Owner and management
 - Remain independent and objective
 
-**Detailed Role Description**: SW-IMS-ROLE-XXX (Internal Auditor)
+**Detailed Role Description**: SW-IMS-ROLE-002 (Internal Auditor)
 
 #### 4.2.9 Data Protection Officer (DPO)
 
-**Current Assignee**: [TBD - Name]
+**Current Assignee**: [to confirm: which job holds the DPO role, or whether a DPO is required]
 **Reports to**: CEO (with functional independence)
 **Time Allocation**: [TBD - e.g., 10-20%]
 
@@ -788,7 +824,7 @@ IMS Roles (Overlaid on Organizational Structure):
 - Direct reporting to highest management level
 - Not to be dismissed or penalized for performing DPO duties
 
-**Detailed Role Description**: SW-IMS-ROLE-XXX (Data Protection Officer)
+**Detailed Role Description**: SW-IMS-ROLE-006 (Data Protection Officer)
 
 #### 4.2.10 All Employees
 
@@ -806,13 +842,13 @@ IMS Roles (Overlaid on Organizational Structure):
 - Report concerns without fear of retaliation
 - Request clarification on IMS requirements
 
-**Detailed Description**: SW-IMS-ROLE-XXX (Employee Responsibilities)
+**Detailed Description**: SW-IMS-ROLE-009 (Employee Responsibilities)
 
 ### 4.3 Authority Matrix
 
 Key authorities within the IMS:
 
-| Decision / Action | CEO | Management Team | IMS Owner | Quality Lead | Environmental Lead | CISO | Department Head |
+| Decision / Action | CEO | Management Team (CEO, COO, CFO, CSO, CCO) | IMS Owner (COO) | Quality Lead (Head of PMO & CI) | Environmental Lead (CFO) | CISO (COO, proposed) | Unit head (COO, CFO, CSO, CCO) |
 |------------------|-----|----------------|-----------|--------------|-------------------|------|----------------|
 | **Approve IMS Policies** | A | C | S | S | S | S | - |
 | **Approve IMS Objectives** | A | C | S | S | S | S | I |
@@ -834,6 +870,8 @@ Key authorities within the IMS:
 - **S** = Supports (assists)
 - **I** = Informed (notified)
 
+Columns name the IMS role and, in brackets, the job that holds it (4.1.2). Where one job holds two roles (the COO as IMS Owner and proposed CISO, or as unit head for Operations), the job acts in the role the row concerns.
+
 ### 4.4 Delegation and Backup
 
 **Delegation Principles**:
@@ -848,7 +886,7 @@ Key authorities within the IMS:
 - Critical contacts and information documented for continuity
 
 **Examples**:
-- Deputy CISO: [TBD] acts as CISO during absence
+- Deputy CISO: [to confirm: which job deputises for the CISO] acts as CISO during absence
 - Internal Auditor Backup: Multiple auditors trained to ensure audit program continuity
 
 ### 4.5 Role Descriptions
@@ -856,14 +894,17 @@ Key authorities within the IMS:
 Detailed role descriptions are maintained for key IMS roles:
 
 **Available Role Descriptions**:
+- SW-IMS-ROLE-001: IMS Owner / Management Representative
+- SW-QMS-ROLE-001: Quality Lead
+- SW-EMS-ROLE-001: Environmental Lead
 - SW-ISMS-ROLE-001: Chief Information Security Officer (CISO)
-- SW-IMS-ROLE-XXX: IMS Owner (to be created)
-- SW-IMS-ROLE-XXX: Quality Lead (to be created)
-- SW-IMS-ROLE-XXX: Environmental Lead (to be created)
-- SW-IMS-ROLE-XXX: Internal Auditor (to be created)
-- SW-IMS-ROLE-XXX: Data Protection Officer (to be created)
-- SW-IMS-ROLE-XXX: Department Manager (to be created)
-- SW-IMS-ROLE-XXX: Employee Responsibilities (to be created)
+- SW-QMS-ROLE-002: Service Delivery Manager (SaaS)
+- SW-IMS-ROLE-002: Internal Auditor
+- SW-IMS-ROLE-006: Data Protection Officer (DPO)
+- SW-IMS-ROLE-007: Risk Manager
+- SW-IMS-ROLE-008: Department Manager
+- SW-IMS-ROLE-009: Employee IMS Responsibilities
+- SW-ISMS-ROLE-002: Asset Owner
 
 Role descriptions include:
 - Role summary and context
@@ -893,7 +934,8 @@ Role descriptions include:
 
 | Version | Date | Author | Changes | Approved By |
 |---------|------|--------|---------|-------------|
-| 1.0 | [TBD] | [IMS Owner name] | Initial creation for ISO certification | [CEO name] |
+| 1.0 | [TBD] | IMS Owner | Initial creation for ISO certification | [TBD] |
+| 1.1 | 2026-10-29 | IMS Owner | Organisation chart replaced with today's units; IMS roles mapped to the jobs that hold them (4.1.2); role description ids filled in; authority matrix names the job-holders | [TBD] |
 
 ### 5.3 Approval
 
@@ -921,14 +963,16 @@ Role descriptions include:
 - SW-ISMS-POL-001: Information Security Policy
 
 **Role Descriptions**:
+- SW-IMS-ROLE-001: IMS Owner / Management Representative
+- SW-QMS-ROLE-001: Quality Lead
+- SW-EMS-ROLE-001: Environmental Lead
 - SW-ISMS-ROLE-001: Chief Information Security Officer (CISO)
-- SW-IMS-ROLE-XXX: IMS Owner
-- SW-IMS-ROLE-XXX: Quality Lead
-- SW-IMS-ROLE-XXX: Environmental Lead
-- SW-IMS-ROLE-XXX: Internal Auditor
-- SW-IMS-ROLE-XXX: Data Protection Officer
-- SW-IMS-ROLE-XXX: Department Manager
-- SW-IMS-ROLE-XXX: Employee Responsibilities
+- SW-QMS-ROLE-002: Service Delivery Manager (SaaS)
+- SW-IMS-ROLE-002: Internal Auditor
+- SW-IMS-ROLE-006: Data Protection Officer (DPO)
+- SW-IMS-ROLE-007: Risk Manager
+- SW-IMS-ROLE-008: Department Manager
+- SW-IMS-ROLE-009: Employee IMS Responsibilities
 
 **Procedures**:
 - SW-IMS-PRO-004: Management Review Procedure

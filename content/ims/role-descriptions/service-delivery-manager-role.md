@@ -2,7 +2,7 @@
 document_id: SW-QMS-ROLE-002
 title: Service Delivery Manager (SaaS)
 doc_type: role
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: CEO
@@ -21,11 +21,11 @@ related_documents:
 
 # Role: Service Delivery Manager (SaaS)
 
-**Document ID**: SW-QMS-ROLE-002-v1.0
+**Document ID**: SW-QMS-ROLE-002-v1.1
 **Effective Date**: [TBD]
 **Review Date**: [TBD]
-**Reports to**: CEO or Service Owner
-**Current Assignment**: [TBD - Name to be assigned by management]
+**Reports to**: CEO
+**Held by**: CSO (Professional Services)
 
 ## Role Summary
 
@@ -430,6 +430,7 @@ The Service Delivery Manager will be successful when:
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | [TBD] | [Author] | Initial release |
+| 1.1 | 2026-10-29 | IMS Owner | Held by: CSO (Professional Services); reports to the CEO (IMS manual SW-IMS-MAN-005, 4.1.2) |
 
 ---
 

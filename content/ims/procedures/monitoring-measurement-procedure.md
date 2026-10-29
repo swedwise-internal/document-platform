@@ -223,7 +223,7 @@ Organizational-level indicators aligned with strategic objectives:
    | Review Frequency | How often is KPI itself reviewed |
 
 4. **Document in KPI Register**
-   - All KPIs documented in KPI Register (SW-IMS-REG-004)
+   - All KPIs documented in KPI Register (SW-IMS-REG-008)
    - Approved by IMS Owner and relevant leads
 
 ### 6.2 Step 2: Collect Data
@@ -410,7 +410,7 @@ Is performance meeting target?
           │                 Monitor closely
           │                 Implement enhancements
           │
-          └── NO (Red) → Initiate Corrective Action (SW-IMS-PRO-009)
+          └── NO (Red) → Initiate Corrective Action (SW-IMS-PRO-005)
                         Escalate to management
                         Implement immediate actions
                         Root cause analysis
@@ -423,7 +423,7 @@ Is performance meeting target?
 | Consistently exceeding target | Optimization, best practice sharing | Continual Improvement (SW-IMS-PRO-010) |
 | Meeting target | Maintain, monitor | This procedure |
 | Below target (Amber) | Improvement initiative | Continual Improvement (SW-IMS-PRO-010) |
-| Below threshold (Red) | Corrective action | Corrective Action (SW-IMS-PRO-009) |
+| Below threshold (Red) | Corrective action | Nonconformity and Corrective Action (SW-IMS-PRO-005) |
 | Negative trend | Proactive intervention | Risk Assessment (SW-IMS-PRO-002) |
 
 **Action Tracking**:
@@ -617,7 +617,7 @@ All security incidents logged and tracked:
 - Stakeholder expectations
 
 ### Outputs
-- KPI Register (SW-IMS-REG-004)
+- KPI Register (SW-IMS-REG-008)
 - Performance data and metrics
 - Dashboards and reports
 - Management review input
@@ -644,7 +644,7 @@ All security incidents logged and tracked:
 
 | Record | Retention Period | Location | Owner |
 |--------|-----------------|----------|-------|
-| KPI Register (SW-IMS-REG-004) | Current + 3 years | IMS Repository | IMS Owner |
+| KPI Register (SW-IMS-REG-008) | Current + 3 years | IMS Repository | IMS Owner |
 | Performance data and metrics | 5 years | Data repository | KPI Owners |
 | Dashboards and reports | 3 years | IMS platform | IMS Owner |
 | Customer satisfaction surveys | 5 years | Survey platform / CRM | Quality Lead |
@@ -657,12 +657,12 @@ All security incidents logged and tracked:
 
 - **SW-IMS-POL-001** - Integrated Management System Policy
 - **SW-IMS-PRO-002** - Risk Assessment Procedure
-- **SW-IMS-PRO-009 - Corrective Action Procedure
+- **SW-IMS-PRO-005 - Nonconformity and Corrective Action Procedure
 - **SW-IMS-PRO-010 - Continual Improvement Procedure
 - **SW-IMS-PRO-011 - Context and Interested Parties Procedure
 - **SW-IMS-PRO-XXX** - Management Review Procedure (when created)
 - **SW-IMS-PRO-XXX** - Customer Complaint Procedure (when created)
-- **SW-IMS-REG-004** - KPI Register
+- **SW-IMS-REG-008** - KPI Register
 
 ## 15. Continuous Improvement
 
