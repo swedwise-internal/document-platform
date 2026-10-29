@@ -29,7 +29,7 @@ have. It also applies to consultants and subcontractors who have a Swedwise acco
 
 ## 1. Who is responsible
 
-**Swedwise AB** (organisation number [to confirm: organisation number], [to confirm: registered address]) is the
+**Swedwise AB** (organisation number 556793-2354, Västra Torggatan 11, 652 25 Karlstad [to confirm: registered address; the address in signed contracts 2023–2025]) is the
 controller for the personal data in this notice.
 
 Questions about your personal data: **privacy@swedwise.se**. The mailbox is read by the Privacy Lead (our CEO) and the
