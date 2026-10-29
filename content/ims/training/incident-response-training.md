@@ -1687,8 +1687,8 @@ We recommend you take the following precautions:
 
 CONTACT:
 If you have questions or concerns, please contact our Privacy Lead:
-Email: dataskydd@swedwise.se
-Phone: [to confirm: via dataskydd@swedwise.se]
+Email: privacy@swedwise.se
+Phone: [to confirm: via privacy@swedwise.se]
 
 We sincerely apologize for this incident and any concern it may cause.
 

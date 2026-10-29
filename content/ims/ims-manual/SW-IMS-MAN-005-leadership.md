@@ -440,7 +440,7 @@ Management team: CEO, COO, CFO, CSO, CCO
 | Communication (process owner) | CEO (proposed) | — | — |
 | Department Manager (unit head) | COO, CFO, CSO, CCO for their unit | Each unit | SW-IMS-ROLE-008 |
 | Internal Auditor | Designated, trained employees | Any unit | SW-IMS-ROLE-002 |
-| Privacy Lead (Dataskyddsansvarig; not a GDPR DPO) | CEO | — | SW-IMS-ROLE-006 |
+| Privacy Lead (not a GDPR DPO) | CEO | — | SW-IMS-ROLE-006 |
 | Risk Manager | [to confirm: which job holds the Risk Manager role] | — | SW-IMS-ROLE-007 |
 | Asset Owner | The unit head who owns the asset | Each unit | SW-ISMS-ROLE-002 |
 | All employees | Everyone | All units | SW-IMS-ROLE-009 |
@@ -804,7 +804,7 @@ Roles marked *proposed* are not yet decided by top management. One job can hold 
 
 **Detailed Role Description**: SW-IMS-ROLE-002 (Internal Auditor)
 
-#### 4.2.9 Privacy Lead (Dataskyddsansvarig)
+#### 4.2.9 Privacy Lead
 
 **Held by**: CEO
 **Reports to**: The board
@@ -894,7 +894,7 @@ Detailed role descriptions are maintained for key IMS roles:
 - SW-ISMS-ROLE-001: Chief Information Security Officer (CISO)
 - SW-QMS-ROLE-002: Service Delivery Manager (SaaS)
 - SW-IMS-ROLE-002: Internal Auditor
-- SW-IMS-ROLE-006: Privacy Lead (Dataskyddsansvarig)
+- SW-IMS-ROLE-006: Privacy Lead
 - SW-IMS-ROLE-007: Risk Manager
 - SW-IMS-ROLE-008: Department Manager
 - SW-IMS-ROLE-009: Employee IMS Responsibilities
@@ -963,7 +963,7 @@ Role descriptions include:
 - SW-ISMS-ROLE-001: Chief Information Security Officer (CISO)
 - SW-QMS-ROLE-002: Service Delivery Manager (SaaS)
 - SW-IMS-ROLE-002: Internal Auditor
-- SW-IMS-ROLE-006: Privacy Lead (Dataskyddsansvarig)
+- SW-IMS-ROLE-006: Privacy Lead
 - SW-IMS-ROLE-007: Risk Manager
 - SW-IMS-ROLE-008: Department Manager
 - SW-IMS-ROLE-009: Employee IMS Responsibilities

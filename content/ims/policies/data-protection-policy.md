@@ -13,6 +13,10 @@ standard:
 related_documents:
   - SW-IMS-POL-001
   - SW-ISMS-POL-001
+  - SW-IMS-REG-009
+  - SW-ISMS-NOT-001
+  - SW-ISMS-NOT-002
+  - SW-ISMS-NOT-003
 ---
 
 # Data Protection Policy
@@ -246,7 +250,7 @@ When processing personal data on behalf of customers (SaaS platform operations):
 - Return or delete data at end of service contract
 - Maintain records of processing activities
 
-### 6.3 Privacy Lead (Dataskyddsansvarig)
+### 6.3 Privacy Lead
 
 **Held by**: CEO (SW-IMS-ROLE-006)
 
@@ -436,7 +440,7 @@ Individuals have right not to be subject to solely automated decisions with lega
 
 **Request Receipt:**
 - Accept requests via email, letter, or in-person
-- Request email: [TBD - privacy@swedwise.se or similar]
+- Request email: privacy@swedwise.se (proposed shared mailbox)
 - Log all requests with date received and type
 
 **Identity Verification:**
@@ -483,7 +487,7 @@ Swedwise maintains records of processing activities including:
 - Security measures
 
 **Responsibility:**
-- CISO maintains central ROPA
+- The Privacy Lead maintains the central ROPA (SW-IMS-REG-009)
 - Department heads provide input for their areas
 - Reviewed and updated at least annually
 - Available to supervisory authority on request
@@ -509,7 +513,7 @@ DPIA required for processing likely to result in high risk to individuals:
 
 **Responsibility:**
 - Department proposing new processing initiates
-- CISO reviews and provides guidance
+- The Privacy Lead reviews and approves the DPIA
 - Management approves before proceeding
 - DPIA reviewed if processing changes significantly
 
@@ -552,7 +556,7 @@ Personal data transferred outside EEA requires adequate protection:
 - Document and monitor all international transfers
 
 **Responsibility:**
-- CISO approves international transfers
+- The Privacy Lead approves international transfers
 - Legal/procurement ensures appropriate safeguards in contracts
 - Monitor changes in adequacy decisions and transfer mechanisms
 
@@ -612,10 +616,10 @@ A breach of security leading to accidental or unlawful destruction, loss, altera
 **All Staff Responsibility:**
 - Report suspected breaches immediately
 - Don't delay reporting while investigating
-- Report to: [TBD - CISO contact, security email, phone]
+- Report to: privacy@swedwise.se and the CISO [to confirm: the security reporting address]
 
 **Initial Assessment:**
-- CISO assesses severity and risk to individuals
+- The CISO assesses the technical severity; the Privacy Lead assesses the risk to individuals and decides on notification
 - Determine if breach is reportable
 - Initiate containment and investigation
 
@@ -659,7 +663,7 @@ All breaches documented including:
 - Remedial action taken
 - Notification decisions and communications
 
-Breach register maintained by CISO for audit and review.
+Breach register maintained by the Privacy Lead for audit and review.
 
 ## 12. Data Retention and Disposal
 
@@ -783,22 +787,23 @@ Data protection performance reviewed in management reviews:
 - [TBD - SW-ISMS-GUI-007: Privacy by Design Guideline]
 
 **Supporting Documents:**
-- [TBD - Records of Processing Activities (ROPA)]
+- SW-IMS-REG-009: Records of Processing Activities (ROPA)
 - [TBD - Data Retention Schedule]
 - [TBD - Data Protection Impact Assessment Template]
 - [TBD - Data Processing Agreement Template (Processor)]
-- [TBD - Employee Privacy Notice]
+- SW-ISMS-NOT-001: Privacy Notice for Employees
+- SW-ISMS-NOT-002: Privacy Notice for Job Candidates
+- SW-ISMS-NOT-003: Privacy Notice for Website Visitors and Marketing Contacts
 - [TBD - Customer Privacy Notice]
-- [TBD - Website Privacy Notice]
 
 ## 16. Contact Information
 
 **Data Protection Queries:**
-- Privacy Lead: dataskydd@swedwise.se (proposed shared mailbox; members: CEO and CFO)
+- Privacy Lead: privacy@swedwise.se (proposed shared mailbox; members: CEO and CFO)
 - CISO: [TBD - email and phone]
 
 **Data Subject Rights Requests:**
-- Email: [TBD - privacy@swedwise.se]
+- Email: privacy@swedwise.se (proposed shared mailbox)
 - Mail: Swedwise AB, [TBD - address]
 
 **Data Breach Reporting (Internal):**
@@ -816,16 +821,16 @@ Data protection performance reviewed in management reviews:
 | Version | Date | Author | Changes | Approved By |
 |---------|------|--------|---------|-------------|
 | 1.0 | [TBD] | [TBD - CISO name] | Initial policy creation | [TBD - CEO name] |
-| 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Data Protection Officer replaced by the Privacy Lead (SW-IMS-ROLE-006, held by the CEO; never the same person as the CISO) | [TBD] |
+| 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Data Protection Officer replaced by the Privacy Lead (SW-IMS-ROLE-006, held by the CEO; never the same person as the CISO); contact privacy@swedwise.se; linked to the ROPA (SW-IMS-REG-009) and the privacy notices SW-ISMS-NOT-001, -002 and -003 | [TBD] |
 
 **Next Review Date**: [TBD - typically 12 months from effective date]
 
 **Document Classification**: Internal
 
-**Document Owner**: CISO
+**Document Owner**: Privacy Lead
 
 ---
 
 *This policy is approved by Swedwise AB management and is effective from the date specified above. All staff are required to read, understand, and comply with this policy.*
 
-*Swedwise AB is committed to protecting personal data and respecting the privacy rights of individuals. Questions or concerns about data protection should be directed to the CISO.*
+*Swedwise AB is committed to protecting personal data and respecting the privacy rights of individuals. Questions or concerns about data protection should be directed to the Privacy Lead (privacy@swedwise.se).*

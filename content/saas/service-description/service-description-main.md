@@ -839,7 +839,7 @@ Karlstad, Sweden
 ### 12.3. Legal and Compliance
 
 **Data protection contact (Privacy Lead):**
-Email: dataskydd@swedwise.se
+Email: privacy@swedwise.se
 
 Swedwise has not designated a Data Protection Officer under GDPR Article 37; it is not required. Data protection is held by the Privacy Lead.
 

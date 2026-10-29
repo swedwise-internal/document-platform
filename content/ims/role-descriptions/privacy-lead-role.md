@@ -1,6 +1,6 @@
 ---
 document_id: SW-IMS-ROLE-006
-title: Privacy Lead (Dataskyddsansvarig)
+title: Privacy Lead
 doc_type: role
 version: "1.1"
 status: draft
@@ -18,9 +18,13 @@ related_documents:
   - SW-IMS-ROLE-007
   - SW-IMS-PRO-013
   - SW-IMS-TRN-004
+  - SW-IMS-REG-009
+  - SW-ISMS-NOT-001
+  - SW-ISMS-NOT-002
+  - SW-ISMS-NOT-003
 ---
 
-# Role: Privacy Lead (Dataskyddsansvarig)
+# Role: Privacy Lead
 
 **Document ID**: SW-IMS-ROLE-006-v1.1
 **Effective Date**: [TBD]
@@ -63,7 +67,8 @@ is assessed by both, and the Privacy Lead decides on notification.
 ### 1. Policy and accountability
 
 - Own the Data Protection Policy (SW-ISMS-POL-004) and keep it current
-- Keep the records of processing activities (ROPA) for Swedwise as controller and as processor
+- Keep the records of processing activities (ROPA, SW-IMS-REG-009) for Swedwise as controller and as processor
+- Own the privacy notices for employees (SW-ISMS-NOT-001), candidates (SW-ISMS-NOT-002) and website visitors (SW-ISMS-NOT-003)
 - Make sure every processing activity has a lawful basis and a retention period
 - Report data protection status to the management review
 
@@ -82,7 +87,7 @@ is assessed by both, and the Privacy Lead decides on notification.
 
 - Own the handling of data subject requests (access, rectification, erasure, objection, portability) within one month
 - Be the contact point for Integritetsskyddsmyndigheten (IMY) and for data subjects
-- Contact address: dataskydd@swedwise.se (proposed shared mailbox; members: CEO and CFO)
+- Contact address: privacy@swedwise.se (proposed shared mailbox; members: CEO and CFO)
 
 ### 5. Personal data breaches
 
@@ -136,7 +141,7 @@ breach notifications within the 72 hours. The stand-in is never the CISO.
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | [TBD] | [Author] | Initial release (as Data Protection Officer) |
-| 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Role changed from Data Protection Officer to Privacy Lead (Dataskyddsansvarig), held by the CEO; not a GDPR DPO (no DPO required, owner 2026-10-29); CFO as stand-in; never held by the same person as the CISO (owner 2026-10-29) |
+| 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Role changed from Data Protection Officer to Privacy Lead, held by the CEO; not a GDPR DPO (no DPO required, owner 2026-10-29); CFO as stand-in; never held by the same person as the CISO (owner 2026-10-29); contact privacy@swedwise.se; ROPA SW-IMS-REG-009 and privacy notices SW-ISMS-NOT-001 to -003 linked |
 
 ---
 

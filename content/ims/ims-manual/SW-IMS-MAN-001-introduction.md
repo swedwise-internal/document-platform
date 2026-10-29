@@ -441,7 +441,7 @@ This IMS Manual is based on the following international standards:
 | **CISO** | Chief Information Security Officer |
 | **CEO** | Chief Executive Officer |
 | **DPO** | Data Protection Officer (GDPR Articles 37–39; Swedwise has not designated one) |
-| **Privacy Lead** | Dataskyddsansvarig: the role accountable for data protection (SW-IMS-ROLE-006) |
+| **Privacy Lead** | The role accountable for data protection (SW-IMS-ROLE-006) |
 | **PDCA** | Plan-Do-Check-Act (continuous improvement cycle) |
 | **KPI** | Key Performance Indicator |
 | **PESTLE** | Political, Economic, Social, Technological, Legal, Environmental (analysis framework) |
