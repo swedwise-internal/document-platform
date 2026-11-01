@@ -2,7 +2,7 @@
 document_id: SW-IMS-REG-009
 title: Records of Processing Activities (ROPA)
 doc_type: form
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: Privacy Lead
@@ -70,7 +70,7 @@ Article 9 conditions are given where health or trade union data occurs.
 | ROPA-C-08 | Sign-in and security logging | Detect and investigate security incidents and misuse; prove access controls work | 6(1)(f) information security | Everyone with an account; external guests | Sign-in events, IP address, device, application used, audit events | Entra sign-in and audit logs, Microsoft 365 audit, Azure logs, logs of Swedwise's own platform | CISO and IT internally; processor: Microsoft (ROPA-PROC-01) | Microsoft: see ROPA-PROC-01 | 12 months (Data Protection Policy 12.2 proposal) [to confirm: what the licences actually keep] | COO (CISO, proposed) |
 | ROPA-C-09 | Employee surveys | Measure engagement and wellbeing and feed each person's development plan | 6(1)(f) developing the workplace [to confirm: lawful basis]; answers about wellbeing may reveal health — Art 9(2)(b) only if health data is processed [to confirm: whether answers are anonymous and the reporting threshold] | Employees | Survey answers, comments, team, scores | Winningtemp | HR and managers (aggregated); processor: Winningtemp (ROPA-PROC-09) | None known [to confirm: Winningtemp hosting] | [to confirm] | HR / People & Culture |
 | ROPA-C-10 | Competence, certifications and training records | Keep consultants' CVs and competences, offer consultants to customers, record certifications and completed training | 6(1)(b) employment contract; 6(1)(f) offering consultants and proving competence | Employees; subcontractors | CV, skills, assignments, certifications and badges, training completed | Skillet (CVs, competences, certifications; Swedwise's own application), Credly (one user, last used 2023), partner portals (OpenText and others), the document platform's training records [to confirm: in use], Swedwise xECM | Customers and partners receive CVs in offers; vendors (OpenText and others) hold their own certification records; processors: Microsoft (ROPA-PROC-01), Credly (ROPA-PROC-13) | Credly: US [to confirm]; Microsoft: see ROPA-PROC-01 | During employment; CV after leaving [to confirm]; training records: the employment plus 2 years [to confirm] | CSO (training records: HR / People & Culture) |
-| ROPA-C-11 | Meeting recordings and transcripts with AI tools | Record, transcribe and summarise meetings | **None decided** [to confirm: lawful basis; the systems catalogue says these tools need consent] | Employees; customers', partners' and candidates' participants in meetings | Voice, image, what people say, names, meeting content (which may contain anything, including customers' personal data) | Fireflies, Fathom, Klang (personal accounts by self-service consent, not company seats) | Processors: the three vendors (ROPA-PROC-12) [to confirm: whether there is any agreement at all] | Fireflies and Fathom: US vendors [to confirm]; Klang [to confirm] | [to confirm]; at leave the account and recordings are removed by the COO (systems catalogue) | COO |
+| ROPA-C-11 | Meeting recordings and transcripts with AI tools | Record, transcribe and summarise meetings | **None decided** [to confirm: lawful basis; the systems catalogue says these tools need consent] | Employees; customers', partners' and candidates' participants in meetings | Voice, image, what people say, names, meeting content (which may contain anything, including customers' personal data) | Fathom (one assigned user in sales since 2026-11-01; reads only that user's calendar), Klang (Swedish; still on by self-service consent, pending a decision), Fireflies (disabled in Entra) — personal accounts, not company seats | Processors: Fathom, Klang, Fireflies (ROPA-PROC-12, ROPA-PROC-28, ROPA-PROC-29) [to confirm: whether there is any agreement at all] | Fathom: US vendor [to confirm: safeguard]; Klang: EU hosting according to the vendor (self-reported); Fireflies: US, disabled | [to confirm]; at leave the account and recordings are removed by the COO (systems catalogue) | COO |
 | ROPA-C-12 | Use of generative AI (ChatGPT) | Help employees write, analyse and code | 6(1)(f) for the employee's account data; for personal data in prompts and uploads, the lawful basis of the activity the data comes from [to confirm: rules in the AI policy] | Employees; anyone named in prompts or uploaded documents | Account data; prompts and uploaded documents (may contain colleagues', customers' or candidates' data) | ChatGPT (SAML sign-in, assignment not required) | Processor: OpenAI (ROPA-PROC-10) | US vendor [to confirm: plan, data location, safeguard, whether prompts are used for training] | [to confirm: workspace retention setting] | COO |
 | ROPA-C-13 | Internal communication and collaboration | Mail, chat, meetings, files and boards for daily work, also with customers and partners | 6(1)(b) and 6(1)(f) running the business | Employees; customer and partner contacts | Messages, files, calendars, boards, everything people share | Microsoft 365 (Exchange, Teams, SharePoint, OneDrive), Slack, whiteboards (diagrams.net in use; Miro, Mural, Lucid not used since 2024–2025), planning tools (Plandisc last used 2026-01; Wrike, Trello, Meister, iGlobe, Placker disabled or never used) | Processors: Microsoft, Slack, whiteboard and planning vendors (ROPA-PROC-01, ROPA-PROC-11, ROPA-PROC-22, ROPA-PROC-23) | Slack and several board vendors: US [to confirm] | Mail: [to confirm]; chat: [to confirm]; tools no longer used: [to confirm: export or delete] | COO |
 | ROPA-C-14 | Supplier contacts and purchasing | Buy goods and services, pay suppliers, manage partner and vendor relationships | 6(1)(f) business relationships; 6(1)(c) Bokföringslagen for supplier invoices | Contact people at suppliers, partners and vendors; sole traders | Name, title, business contact details, invoices and payment details of sole traders | Fortnox (supplier invoices), Nexta Hub (supplier and partner register, purchasing), Microsoft 365, partner portals | Internal finance and purchasing; processors: Fortnox, Nexta, Microsoft | Microsoft: see ROPA-PROC-01 | Supplier invoices: 7 years (Bokföringslagen 7 kap. 2 §); contacts while the relationship is active plus 2 years [to confirm] | CFO (ordinary suppliers); CCO (partners and vendors whose products Swedwise sells) |
@@ -85,17 +85,32 @@ purpose. Swedwise follows the customer's documented instructions (Data Protectio
 
 | ID | Service | Controllers (customer categories) | Processing | Data categories | Sub-processors | Transfers | Retention and return | Governing agreement |
 |---|---|---|---|---|---|---|---|---|
-| ROPA-P-01 | Consulting and implementation assignments in customers' systems (OpenText xECM, Content Server, AppWorks, Exstream; Salesforce; integration; other platforms) | Customers in industry, services and the public sector [to confirm: customer categories] | Configuration, migration, testing, troubleshooting and support in the customer's environment; consultants may see and move personal data | Whatever the customer's systems hold: employees', customers' and citizens' data, documents, case files; special categories may occur [to confirm per assignment] | Subcontracted consultants and partners [to confirm: which]; tools in the customer's own tenant (Azure DevOps, Jira, Confluence, Bitbucket) are the customer's | None intended by Swedwise; data stays in the customer's environment [to confirm per assignment] | Nothing kept by Swedwise after the assignment unless the agreement says otherwise [to confirm: whether copies are made in Swedwise's own environments] | The customer's consulting agreement and its data processing agreement [to confirm: that every assignment with personal data has one] |
+| ROPA-P-01 | Consulting and implementation assignments in customers' systems (OpenText xECM, Content Server, AppWorks, Exstream; Salesforce; integration; other platforms) | Customers in industry, services and the public sector [to confirm: customer categories] | Configuration, migration, testing, troubleshooting and support in the customer's environment; consultants may see and move personal data | Whatever the customer's systems hold: employees', customers' and citizens' data, documents, case files; special categories may occur [to confirm per assignment] | Subcontracted consultants and partners [to confirm: which]; tools in the customer's own tenant (Azure DevOps, Jira, Confluence, Bitbucket) are the customer's | None intended by Swedwise; data stays in the customer's environment [to confirm per assignment] | Nothing kept by Swedwise after the assignment unless the agreement says otherwise [to confirm: whether copies are made in Swedwise's own environments] | The customer's consulting agreement and its data processing agreement; signed ones found are listed in B.1 [to confirm: that every assignment with personal data has one] |
 | ROPA-P-02 | Swedwise SaaS (Swedwise Communications: OpenText Exstream and Notifications, hosted at Entiros) [to confirm: still offered] | SaaS subscribers [to confirm: current customers, if any] | Generating and sending customers' communications (letters, notifications) | Recipients' names, addresses, contact details and message content | Entiros AB (hosting) (ROPA-PROC-20) [to confirm: further sub-processors] | None; Swedish data residency according to the SaaS service description | Return or deletion at the end of the subscription (SaaS service description) [to confirm] | Subscription agreement with a data processing agreement (the SaaS service description says one is included) [to confirm: template exists] |
-| ROPA-P-03 | Support and incident handling for customers | Customers with support or maintenance agreements | Receiving, logging and solving support tickets; screenshots, logs and files attached to tickets may hold the customer's personal data | Customer contacts' names and contact details (Swedwise is controller for these, see ROPA-C-05) and personal data in attachments and logs (processor) | Zendesk (ROPA-PROC-15); Nexta Hub support module (ROPA-PROC-04) [to confirm: which helpdesk runs Swedwise's support today] | Zendesk: US vendor [to confirm: data location and safeguard] | Tickets: [to confirm]; attachments with customer data should be deleted when the ticket closes [to confirm] | Support or maintenance agreement and its data processing agreement [to confirm] |
+| ROPA-P-03 | Support and incident handling for customers | Customers with support or maintenance agreements | Receiving, logging and solving support tickets; screenshots, logs and files attached to tickets may hold the customer's personal data | Customer contacts' names and contact details (Swedwise is controller for these, see ROPA-C-05) and personal data in attachments and logs (processor) | Zendesk (ROPA-PROC-15); Nexta Hub support module (ROPA-PROC-04); Xpeedio Support Solutions for first-line support (ROPA-PROC-31) [to confirm: which helpdesk runs Swedwise's support today, and whether Xpeedio still does] | Zendesk: US vendor [to confirm: data location and safeguard] | Tickets: [to confirm]; attachments with customer data should be deleted when the ticket closes [to confirm] | Support or maintenance agreement and its data processing agreement [to confirm] |
 | ROPA-P-04 | Managed operation and monitoring of customer solutions (services run on Swedwise's own platform, integration monitoring) | Customers with operations agreements [to confirm: which services with personal data run for customers today; Swedwise Matrix production is parked] | Running, monitoring and backing up solutions; monitoring integration messages | Message content and logs that may contain personal data | Microsoft Azure (ROPA-PROC-01); Nodinite (ROPA-PROC-24) [to confirm: who hosts the instances]; Starlify (ROPA-PROC-25) | Microsoft: see ROPA-PROC-01 | According to the operations agreement [to confirm] | Operations agreement and its data processing agreement [to confirm] |
 
 **Rows in section B: 4.**
 
+### B.1 Data processing agreements found with customers
+
+Found 2026-10-29 in Swedwise's own document inventory (the downloaded documents, read in full). Tenders and templates
+that were never signed are left out. DocuSign was not read (no access); agreements kept only there are missing.
+
+| Customer | Agreement | Swedwise's role | Signed | Status |
+|---|---|---|---|---|
+| Hi3G Access AB (Tre), via Ework | Data Processing Agreement | Sub-processor (Ework processor) | DocuSign, 2025-12 | Signed copy found |
+| Atea | Generellt samarbetsavtal 2021 with a processor annex | Processor | DocuSign, valid from 2021-01-14 | Signed copy found |
+| Eskilstuna Strängnäs Energi och Miljö (ESEM) | Personuppgiftsbiträdesavtal, integration platform | Processor | Electronic signature, 2023-06 | Signed copy found |
+| Uddevalla kommun | Bilaga 5 Personuppgiftsbiträdesavtal (Dnr KS/2025:168) | Processor | Dated 2025-04-17 | [to confirm: no signature visible in the copy] |
+| Sandvik Materials Technology EMEA | Data Processing Agreement | Processor | DocuSign, 2019 | Signed copy found [to confirm: whether the assignment is still active] |
+| Consilium Marine & Safety; Bharat Forge Kilsta | Personal data annexes (2018) | Independent controller on both sides — not a processor agreement | DocuSign, 2018-05 | Signed copies found |
+
 ## C. Processors and sub-processors Swedwise uses
 
-"Data processing agreement in place" is `[to confirm]` for every row: it is not known which agreements exist. Most
-vendors offer standard terms that include one; whether Swedwise has accepted them, and on which account, must be
+"Data processing agreement in place" says what was found in Swedwise's own documents on 2026-10-29. Only Xpeedio has
+an agreement there, and that copy is unsigned. For the others none was found; most vendors include one in their online
+terms, accepted when the service was bought ("online terms"), and whether and on which account that happened must be
 checked. A vendor that decides its own purposes (for example LinkedIn and Google for their own analytics) may be an
 independent or joint controller rather than a processor; this is noted where likely.
 
@@ -112,7 +127,7 @@ independent or joint controller rather than a processor; this is noted where lik
 | ROPA-PROC-09 | Winningtemp | Winningtemp | Employee survey answers and comments | [to confirm: EU hosting] | [to confirm] | CFO |
 | ROPA-PROC-10 | OpenAI | ChatGPT | Accounts, prompts and uploaded documents | US [to confirm: plan, data location, safeguard] | [to confirm] | CFO |
 | ROPA-PROC-11 | Slack (Salesforce) | Slack | Company chat, also with customers and partners; files (admin consent gives Slack Files.ReadWrite.All on everyone's behalf) | US [to confirm: data location and safeguard] | [to confirm] | CCO (Salesforce is a vendor whose products Swedwise sells) [to confirm] |
-| ROPA-PROC-12 | Fireflies, Fathom, Klang | Meeting AI | Meeting recordings and transcripts | Fireflies and Fathom: US [to confirm]; Klang [to confirm] — accounts are the employees' own, not company seats | [to confirm] | CFO |
+| ROPA-PROC-12 | Fathom | Meeting AI — **limited to one assigned user since 2026-11-01** | Meeting recordings and transcripts; that user's calendar | US [to confirm: safeguard] — the account is the employee's own, not a company seat | None found [to confirm: online terms] | COO |
 | ROPA-PROC-13 | Credly | Credly — **disabled in Entra since 2023** | Badges and certifications (on the person's own Credly account) | US [to confirm] — likely not a processor for Swedwise | [to confirm] | CFO |
 | ROPA-PROC-14 | Leadfeeder | Leadfeeder — **disabled in Entra**, while the systems catalogue says it reads the website's visitors [to confirm: still in use] | Website visits and the companies identified from them | [to confirm] | [to confirm] | CFO |
 | ROPA-PROC-15 | Zendesk | Zendesk | Customer support tickets | US vendor [to confirm: data location and safeguard] | [to confirm] | CFO |
@@ -128,8 +143,12 @@ independent or joint controller rather than a processor; this is noted where lik
 | ROPA-PROC-25 | Entiros (Starlify) | Starlify (starlify-prod disabled in Entra) | Integration landscapes; user accounts | [to confirm] | [to confirm] | CCO |
 | ROPA-PROC-26 | TeamViewer | TeamViewer — **disabled in Entra since 2024-11** | Remote access sessions, accounts | [to confirm] | [to confirm] | CFO |
 | ROPA-PROC-27 | Atlassian | Jira, Confluence, Bitbucket (mostly customers' own instances) | Swedwise people's accounts; customer project content | US/AU group [to confirm] — in a customer's instance the customer is the controller | [to confirm] | CFO |
+| ROPA-PROC-28 | Klang AI AB | Klang — meeting AI, **pending a decision** (two enterprise apps from 2026-04, on by self-service consent) | Meeting recordings and transcripts | Sweden; EU hosting, ISO 27001 and ISO 42001, no training on customer data according to the vendor (self-reported) | None found | COO |
+| ROPA-PROC-29 | Fireflies.ai | Fireflies — **disabled in Entra** | Meeting recordings and transcripts made before it was disabled | US [to confirm] | None found | COO |
+| ROPA-PROC-30 | DocuSign | DocuSign — e-signature (not in Entra; own accounts) | Agreements, signers' names, e-mail addresses and signing records | US group [to confirm: EU account and safeguard] | None found [to confirm: online terms] | CFO (proposed) |
+| ROPA-PROC-31 | Xpeedio Support Solutions | First-line support, under a master agreement from 2021-02 | Customer contacts and ticket content in support (sub-processor in ROPA-P-03) | Sweden [to confirm] | **Agreement found, unsigned copy** (PUB-avtal, Bilaga 3) [to confirm: signed original; still in use] | CFO |
 
-**Rows in section C: 27.**
+**Rows in section C: 31.**
 
 Not listed as processors: Skillet, Swedwise xECM, Swedwise Matrix and CompanyIT are Swedwise's own applications and run
 on Microsoft Azure (ROPA-PROC-01). Pension and insurance providers, banks, Skatteverket and Försäkringskassan receive data as
@@ -152,11 +171,13 @@ independent controllers (ROPA-C-02) [to confirm: which pension and insurance pro
 
 These were found while drafting the register. They are named here, not decided.
 
-1. **Meeting AI records customers without a decided basis (ROPA-C-11).** Fireflies, Fathom and Klang record and
-   transcribe meetings with customers, partners and colleagues. The accounts are employees' own, by self-service
-   consent, not company seats; there is no known agreement, no decided lawful basis, no notice to participants, and US
-   transfers. Customers' personal data said in meetings ends up there, which may also breach customers' contracts.
-   Decision needed: allow (with company accounts, agreements, a consent and notice routine) or stop.
+1. **Meeting AI records customers without a decided basis (ROPA-C-11).** Fathom and Klang record and transcribe
+   meetings with customers, partners and colleagues. The accounts are employees' own, by self-service consent, not
+   company seats; there is no known agreement, no decided lawful basis and no notice to participants, and Fathom
+   transfers data to the US. Customers' personal data said in meetings ends up there, which may also breach customers'
+   contracts. Done (owner 2026-10-29 to 2026-11-01): Fireflies disabled; Fathom limited to its one user, and the
+   tenant-wide consent that let it read everyone's calendar removed (CompanyIT decision record 2026-10-29). Decision
+   still needed: an agreement and lawful basis for Fathom, and allow or block Klang.
 2. **ChatGPT may receive customer and colleague data (ROPA-C-12).** Anyone can sign in (assignment not required). It is
    not known which plan is used, where the data is stored, whether prompts are used for training, or whether the AI
    policy the systems catalogue refers to exists. Decision needed: rules for what may be entered, and the plan.
@@ -172,8 +193,9 @@ These were found while drafting the register. They are named here, not decided.
 6. **A leaver's mailbox is handed to the manager.** Exchange converts the mailbox to a shared mailbox for the manager on
    the last day. Private mail may be exposed. Decision needed: how long the mailbox is kept and what the employee is told
    (see SW-ISMS-NOT-001).
-7. **No data processing agreement is known to exist with any processor (section C).** Every row is `[to confirm]`,
-   including Microsoft, HubSpot, Zendesk and the US vendors where the transfer safeguard is also unknown.
+7. **No signed data processing agreement was found with any processor (section C).** Only Xpeedio has one in
+   Swedwise's documents, and that copy is unsigned. For Microsoft, HubSpot, Zendesk and the others the online terms
+   must be checked, as must the transfer safeguard for the US vendors. Agreements kept only in DocuSign were not read.
 8. **The SaaS documents promise more than is known.** The SaaS service description says a data processing agreement is
    included with all contracts and that a sub-processor list is available. No such list or template was found, and it
    is not confirmed that the SaaS service is still offered (ROPA-P-02).
@@ -185,7 +207,7 @@ These were found while drafting the register. They are named here, not decided.
     hard to enforce.
 11. **Employee surveys may hold health data (ROPA-C-09).** Winningtemp asks about wellbeing; whether answers are
     anonymous and what managers see is not known.
-12. **The contact address does not exist yet.** privacy@swedwise.se is proposed but not created; the notices point to it.
+12. **The contact address does not exist yet.** privacy@swedwise.se (members: CEO and CFO) is approved by the owner (2026-11-01, «Ja på alla»); it is requested in the CompanyIT console and created when the plan is approved [to confirm: requested]. The notices point to it.
 
 ## F. Review
 
@@ -198,6 +220,7 @@ source for the systems; a new system there should get a row here before people s
 | Version | Date | Author | Changes |
 |---|---|---|---|
 | 1.0 | 2026-10-29 | Privacy Lead (drafted in session) | First records of processing: 15 controller activities, 4 processor services, 27 processors, the Article 37 assessment and 12 findings |
+| 1.1 | 2026-11-01 | Privacy Lead (drafted in session) | B.1: data processing agreements found with customers; section C: what was found per processor, meeting AI split per vendor (Fathom limited to one user, Fireflies disabled, Klang pending), DocuSign and Xpeedio added (31 rows); findings 1, 7 and 12 updated |
 
 ---
 
