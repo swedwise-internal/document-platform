@@ -41,15 +41,15 @@ Privacy Lead is responsible for data protection.
 | Answering you when you use the contact form or write to us | Name, e-mail, phone, company, your message | Our legitimate interest in answering enquiries and doing business |
 | Keeping in touch with business contacts (customers, prospects, partners) | Name, title, company, business contact details, our communication | Our legitimate interest in business relationships with companies and organisations |
 | Sending newsletters or marketing e-mail [to confirm: whether we send a newsletter] | Name, e-mail, company, what you signed up for | Your consent, or our legitimate interest for existing business contacts; you can always say no |
-| Understanding how the website is used and which companies visit it | IP address, device and browser data, pages visited, the company identified from the visit [to confirm: tools used] | Your consent for cookies that are not necessary; our legitimate interest for statistics without cookies |
+| Understanding how the website is used and which companies visit it | IP address, device and browser data, pages visited, the company identified from the visit (Google Tag Manager and the tags it loads, after consent) | Your consent for cookies that are not necessary; our legitimate interest for statistics without cookies |
 | Advertising and social media | Ad and page statistics from Google Ads and our LinkedIn company page | Your consent where cookies are used; our legitimate interest in reaching business customers |
 
 ## 3. Cookies
 
-The website uses cookies and similar technology [to confirm: which cookies the site sets, and whether a consent banner is
-in place]. Cookies that are needed for the site to work are always set. Other cookies — for statistics, visitor
+The website uses cookies and similar technology. A consent banner (Cookiebot) asks for your choice on the first visit; Google
+Tag Manager and the tags it loads run only after consent. Cookies that are needed for the site to work are always set. Other cookies — for statistics, visitor
 identification and advertising — are set only if you agree, and you can change your choice at any time
-[to confirm: how]. You can also block cookies in your browser.
+from the cookie settings link on the site. You can also block cookies in your browser.
 
 Tools that may be in use [to confirm each]: Leadfeeder (identifies companies visiting the site), Google Ads (ads and
 conversion measurement), LinkedIn (company page and its statistics).
@@ -76,7 +76,7 @@ supplier]. You can ask us for details.
   [to confirm].
 - Marketing consent: until you withdraw it, and a record of it for **1 year** after that, so that we can show what you
   agreed to.
-- Website statistics and cookies: as stated in the cookie settings [to confirm].
+- Website statistics and cookies: as stated in the cookie settings (Cookiebot).
 
 ## 7. Your rights
 

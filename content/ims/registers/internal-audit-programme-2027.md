@@ -199,7 +199,7 @@ are covered at least once: 4.1–4.4, 5.1–5.3, 6.1–6.3, 7.1–7.4, 7.5.1–7
 9.3.1–9.3.3, 10.1, 10.2.
 
 **Locations.** SW-IMS-PRO-003 and SW-IMS-MAN-004 name Karlstad, Stockholm and Uddevalla.
-[to confirm: the offices Swedwise has today]. Each audit plan samples at least one office other than the
+These are the offices Swedwise has today (annual report 2025, insurance letter 2025–2026). Each audit plan samples at least one office other than the
 head office during the year, as well as remote work and work at customer sites.
 
 ## 7. The readiness audit (A-2027-01)

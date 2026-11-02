@@ -389,7 +389,7 @@ Swedwise's current IMS objectives are documented in section 3 of the **KPI Regis
 |-----------|--------|--------|------------------|
 | Customer Satisfaction | Customer satisfaction survey rating | ≥ 4.0 / 5.0 | Quarterly |
 | Service Delivery Quality | On-time project delivery rate | ≥ 90% | Quarterly |
-| SaaS Service Reliability | Platform uptime | ≥ 99.9% | Monthly |
+| SaaS Service Reliability (out of scope today: Swedwise offers no SaaS service of its own (owner, 2026-11-02); kept for a possible later service) | Platform uptime | ≥ 99.9% | Monthly |
 | Competence Development | Staff completing required training | 100% | Quarterly |
 
 **Environmental Objectives (ISO 14001)**:

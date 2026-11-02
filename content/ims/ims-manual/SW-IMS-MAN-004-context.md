@@ -2,7 +2,7 @@
 document_id: SW-IMS-MAN-004
 title: IMS Manual - Context of the Organization (Clause 4)
 doc_type: ims-manual
-version: "1.1"
+version: "1.2"
 status: draft
 classification: internal
 owner: CEO
@@ -60,17 +60,17 @@ Swedwise systematically analyzes internal and external issues that affect our ab
 #### 2.2.1 Company Profile
 
 **Company Name**: Swedwise AB
-**Founded**: [to confirm: year founded]
-**Headquarters**: Karlstad, Sweden [to confirm: Karlstad is still the registered head office]
-**Offices**: Karlstad, Stockholm, Malmö, Uddevalla [to confirm: the office list; read from the consultant profile in the CompanyIT declarations, 2026-10-06, which lists these four; Malmö is not in the 1.0 edition of this manual]
-**Employees**: Approximately 60 (Entra, measured 2026-10-19: Professional Services 50, Sales 6, Operations 3, Finance 2)
-**Ownership**: [to confirm: ownership structure and board]
+**Founded**: 2010 (annual report 2025)
+**Headquarters**: Karlstad, Sweden (registered seat, annual report 2025)
+**Offices**: Karlstad, Stockholm and Uddevalla (annual report 2025; the three insured premises 2025–2026). Malmö is not an office: the CompanyIT consultant profile's list of four is wrong on that point
+**Employees**: 35 (CompanyIT's classification of Entra accounts, 2026-11-02; the 60 counted on 2026-10-19 included subcontractors and other accounts); 33 on average in 2025 (annual report 2025)
+**Ownership**: Swedwise AB is wholly owned by VSH Holding AB, which is owned by Storskogen 3 Invest AB, in the Storskogen group (annual report 2025, note on the parent company; Storskogen onboarding, April 2022). The board follows Storskogen's board year and policy package (CO-075)
 
 **Business Model**:
 - Software licences as a partner and reseller (OpenText, Salesforce and other platforms)
 - Consulting and implementation services
 - Support and maintenance services
-- SaaS offerings (Swedwise Communications) [to confirm: is the SaaS service hosted at Entiros still offered]
+- SaaS offerings: none today [out of scope today: Swedwise offers no SaaS service of its own (owner, 2026-11-02); kept for a possible later service]
 
 **How the company runs its own business**:
 - Swedwise runs its business (customers, deals, contracts, staffing, time, invoicing basis, support) in its own instance of **Nexta Hub**. Accounting is in Fortnox. HubSpot holds the CRM and TimeLog remains master for time reporting until the switch to the hub [to confirm: date of the TimeLog switch].
@@ -79,7 +79,7 @@ Swedwise systematically analyzes internal and external issues that affect our ab
 **Target Market**:
 - Large public sector organizations (government, municipalities, healthcare)
 - Private sector enterprises (financial services, utilities, manufacturing, mining)
-- Geographic focus: Nordic region (primarily Sweden, Norway, Denmark) [to confirm: Norway and Denmark are still active markets]
+- Geographic focus: Sweden, with customers also in Norway, Denmark and Finland (invoices in the 12 months to 2026-10-31, Nexta Hub)
 
 **Brand Promise**: "Make Time For The Good"
 - Helping customers automate and optimize business-critical processes
@@ -177,12 +177,12 @@ Swedwise systematically analyzes internal and external issues that affect our ab
 - Microsoft Azure (Kubernetes, Key Vault, AI services) for the company's own operations platform (Matrix)
 - Microsoft 365 and Entra ID for identity, mail and collaboration
 - Nexta Hub (business system), Fortnox (accounting), HubSpot (CRM), TimeLog (time, until the switch)
-- Data center partnership (Entiros, Sweden) for SaaS hosting [to confirm: is the SaaS service at Entiros still offered]
+- Data center partnership (Entiros, Sweden) for SaaS hosting [out of scope today: Swedwise offers no SaaS service of its own (owner, 2026-11-02); kept for a possible later service]
 - Development tools and platforms, including AI-assisted development
 - Monitoring and management tools
 
 **Financial Resources**:
-- [to confirm: financial position, access to capital, constraints]
+- Net turnover SEK 114.7 m in 2025 (106.7 m in 2024), result after financial items SEK 28.0 m, equity ratio 23.9 % (annual report 2025); part of the Storskogen group
 
 **Knowledge and Intellectual Property**:
 - Implementation methodologies and best practices
@@ -249,7 +249,7 @@ A comprehensive PESTLE analysis is conducted annually (see SW-IMS-PRO-011). Key 
 - **Swedish Data Protection Act**: Supplements GDPR with national provisions
 - **Public Procurement Act**: Requirements for quality, environmental, security in public tenders
 - **Work Environment Act**: Health and safety obligations
-- **Cybersecurity legislation implementing NIS2**: [to confirm: whether Swedwise is in scope directly, or only as a supplier to customers who are]
+- **Cybersäkerhetslag (SFS 2025:1506), implementing NIS2**: not in scope directly on our reading (a small enterprise whose systems are independent of the group's; SW-IMS-REG-010, CO-010); in scope as a supplier to customers who are (CO-011)
 - **EU AI Act**: obligations depend on Swedwise's role (deployer, provider or distributor) for each AI use [to confirm]
 - **Bookkeeping and tax legislation**: corporate and financial reporting obligations
 - **Environmental Code**: Limited applicability (office-based operations)
@@ -285,7 +285,7 @@ A comprehensive PESTLE analysis is conducted annually (see SW-IMS-PRO-011). Key 
 - Nordic presence and language capabilities
 - Customer-centric approach and long relationships
 - ISO certifications (in progress) demonstrating quality, security, environmental commitment
-- Own operations platform and offerings (Matrix; Swedwise Communications [to confirm])
+- Own operations platform and offerings (Matrix; Swedwise Communications, out of scope today: no SaaS service of its own, owner 2026-11-02)
 - "Make Time For The Good" value proposition
 
 **Competitive Threats**:
@@ -302,7 +302,7 @@ A comprehensive PESTLE analysis is conducted annually (see SW-IMS-PRO-011). Key 
 |-----------|--------|---------------------|
 | **GDPR** | High - All customer and employee data processing | ISMS controls, Data Protection Policy, Privacy Lead, privacy by design |
 | **Public Procurement Act** | High - Required for public sector tenders | ISO certifications, quality and environmental documentation |
-| **NIS2 (Swedish implementation)** | [to confirm] - directly, or through customers' supplier requirements | ISMS controls; supplier security clauses in customer contracts |
+| **NIS2 (Cybersäkerhetslag, SFS 2025:1506)** | Through customers' supplier requirements; not directly on our reading (SW-IMS-REG-010, CO-010) | ISMS controls; supplier security clauses in customer contracts |
 | **EU AI Act** | [to confirm] - depends on the role per AI use | AI use inventory [to confirm: owner], see the ISO/IEC 42001 proposal in 4.1.5 |
 | **Work Environment Act** | Medium - Employee health and safety | HR policies, work environment risk assessment |
 | **Environmental Code** | Low - Limited direct applicability | Voluntary environmental management (ISO 14001) |
@@ -319,7 +319,7 @@ A comprehensive PESTLE analysis is conducted annually (see SW-IMS-PRO-011). Key 
 - Microsoft Azure: the platform for Swedwise's own operations (Matrix)
 - AWS, Google Cloud: platforms in customer engagements [to confirm: still relevant]
 - Kubernetes: Container orchestration
-- Entiros (Sweden): Data center partner for SaaS hosting [to confirm: is the SaaS service at Entiros still offered]
+- Entiros (Sweden): Data center partner for SaaS hosting [out of scope today: Swedwise offers no SaaS service of its own (owner, 2026-11-02); kept for a possible later service]
 
 **Software Vendors**:
 - OpenText: Primary technology platform; strategic partnership
@@ -425,7 +425,7 @@ Swedwise tells partners and product vendors apart from ordinary suppliers. Partn
 **Key Suppliers**:
 - **Microsoft**: Azure, Microsoft 365, Entra ID
 - **Business system suppliers**: Nexta Hub, Fortnox, HubSpot, TimeLog
-- **Entiros AB**: Data center partner (SaaS hosting, Swedish data residency) [to confirm: is the SaaS service at Entiros still offered]
+- **Entiros AB**: Data center partner (SaaS hosting, Swedish data residency) [out of scope today: Swedwise offers no SaaS service of its own (owner, 2026-11-02); kept for a possible later service]
 - **Subcontractors and Freelancers**: Supplemental consulting capacity
 
 **Partner/Supplier Requirements**:
@@ -448,7 +448,7 @@ Swedwise tells partners and product vendors apart from ordinary suppliers. Partn
 - **Integritetsskyddsmyndigheten (IMY)**: Swedish Authority for Privacy Protection
 - **Arbetsmiljöverket**: Swedish Work Environment Authority
 - **Skatteverket**: Swedish Tax Agency
-- **Supervisory authority under the Swedish NIS2 implementation**: [to confirm: whether Swedwise is in scope]
+- **Supervisory authority under the Cybersäkerhetslag**: not a direct party on our reading (CO-010)
 - **Certification Body**: auditors for ISO 9001, ISO 14001 and ISO/IEC 27001 [to confirm: which certification body]
 
 **Regulatory Requirements**:
@@ -460,7 +460,7 @@ Swedwise tells partners and product vendors apart from ordinary suppliers. Partn
 #### 3.1.5 Owners and Board
 
 **Ownership**:
-- [to confirm: shareholders, ownership structure, board composition]
+- VSH Holding AB (sole shareholder) and, through it, Storskogen 3 Invest AB and the Storskogen group
 
 **Owner/Board Requirements**:
 - Profitable and sustainable business growth
@@ -556,26 +556,27 @@ Based on the understanding of organizational context and interested party requir
 
 > The management system of Swedwise AB for the sale of software licences as a partner and reseller (OpenText, Salesforce and other platforms), consulting, implementation, support and maintenance of business-critical information management, customer communication, integration and service management solutions, and the operation of Swedwise's own services and platforms, delivered from the offices in Sweden, remotely and at customer sites.
 
+**No SaaS service of its own today.** The owner, 2026-11-02: «Vi har egentligen inga egna saas-tjänster i nuläget». Wherever an IMS document names a SaaS service, SaaS operations, SaaS uptime or SaaS hosting at Entiros, that text is out of scope today and kept for a possible later service; the scope is reviewed (4.4) before one is launched.
+
 #### 4.1.1 Activities Covered
 
 - Software licence sales as partner and reseller, and account management
 - Consulting and implementation services (OpenText, Salesforce, other platforms)
 - Support and maintenance services
 - Operation of Swedwise's own services and platforms (the operations platform Matrix and the services run on it)
-- SaaS service delivery (Swedwise Communications: OpenText Exstream + Notifications) [to confirm: is the SaaS service at Entiros still offered]
+- SaaS service delivery [out of scope today: Swedwise offers no SaaS service of its own (owner, 2026-11-02); kept for a possible later service]
 - Partner and product vendor management
 - Internal operations and management (finance, purchasing, HR, IT, PMO, resource allocation)
 
 #### 4.1.2 Locations Covered
 
-- **Karlstad** (Head Office): [to confirm: address]
-- **Stockholm Office**: [to confirm: address]
-- **Malmö Office**: [to confirm: the office exists and its address]
-- **Uddevalla Office**: [to confirm: address]
+- **Karlstad** (Head Office): Järnvägsgatan 7
+- **Stockholm Office**: Sankt Eriksgatan 46
+- **Uddevalla Office**: Agnebergsgatan 2
 - **Remote Work Locations**: Employee homes and temporary remote work sites
 - **Customer Sites**: Where Swedwise consultants deliver services
-- **Cloud services**: Microsoft Azure regions used by Swedwise's own platform [to confirm: regions]
-- **Data Center**: Entiros facility, Sweden (for SaaS platform hosting) [to confirm: is the SaaS service at Entiros still offered]
+- **Cloud services**: Microsoft Azure, Sweden Central for the Matrix platform; West Europe, North Europe and Sweden Central for older resources (measured 2026-11-02; a few education VM images sit in Japan East)
+- **Data Center**: Entiros facility, Sweden (for SaaS platform hosting) [out of scope today: Swedwise offers no SaaS service of its own (owner, 2026-11-02); kept for a possible later service]
 
 #### 4.1.3 Organizational Units Covered
 
@@ -593,7 +594,7 @@ Based on the understanding of organizational context and interested party requir
 - Consulting and implementation services (all customer engagements)
 - Support and maintenance services (all support contracts)
 - Swedwise's own services and platforms [to confirm: which own products and services are named]
-- SaaS services (Swedwise Communications) [to confirm: is the SaaS service at Entiros still offered]
+- SaaS services [out of scope today: Swedwise offers no SaaS service of its own (owner, 2026-11-02); kept for a possible later service]
 
 #### 4.1.5 Management System Standards Covered
 
@@ -615,7 +616,7 @@ The scope should name these editions (titles and numbers only):
 - All information systems and data (corporate and customer-facing), including Nexta Hub, Fortnox, HubSpot, TimeLog, Microsoft 365 and the Matrix platform
 - All physical locations controlled by Swedwise
 - Swedwise's own operated platforms and services on Microsoft Azure
-- SaaS infrastructure (hosted at Entiros data center) [to confirm: is the SaaS service at Entiros still offered]
+- SaaS infrastructure [out of scope today: Swedwise offers no SaaS service of its own (owner, 2026-11-02); kept for a possible later service]
 
 **Interfaces and dependencies** (outside Swedwise's control, managed through agreements):
 - Partners' and product vendors' products and cloud services (OpenText, Salesforce)
@@ -852,6 +853,7 @@ The IMS is not a separate "compliance system" but is integrated with business st
 |---------|------|--------|---------|-------------|
 | 1.0 | [TBD] | IMS Owner | Initial creation for ISO certification | [TBD] |
 | 1.1 | 2026-10-29 | IMS Owner (COO) | Company profile updated (~60 employees, current units, offices, Nexta Hub and Matrix); scope re-read against the current business; standard editions set (ISO 9001:2026, ISO 14001:2026, ISO/IEC 27001:2022 + Amd 1:2024) with transition note; ISO/IEC 42001 proposed, not decided; process model rewritten from the process register (26 processes, three groups, owners as jobs, procedure ids, interaction table); SW-IMS-REG-006 created. Open points marked [to confirm].; Data Protection Officer replaced by the Privacy Lead (SW-IMS-ROLE-006, held by the CEO; never the same person as the CISO) | [TBD] |
+| 1.2 | 2026-11-02 | IMS Owner (COO), draft | Facts measured from Swedwise's own sources: founded 2010, registered seat, the three offices with addresses (Malmö is not one), 35 employees, ownership through VSH Holding AB and Storskogen 3 Invest AB, markets, Azure regions, NIS2 reading (SFS 2025:1506); no SaaS service of its own today (owner, 2026-11-02), every SaaS text kept as out of scope | [TBD] |
 
 ### 7.3 Approval
 

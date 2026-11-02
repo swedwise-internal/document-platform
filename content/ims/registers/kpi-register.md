@@ -57,7 +57,7 @@ from a system of record, and to type numbers in by hand only as a last resort.
 | Hub `time` (1.0) | Time entries, submission and approval, reminders, reports | Built. TimeLog remains master for time until the switch |
 | Hub `sales`, `contracts`, `crm`, `sync` (1.0) | Deals, quotes, contracts, customers; HubSpot and Fortnox kept in step | Built |
 | Hub `finance` (1.0) | Results, budget, cash flow, overdue receivables, days sales outstanding | Built, read from Fortnox |
-| Hub `support` (1.0/1.1) | Tickets, SLA and routing (1.1) | Built. [to confirm: whether Swedwise's own customer support runs in the hub or still in Zendesk] |
+| Hub `support` (1.0/1.1) | Tickets, SLA and routing (1.1) | Built. Swedwise's own customer support runs in Zendesk (CompanyIT `declarations/systems.toml`; every employee signs in since 2026-11-02) |
 | Hub `support.satisfaction`, `reporting.*`, `management.*`, `leadership.*` | Satisfaction surveys, KPI definitions and dashboards, audits, deviations, decisions, reviews | **Proposed for release 1.3, not built** |
 | Hub `parties`, `purchasing` (1.0/1.1) | Supplier and partner register, supplier quotes, purchase orders, matched supplier invoices | Register built. It has no field for environmental or security certification |
 | Fortnox | Books, invoices, credit notes, supplier invoices | Master for accounting |
@@ -73,11 +73,11 @@ from a system of record, and to type numbers in by hand only as a last resort.
 |---|---|---|---|
 | O-Q1 | Customer satisfaction | Survey rating ≥ 4.0 / 5.0, quarterly | **No.** No survey is run; `support.satisfaction` is not built |
 | O-Q2 | Service delivery quality | On-time project delivery ≥ 90%, quarterly | Partly. Hub deliverables have dates only for projects made from hub quotes |
-| O-Q3 | SaaS service reliability | Platform uptime ≥ 99.9%, monthly | **No.** No uptime source; which SaaS services are in scope is unconfirmed |
+| O-Q3 | SaaS service reliability | Platform uptime ≥ 99.9%, monthly | **Out of scope today.** Swedwise offers no SaaS service of its own (owner, 2026-11-02); kept for a possible later service |
 | O-Q4 | Competence development | Required training completed 100%, quarterly | **No.** No training record exists. [to confirm: document platform tracking] |
 | O-E1 | Carbon footprint reduction | Business travel CO2 −10% year on year, annually | **No.** Only travel cost is in Fortnox; no distances or emission factors |
 | O-E2 | Waste management | E-waste recycling ≥ 95%, annually | **No.** No disposal records kept |
-| O-E3 | Energy efficiency | Office energy per employee −5% year on year, quarterly | **No.** [to confirm: whether Swedwise receives its own electricity bills or pays energy in the rent] |
+| O-E3 | Energy efficiency | Office energy per employee −5% year on year, quarterly | **Partly.** Karlstad has its own electricity bills (Karlstads Energi), Stockholm's are billed by the landlord, Uddevalla's are in the rent (account 5020) |
 | O-E4 | Sustainable procurement | ≥ 70% of critical suppliers environmentally certified, annually | **No.** "Critical supplier" is not defined; the parties register has no certification field |
 | O-S1 | Security incident prevention | Zero material breaches, quarterly | **No.** No incident register is kept (SW-ISMS-FRM-002 is a form) |
 | O-S2 | Security awareness | 100% staff trained annually, quarterly | **No.** As O-Q4 |
@@ -120,7 +120,7 @@ objective). **Today** is Yes (can be produced now from an existing source), Part
 | KPI-Q-08 | Customer retention | Process: account-management | Customers with an active contract at the start of the year that still have one at the end ÷ customers at the start | Hub `contracts.register`, `crm` (HubSpot via `sync`) | CCO (Customer Development Lead) | Quarterly | ≥ 95% (SW-IMS-PRO-006) | [to measure] | Yes |
 | KPI-Q-09 | Support response within SLA | Process: support-and-incidents | Tickets with first response within the SLA ÷ tickets | Hub `support.sla` (1.1); [to confirm: helpdesk in use today] | CSO (Service Delivery Manager) | Monthly | ≥ 95% [to confirm] | [to measure] | Partly |
 | KPI-Q-10 | Support resolution within SLA | Process: support-and-incidents | Tickets resolved within the SLA ÷ tickets resolved | As KPI-Q-09 | CSO (Service Delivery Manager) | Monthly | [to set after baseline] | [to measure] | Partly |
-| KPI-Q-11 | SaaS service availability | O-Q3 | (Minutes in period − unplanned downtime) ÷ minutes in period, per service | No source. Later hub `assets.watch` (later release) or Matrix observation once Matrix production runs | CSO (Service Delivery Manager) | Monthly | ≥ 99.9% | [to measure] | No |
+| KPI-Q-11 | SaaS service availability (out of scope today: no SaaS service of its own, owner 2026-11-02) | O-Q3 | (Minutes in period − unplanned downtime) ÷ minutes in period, per service | No source. Later hub `assets.watch` (later release) or Matrix observation once Matrix production runs | CSO (Service Delivery Manager) | Monthly | ≥ 99.9% | [to measure] | No |
 | KPI-Q-12 | Invoice accuracy | Process: invoicing-and-finance | Credit notes caused by invoicing errors ÷ invoices issued | Fortnox (invoices and credit notes; the cause must be recorded on the credit note) | CFO | Quarterly | [to set after baseline] | [to measure] | Partly (cause not recorded) |
 | KPI-Q-13 | Time reported on time | Process: invoicing-and-finance, resource-allocation | People with the week's time submitted by the deadline ÷ people expected to report | TimeLog today; hub `time.approval`, `time.settings` after the switch | CSO | Weekly, reported monthly | ≥ 95% [to confirm] | [to measure] | Yes |
 | KPI-Q-14 | Quote win rate | Process: sales | Deals won ÷ deals closed (won + lost) in the period | Hub `sales.deals` and HubSpot | CCO (Customer Acquisition Lead) | Quarterly | [to set after baseline] | [to measure] | Yes |
@@ -141,7 +141,7 @@ objective). **Today** is Yes (can be produced now from an existing source), Part
 |---|---|---|---|---|---|---|---|---|---|
 | KPI-E-01 | Business travel CO2e | O-E1 | Σ (distance per mode × emission factor) | No source. Fortnox has the cost only. Needs the travel agency's report or hub `time.expenses` (1.2) with distance and mode | CFO (Environmental Lead) | Annual (quarterly tracking) | −10% vs. baseline year (MAN-006) | [to measure] | No |
 | KPI-E-02 | Business travel cost (proxy) | O-E1 | Travel cost booked in the period | Fortnox travel cost accounts [to confirm: accounts used] via hub `finance.results` | CFO (Environmental Lead) | Quarterly | Trend only | [to measure] | Yes |
-| KPI-E-03 | Office energy per employee | O-E3 | kWh in the period ÷ average headcount | Energy bills [to confirm: available]; headcount from Entra | CFO (Environmental Lead) | Quarterly | −5% per year (MAN-006) | [to measure] | No |
+| KPI-E-03 | Office energy per employee | O-E3 | kWh in the period ÷ average headcount | Energy bills: Karlstad's own and Stockholm's from the landlord (account 5020); Uddevalla in the rent, estimated from area; headcount from Entra | CFO (Environmental Lead) | Quarterly | −5% per year (MAN-006) | [to measure] | No |
 | KPI-E-04 | E-waste recycled | O-E2 | Units disposed with a recycling certificate ÷ units disposed | Disposal certificates (SW-ISMS-FRM-009); later hub `assets.equipment` (later release) | CFO (Environmental Lead) with COO (IT Manager) | Annual | ≥ 95% (MAN-006) | [to measure] | No |
 | KPI-E-05 | Critical suppliers with environmental certification | O-E4 | Critical suppliers with valid ISO 14001 or equivalent ÷ critical suppliers | Hub `parties.register` (needs a certification field and a "critical" mark) | CFO (Environmental Lead) | Annual | ≥ 70% (MAN-006) | [to measure] | No |
 | KPI-E-06 | Environmental incidents | Process: emergency-preparedness | Incidents logged in the period | SW-EMS-FRM-004 | CFO (Environmental Lead) | Quarterly | Zero | [to measure] | No (no log kept) |
