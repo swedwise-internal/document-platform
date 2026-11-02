@@ -2,7 +2,7 @@
 document_id: SW-EMS-REG-001
 title: Environmental Aspects Register
 doc_type: register
-version: "2.0"
+version: "2.1"
 status: draft
 classification: internal
 owner: Environmental Lead
@@ -39,11 +39,11 @@ assessing a new or changed aspect before it is entered here.
 ## 2. Scope
 
 The scope is the whole company as described in the IMS scope (SW-IMS-MAN-004):
-- the offices: Karlstad, Stockholm, Malmö and Uddevalla [to confirm: office list];
+- the offices: Karlstad (head office, Järnvägsgatan 7), Stockholm (Sankt Eriksgatan 46) and Uddevalla (Agnebergsgatan 2), the three premises in the annual report 2025 and the insurance letter 2025–2026; Malmö is not an office;
 - business travel and commuting;
 - the IT equipment Swedwise buys, uses and disposes of;
-- Swedwise's own cloud platform (Matrix on Microsoft Azure) and its use of AI services;
-- the SaaS service hosted at Entiros [to confirm: still offered];
+- Swedwise's own cloud platform (Matrix on Microsoft Azure, Sweden Central; older resources in West and North Europe) and its use of AI services;
+- not today: a SaaS service of Swedwise's own. Swedwise offers none (owner, 2026-11-02); EA-12 is kept for a possible later service;
 - the solutions Swedwise delivers, in their use phase at customers and at their end of life.
 
 ## 3. Method (the only one)
@@ -91,7 +91,7 @@ source exists or is planned, it is named, and the first year's figures will be u
 
 | ID | Activity | Aspect → impact | Stage | Cond. | C/I | Sev | Freq | Score | Significant (why) | Control today | Owner (job) | Data source |
 |----|----------|-----------------|-------|-------|-----|-----|------|-------|-------------------|---------------|-------------|-------------|
-| EA-01 | Office lighting and equipment | Electricity use → climate (Swedish grid, low carbon) | Own use | N | C | 2 | 5 | 10 | No | Equipment switched off; laptops, no desktops | CFO (Environmental Lead) | Energy bills [to confirm: whether Swedwise gets its own bills or electricity is in the rent] |
+| EA-01 | Office lighting and equipment | Electricity use → climate (Swedish grid, low carbon) | Own use | N | C | 2 | 5 | 10 | No | Equipment switched off; laptops, no desktops | CFO (Environmental Lead) | Energy bills: Karlstad has its own electricity bills (Karlstads Energi), Stockholm's electricity is billed by the landlord, Uddevalla's is in the rent (account 5020, SEK 20 k in 2025) |
 | EA-02 | Office heating and cooling | Energy use → climate | Own use | N | I (landlord) | 2 | 5 | 10 | No | Landlord's systems | CFO | Landlord's figures [to request] |
 | EA-03 | Business travel by air (customer sites, vendor events) | Fuel → greenhouse gases | Own use / delivery | N | C | 4 | 4 | 16 | **Yes** (score; CO-042 group sustainability reporting) | Remote delivery where possible; no written travel rule [to write: travel guideline] | CSO (Resource Management Lead) | Travel bookings and expense reports [to confirm: travel agency report]; today only cost (KPI-E-02) |
 | EA-04 | Business travel by car (own and rental cars) | Fuel → greenhouse gases, air pollution | Own use / delivery | N | C | 3 | 4 | 12 | **Yes** (score) | None written [to write: travel guideline] | CSO | Mileage claims in expense reports |
@@ -102,7 +102,7 @@ source exists or is planned, it is named, and the first year's figures will be u
 | EA-09 | Swedwise's own cloud platform (Matrix on Azure, Kubernetes test cluster running continuously) | Data-centre electricity and cooling → climate | Own use | N | C (size, scheduling) / I (provider's energy) | 3 | 5 | 15 | **Yes** (score) | Autoscaled node pools; heavy workloads on their own tainted pool [to decide: scale test down outside working hours] | COO (IT Manager) | Microsoft's emissions reporting for the subscription [to confirm: Emissions Impact Dashboard or Azure carbon optimization]; Azure region [to confirm] |
 | EA-10 | Development workstations and local test environments, including local AI model hosting | Electricity → climate | Own use | N | C | 2 | 5 | 10 | No | — | COO (IT Manager) | — |
 | EA-11 | Use of AI services (assistants and coding agents, model inference in the cloud) | Data-centre electricity, water for cooling → climate, water | Own use / delivery | N | C (how much) / I (provider) | 3 | 5 | 15 | **Yes** (score) | None [to decide: what is reported per provider] | COO | Provider usage reports (tokens per month) [to confirm: providers report energy] |
-| EA-12 | SaaS service hosted at Entiros [to confirm: still offered] | Data-centre electricity → climate | Delivery | N | I | 2 | 5 | 10 | No | Hosting contract | CSO | Entiros's reporting [to request] |
+| EA-12 | Out of scope today — SaaS service of Swedwise's own: none offered (owner, 2026-11-02); kept for a possible later service | Data-centre electricity → climate | Delivery | N | I | 2 | 5 | 10 | No | Hosting contract | CSO | Entiros's reporting [to request] |
 | EA-13 | Paper and printing | Paper, toner → resources, waste | Own use | N | C | 1 | 2 | 2 | No | Digital-first work | COO | — |
 | EA-14 | Office waste (general, packaging, food) | Waste → resources, pollution | Own use | N | C (sorting) / I (landlord's collection) | 2 | 4 | 8 | **Yes** (CO-051 sorting at source) | Sorting where the building offers it [to confirm per office] | CFO | Landlord's waste figures [to request] |
 | EA-15 | Building cooling systems (landlord) | Refrigerant leak → climate | Own use | E | I (landlord) | 3 | 1 | 3 | No | Landlord's maintenance | CFO | — |
@@ -149,7 +149,7 @@ These planned changes are already rated above, or will change the ratings when t
 | A production environment for Swedwise's own platform (Matrix), planned after the test environment is complete | EA-09 | Roughly doubles the platform's continuous load |
 | Growing use of AI agents in delivery and in Swedwise's own products | EA-11 | Frequency stays at 5; severity may rise to 4 once usage is reported |
 | Swedwise's own products sold as services (Certify, Pages, the hub) | EA-09, EA-11, new aspects per product | Assess each with SW-EMS-FRM-001 before launch |
-| Office changes [to confirm] | EA-01, EA-02, EA-14 | Re-assess when an office opens, moves or closes |
+| Office changes | EA-01, EA-02, EA-14 | Re-assess when an office opens, moves or closes |
 
 Every change that goes through change management (SW-IMS-PRO-008) is checked for new or changed
 aspects. The form SW-EMS-FRM-001 is the record of that check.
@@ -182,3 +182,4 @@ The Environmental Lead re-rates with the measured figures once a year of data ex
 |---------|------|--------|---------|-------------|
 | 1.0 | [TBD] | Environmental Lead | Initial draft | [TBD] |
 | 2.0 | 2026-11-02 | Environmental Lead (draft prepared for review) | One method (severity × frequency, with significance also by obligation or interested party) replacing three; unique ids EA-01–EA-30; control vs influence; life-cycle stages including use at the customer and end of life; own cloud platform and AI services added; planned changes; communication of significant aspects; owners by job; Entiros-hosted SaaS marked to confirm; references to non-existent documents replaced or marked [to write]. From the ISO 14001 text pilot (2026-11-02) | [TBD] |
+| 2.1 | 2026-11-02 | Environmental Lead (draft prepared for review) | Offices measured (three, from the annual report and the insurance letter; Malmö is not one), electricity bills per office, the Azure regions, and EA-12 out of scope: Swedwise offers no SaaS service of its own (owner, 2026-11-02) | [TBD] |
