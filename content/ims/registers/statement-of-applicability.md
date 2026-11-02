@@ -19,6 +19,8 @@ related_documents:
 
 # Statement of Applicability (SoA)
 
+> **Out of scope today (2026-11-02):** Swedwise offers no SaaS service of its own (the owner: «Vi har egentligen inga egna saas-tjänster i nuläget»). The parts of this document about a SaaS service, SaaS operations, SaaS uptime or SaaS hosting at Entiros are kept for a possible later service and do not apply now; the rest applies. See SW-IMS-MAN-004 4.1.
+
 **Organization**: Swedwise AB
 **Standard**: ISO/IEC 27001:2022
 **Date**: 2025-01-01

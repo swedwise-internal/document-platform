@@ -21,6 +21,8 @@ related_documents:
 
 # Service Continuity Policy
 
+> **Out of scope today (2026-11-02):** Swedwise offers no SaaS service of its own (the owner: «Vi har egentligen inga egna saas-tjänster i nuläget»). The parts of this document about a SaaS service, SaaS operations, SaaS uptime or SaaS hosting at Entiros are kept for a possible later service and do not apply now; the rest applies. See SW-IMS-MAN-004 4.1.
+
 ## 1. Purpose
 
 This policy establishes Swedwise AB's commitment to maintaining critical services during disruptions and ensuring timely recovery. It defines our approach to service continuity management, supporting ISO 9001 quality objectives, ISO 27001 information security availability requirements, and our contractual obligations to customers, particularly the 99.9% SLA commitment for Swedwise Communications SaaS services.

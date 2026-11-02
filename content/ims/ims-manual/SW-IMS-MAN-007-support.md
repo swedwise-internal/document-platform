@@ -22,6 +22,8 @@ related_documents:
 
 # IMS Manual - Clause 7: Support
 
+> **Out of scope today (2026-11-02):** Swedwise offers no SaaS service of its own (the owner: «Vi har egentligen inga egna saas-tjänster i nuläget»). The parts of this document about a SaaS service, SaaS operations, SaaS uptime or SaaS hosting at Entiros are kept for a possible later service and do not apply now; the rest applies. See SW-IMS-MAN-004 4.1.
+
 ## Purpose
 
 This section of the IMS Manual describes how Swedwise provides and manages resources, competence, awareness, communication, and documented information to support effective operation of the Integrated Management System. It demonstrates compliance with Clause 7 requirements of ISO 9001:2015, ISO 14001:2015, and ISO 27001:2022.

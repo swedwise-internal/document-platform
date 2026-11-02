@@ -22,6 +22,8 @@ related_documents:
 
 # Change Management Procedure
 
+> **Out of scope today (2026-11-02):** Swedwise offers no SaaS service of its own (the owner: «Vi har egentligen inga egna saas-tjänster i nuläget»). The parts of this document about a SaaS service, SaaS operations, SaaS uptime or SaaS hosting at Entiros are kept for a possible later service and do not apply now; the rest applies. See SW-IMS-MAN-004 4.1.
+
 **Document ID**: SW-IMS-PRO-008-v1.0
 **Effective Date**: [TBD]
 **Review Date**: [TBD]

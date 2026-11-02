@@ -18,6 +18,8 @@ related_documents:
 
 # Backup and Recovery Procedure
 
+> **Out of scope today (2026-11-02):** Swedwise offers no SaaS service of its own (the owner: «Vi har egentligen inga egna saas-tjänster i nuläget»). The parts of this document about a SaaS service, SaaS operations, SaaS uptime or SaaS hosting at Entiros are kept for a possible later service and do not apply now; the rest applies. See SW-IMS-MAN-004 4.1.
+
 ## 1. Purpose
 
 This procedure defines the approach for backing up critical information assets and recovering data and systems following data loss, system failure, or disaster. It ensures that Swedwise AB can restore operations within acceptable timeframes and with minimal data loss, supporting business continuity and compliance requirements.

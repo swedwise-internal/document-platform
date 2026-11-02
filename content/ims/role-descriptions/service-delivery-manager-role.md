@@ -21,6 +21,8 @@ related_documents:
 
 # Role: Service Delivery Manager (SaaS)
 
+> **Not staffed today (2026-11-02):** Swedwise offers no SaaS service of its own (the owner: «Vi har egentligen inga egna saas-tjänster i nuläget»), so this role has nothing to run. The description is kept for a possible later service. See SW-IMS-MAN-004 4.1.
+
 **Document ID**: SW-QMS-ROLE-002-v1.1
 **Effective Date**: [TBD]
 **Review Date**: [TBD]
