@@ -287,7 +287,7 @@ Full-disk encryption protects all data on a device by encrypting the entire hard
 
 **Additional Considerations:**
 - [ ] Inform IT of travel dates and destination
-- [ ] Check company travel policy for device restrictions
+- [ ] Check device restrictions for the destination (a travel guideline is to be written)
 - [ ] Consider using "travel laptop" (minimal data)
 - [ ] Avoid taking devices with customer data if possible
 - [ ] Be aware of border control device searches (some countries)

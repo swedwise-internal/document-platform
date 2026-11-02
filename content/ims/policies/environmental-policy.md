@@ -2,7 +2,7 @@
 document_id: SW-EMS-POL-001
 title: Environmental Policy
 doc_type: policy
-version: "1.0"
+version: "1.1"
 status: draft
 classification: public
 owner: Environmental Lead
@@ -236,10 +236,10 @@ Changes to this policy:
 ## 9. Related Documents
 
 - SW-IMS-POL-001: Integrated Management System Policy
-- [TBD - SW-EMS-PRO-001: Environmental Aspects Identification and Evaluation]
-- [TBD - SW-EMS-PRO-002: Compliance Obligations Procedure]
-- [TBD - SW-EMS-PRO-003: Environmental Objectives and Planning]
-- [TBD - SW-EMS-ROLE-001: Environmental Lead Role Description]
+- SW-EMS-REG-001: Environmental Aspects Register (the aspects and the one significance method); SW-EMS-FRM-001: Environmental Aspect Assessment Form
+- SW-IMS-REG-010: Compliance Obligations Register, kept by SW-IMS-PRO-013: Legal and Compliance Monitoring Procedure
+- SW-IMS-MAN-006 section 6.2 and SW-IMS-REG-008: Environmental objectives and their measures
+- SW-EMS-ROLE-001: Environmental Lead Role Description
 - [TBD - Environmental Aspects Register]
 - [TBD - Legal Compliance Register]
 - [TBD - Environmental Objectives and Targets]
@@ -265,6 +265,7 @@ Changes to this policy:
 | Version | Date | Author | Changes | Approved By |
 |---------|------|--------|---------|-------------|
 | 1.0 | [TBD] | [TBD] | Initial release | [TBD] |
+| 1.1 | 2026-11-02 | Environmental Lead (drafted in session) | Related documents point to the documents that exist (aspects register, compliance obligations register, objectives); the planned SW-EMS-PRO-001–003 ids dropped (SW-EMS-PRO-001 is the emergency procedure) | [TBD] |
 
 ### Approval
 

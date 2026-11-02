@@ -370,7 +370,7 @@ Determine which requirements are relevant to the IMS (quality, environmental, in
 |-------------|-------------|----------------|
 | GDPR compliance | ISMS | Information security controls for personal data |
 | 99.9% SaaS uptime | QMS | Availability monitoring, incident management |
-| Carbon footprint reduction | EMS | Environmental objectives, travel policy |
+| Carbon footprint reduction | EMS | Environmental objectives, travel guideline [to write] (SW-EMS-REG-001 EA-03, EA-04) |
 | Employee training | All | Competence management, training procedure |
 | Secure software development | ISMS, QMS | Secure SDLC procedure, code reviews |
 
