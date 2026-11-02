@@ -87,7 +87,7 @@ is assessed by both, and the Privacy Lead decides on notification.
 
 - Own the handling of data subject requests (access, rectification, erasure, objection, portability) within one month
 - Be the contact point for Integritetsskyddsmyndigheten (IMY) and for data subjects
-- Contact address: privacy@swedwise.se (proposed shared mailbox; members: CEO and CFO)
+- Contact address: privacy@swedwise.se (shared mailbox; members: CEO and CFO)
 
 ### 5. Personal data breaches
 

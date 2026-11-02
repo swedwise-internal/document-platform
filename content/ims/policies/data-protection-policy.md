@@ -440,7 +440,7 @@ Individuals have right not to be subject to solely automated decisions with lega
 
 **Request Receipt:**
 - Accept requests via email, letter, or in-person
-- Request email: privacy@swedwise.se (proposed shared mailbox)
+- Request email: privacy@swedwise.se (shared mailbox)
 - Log all requests with date received and type
 
 **Identity Verification:**
@@ -799,11 +799,11 @@ Data protection performance reviewed in management reviews:
 ## 16. Contact Information
 
 **Data Protection Queries:**
-- Privacy Lead: privacy@swedwise.se (proposed shared mailbox; members: CEO and CFO)
+- Privacy Lead: privacy@swedwise.se (shared mailbox; members: CEO and CFO)
 - CISO: [TBD - email and phone]
 
 **Data Subject Rights Requests:**
-- Email: privacy@swedwise.se (proposed shared mailbox)
+- Email: privacy@swedwise.se (shared mailbox)
 - Mail: Swedwise AB, [TBD - address]
 
 **Data Breach Reporting (Internal):**
