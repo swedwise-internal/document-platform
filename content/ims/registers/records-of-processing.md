@@ -2,7 +2,7 @@
 document_id: SW-IMS-REG-009
 title: Records of Processing Activities (ROPA)
 doc_type: form
-version: "1.1"
+version: "1.2"
 status: draft
 classification: internal
 owner: Privacy Lead
@@ -37,7 +37,7 @@ processes as **controller** (section A) and as **processor** for customers (sect
 itself uses (section C), why Swedwise has no Data Protection Officer (section D), and what needs a decision (section E).
 
 **Controller**: Swedwise AB, organisation number 556793-2354, Västra Torggatan 11, 652 25 Karlstad [to confirm: registered address; the address in signed contracts 2023–2025].
-**Contact**: the Privacy Lead, privacy@swedwise.se (proposed shared mailbox, not created yet; members CEO and CFO).
+**Contact**: the Privacy Lead, privacy@swedwise.se (shared mailbox created 2026-11-02; members CEO and CFO [to confirm: access granted]).
 **Data Protection Officer**: none; not required (section D).
 
 **How this register was made.** It was drafted on 2026-10-29 from the CompanyIT systems catalogue
@@ -74,7 +74,7 @@ Article 9 conditions are given where health or trade union data occurs.
 | ROPA-C-12 | Use of generative AI (ChatGPT) | Help employees write, analyse and code | 6(1)(f) for the employee's account data; for personal data in prompts and uploads, the lawful basis of the activity the data comes from [to confirm: rules in the AI policy] | Employees; anyone named in prompts or uploaded documents | Account data; prompts and uploaded documents (may contain colleagues', customers' or candidates' data) | ChatGPT (SAML sign-in, assignment not required) | Processor: OpenAI (ROPA-PROC-10) | US vendor [to confirm: plan, data location, safeguard, whether prompts are used for training] | [to confirm: workspace retention setting] | COO |
 | ROPA-C-13 | Internal communication and collaboration | Mail, chat, meetings, files and boards for daily work, also with customers and partners | 6(1)(b) and 6(1)(f) running the business | Employees; customer and partner contacts | Messages, files, calendars, boards, everything people share | Microsoft 365 (Exchange, Teams, SharePoint, OneDrive), Slack, whiteboards (diagrams.net in use; Miro, Mural, Lucid not used since 2024–2025), planning tools (Plandisc last used 2026-01; Wrike, Trello, Meister, iGlobe, Placker disabled or never used) | Processors: Microsoft, Slack, whiteboard and planning vendors (ROPA-PROC-01, ROPA-PROC-11, ROPA-PROC-22, ROPA-PROC-23) | Slack and several board vendors: US [to confirm] | Mail: [to confirm]; chat: [to confirm]; tools no longer used: [to confirm: export or delete] | COO |
 | ROPA-C-14 | Supplier contacts and purchasing | Buy goods and services, pay suppliers, manage partner and vendor relationships | 6(1)(f) business relationships; 6(1)(c) Bokföringslagen for supplier invoices | Contact people at suppliers, partners and vendors; sole traders | Name, title, business contact details, invoices and payment details of sole traders | Fortnox (supplier invoices), Nexta Hub (supplier and partner register, purchasing), Microsoft 365, partner portals | Internal finance and purchasing; processors: Fortnox, Nexta, Microsoft | Microsoft: see ROPA-PROC-01 | Supplier invoices: 7 years (Bokföringslagen 7 kap. 2 §); contacts while the relationship is active plus 2 years [to confirm] | CFO (ordinary suppliers); CCO (partners and vendors whose products Swedwise sells) |
-| ROPA-C-15 | Data subject requests and personal data breach records | Answer requests from data subjects; record and assess personal data breaches; notify IMY | 6(1)(c) GDPR Articles 12–22 and 33(5) | People who make requests; people affected by a breach | Request content, identity check, correspondence; breach facts, affected categories, decisions | privacy@swedwise.se (proposed shared mailbox, not created yet); [to confirm: where the request log and breach register are kept] | IMY; affected customers where Swedwise is processor; processor: Microsoft (ROPA-PROC-01) | Microsoft: see ROPA-PROC-01 | Requests: 2 years after closing [to confirm]; breach register: 5 years [to confirm] | Privacy Lead (CEO) |
+| ROPA-C-15 | Data subject requests and personal data breach records | Answer requests from data subjects; record and assess personal data breaches; notify IMY | 6(1)(c) GDPR Articles 12–22 and 33(5) | People who make requests; people affected by a breach | Request content, identity check, correspondence; breach facts, affected categories, decisions | privacy@swedwise.se (shared mailbox, created 2026-11-02); [to confirm: where the request log and breach register are kept] | IMY; affected customers where Swedwise is processor; processor: Microsoft (ROPA-PROC-01) | Microsoft: see ROPA-PROC-01 | Requests: 2 years after closing [to confirm]; breach register: 5 years [to confirm] | Privacy Lead (CEO) |
 
 **Rows in section A: 15.**
 
@@ -207,7 +207,7 @@ These were found while drafting the register. They are named here, not decided.
     hard to enforce.
 11. **Employee surveys may hold health data (ROPA-C-09).** Winningtemp asks about wellbeing; whether answers are
     anonymous and what managers see is not known.
-12. **The contact address does not exist yet.** privacy@swedwise.se (members: CEO and CFO) is approved by the owner (2026-11-01, «Ja på alla»); it is requested in the CompanyIT console and created when the plan is approved [to confirm: requested]. The notices point to it.
+12. **The contact address exists; its members cannot read it yet.** privacy@swedwise.se was approved by the owner (2026-11-01, «Ja på alla»), requested and approved in the CompanyIT console and created as a shared mailbox on 2026-11-02. Full access and send-as for the CEO and the CFO are steps of the same plan; both accounts are protected, so the steps are made by hand in Exchange admin [to confirm: access granted]. Until then nothing sent to the address is read. The notices point to it.
 
 ## F. Review
 
@@ -221,6 +221,7 @@ source for the systems; a new system there should get a row here before people s
 |---|---|---|---|
 | 1.0 | 2026-10-29 | Privacy Lead (drafted in session) | First records of processing: 15 controller activities, 4 processor services, 27 processors, the Article 37 assessment and 12 findings |
 | 1.1 | 2026-11-01 | Privacy Lead (drafted in session) | B.1: data processing agreements found with customers; section C: what was found per processor, meeting AI split per vendor (Fathom limited to one user, Fireflies disabled, Klang pending), DocuSign and Xpeedio added (31 rows); findings 1, 7 and 12 updated |
+| 1.2 | 2026-11-02 | Privacy Lead (drafted in session) | privacy@swedwise.se created as a shared mailbox; finding 12 and the contact lines updated |
 
 ---
 
