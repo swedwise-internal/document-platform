@@ -51,7 +51,7 @@ This register records the parties that can affect, be affected by, or perceive t
 | **Monitoring** | How Swedwise follows the party's needs and whether they are met |
 | **Owner (job)** | The job that owns the relationship and the entry |
 
-Compliance obligations marked Legal, Contract or Adopted are carried into the compliance obligations list kept under SW-IMS-PRO-013 and into the integrated risk register (SW-IMS-REG-001).
+Compliance obligations marked Legal, Contract or Adopted are carried into the Compliance Obligations Register (SW-IMS-REG-010, kept by SW-IMS-PRO-013) and into the integrated risk register (SW-IMS-REG-001).
 
 ## 3. Register
 
@@ -113,7 +113,7 @@ Compliance obligations marked Legal, Contract or Adopted are carried into the co
 
 ## 4. Compliance Obligations from this Register
 
-The entries marked Legal, Contract or Adopted give these obligations; the full list with the evaluation of compliance is kept under SW-IMS-PRO-013.
+The entries marked Legal, Contract or Adopted give these obligations; the full list with the evaluation of compliance is SW-IMS-REG-010.
 
 | Obligation | From | Owner (job) |
 |-----------|------|-------------|
@@ -136,7 +136,7 @@ This register is reviewed:
 - **Quarterly** in management review (changes in parties or their requirements)
 - **When triggered**: new customer segment or major contract, new partner programme, new office, new law or regulation, change in ownership, new AI use, change in scope
 
-Changes are recorded in the document control table below. Obligations that change are passed to SW-IMS-PRO-013 and risks to SW-IMS-REG-001.
+Changes are recorded in the document control table below. Obligations that change are passed to SW-IMS-REG-010 and risks to SW-IMS-REG-001.
 
 ---
 

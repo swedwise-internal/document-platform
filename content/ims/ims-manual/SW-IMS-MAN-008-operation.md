@@ -651,7 +651,7 @@ Swedwise ensures compliance with environmental legal and regulatory requirements
 - Customer environmental requirements (e.g., green procurement criteria)
 
 **Compliance monitoring**:
-- Legal register maintained (SW-IMS-PRO-012)
+- Compliance obligations register maintained (SW-IMS-REG-010, kept by SW-IMS-PRO-013)
 - Compliance evaluations conducted annually
 - Certification of e-waste recycler verified
 - Data center environmental certifications reviewed

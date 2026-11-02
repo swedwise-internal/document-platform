@@ -296,7 +296,7 @@ A comprehensive PESTLE analysis is conducted annually (see SW-IMS-PRO-011). Key 
 
 #### 2.3.3 Regulatory Environment
 
-**Key Regulations Affecting Swedwise** (the full list of compliance obligations is kept under SW-IMS-PRO-013; the parties behind them are in SW-IMS-REG-006):
+**Key Regulations Affecting Swedwise** (the full list of compliance obligations is SW-IMS-REG-010, kept by SW-IMS-PRO-013; the parties behind them are in SW-IMS-REG-006):
 
 | Regulation | Impact | Compliance Approach |
 |-----------|--------|---------------------|

@@ -146,7 +146,7 @@ lead more than four [to confirm: limit] so that consulting work is not crowded o
 | 3 | communication | CEO (proposed) | Low | Owner only proposed. Little direct customer or security exposure | A-2027-13 (Q4) |
 | 4 | risk-management | COO | Medium | The risk register is a template with no assessed risks, and certification Stage 1 looks for it early. Rated Medium rather than High because the readiness audit already checks that it has started | A-2027-02 (Q1) |
 | 5 | context-and-interested-parties | COO | Medium | The scope still names one SaaS service hosted at Entiros and the 2015 editions. The interested parties register SW-IMS-REG-006 is a new draft (2026-10-29) with no review behind it | A-2027-02 (Q1) |
-| 6 | compliance-obligations | COO | Medium | GDPR and customer contract obligations are material. The compliance obligations register SW-IMS-REG-002 does not exist yet | A-2027-02 (Q1) |
+| 6 | compliance-obligations | COO | Medium | GDPR and customer contract obligations are material. The compliance obligations register SW-IMS-REG-010 is drafted (2026-11-02); no evaluation of compliance is held yet | A-2027-02 (Q1) |
 | 7 | monitoring-and-measurement | COO | Medium | No KPI is measured today (see SW-IMS-REG-008). Audited late so a year of figures exists | A-2027-12 (Q4) |
 | 8 | internal-audit | COO | Medium | Can only be audited once this programme has run | A-2027-12 (Q4) |
 | 9 | nonconformity-and-corrective-action | COO | **High** | Two procedures described the same process; merged into SW-IMS-PRO-005 as a proposal on 2026-10-29, not yet confirmed. Every other audit's findings depend on it working | A-2027-01 (Q1, choice of procedure), A-2027-12 (Q4) |

@@ -2,7 +2,7 @@
 document_id: SW-IMS-MAN-006
 title: "IMS Manual - Clause 6: Planning"
 doc_type: ims-manual
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: IMS Owner
@@ -238,46 +238,17 @@ Example significant aspects for Swedwise:
 
 Swedwise systematically determines and maintains awareness of compliance obligations related to quality, environmental, and information security.
 
-**Types of Compliance Obligations**:
-
-**Legal and Regulatory Requirements**:
-
-**Quality and General Business**:
-- Swedish consumer protection laws (Konsumentköplagen)
-- EU Product Liability Directive
-- Labor law (Arbetsmiljölagen) - employee health and safety
-- Accounting and tax regulations
-
-**Environmental**:
-- Swedish Environmental Code (Miljöbalken)
-- EU Waste Electrical and Electronic Equipment Directive (WEEE)
-- Energy efficiency requirements
-- Hazardous waste regulations (limited applicability for office operations)
-
-**Information Security and Privacy**:
-- EU General Data Protection Regulation (GDPR) - primary data protection law
-- Swedish Data Protection Act (Dataskyddslagen)
-- NIS2 Directive (if applicable as critical infrastructure or essential service)
-- Telecommunications regulations (for SaaS notification services)
-- Sector-specific regulations (e.g., public sector procurement requirements)
-
-**Contractual Requirements**:
-- Customer contracts (service levels, security commitments, data handling)
-- Supplier agreements (OpenText licensing, cloud hosting SLAs)
-- Partnership agreements
-- Insurance policy requirements
-
-**Voluntary Commitments**:
-- ISO 9001:2015 (Quality Management)
-- ISO 14001:2015 (Environmental Management)
-- ISO 27001:2022 (Information Security Management)
-- Industry best practices and standards
-- Customer codes of conduct (when contractually binding)
+**The obligations themselves** are in the Compliance Obligations Register (SW-IMS-REG-010): law and regulation
+(personal data, cyber security, AI, work environment and employment, accounting, environment, accessibility),
+contracts (customer agreements, the OpenText partner agreement, Microsoft and AI provider terms, licence terms for
+standards, the owner's group policies, insurance) and the certification schemes. Each row names the duty, its source,
+the owner job, how and how often compliance is evaluated, and the evidence. The categories that used to be listed here
+are replaced by that register.
 
 **Compliance Determination Process**:
 
 **Step 1: Identify Applicable Obligations**
-- IMS Owner maintains **Compliance Obligations Register** (SW-IMS-REG-002)
+- IMS Owner maintains the **Compliance Obligations Register** (SW-IMS-REG-010)
 - Sources: Legal databases, industry associations, customer contracts, regulatory updates
 - Reviewed by legal advisor (external) annually or when changes occur
 
@@ -297,7 +268,7 @@ Swedwise systematically determines and maintains awareness of compliance obligat
 - Management review assesses compliance performance
 - Update register when regulations change
 
-**Compliance Obligations Register** (SW-IMS-REG-002):
+**Compliance Obligations Register** (SW-IMS-REG-010):
 
 Contents:
 - Obligation ID and category
@@ -740,7 +711,7 @@ Certain changes must be communicated to ISO certification body:
 - **SW-IMS-PRO-008** - Change Management Procedure
 - **SW-ISMS-POL-007** - Information Classification Policy
 - **SW-IMS-REG-001** - Integrated Risk Register
-- **SW-IMS-REG-002** - Compliance Obligations Register
+- **SW-IMS-REG-010** - Compliance Obligations Register
 - **SW-IMS-REG-008** - KPI Register (section 3: IMS objectives)
 - **SW-ISMS-REG-001** - Statement of Applicability (ISO 27001 Annex A Controls)
 - **SW-EMS-REG-001** - Environmental Aspects Register
@@ -760,6 +731,7 @@ This manual section is reviewed annually by the IMS Owner or when:
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | [TBD] | IMS Owner | Initial release |
+| 1.1 | 2026-11-02 | IMS Owner (drafted in session) | 6.1.6: the compliance obligations are SW-IMS-REG-010 (was the non-existent SW-IMS-REG-002, which is the document register); the list of categories replaced by the register |
 
 **Next Review Date**: [TBD - typically 12 months from effective date]
 

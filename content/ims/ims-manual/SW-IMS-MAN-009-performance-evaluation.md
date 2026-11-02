@@ -235,7 +235,7 @@ Swedwise periodically evaluates compliance with environmental legal and other re
    - Reported to management in annual management review
    - Evidence retained for certification audits
 
-**See SW-IMS-PRO-012** (Legal Compliance Procedure) for detailed compliance evaluation process.
+**See SW-IMS-PRO-013** (Legal and Compliance Monitoring Procedure) and the register SW-IMS-REG-010 for detailed compliance evaluation process.
 
 **Key environmental legal requirements for Swedwise**:
 - WEEE Directive (e-waste disposal)
@@ -613,7 +613,8 @@ Management review outputs include decisions and actions related to:
 - SW-IMS-PRO-004: Management Review Procedure
 - SW-IMS-PRO-005: Nonconformity and Corrective Action Procedure
 - SW-IMS-PRO-010: Monitoring and Measurement Procedure
-- SW-IMS-PRO-012: Legal Compliance Procedure
+- SW-IMS-PRO-013: Legal and Compliance Monitoring Procedure
+- SW-IMS-REG-010: Compliance Obligations Register
 - SW-QMS-PRO-002: Customer Feedback Procedure
 - SW-ISMS-PRO-002: Incident Management Procedure
 - SW-ISMS-PRO-007: User Access Review Procedure

@@ -2,7 +2,7 @@
 document_id: SW-IMS-PRO-013
 title: Legal and Compliance Monitoring Procedure
 doc_type: procedure
-version: "1.1"
+version: "1.2"
 status: draft
 classification: internal
 owner: IMS Owner
@@ -19,6 +19,7 @@ related_documents:
   - SW-ISMS-POL-001
   - SW-IMS-PRO-002
   - SW-IMS-PRO-005
+  - SW-IMS-REG-010
 ---
 
 # Legal and Compliance Monitoring Procedure
@@ -183,7 +184,7 @@ Based on Swedwise's operations (IT consultancy, SaaS services, ~35 employees, Sw
 | **IT Services & SaaS** | - SaaS service level agreements (contractual)<br>- Cloud service regulations (GDPR, data residency)<br>- Intellectual property (software licensing, OpenText agreements) | Service Owner, CISO | High |
 | **Anti-Corruption & Ethics** | - Anti-bribery laws<br>- Conflict of interest<br>- Ethical business practices<br>- Code of conduct | Management Team | Medium |
 
-**Note**: This is a representative list. The full Compliance Obligation Register will be more comprehensive and updated regularly.
+**Note**: These are the areas. The obligations themselves, with owner, evaluation and evidence, are in the Compliance Obligations Register (SW-IMS-REG-010).
 
 ## 7. Legal Horizon Scanning and Monitoring
 
@@ -262,7 +263,7 @@ When new or changed legal requirement identified:
 
 ### 8.1 Register Contents
 
-The **Compliance Obligation Register** is a centralized list of all compliance obligations applicable to Swedwise.
+The **Compliance Obligations Register** (SW-IMS-REG-010, `content/ims/registers/compliance-obligations-register.md`) is the list of all compliance obligations applicable to Swedwise. Its rows carry the fields below in a compact form (ID CO-nnn, duty, source, why it applies, owner job, evaluation and frequency, evidence); the evaluation results are kept in its evaluation log.
 
 **Information Captured** (for each obligation):
 
@@ -309,9 +310,9 @@ The **Compliance Obligation Register** is a centralized list of all compliance o
 - Quarterly: Review and update based on legal horizon scanning
 - Annually: Comprehensive review of entire register (during IMS review)
 
-**Tool/Format**: [TBD - Spreadsheet (Excel, Google Sheets), database, or compliance management software]
+**Tool/Format**: a Markdown register in the IMS document platform (SW-IMS-REG-010)
 
-**Location**: [TBD - Document repository, SharePoint, or dedicated compliance tool]
+**Location**: the IMS document platform, `content/ims/registers/`
 
 **Access**: IMS Owner, Compliance Owners (read/write), Management (read)
 
@@ -809,6 +810,7 @@ This procedure is reviewed and improved based on:
 |---------|------|--------|---------|
 | 1.0 | [TBD] | [Author] | Initial release |
 | 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Data Protection Officer replaced by the Privacy Lead (SW-IMS-ROLE-006, held by the CEO; never the same person as the CISO) |
+| 1.2 | 2026-11-02 | IMS Owner (drafted in session) | The register is SW-IMS-REG-010 (written); section 6.2 is the areas, the obligations are in the register; tool and location set |
 
 ---
 
