@@ -182,7 +182,7 @@ Swedwise systematically analyzes internal and external issues that affect our ab
 - Monitoring and management tools
 
 **Financial Resources**:
-- Net turnover SEK 114.7 m in 2025 (106.7 m in 2024), result after financial items SEK 28.0 m, equity ratio 23.9 % (annual report 2025); part of the Storskogen group
+- Net turnover SEK 114.7 m in 2025 (106.7 m in 2024; about SEK 125 m forecast for 2026, owner 2026-11-02), result after financial items SEK 28.0 m, equity ratio 23.9 % (annual report 2025); part of the Storskogen group
 
 **Knowledge and Intellectual Property**:
 - Implementation methodologies and best practices
