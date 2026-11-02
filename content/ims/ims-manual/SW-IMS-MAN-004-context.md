@@ -64,7 +64,7 @@ Swedwise systematically analyzes internal and external issues that affect our ab
 **Headquarters**: Karlstad, Sweden (registered seat, annual report 2025)
 **Offices**: Karlstad, Stockholm and Uddevalla (annual report 2025; the three insured premises 2025–2026). Malmö is not an office: the CompanyIT consultant profile's list of four is wrong on that point
 **Employees**: 35 (CompanyIT's classification of Entra accounts, 2026-11-02; the 60 counted on 2026-10-19 included subcontractors and other accounts); 33 on average in 2025 (annual report 2025)
-**Ownership**: Swedwise AB is wholly owned by VSH Holding AB, which is owned by Storskogen 3 Invest AB, in the Storskogen group (annual report 2025, note on the parent company; Storskogen onboarding, April 2022). The board follows Storskogen's board year and policy package (CO-075)
+**Ownership**: Swedwise AB is wholly owned by VSH Holding AB, which is owned by Storskogen 3 Invest AB, in the Storskogen group (annual report 2025, note on the parent company; Storskogen onboarding, April 2022). The board follows Storskogen's board year and policy package, version 2024-11-06 (CO-075)
 
 **Business Model**:
 - Software licences as a partner and reseller (OpenText, Salesforce and other platforms)
