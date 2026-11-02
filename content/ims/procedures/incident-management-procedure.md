@@ -2,7 +2,7 @@
 document_id: SW-ISMS-PRO-001
 title: Incident Management Procedure
 doc_type: procedure
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: CISO
@@ -469,11 +469,14 @@ When reporting, provide:
 1. **Initial Assessment (within 4 hours)**
    - Determine if personal data is involved
    - Assess risk to data subjects
-   - Notify CISO and Legal/Privacy Officer immediately
+   - Notify CISO and the Privacy Lead immediately
+   - Report every personal data breach immediately to the CEO and to the Storskogen group's IT lead (the IT Manager at group level), whether or not it is notifiable to IMY (Storskogen Information security policy 2024-11-06, 4.7.1)
+   - Where Swedwise is processor for a customer: notify the customer (the controller) without undue delay
 
 2. **Regulatory Notification (within 72 hours if required)**
-   - Notify IMY if breach likely to result in risk to rights/freedoms
-   - Document reason if notification not required
+   - Notify IMY within 72 hours of becoming aware, if the breach is likely to result in risk to rights/freedoms
+   - If notified later than 72 hours, state the reasons for the delay in the notification
+   - Document reason if notification not required (GDPR Article 33 exemption); the group's text has no exemption, so the breach is still registered (step 4) and reported internally and to the group (step 1)
    - Use GDPR breach notification form
 
 3. **Individual Notification (if high risk)**
@@ -484,8 +487,8 @@ When reporting, provide:
 
 4. **Documentation**
    - Document all personal data breaches (even if not notified)
-   - Maintain breach register
-   - Include facts, effects, and remedial actions
+   - Maintain the personal data breach register; the register is required (Storskogen Information security policy 2024-11-06, 4.7.1) and is kept by the Privacy Lead in the location given in section 12
+   - Include facts, effects, and remedial actions, and the dates of the internal, group and IMY reports
 
 ### 9.2 Ransomware
 
@@ -615,7 +618,7 @@ Review and update this procedure:
 | Investigation Evidence | Per severity (see 8.3) | [TBD - Secure evidence storage] |
 | Post-Incident Reviews | 5 years | [TBD - Document repository] |
 | Communication Records | 3 years | [TBD - Email/Teams] |
-| GDPR Breach Register | Permanent | [TBD - Privacy management system] |
+| GDPR Breach Register (personal data breach register, required, owned by the Privacy Lead) | Permanent | [TBD - Privacy management system] |
 | Incident Metrics Reports | 7 years | [TBD - Document repository] |
 
 ## 13. Related Documents
@@ -650,6 +653,7 @@ Review and update this procedure:
 | Version | Date | Author | Changes | Approved By |
 |---------|------|--------|---------|-------------|
 | 1.0 | [TBD] | [TBD - CISO] | Initial procedure creation | [TBD - CEO] |
+| 1.1 | 2026-11-02 | IMS Owner (draft prepared for review) | 9.1 aligned with Storskogen Information security policy 2024-11-06, 4.7.1: every personal data breach reported immediately to the CEO and the group's IT lead; IMY within 72 h with reasons if later; every breach registered even when exempt from IMY notification; breach register marked required (12) | [TBD] |
 
 **Next Review Date**: [TBD - typically 12 months from effective date]
 

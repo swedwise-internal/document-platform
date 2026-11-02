@@ -2,7 +2,7 @@
 document_id: SW-ISMS-PRO-003
 title: Backup and Recovery Procedure
 doc_type: procedure
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: CISO
@@ -107,6 +107,15 @@ Swedwise follows a layered backup approach:
 - 2 different storage media/technologies
 - 1 copy off-site (different geographic location)
 
+**Required for business-critical systems (Storskogen Information security policy 2024-11-06, 4.5):** every business-critical system marked in the Information Asset Register (SW-ISMS-REG-001, section 6) is backed up by the 3-2-1 principle as the group defines it:
+- **Three copies** of the data
+- in **two different physical locations**
+- of which **one copy is kept without network access** (offline, or immutable storage that cannot be reached, changed or deleted from the network during its retention period)
+
+This is a requirement, not a guiding principle, for business-critical systems. Native redundancy inside one provider's platform (for example geo-redundant storage in Microsoft 365) counts as at most one location unless the copies are independent of each other. Backups are tested regularly for integrity (section 11).
+
+**A backup procedure is defined for every business-critical system** (Storskogen Information security policy 2024-11-06, 4.5). Section 7 covers platforms; a business-critical system not fully covered there gets its own entry stating what is backed up, frequency, retention, where each of the three copies is kept, which copy is without network access, how restore is done and who the system administrator is. The entry is referenced from the system's row in the asset register.
+
 ## 6. Data Classification and Backup Requirements
 
 Backup frequency and retention based on data criticality and classification.
@@ -130,6 +139,8 @@ Backup frequency and retention based on data criticality and classification.
 | **Public** | Recommended | Optional | 1 year | Standard access controls |
 
 Reference: [TBD - SW-ISMS-GUI-001: Information Classification Guideline]
+
+Business-sensitive information (Confidential and Restricted) is backed up at least daily, whatever the system's criticality level in 6.1 (Storskogen Information security policy 2024-11-06, 4.5).
 
 ## 7. Backup Scope and Schedules
 
@@ -169,7 +180,7 @@ Reference: [TBD - SW-ISMS-GUI-001: Information Classification Guideline]
 ### 7.2 Azure Infrastructure
 
 **Virtual Machines:**
-- **Criticality:** Per system (see system inventory)
+- **Criticality:** Per system (see the Information Asset Register, SW-ISMS-REG-001; business-critical VMs follow the 3-2-1 requirement in section 5)
 - **Method:** Azure Backup service
 - **Frequency:**
   - Critical VMs: Every 4-6 hours
@@ -672,6 +683,7 @@ For major disasters affecting entire systems or sites, follow disaster recovery 
 ### 13.3 Immutable Backups
 
 **For critical systems and ransomware protection:**
+- For business-critical systems, the copy without network access required by section 5 may be an immutable copy only if it cannot be changed or deleted from the network during its retention period; otherwise an offline copy (13.4) is required
 - Enable immutable backup features where supported
 - Backups cannot be deleted or modified during retention period
 - Protects against insider threats and ransomware
@@ -680,8 +692,9 @@ For major disasters affecting entire systems or sites, follow disaster recovery 
 
 ### 13.4 Air-Gapped Backups
 
-**For highest-risk data:**
-- Consider offline, disconnected backup copies
+**For business-critical systems (required) and highest-risk data:**
+- One copy without network access is required for every business-critical system (section 5); where it is not an immutable copy under 13.3, it is an offline, disconnected copy
+- Consider offline, disconnected backup copies for other highest-risk data
 - Physically isolated from network
 - Stored in secure location
 - Access only for disaster recovery testing or actual disaster
@@ -886,6 +899,7 @@ Backup and recovery is critical component of incident response.
 | Version | Date | Author | Changes | Approved By |
 |---------|------|--------|---------|-------------|
 | 1.0 | [TBD] | [TBD - CISO] | Initial procedure creation | [TBD - CEO] |
+| 1.1 | 2026-11-02 | IMS Owner (draft prepared for review) | Aligned with Storskogen Information security policy 2024-11-06, 4.5: 3-2-1 required for business-critical systems (three copies, two physical locations, one without network access); a backup procedure defined per business-critical system (5); business-sensitive information backed up daily (6.2); criticality from the asset register (7.2); immutable and offline copies tied to the requirement (13.3, 13.4) | [TBD] |
 
 **Next Review Date**: [TBD - typically 12 months from effective date]
 

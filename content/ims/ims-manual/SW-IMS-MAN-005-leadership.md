@@ -2,7 +2,7 @@
 document_id: SW-IMS-MAN-005
 title: IMS Manual - Leadership (Clause 5)
 doc_type: ims-manual
-version: "1.1"
+version: "1.2"
 status: draft
 classification: internal
 owner: CEO
@@ -35,7 +35,7 @@ related_documents:
 ## Document Information
 
 **Document ID**: SW-IMS-MAN-005
-**Version**: 1.1
+**Version**: 1.2
 **Status**: Draft
 **Effective Date**: [TBD]
 **Review Date**: [TBD]
@@ -125,6 +125,7 @@ Top management ensures adequate resources are available for:
 
 **Financial Resources**:
 - Budget for IMS implementation and maintenance
+- An IT budget prepared annually by the IT Manager in the ordinary budget process, covering all estimated IT costs for the year; it need not be a separate budget line given Swedwise's size; the CEO approves it (Storskogen IT policy 2024-11-06, 3 and 4.1)
 - Investment in tools and systems (monitoring, documentation, security controls)
 - External support (consultants, certification audits, training)
 
@@ -192,6 +193,18 @@ Top management:
 - Demonstrates leadership in their own areas
 - Ensures managers have authority and resources to fulfill IMS responsibilities
 - Holds managers accountable for IMS performance in their areas
+
+#### 2.2.9 IT Strategy Principles
+
+Swedwise's IT strategy follows the Storskogen group's IT strategy (Storskogen IT policy 2024-11-06, 4). The CEO approves the IT strategy (Storskogen IT policy 2024-11-06, 3). Its principles:
+
+- **Secure and stable IT supply** with systems that support Swedwise's processes, routines and size
+- **User-friendly systems** that make it easy to find, compile and analyse information
+- **Cloud first**: cloud applications are used as far as possible
+- **Standard processes**: the standard processes built into IT systems are followed
+- **Minimal customisation**: customer-specific adaptations of Swedwise's own IT systems are kept to a minimum, so as not to raise operating costs
+
+These principles apply to Swedwise's internal IT. They do not restrict the solutions Swedwise designs and delivers for customers.
 
 ### 2.3 Customer Focus
 
@@ -473,6 +486,9 @@ Roles marked *proposed* are not yet decided by top management. One job can hold 
 **Resources**:
 - Ensures adequate resources for IMS (personnel, financial, infrastructure)
 - Approves IMS budget and major investments
+- Approves the IT budget and the IT strategy (Storskogen IT policy 2024-11-06, 3; see 2.2.4 and 2.2.9)
+- Makes sure the group's IT policy, Information security policy and IT continuity policy, and Swedwise's own corresponding policies, are available to everyone they apply to (Storskogen IT policy 2024-11-06, 1.1)
+- Has overall responsibility for notifying and reporting personal data breaches (Storskogen Information security policy 2024-11-06, 3; see SW-ISMS-POL-004, 11.2)
 - Assigns IMS roles and responsibilities
 
 **Integration**:
@@ -830,6 +846,8 @@ Roles marked *proposed* are not yet decided by top management. One job can hold 
 - Follow documented processes and work instructions
 - Contribute to achieving IMS objectives
 - Represent Swedwise professionally to customers and external parties
+- Read the IT, information security and continuity policies that apply to Swedwise (Swedwise's and the Storskogen group's) at least once a year, and confirm it in the annual acknowledgment (Acceptable Use Policy SW-ISMS-POL-003, section 15; Storskogen IT policy 2024-11-06, 1.1; Storskogen Information security policy 2024-11-06, 1.1; Storskogen IT continuity policy 2024-11-06, 1.1)
+- Report faults, weaknesses, rule breaches and other IT problems to the IT Manager within reasonable time (Storskogen IT policy 2024-11-06, 4.1)
 
 **Authority**:
 - Implement improvements within their scope of work (with approval as needed)
@@ -837,6 +855,27 @@ Roles marked *proposed* are not yet decided by top management. One job can hold 
 - Request clarification on IMS requirements
 
 **Detailed Description**: SW-IMS-ROLE-009 (Employee Responsibilities)
+
+#### 4.2.11 IT Manager
+
+**Held by**: COO (4.1.2)
+**Reports to**: CEO
+
+The Storskogen group requires each company to have a defined IT Manager role (Storskogen IT policy 2024-11-06, 3; Storskogen Information security policy 2024-11-06, 3).
+
+**Responsibilities**:
+- Lead and follow up the implementation of the group's IT policy at Swedwise, the upkeep of IT procedures and compliance with the organisation's IT goals (Storskogen IT policy 2024-11-06, 3)
+- Lead and be responsible for information security work and follow up what the policies and guidelines require; where the CISO role is held separately, the CISO runs the ISMS and the IT Manager stays accountable for the group's requirements (Storskogen Information security policy 2024-11-06, 3)
+- Report security incidents to the CEO regularly and to the board on request (Storskogen Information security policy 2024-11-06, 3)
+- Prepare the annual IT budget in the ordinary budget process (2.2.4) and propose the IT strategy for the CEO's approval (2.2.9)
+- Propose the list of business-critical systems for the CEO's confirmation, and make sure each has a system owner and a system administrator (Information Asset Register SW-ISMS-REG-001, section 6; Storskogen IT policy 2024-11-06, 3)
+- Approve group, system and service accounts as exceptions with limited rights (Access Control Policy SW-ISMS-POL-002, 3.4 and 5.4)
+- Approve file-sharing tools and decide which programs and apps are allowed on Swedwise's computers and phones (Acceptable Use Policy SW-ISMS-POL-003, 7.1)
+- Run and document the annual review of users in business-critical systems and the half-yearly check of the onboarding and offboarding routine (User Access Review Procedure SW-ISMS-PRO-010, 6.5 and 6.6)
+- Receive reports from employees about IT faults, weaknesses and rule breaches
+
+**Authority**:
+- The approvals above. A deviation from a Storskogen group policy is outside the IT Manager's authority; it needs a written Storskogen board decision (Information Security Policy SW-ISMS-POL-001, section 7)
 
 ### 4.3 Authority Matrix
 
@@ -863,6 +902,8 @@ Key authorities within the IMS:
 - **C** = Consulted (input sought)
 - **S** = Supports (assists)
 - **I** = Informed (notified)
+
+**Security exceptions** in the matrix cover only Swedwise's own additional rules. A deviation from a Storskogen group policy (IT policy, Information security policy, IT continuity policy, 2024-11-06) needs a written decision by the Storskogen board, which no role at Swedwise can grant (SW-ISMS-POL-001, section 7).
 
 Columns name the IMS role and, in brackets, the job that holds it (4.1.2). Where one job holds two roles (the COO as IMS Owner and proposed CISO, or as unit head for Operations), the job acts in the role the row concerns.
 
@@ -930,6 +971,7 @@ Role descriptions include:
 |---------|------|--------|---------|-------------|
 | 1.0 | [TBD] | IMS Owner | Initial creation for ISO certification | [TBD] |
 | 1.1 | 2026-10-29 | IMS Owner | Organisation chart replaced with today's units; IMS roles mapped to the jobs that hold them (4.1.2); role description ids filled in; authority matrix names the job-holders; Data Protection Officer replaced by the Privacy Lead (SW-IMS-ROLE-006, held by the CEO; never the same person as the CISO) | [TBD] |
+| 1.2 | 2026-11-02 | IMS Owner (draft prepared for review) | Aligned with Storskogen IT, Information security and IT continuity policies 2024-11-06: IT Manager role and responsibilities from the group (4.2.11); annual IT budget in the ordinary budget process (2.2.4); IT strategy principles: cloud first, standard processes, minimal customisation (2.2.9); CEO approves IT budget and strategy, makes the policies available, owns breach reporting (4.2.1); employees read the IT, information security and continuity policies annually, linked to the annual acknowledgment (4.2.10); security exceptions limited to Swedwise's own rules (4.3) | [TBD] |
 
 ### 5.3 Approval
 

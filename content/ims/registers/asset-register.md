@@ -2,7 +2,7 @@
 document_id: SW-ISMS-REG-001
 title: Information Asset Register
 doc_type: form
-version: "1.0"
+version: "1.1"
 status: draft
 classification: confidential
 owner: CISO
@@ -136,6 +136,22 @@ For each asset, rate Confidentiality, Integrity, and Availability needs:
 
 ---
 
+## 6. Business-Critical Systems
+
+The Storskogen group requires each subsidiary to list and define the systems it considers business-critical (Storskogen Information security policy 2024-11-06, 4), and every business-critical system must have a named system owner and a named system administrator (Storskogen IT policy 2024-11-06, 3). This register is where Swedwise keeps that list.
+
+- **Marking.** Each system that is business-critical is marked as such in this register (sections 2 and 4). The IT Manager proposes the list from the business impact assessment (criteria model in the Business Continuity Policy, SW-IMS-POL-005) and the CEO confirms it. A "Critical" criticality rating alone is not the marking; the list below is.
+- **System owner.** Responsible for following up suppliers, budget and development of the system and for the information held in it (Storskogen IT policy 2024-11-06, 3).
+- **System administrator.** Responsible for administration and operation of the system; may report to the system owner (Storskogen IT policy 2024-11-06, 3).
+- **What each business-critical system needs elsewhere:** MFA on every internet-reachable account (Access Control Policy SW-ISMS-POL-002, 5.2), documented access management with an annual user review (User Access Review Procedure SW-ISMS-PRO-010), a defined backup procedure following 3-2-1 (Backup and Recovery Procedure SW-ISMS-PRO-003), and a continuity plan where the system supports a critical process (Business Continuity Policy SW-IMS-POL-005).
+- **Not yet filled in.** Which systems are business-critical has not been decided; no system is listed until the CEO has confirmed it.
+
+| Asset ID | System | Business-critical (confirmed by CEO, date) | System owner (role) | System administrator (role) | Backup procedure reference | Last reviewed |
+|----------|--------|---------------------------------------------|---------------------|-----------------------------|----------------------------|---------------|
+| [TBD] | [TBD] | [TBD] | [TBD] | [TBD] | [TBD] | [TBD] |
+
+---
+
 ## Asset Register Maintenance
 
 ### Responsibilities
@@ -169,5 +185,6 @@ For each asset, rate Confidentiality, Integrity, and Availability needs:
 | Version | Date | Author | Changes | Approved By |
 |---------|------|--------|---------|-------------|
 | 1.0 | [TBD] | CISO | Initial template creation | [TBD] |
+| 1.1 | 2026-11-02 | IMS Owner (draft prepared for review) | Section 6 added: the register marks the business-critical systems, each with a system owner and a system administrator (Storskogen IT policy 2024-11-06, 3; Information security policy 2024-11-06, 4); no systems filled in | [TBD] |
 
 **Next Review Date**: [TBD - typically 12 months from effective date]

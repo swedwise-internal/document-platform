@@ -2,7 +2,7 @@
 document_id: SW-ISMS-PRO-010
 title: User Access Review Procedure
 doc_type: procedure
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: CISO
@@ -64,6 +64,7 @@ This procedure applies to:
 | Role | Responsibility |
 |------|---------------|
 | **CISO** | Overall access review framework, oversight, compliance verification, escalation handling |
+| **IT Manager** | Runs and documents the annual review of users in business-critical systems (6.5) and the half-yearly check that the onboarding and offboarding routine was followed (6.6) (Storskogen Information security policy 2024-11-06, 4.1) |
 | **IT Operations** | Generating access reports, executing access changes, tool administration, tracking completion |
 | **Line Managers** | Reviewing and recertifying access for their team members, identifying unnecessary access |
 | **System Owners** | Reviewing access to their systems/applications, approving or revoking access |
@@ -77,6 +78,8 @@ This procedure applies to:
 | Review Type | Frequency | Scope | Primary Reviewer |
 |-------------|-----------|-------|------------------|
 | **Standard User Access** | Annually (Q1) | All employees: systems, applications, data access | Line Manager |
+| **Business-Critical System Users** | Annually (Q1, with the standard review) | Every user of each business-critical system marked in the Information Asset Register (SW-ISMS-REG-001) | IT Manager runs and documents; line managers confirm |
+| **Onboarding/Offboarding Routine Check** | Half-yearly | Every joiner, mover and leaver in the past six months | IT Manager |
 | **Privileged Access** | Quarterly | Administrative accounts, elevated privileges | CISO + Line Manager |
 | **Customer Data Access** | Quarterly | Access to customer systems and data | Engagement Manager + Line Manager |
 | **SaaS Platform Access** | Quarterly | Production SaaS infrastructure and customer tenant access | CISO + SaaS Service Manager |
@@ -230,6 +233,25 @@ This procedure applies to:
 - Archive records for audit evidence
 
 **Timeline:** Complete all phases within 4 weeks of start
+
+### 6.5 Annual Review of Users in Business-Critical Systems
+
+The Storskogen group requires periodic reviews of users in business-critical systems to be carried out annually by the IT Manager and documented (Storskogen Information security policy 2024-11-06, 4.1). This review runs together with the standard annual review (6.1-6.4) and does not replace it.
+
+1. The IT Manager takes the list of business-critical systems from the Information Asset Register (SW-ISMS-REG-001, section 6). Until that list is confirmed, the review cannot be scoped; the IT Manager records that as an open item in the review report.
+2. For each business-critical system, the IT Manager extracts every user account with its access level, and checks that each account is personal, was granted after a request, and has no higher rights than the role requires (Storskogen Information security policy 2024-11-06, 4.1, 4.2).
+3. Line managers confirm, for their team members, that the access is still needed. The confirmation is recorded per user.
+4. Group, system and service accounts are checked against the IT Manager's recorded approval (Access Control Policy SW-ISMS-POL-002, 5.4).
+5. The IT Manager documents the review (systems covered, users reviewed, decisions, changes made, date, the IT Manager's sign-off) and sends the report to the CISO.
+
+### 6.6 Half-Yearly Onboarding and Offboarding Routine Check
+
+The group requires a documented onboarding and offboarding routine and a half-yearly check that the routine is followed (Storskogen Information security policy 2024-11-06, 4.1).
+
+1. Every six months the IT Manager lists the joiners, movers and leavers of the period (from HR records).
+2. For each person, the IT Manager checks that access was requested and approved before it was granted (joiners and movers), and that all access was removed and equipment returned on time (leavers), as the routine requires.
+3. Deviations are corrected and, if the routine was not followed, recorded as a nonconformity.
+4. The IT Manager documents the check (period, people checked, deviations, corrections, date, sign-off) and sends it to the CISO.
 
 ## 7. Privileged Access Review
 
@@ -703,6 +725,8 @@ This procedure applies to:
 | Privileged access review records | 7 years | [TBD - Privileged access register] |
 | Service account review records | 3 years | [TBD - Service account register] |
 | Non-compliance and escalation documentation | 7 years | [TBD - Document repository] |
+| Annual business-critical system user review (6.5) | 7 years | [TBD - Document repository] |
+| Half-yearly onboarding/offboarding routine checks (6.6) | 7 years | [TBD - Document repository] |
 
 ## 19. Related Documents
 
@@ -737,6 +761,7 @@ This procedure applies to:
 | Version | Date | Author | Changes | Approved By |
 |---------|------|--------|---------|-------------|
 | 1.0 | [TBD] | [TBD - CISO] | Initial procedure creation | [TBD - CEO] |
+| 1.1 | 2026-11-02 | IMS Owner (draft prepared for review) | Aligned with Storskogen Information security policy 2024-11-06, 4.1: the IT Manager runs and documents the annual review of users in business-critical systems, line managers confirm (6.5); half-yearly documented check that the onboarding/offboarding routine was followed (6.6); schedule, responsibilities and records updated | [TBD] |
 
 **Next Review Date**: [TBD - typically 12 months from effective date]
 

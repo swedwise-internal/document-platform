@@ -2,7 +2,7 @@
 document_id: SW-ISMS-POL-002
 title: Access Control Policy
 doc_type: policy
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: CISO
@@ -58,7 +58,7 @@ Examples:
 
 ### 3.4 User Accountability
 
-All users are accountable for actions performed under their credentials. Sharing of credentials or use of generic accounts is prohibited except where specifically documented and approved.
+All users are accountable for actions performed under their credentials. Every employee has a personal user account in each system. Sharing of credentials is prohibited. Group (shared) accounts and system or service accounts are allowed only as exceptions approved by the IT Manager, documented, and with rights limited to what the account's purpose requires (Storskogen Information security policy 2024-11-06, 4.2; see 5.4).
 
 ### 3.5 Default Deny
 
@@ -177,7 +177,9 @@ All system access requires authentication. Users must:
 
 ### 5.2 Multi-Factor Authentication (MFA)
 
-MFA is required for:
+**Every account that gives access to Swedwise's resources over the internet must be protected by MFA** (Storskogen Information security policy 2024-11-06, 4.2). This covers at least Microsoft 365 / Entra ID, GitHub, and every business-critical SaaS service marked business-critical in the Information Asset Register (SW-ISMS-REG-001). No exemption can be granted locally for an internet-reachable account; a deviation needs a written Storskogen board decision (section 12).
+
+In addition, MFA is required for:
 
 - All remote access (VPN, remote desktop, cloud applications)
 - Administrative and privileged accounts
@@ -186,7 +188,7 @@ MFA is required for:
 - Financial systems and sensitive applications
 - SaaS platform administrative access
 
-MFA exemptions require CISO approval with documented compensating controls.
+MFA exemptions for accounts that are not reachable from the internet require CISO approval with documented compensating controls.
 
 **Acceptable MFA Methods:**
 - Authenticator app (e.g., Microsoft Authenticator, Google Authenticator)
@@ -213,8 +215,10 @@ Privileged accounts (system administrators, root/admin access, database administ
 
 ### 5.4 Service and System Accounts
 
-Non-human accounts (application service accounts, API keys, system accounts):
+Non-human accounts (application service accounts, API keys, system accounts) and group (shared) accounts are allowed only as exceptions (Storskogen Information security policy 2024-11-06, 4.2):
 
+- Approved by the IT Manager before creation, with the reason recorded
+- Rights limited to what the account's purpose requires
 - Documented with purpose, owner, and systems accessed
 - Use strong authentication (long complex passwords or certificate-based)
 - Credentials stored in secure vault, not embedded in code
@@ -233,7 +237,7 @@ All remote access to Swedwise systems requires:
 
 - Approved remote access request
 - Use of corporate VPN or approved secure remote access solution
-- Multi-factor authentication
+- Multi-factor authentication (mandatory for every account reachable from the internet, see 5.2)
 - Company-managed device with current security controls (antivirus, encryption, patching)
 - Compliance with SW-ISMS-GUI-002: Remote Working Security Guideline [TBD]
 
@@ -428,7 +432,9 @@ Non-compliance is reported to CISO and remediated according to severity and risk
 
 ## 12. Exceptions
 
-Temporary exceptions to this policy may be granted when:
+A deviation from a Storskogen group policy (IT policy, Information security policy or IT continuity policy, 2024-11-06) requires a written, documented decision by the Storskogen board (Storskogen Information security policy 2024-11-06, 6; Storskogen IT policy 2024-11-06, 5). This includes the MFA requirement for internet-reachable accounts, the personal-account rule and the IT Manager's approval of group and system accounts. The CISO or a delegate can grant an exception only from Swedwise's own additional rules in this policy (see SW-ISMS-POL-001 section 7).
+
+Temporary exceptions to Swedwise's own additional rules may be granted when:
 
 - Business justification documented and approved
 - Risk assessed and accepted by CISO or delegate
@@ -487,6 +493,7 @@ Severity of consequences depends on:
 | Version | Date | Author | Changes | Approved By |
 |---------|------|--------|---------|-------------|
 | 1.0 | [TBD] | [TBD - CISO name] | Initial policy creation | [TBD - CEO name] |
+| 1.1 | 2026-11-02 | IMS Owner (draft prepared for review) | Aligned with Storskogen group policies 2024-11-06: MFA mandatory on every internet-reachable account (5.2, 6); group, system and service accounts only as exceptions approved by the IT Manager with limited rights (3.4, 5.4); group-policy deviations need a written Storskogen board decision (12) | [TBD] |
 
 **Next Review Date**: [TBD - typically 12 months from effective date]
 

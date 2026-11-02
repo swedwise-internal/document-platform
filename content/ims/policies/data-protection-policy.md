@@ -2,7 +2,7 @@
 document_id: SW-ISMS-POL-004
 title: Data Protection Policy
 doc_type: policy
-version: "1.1"
+version: "1.2"
 status: draft
 classification: internal
 owner: Privacy Lead
@@ -618,6 +618,11 @@ A breach of security leading to accidental or unlawful destruction, loss, altera
 - Don't delay reporting while investigating
 - Report to: privacy@swedwise.se and the CISO [to confirm: the security reporting address]
 
+**Reporting to the CEO and the group (every breach):**
+- Every personal data breach is reported immediately to the CEO and to the Storskogen group's IT lead (the IT Manager at group level), whether or not it must be notified to IMY (Storskogen Information security policy 2024-11-06, 4.7.1)
+- The CEO has overall responsibility for notifying and reporting personal data breaches (Storskogen Information security policy 2024-11-06, 3)
+- Where Swedwise acts as processor for a customer, Swedwise also notifies the customer (the controller) without undue delay after becoming aware of the breach (Storskogen Information security policy 2024-11-06, 4.7.1; see 6.2)
+
 **Initial Assessment:**
 - The CISO assesses the technical severity; the Privacy Lead assesses the risk to individuals and decides on notification
 - Determine if breach is reportable
@@ -626,7 +631,8 @@ A breach of security leading to accidental or unlawful destruction, loss, altera
 ### 11.3 Notification to Supervisory Authority
 
 **Requirement:**
-- Report to IMY within 72 hours if breach likely to result in risk to individuals' rights and freedoms
+- Report to IMY within 72 hours of becoming aware of the breach if the breach is likely to result in risk to individuals' rights and freedoms
+- If the report is made later than 72 hours, it must state the reasons for the delay (Storskogen Information security policy 2024-11-06, 4.7.1)
 - Initial report may be followed by additional information
 
 **Report Contents:**
@@ -636,8 +642,9 @@ A breach of security leading to accidental or unlawful destruction, loss, altera
 - Measures taken or proposed to address breach
 
 **Exemption:**
-- No notification required if unlikely to result in risk (e.g., encrypted data, very limited scope)
+- No notification to IMY required if unlikely to result in risk (e.g., encrypted data, very limited scope), as GDPR Article 33 allows
 - Document rationale for not reporting
+- The Storskogen group's text has no such exemption: every personal data breach, including one that need not be notified to IMY, is still registered in the personal data breach register and reported internally and to the group as in 11.2 (Storskogen Information security policy 2024-11-06, 4.7.1).
 
 ### 11.4 Notification to Data Subjects
 
@@ -657,13 +664,13 @@ A breach of security leading to accidental or unlawful destruction, loss, altera
 
 ### 11.5 Breach Documentation
 
-All breaches documented including:
+All personal data breaches, including those not notified to IMY, are documented in the personal data breach register (Storskogen Information security policy 2024-11-06, 4.7.1), including:
 - Facts of breach
 - Effects and impact
 - Remedial action taken
 - Notification decisions and communications
 
-Breach register maintained by the Privacy Lead for audit and review.
+Breach register maintained by the Privacy Lead for audit and review. The register is required; where it is kept and how it is filled in is set out in the Incident Management Procedure (SW-ISMS-PRO-001, sections 9.1 and 12).
 
 ## 12. Data Retention and Disposal
 
@@ -822,6 +829,7 @@ Data protection performance reviewed in management reviews:
 |---------|------|--------|---------|-------------|
 | 1.0 | [TBD] | [TBD - CISO name] | Initial policy creation | [TBD - CEO name] |
 | 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Data Protection Officer replaced by the Privacy Lead (SW-IMS-ROLE-006, held by the CEO; never the same person as the CISO); contact privacy@swedwise.se; linked to the ROPA (SW-IMS-REG-009) and the privacy notices SW-ISMS-NOT-001, -002 and -003 | [TBD] |
+| 1.2 | 2026-11-02 | IMS Owner (draft prepared for review) | Aligned with Storskogen Information security policy 2024-11-06, 4.7.1: every personal data breach reported immediately to the CEO and to the group's IT lead; IMY within 72 h, with reasons if later; the GDPR Art. 33 exemption kept, but every breach still registered and reported internally and to the group; processor duty to notify the controller; the breach register is required (11.2-11.5) | [TBD] |
 
 **Next Review Date**: [TBD - typically 12 months from effective date]
 

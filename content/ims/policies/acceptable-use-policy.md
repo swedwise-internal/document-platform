@@ -2,7 +2,7 @@
 document_id: SW-ISMS-POL-003
 title: Acceptable Use Policy
 doc_type: policy
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: CISO
@@ -109,7 +109,7 @@ Swedwise-provided devices (laptops, phones, tablets):
 - Installing unauthorized software or circumventing security controls
 - Storing illegal, offensive, or inappropriate content
 - Using devices for commercial personal business or competing interests
-- Tampering with security settings or removing security software
+- Tampering with security settings or removing security software, including antimalware protection, which must be present and active on every device and system (Storskogen Information security policy 2024-11-06, 4)
 - Connecting to untrusted or malicious networks
 
 **Responsibilities:**
@@ -129,7 +129,7 @@ Corporate and BYOD mobile devices accessing Swedwise data:
 - Remote wipe capability enabled for corporate devices
 - Operating system and apps kept current
 - Only download apps from official app stores
-- Antivirus/security software where applicable
+- Protection against malicious code (antimalware) installed and active; this applies to all devices and systems without exception (Storskogen Information security policy 2024-11-06, 4)
 
 **Cautions:**
 - Avoid using public charging stations (risk of data theft)
@@ -139,7 +139,9 @@ Corporate and BYOD mobile devices accessing Swedwise data:
 
 ### 4.3 Personal Devices (BYOD)
 
-Personal devices may access Swedwise resources only when:
+Company information and data must never be stored on a private computer (Storskogen Information security policy 2024-11-06, 4.5). All company data is stored on central storage administered by Swedwise or in the support systems Swedwise provides.
+
+Personal devices (for example a private phone) may access Swedwise resources only through company-managed applications that do not store company data locally on the device, and only when:
 
 - Explicitly permitted for specific services (e.g., email on personal phone)
 - Device meets minimum security requirements
@@ -148,7 +150,7 @@ Personal devices may access Swedwise resources only when:
 - Device can be remotely wiped of corporate data if lost or user departs
 
 **Restrictions:**
-- Personal devices may not store or process [TBD - customer data, restricted data, etc.] without explicit approval
+- Personal devices may not store company information or data locally; access is only through managed apps as above, and no approval can permit local storage on a private computer
 - Swedwise reserves right to remove corporate data from personal devices
 - Swedwise is not responsible for personal data loss during security actions
 - Device must comply with email retention and legal hold requirements
@@ -272,11 +274,12 @@ Employees should remember:
 ### 7.1 Software Installation
 
 **Corporate Devices:**
-- Software must be approved and installed via authorized channels
+- New software must be approved by the employee's nearest manager before it is installed, and installed via authorized channels (Storskogen Information security policy 2024-11-06, 4.4)
 - Only licensed, authorized software permitted
 - No pirated, cracked, or unauthorized software
 - No installation of software that circumvents security controls
-- No peer-to-peer file sharing applications unless approved
+- File-sharing tools (including peer-to-peer applications) may be downloaded, installed or used only when approved by the IT Manager (Storskogen Information security policy 2024-11-06, 4.4)
+- The IT Manager may restrict which programs and apps are allowed on Swedwise's computers and mobile phones; a manager's approval does not override such a restriction
 
 **Licensing:**
 - Software must be properly licensed
@@ -341,7 +344,7 @@ Handle data according to its classification level (refer to SW-ISMS-POL-004: Dat
 **Prohibited Storage:**
 - Don't store company data on unapproved cloud services
 - Don't store sensitive data on removable media without encryption and approval
-- Don't store confidential data on personal devices
+- Don't store any company information or data on private computers or other personal devices (see 4.3)
 - Don't keep local-only copies of critical business data
 
 ### 8.3 Data Sharing
@@ -537,12 +540,12 @@ Employees reporting serious violations are protected under Swedish whistleblower
 - Monitoring and alerting
 - Investigation support
 - User support and guidance
-- Exception evaluation
+- Exception evaluation (local exceptions to Swedwise's own additional rules only; see section 14.1)
 
 ### Managers
 
 - Ensuring team awareness and compliance
-- Approving exceptions within authority
+- Approving exceptions within authority, limited to Swedwise's own additional rules (section 14.1)
 - Addressing violations promptly
 - Promoting culture of responsible use
 - Leading by example
@@ -586,6 +589,10 @@ Violations may result in:
 
 The goal is education and prevention for unintentional violations, with stronger measures for negligent or malicious conduct.
 
+### 14.1 Exceptions
+
+A deviation from a Storskogen group policy (IT policy, Information security policy or IT continuity policy, 2024-11-06) requires a written, documented decision by the Storskogen board (Storskogen IT policy 2024-11-06, 5; Storskogen Information security policy 2024-11-06, 6). This applies to, among others, the ban on storing company data on private computers, antimalware on all devices and systems, manager approval of new software and the IT Manager's approval of file-sharing tools. Managers, IT Operations, the CISO and the CEO can grant exceptions only from the rules Swedwise has added on top of the group policies, under the conditions in the Information Security Policy (SW-ISMS-POL-001, section 7).
+
 ## 15. Policy Acknowledgment
 
 All users must acknowledge:
@@ -598,6 +605,8 @@ Acknowledgment required:
 - Before receiving access to IT resources
 - Annually as part of policy refresh
 - After significant policy updates
+
+The annual acknowledgment also confirms that the employee has read, during the past year, the IT, information security and continuity policies that apply to Swedwise: Swedwise's Information Security Policy (SW-ISMS-POL-001), Business Continuity Policy (SW-IMS-POL-005) and this policy, and the Storskogen group's IT policy, Information security policy and IT continuity policy (2024-11-06), which the group asks employees to read annually (Storskogen IT policy 2024-11-06, 1.1; Storskogen Information security policy 2024-11-06, 1.1; Storskogen IT continuity policy 2024-11-06, 1.1). The CEO makes these policies available to everyone they apply to; the records are kept as described in the Leadership chapter of the IMS manual (SW-IMS-MAN-005).
 
 ## 16. Related Documents
 
@@ -631,6 +640,7 @@ Acknowledgment required:
 | Version | Date | Author | Changes | Approved By |
 |---------|------|--------|---------|-------------|
 | 1.0 | [TBD] | [TBD - CISO name] | Initial policy creation | [TBD - CEO name] |
+| 1.1 | 2026-11-02 | IMS Owner (draft prepared for review) | Aligned with Storskogen group policies 2024-11-06: antimalware on all devices and systems (4.1, 4.2); no company data on private computers, personal devices only through managed apps without local storage (4.3, 8.2); new software approved by the nearest manager, file-sharing tools only with IT Manager approval, IT Manager may restrict allowed apps (7.1); group-policy deviations need a written Storskogen board decision (13, 14.1); annual acknowledgment covers the IT, information security and continuity policies (15) | [TBD] |
 
 **Next Review Date**: [TBD - typically 12 months from effective date]
 

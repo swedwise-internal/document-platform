@@ -2,7 +2,7 @@
 document_id: SW-IMS-POL-005
 title: Business Continuity Policy
 doc_type: policy
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: CEO
@@ -119,6 +119,23 @@ Risk assessments are conducted:
 - Following incidents or near-misses
 - Before launching new services or major contracts
 
+#### 5.2.1 Group Criteria Model
+
+The Storskogen group's criteria model describes the group's risk acceptance and is the basis for assessing maximum tolerable outage and recovery targets (Storskogen IT continuity policy 2024-11-06, 4 and 5). Swedwise uses it in every business impact analysis.
+
+| Category / consequence | None | Noticeable | Severe |
+|------------------------|------|------------|--------|
+| **Financial** | Insignificant financial impact | Some financial impact | Serious financial impact |
+| **Reputation** | Insignificant impact on reputation in any stakeholder group | Reputation lost in one stakeholder group | Reputation lost in several stakeholder groups |
+| **Operational functionality** | Insignificant reduction in the ability to perform critical business tasks | Noticeable reduction in the ability to perform critical business tasks | Severe limitation of the ability to perform critical business tasks |
+
+How it is applied:
+
+- For each critical business function (5.1) and each business-critical system (Information Asset Register, SW-ISMS-REG-001, section 6), the Business Continuity Lead assesses the consequence in each of the three categories as the outage grows longer.
+- The **maximum tolerable outage** is the longest outage before any category reaches *Severe*.
+- The **recovery targets** (RTO and RPO) are set shorter than the maximum tolerable outage. The recovery objectives in section 3 are confirmed or adjusted against this assessment; a target that does not rest on a recorded assessment is provisional.
+- The assessment, its date and the resulting targets are recorded in the business impact analysis and kept with the continuity documentation (5.3).
+
 ### 5.3 Business Continuity Planning
 
 Business continuity plans are maintained for each critical function, including:
@@ -134,8 +151,11 @@ Business continuity plans are maintained for each critical function, including:
 Plans are:
 - Documented and maintained in accessible locations (digital and offline copies)
 - Owned by responsible managers for each critical function
-- Reviewed and updated at least annually
+- Concise and understandable for those who have to use them (Storskogen IT continuity policy 2024-11-06, 4)
+- Tested and reviewed at least annually (see 5.9)
 - Updated following organizational changes or incidents
+
+**All continuity documentation is kept centrally and is available to all employees** (Storskogen IT continuity policy 2024-11-06, 4): this policy, the business impact analyses, the continuity plans, test reports and the related training material are kept in one central location in the IMS document repository [TBD - location], which every employee can read. An offline copy of the plans is kept for use when the central location is unavailable.
 
 ### 5.4 Remote Work Capability
 
@@ -220,6 +240,7 @@ Communication templates and procedures are maintained in [TBD - Business Continu
 Business continuity arrangements are tested to ensure effectiveness:
 
 #### Testing Schedule
+- **Continuity Plans**: Every continuity plan is tested at least once a year and maintained after the test (Storskogen IT continuity policy 2024-11-06, 4); a desktop exercise counts as a test only when its result is documented
 - **Desktop Exercises**: Annual review of plans with key personnel
 - **Component Testing**: Backup restoration tests quarterly
 - **Full Exercises**: Simulated disruption scenarios [TBD - annually or biennially]
@@ -256,6 +277,8 @@ Staff are prepared for business continuity events through:
 
 Responsibilities:
 - Approve business continuity policy and plans
+- Appoint the Business Continuity Lead (Storskogen IT continuity policy 2024-11-06, 3)
+- Make sure this policy and the group's IT continuity policy are available to everyone they apply to
 - Allocate resources for business continuity preparedness
 - Lead crisis management for major incidents
 - Make strategic decisions during disruptions
@@ -264,9 +287,13 @@ Responsibilities:
 
 ### Business Continuity Lead
 
-**Assigned to**: [TBD - name and role, e.g., Quality Lead, CISO, Operations Manager]
+**Appointed by**: the CEO, who appoints the role responsible for producing Swedwise's continuity plans (Storskogen IT continuity policy 2024-11-06, 3)
+**Assigned to**: [TBD - role appointed by the CEO]
 
 Responsibilities:
+- Lead and be responsible for continuity planning
+- Develop, test and maintain the continuity plans (Storskogen IT continuity policy 2024-11-06, 3)
+- Coordinate continuity training for employees
 - Coordinate development and maintenance of business continuity plans
 - Conduct business impact analyses and risk assessments
 - Organize business continuity testing and exercises
@@ -387,6 +414,7 @@ This policy is:
 | Version | Date | Author | Changes | Approved By |
 |---------|------|--------|---------|-------------|
 | 1.0 | [TBD] | [TBD] | Initial policy creation | [TBD - CEO name] |
+| 1.1 | 2026-11-02 | IMS Owner (draft prepared for review) | Aligned with Storskogen IT continuity policy 2024-11-06: group criteria model (None/Noticeable/Severe across financial, reputation, operational functionality) as the basis for maximum tolerable outage and recovery targets (5.2.1); plans tested annually (5.9); all continuity documentation kept centrally and available to all employees (5.3); Business Continuity Lead appointed by the CEO (6) | [TBD] |
 
 **Next Review Date**: [TBD - typically 12 months from effective date]
 

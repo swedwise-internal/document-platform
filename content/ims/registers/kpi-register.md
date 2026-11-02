@@ -2,7 +2,7 @@
 document_id: SW-IMS-REG-008
 title: KPI Register
 doc_type: form
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: IMS Owner
@@ -79,7 +79,7 @@ from a system of record, and to type numbers in by hand only as a last resort.
 | O-E2 | Waste management | E-waste recycling ≥ 95%, annually | **No.** No disposal records kept |
 | O-E3 | Energy efficiency | Office energy per employee −5% year on year, quarterly | **Partly.** Karlstad has its own electricity bills (Karlstads Energi), Stockholm's are billed by the landlord, Uddevalla's are in the rent (account 5020) |
 | O-E4 | Sustainable procurement | ≥ 70% of critical suppliers environmentally certified, annually | **No.** "Critical supplier" is not defined; the parties register has no certification field |
-| O-S1 | Security incident prevention | Zero material breaches, quarterly | **No.** No incident register is kept (SW-ISMS-FRM-002 is a form) |
+| O-S1 | Security incident prevention | Zero material breaches, quarterly | **No.** No incident register is kept yet (SW-ISMS-FRM-002 is a form). The register is required: the group requires every personal data breach to be registered (Storskogen Information security policy 2024-11-06, 4.7.1), and the Incident Management Procedure (SW-ISMS-PRO-001, sections 9.1 and 12) says where the incident records and the personal data breach register live. Status: not yet started |
 | O-S2 | Security awareness | 100% staff trained annually, quarterly | **No.** As O-Q4 |
 | O-S3 | Vulnerability management | High-risk vulnerabilities remediated within 30 days, monthly | **No.** [to confirm: whether a vulnerability scanner or endpoint management (e.g. Intune/Defender) is in use] |
 | O-S4 | Phishing resistance | Simulation click rate < 5%, quarterly | **No.** No phishing simulation is run |
@@ -204,6 +204,7 @@ target at the first management review after twelve months of data.
 | Version | Date | Author | Changes |
 |---|---|---|---|
 | 1.0 | 2026-10-29 | IMS Owner (drafted in session) | First KPI register: 14 objectives, 40 KPIs, data sources and gaps |
+| 1.1 | 2026-11-02 | IMS Owner (draft prepared for review) | O-S1: the incident and personal data breach register is required (Storskogen Information security policy 2024-11-06, 4.7.1) and lives per SW-ISMS-PRO-001; status not yet started. Approved: [TBD] |
 
 ---
 

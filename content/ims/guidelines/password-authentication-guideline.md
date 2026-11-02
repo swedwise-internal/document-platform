@@ -2,7 +2,7 @@
 document_id: SW-ISMS-GUI-002
 title: Password and Authentication Guideline
 doc_type: guideline
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: TBD (CISO)
@@ -109,6 +109,10 @@ MFA requires two or more verification methods:
 ### MFA Requirements
 
 **Mandatory MFA:**
+- **Every account that is reachable from the internet** (Storskogen Information security policy 2024-11-06, 4.2), including at least:
+  - Microsoft 365 / Entra ID
+  - GitHub
+  - Every business-critical SaaS service (the business-critical systems are marked in the Information Asset Register, SW-ISMS-REG-001)
 - All privileged/administrator accounts
 - Remote access to Swedwise network (VPN)
 - Email (Microsoft 365)
@@ -118,10 +122,10 @@ MFA requires two or more verification methods:
 - Financial systems
 - HR systems
 
-**Recommended MFA:**
-- All business-critical applications
+**Recommended MFA (where the system is not reachable from the internet; if it is, MFA is mandatory):**
+- Business-critical applications on internal networks only
 - Development environments with customer data
-- Code repositories (GitHub, Azure DevOps)
+- Code repositories hosted internally (GitHub and Azure DevOps are internet-reachable and therefore mandatory)
 
 **MFA Methods (in order of preference):**
 
@@ -538,6 +542,7 @@ A: Yes, where available (Windows Hello, Touch ID). Still need a strong password 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | TBD | TBD | Initial draft |
+| 1.1 | 2026-11-02 | IMS Owner (draft prepared for review) | MFA mandatory on every internet-reachable account (Microsoft 365/Entra ID, GitHub, business-critical SaaS), per Storskogen Information security policy 2024-11-06, 4.2. Approved: [TBD] |
 
 **Review Frequency:** Annual or when authentication requirements change
 

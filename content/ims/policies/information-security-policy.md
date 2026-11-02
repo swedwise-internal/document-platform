@@ -2,7 +2,7 @@
 document_id: SW-ISMS-POL-001
 title: Information Security Policy
 doc_type: policy
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: CISO
@@ -277,7 +277,16 @@ Optional role to promote security awareness:
 
 ## 7. Exceptions
 
-Temporary exceptions to this policy may be granted only when:
+### 7.1 Group policies take precedence
+
+Swedwise is a subsidiary in the Storskogen group. The group's IT policy, Information security policy and IT continuity policy (all adopted by the Storskogen Group AB board on 2024-11-06) apply to Swedwise. Swedwise's IMS documents may be more detailed than the group policies; where a Swedwise document contradicts a group policy, the group policy takes precedence (Storskogen IT policy 2024-11-06, 2; Storskogen Information security policy 2024-11-06, 2; Storskogen IT continuity policy 2024-11-06, 2).
+
+- **A deviation from a Storskogen group policy requires a written, documented decision by the Storskogen board** (Storskogen IT policy 2024-11-06, 5; Storskogen Information security policy 2024-11-06, 6; Storskogen IT continuity policy 2024-11-06, 6). Neither the CEO nor the CISO can grant one. The CISO prepares the request through the CEO and keeps the board decision with the exception record.
+- **Local exceptions** under section 7.2 cover only the rules Swedwise has added on top of the group policies (where a Swedwise rule is stricter or more detailed than the group requirement). A local exception never takes Swedwise below the group requirement.
+
+### 7.2 Local exceptions
+
+Temporary exceptions to Swedwise's own additional rules in this policy may be granted only when:
 
 - Business justification is documented
 - Compensating controls are identified
@@ -346,6 +355,7 @@ This policy is:
 | Version | Date | Author | Changes | Approved By |
 |---------|------|--------|---------|-------------|
 | 1.0 | [TBD] | [TBD - CISO name] | Initial policy creation | [TBD - CEO name] |
+| 1.1 | 2026-11-02 | IMS Owner (draft prepared for review) | Section 7: Storskogen group policies (2024-11-06) take precedence; a deviation from a group policy needs a written Storskogen board decision; local exceptions cover only Swedwise's additional rules | [TBD] |
 
 **Next Review Date**: [TBD - typically 12 months from effective date]
 
