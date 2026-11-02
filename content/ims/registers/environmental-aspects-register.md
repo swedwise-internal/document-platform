@@ -1,8 +1,8 @@
 ---
 document_id: SW-EMS-REG-001
 title: Environmental Aspects Register
-doc_type: form
-version: "1.0"
+doc_type: register
+version: "2.0"
 status: draft
 classification: internal
 owner: Environmental Lead
@@ -13,158 +13,172 @@ standard:
 required_for_certification: true
 related_documents:
   - SW-EMS-POL-001
-  - SW-IMS-PRO-002
+  - SW-EMS-FRM-001
+  - SW-IMS-MAN-006
+  - SW-IMS-MAN-008
+  - SW-IMS-REG-010
+  - SW-IMS-REG-006
+  - SW-IMS-REG-008
+  - SW-IMS-PRO-007
+  - SW-EMS-TRN-001
 ---
 
 # Environmental Aspects Register
 
 ## 1. Purpose
 
-This Environmental Aspects Register identifies and evaluates the environmental aspects of Swedwise AB's activities, products, and services to determine which aspects have or can have significant environmental impacts, as required by ISO 14001:2015 Clause 6.1.2.
+This is Swedwise AB's one register of environmental aspects (ISO 14001 6.1.2). It lists the aspects of what Swedwise
+does, buys and delivers, scores them with one method, says which are significant, who owns each and how significant
+aspects are communicated.
+
+Version 2.0 replaces the two earlier registers: this register's version 1.0, and the example rows in the form
+SW-EMS-FRM-001. Those used three different scoring methods (here, in FRM-001 and in MAN-006 6.1.5) with clashing
+aspect ids. The method below is now the only one: MAN-006 6.1.5 and FRM-001 point to it. FRM-001 is the form for
+assessing a new or changed aspect before it is entered here.
 
 ## 2. Scope
 
-This register covers:
+The scope is the whole company as described in the IMS scope (SW-IMS-MAN-004):
+- the offices: Karlstad, Stockholm, Malmö and Uddevalla [to confirm: office list];
+- business travel and commuting;
+- the IT equipment Swedwise buys, uses and disposes of;
+- Swedwise's own cloud platform (Matrix on Microsoft Azure) and its use of AI services;
+- the SaaS service hosted at Entiros [to confirm: still offered];
+- the solutions Swedwise delivers, in their use phase at customers and at their end of life.
 
-- **Office Operations**: All three Swedwise offices (Karlstad HQ, Stockholm, Uddevalla)
-- **Business Travel**: Air, car, and rail travel for business purposes
-- **IT Equipment**: Hardware, consumables, and e-waste
-- **Procurement**: Goods and services purchased
-- **Customer Delivery**: On-site consulting and remote service delivery
-- **SaaS Operations**: Cloud infrastructure and data center impacts (indirect)
+## 3. Method (the only one)
 
-## 3. Significance Evaluation Criteria
+### 3.1 Identify
 
-| Criterion | Description | Score Range |
-|-----------|-------------|-------------|
-| **Scale** | Magnitude of environmental impact | 1-5 (1=minimal, 5=severe) |
-| **Frequency** | How often the aspect occurs | 1-5 (1=rare, 5=continuous) |
-| **Legal Requirement** | Subject to legal/regulatory requirement | Y/N (adds +5 if Yes) |
-| **Stakeholder Concern** | Level of stakeholder interest/concern | 1-5 (1=low, 5=high) |
+Each aspect is identified per activity, with:
+- its **life-cycle stage**: purchase, own use, delivery, use at the customer, or end of life;
+- its **condition**: normal, abnormal (for example a migration or an office move), or emergency;
+- whether Swedwise **controls** it (C) or can only **influence** it (I). An aspect is controlled when Swedwise decides
+  how it happens, for example its own travel or the size of its own cloud platform. It is influenced when someone
+  else decides and Swedwise can only affect the choice, for example a landlord's heating, a cloud provider's energy
+  mix, or how a customer runs a solution Swedwise designed.
+- whether it is **beneficial**: an aspect that reduces impact elsewhere, such as a customer's paper process replaced
+  by a digital one. Beneficial aspects are listed and not scored.
 
-**Significance Score** = (Scale × Frequency) + Stakeholder Concern + (Legal × 5)
+### 3.2 Score
 
-**Significance Threshold**:
-- **Score ≥ 15**: Significant aspect (requires objectives, targets, and controls)
-- **Score 10-14**: Moderate aspect (monitor and consider for improvement)
-- **Score < 10**: Low significance (routine monitoring)
+**Score = Severity × Frequency**, each rated 1–5. Scores therefore run from 1 to 25.
 
----
+| Rating | Severity: size of the impact | Frequency: how often it happens |
+|--------|------------------------------|---------------------------------|
+| 1 | Negligible | Rarely, or only in an emergency |
+| 2 | Minor and local | A few times a year |
+| 3 | Noticeable; a measurable share of Swedwise's footprint | Monthly |
+| 4 | Large; among the biggest parts of the footprint | Weekly |
+| 5 | Severe or irreversible | Continuously |
 
-## 4. Environmental Aspects Register
+### 3.3 Decide significance
 
-### 4.1 Office Operations - Energy & Resources
+An aspect is **significant** when any one of these holds:
+1. its score is **12 or more**;
+2. a **compliance obligation** in SW-IMS-REG-010 applies to it (the CO id is given);
+3. an **interested party** has a stated requirement about it in SW-IMS-REG-006.
 
-| Aspect ID | Activity | Environmental Aspect | Environmental Impact | Condition | Scale | Freq | Legal | Stakeholder | Score | Significant? | Control Measures | Owner |
-|-----------|----------|---------------------|---------------------|-----------|-------|------|-------|-------------|-------|--------------|------------------|-------|
-| EA-001 | Office lighting and equipment | Electricity consumption | Climate change, resource depletion | Normal | 3 | 5 | N | 4 | 19 | **Y** | LED lighting, auto-off timers, energy-efficient equipment | Facility Manager |
-| EA-002 | Office HVAC | Heating/cooling energy use | Climate change | Normal | 4 | 5 | N | 3 | 23 | **Y** | Temperature controls, regular maintenance | Facility Manager |
-| EA-003 | Office water usage | Water consumption | Resource depletion | Normal | 2 | 4 | N | 2 | 10 | N | Low-flow fixtures | Facility Manager |
-| EA-004 | Office waste generation | General waste to landfill | Land pollution, resource loss | Normal | 3 | 5 | N | 3 | 18 | **Y** | Waste sorting, recycling programs | Environmental Lead |
-| EA-005 | Office paper use | Paper consumption | Deforestation, resource depletion | Normal | 2 | 3 | N | 2 | 8 | N | Digital-first policy, double-sided printing | IT Manager |
+Significant aspects get an operational control (SW-IMS-MAN-008 8.9.1). Each one is considered when objectives are
+set (SW-IMS-MAN-006 6.2), and it is monitored (SW-IMS-REG-008).
 
-### 4.2 Business Travel
+The ratings are the Environmental Lead's judgement from what is known today. No aspect is measured yet. Where a data
+source exists or is planned, it is named, and the first year's figures will be used to re-rate.
 
-| Aspect ID | Activity | Environmental Aspect | Environmental Impact | Condition | Scale | Freq | Legal | Stakeholder | Score | Significant? | Control Measures | Owner |
-|-----------|----------|---------------------|---------------------|-----------|-------|------|-------|-------------|-------|--------------|------------------|-------|
-| EA-006 | Employee air travel | Aviation fuel emissions | Climate change (high CO2/km) | Normal | 5 | 3 | N | 5 | 20 | **Y** | Virtual meetings default, travel approval process | Resource Manager |
-| EA-007 | Employee car travel | Vehicle fuel emissions | Air pollution, climate change | Normal | 4 | 4 | N | 4 | 20 | **Y** | Car pooling, public transport incentives | Resource Manager |
-| EA-008 | Employee train travel | Rail electricity use | Climate change (low CO2/km) | Normal | 1 | 3 | N | 2 | 5 | N | Preferred travel mode | Resource Manager |
+## 4. The register
 
-### 4.3 IT Equipment & Operations
+### 4.1 Own operations
 
-| Aspect ID | Activity | Environmental Aspect | Environmental Impact | Condition | Scale | Freq | Legal | Stakeholder | Score | Significant? | Control Measures | Owner |
-|-----------|----------|---------------------|---------------------|-----------|-------|------|-------|-------------|-------|--------------|------------------|-------|
-| EA-009 | IT equipment disposal | Electronic waste (WEEE) | Toxic pollution, resource loss | Normal | 3 | 2 | **Y** | 4 | 15 | **Y** | WEEE-certified recyclers, asset tracking | IT Manager |
-| EA-010 | IT equipment energy | Equipment energy consumption | Climate change | Normal | 3 | 5 | N | 3 | 18 | **Y** | Energy Star equipment, power management | IT Manager |
-| EA-011 | Printer consumables | Toner cartridges, batteries | Hazardous waste | Normal | 2 | 2 | **Y** | 2 | 11 | N | Supplier take-back programs | IT Manager |
+| ID | Activity | Aspect → impact | Stage | Cond. | C/I | Sev | Freq | Score | Significant (why) | Control today | Owner (job) | Data source |
+|----|----------|-----------------|-------|-------|-----|-----|------|-------|-------------------|---------------|-------------|-------------|
+| EA-01 | Office lighting and equipment | Electricity use → climate (Swedish grid, low carbon) | Own use | N | C | 2 | 5 | 10 | No | Equipment switched off; laptops, no desktops | CFO (Environmental Lead) | Energy bills [to confirm: whether Swedwise gets its own bills or electricity is in the rent] |
+| EA-02 | Office heating and cooling | Energy use → climate | Own use | N | I (landlord) | 2 | 5 | 10 | No | Landlord's systems | CFO | Landlord's figures [to request] |
+| EA-03 | Business travel by air (customer sites, vendor events) | Fuel → greenhouse gases | Own use / delivery | N | C | 4 | 4 | 16 | **Yes** (score; CO-042 group sustainability reporting) | Remote delivery where possible; no written travel rule [to write: travel guideline] | CSO (Resource Management Lead) | Travel bookings and expense reports [to confirm: travel agency report]; today only cost (KPI-E-02) |
+| EA-04 | Business travel by car (own and rental cars) | Fuel → greenhouse gases, air pollution | Own use / delivery | N | C | 3 | 4 | 12 | **Yes** (score) | None written [to write: travel guideline] | CSO | Mileage claims in expense reports |
+| EA-05 | Business travel by rail | Electricity → climate (low) | Own use / delivery | N | C | 1 | 4 | 4 | No | Preferred mode where it is practical | CSO | Travel bookings |
+| EA-06 | Commuting | Fuel → greenhouse gases | Own use | N | I | 2 | 5 | 10 | No | Remote work possible | HR | None (survey, if needed) |
+| EA-07 | Buying laptops, phones and screens | Manufacturing (embodied) emissions, raw materials → climate, resources | Purchase | N | I (choice of product and lifetime) | 4 | 3 | 12 | **Yes** (score) | None written; lifetime not set [to decide: target lifetime] | COO (IT Manager) | Asset register SW-ISMS-REG-001 (units bought per year) |
+| EA-08 | IT equipment at end of life | E-waste → pollution, lost materials | End of life | N | C | 3 | 2 | 6 | **Yes** (CO-051, CO-052) | Disposal through an authorised collector, data erased [to confirm: the recycler used] | COO (IT Manager) | Disposal authorisations SW-ISMS-FRM-009, recycler certificates |
+| EA-09 | Swedwise's own cloud platform (Matrix on Azure, Kubernetes test cluster running continuously) | Data-centre electricity and cooling → climate | Own use | N | C (size, scheduling) / I (provider's energy) | 3 | 5 | 15 | **Yes** (score) | Autoscaled node pools; heavy workloads on their own tainted pool [to decide: scale test down outside working hours] | COO (IT Manager) | Microsoft's emissions reporting for the subscription [to confirm: Emissions Impact Dashboard or Azure carbon optimization]; Azure region [to confirm] |
+| EA-10 | Development workstations and local test environments, including local AI model hosting | Electricity → climate | Own use | N | C | 2 | 5 | 10 | No | — | COO (IT Manager) | — |
+| EA-11 | Use of AI services (assistants and coding agents, model inference in the cloud) | Data-centre electricity, water for cooling → climate, water | Own use / delivery | N | C (how much) / I (provider) | 3 | 5 | 15 | **Yes** (score) | None [to decide: what is reported per provider] | COO | Provider usage reports (tokens per month) [to confirm: providers report energy] |
+| EA-12 | SaaS service hosted at Entiros [to confirm: still offered] | Data-centre electricity → climate | Delivery | N | I | 2 | 5 | 10 | No | Hosting contract | CSO | Entiros's reporting [to request] |
+| EA-13 | Paper and printing | Paper, toner → resources, waste | Own use | N | C | 1 | 2 | 2 | No | Digital-first work | COO | — |
+| EA-14 | Office waste (general, packaging, food) | Waste → resources, pollution | Own use | N | C (sorting) / I (landlord's collection) | 2 | 4 | 8 | **Yes** (CO-051 sorting at source) | Sorting where the building offers it [to confirm per office] | CFO | Landlord's waste figures [to request] |
+| EA-15 | Building cooling systems (landlord) | Refrigerant leak → climate | Own use | E | I (landlord) | 3 | 1 | 3 | No | Landlord's maintenance | CFO | — |
+| EA-16 | Fire in an office | Smoke, burnt equipment → air, waste | Own use | E | C (prevention) | 3 | 1 | 3 | No | Building fire safety; SW-EMS-PRO-001 | CFO | Incident reports SW-EMS-FRM-004 |
 
-### 4.4 Procurement & Supply Chain
+### 4.2 What Swedwise delivers (life-cycle perspective)
 
-| Aspect ID | Activity | Environmental Aspect | Environmental Impact | Condition | Scale | Freq | Legal | Stakeholder | Score | Significant? | Control Measures | Owner |
-|-----------|----------|---------------------|---------------------|-----------|-------|------|-------|-------------|-------|--------------|------------------|-------|
-| EA-012 | Hardware purchasing | Supplier environmental practices | Indirect manufacturing impacts | Normal | 3 | 3 | N | 3 | 12 | N | Supplier environmental questionnaire | Procurement Lead |
-| EA-013 | Cloud services | Data center energy consumption | Climate change (indirect) | Normal | 4 | 5 | N | 4 | 24 | **Y** | Green cloud providers, resource optimization | CTO/CISO |
+| ID | Activity | Aspect → impact | Stage | Cond. | C/I | Sev | Freq | Score | Significant (why) | Control today | Owner (job) | Data source |
+|----|----------|-----------------|-------|-------|-----|-----|------|-------|-------------------|---------------|-------------|-------------|
+| EA-20 | Solutions Swedwise designs and delivers (Content Server/xECM, Exstream, AppWorks, integrations) running at the customer or in the customer's cloud | Server energy, storage, search indexing, batch runs → climate | Use at customer | N | I (design: sizing, retention, indexing, scheduling) | 3 | 5 | 15 | **Yes** (score) | None: design inputs carry no environmental requirement (SW-IMS-MAN-008 8.3) [to write: one design-input line for sizing and retention] | CSO (Service Delivery Manager) | Sizing documents per delivery |
+| EA-21 | Data kept by delivered solutions without a retention rule | Storage growth → energy, hardware | Use at customer / end of life | N | I (records management design) | 2 | 5 | 10 | No | Retention rules where the customer decides them | CSO | — |
+| EA-22 | Decommissioning and migration of delivered systems | Old servers, data disposal → e-waste | End of life | A | I | 2 | 2 | 4 | No | Customer's own disposal | CSO | — |
+| EA-23 | Customers' paper processes replaced by digital ones (xECM, Exstream digital delivery) | Less paper, print and post → resources, climate | Use at customer | N | I | — | — | — | Beneficial (not scored) | — | CCO | Delivery cases [to collect] |
 
-### 4.5 Service Delivery
+### 4.3 Suppliers
 
-| Aspect ID | Activity | Environmental Aspect | Environmental Impact | Condition | Scale | Freq | Legal | Stakeholder | Score | Significant? | Control Measures | Owner |
-|-----------|----------|---------------------|---------------------|-----------|-------|------|-------|-------------|-------|--------------|------------------|-------|
-| EA-014 | On-site consulting | Travel to customer sites | Emissions, air pollution | Normal | 3 | 4 | N | 3 | 15 | **Y** | Remote delivery where possible | Delivery Manager |
-| EA-015 | Customer use of solutions | Energy use of deployed systems | Indirect operational emissions | Normal | 3 | 5 | N | 2 | 17 | **Y** | Energy-efficient design | Development Lead |
+| ID | Activity | Aspect → impact | Stage | Cond. | C/I | Sev | Freq | Score | Significant (why) | Control today | Owner (job) | Data source |
+|----|----------|-----------------|-------|-------|-----|-----|------|-------|-------------------|---------------|-------------|-------------|
+| EA-30 | Purchased software, cloud and services | Suppliers' own footprint → climate | Purchase | N | I (choice of supplier) | 2 | 5 | 10 | No | Environmental criterion in purchasing (SW-IMS-PRO-015) | CFO | Supplier register |
 
----
+## 5. Significant aspects
 
-## 5. Significant Environmental Aspects Summary
+| ID | Aspect | Why significant | Objective (SW-IMS-REG-008) | Operational control (SW-IMS-MAN-008 8.9.1) |
+|----|--------|-----------------|----------------------------|--------------------------------------------|
+| EA-03 | Air travel | Score 16; group reporting | O-E1 travel CO2 −10% | Travel guideline [to write]; remote delivery first |
+| EA-04 | Car travel | Score 12 | O-E1 | Travel guideline [to write] |
+| EA-07 | Equipment purchase (embodied emissions) | Score 12 | None yet [to decide: target lifetime] | Lifetime rule in the asset procedure [to write] |
+| EA-08 | E-waste | CO-051, CO-052 | O-E2 e-waste recycled ≥ 95% | Asset disposal: SW-ISMS-PRO-006 and SW-ISMS-FRM-009 |
+| EA-09 | Own cloud platform | Score 15 | None yet [to decide] | Platform sizing and scheduling [to write] |
+| EA-11 | AI services | Score 15 | None yet [to decide] | None yet [to decide] |
+| EA-14 | Office waste | CO-051 | None | Sorting at source per office |
+| EA-20 | Delivered solutions in use | Score 15 | None yet [to decide] | Design input for sizing and retention [to write] |
 
-Based on the evaluation, the following aspects are **significant** and require environmental objectives:
+Three significant aspects (EA-09, EA-11 and EA-20) have no objective yet, and they score highest after air travel.
+The objectives in SW-IMS-MAN-006 6.2 (O-E1 to O-E4) predate this register. The proposal for the next management
+review (SW-IMS-REC-001) is to consider objectives for them.
 
-1. **EA-001**: Office electricity consumption (Score: 19)
-2. **EA-002**: HVAC energy use (Score: 23)
-3. **EA-004**: Office waste generation (Score: 18)
-4. **EA-006**: Employee air travel (Score: 20)
-5. **EA-007**: Employee car travel (Score: 20)
-6. **EA-009**: Electronic waste disposal (Score: 15)
-7. **EA-010**: IT equipment energy (Score: 18)
-8. **EA-013**: Cloud services data center energy (Score: 24)
-9. **EA-014**: Travel to customer sites (Score: 15)
-10. **EA-015**: Customer use of solutions (Score: 17)
+## 6. Planned changes (ISO 14001 6.1.2 a)
 
----
+These planned changes are already rated above, or will change the ratings when they happen:
 
-## 6. Priority Improvement Opportunities
+| Planned change | Aspects it changes | Effect |
+|----------------|--------------------|--------|
+| A production environment for Swedwise's own platform (Matrix), planned after the test environment is complete | EA-09 | Roughly doubles the platform's continuous load |
+| Growing use of AI agents in delivery and in Swedwise's own products | EA-11 | Frequency stays at 5; severity may rise to 4 once usage is reported |
+| Swedwise's own products sold as services (Certify, Pages, the hub) | EA-09, EA-11, new aspects per product | Assess each with SW-EMS-FRM-001 before launch |
+| Office changes [to confirm] | EA-01, EA-02, EA-14 | Re-assess when an office opens, moves or closes |
 
-### High Priority
+Every change that goes through change management (SW-IMS-PRO-008) is checked for new or changed
+aspects. The form SW-EMS-FRM-001 is the record of that check.
 
-1. **Green Electricity**: Switch all offices to 100% renewable energy
-2. **Travel Reduction**: Implement travel reduction targets and virtual-first policy
-3. **Cloud Optimization**: Select carbon-neutral cloud regions and optimize resource use
-4. **Circular Economy**: Extend IT equipment life and establish refurbishment programs
+## 7. Communication of significant aspects (6.1.2, 7.4)
 
-### Medium Priority
+| To whom | What | How | When | Owner |
+|---------|------|-----|------|-------|
+| All employees | The significant aspects and what each person can do (travel, equipment, AI use) | Environmental awareness training SW-EMS-TRN-001 and the induction programme SW-IMS-TRN-006; this register on the IMS document platform | At induction and yearly | CFO (Environmental Lead) with HR |
+| Owners of significant aspects | Their aspect, its control and data source | Named in this register; reviewed with each owner | Yearly review | CFO |
+| Management team | Significant aspects, ratings, missing objectives | Management review input (SW-IMS-MAN-009 9.3) | Yearly | CFO |
+| Delivery teams | EA-20 and EA-21: sizing and retention as design inputs | Delivery method and design reviews | Per delivery | CSO |
+| Suppliers | The environmental criterion in purchasing | Purchasing procedure SW-IMS-PRO-015 | At purchase | CFO |
+| The owner (Storskogen) | The data behind EA-03, EA-04, EA-09 and others the group asks for | Group sustainability reporting (CO-042) | Yearly | CFO |
+| Customers and the public | The environmental policy and, on request, the significant aspects | Communication procedure SW-IMS-PRO-007 [to decide: whether to publish on the website] | On request | CEO (communication) |
 
-5. **Zero Waste Office**: Implement comprehensive waste reduction and recycling
-6. **Sustainable Procurement**: Formal environmental criteria for suppliers
-7. **Green Software**: Design energy-efficient solutions for customers
+## 8. Review
 
----
+The register is reviewed:
+- yearly, before the management review;
+- when an activity, product, office or supplier changes (section 6);
+- after an environmental incident;
+- when SW-IMS-REG-010 records a new or changed obligation.
 
-## 7. Roles & Responsibilities
-
-| Role | Responsibility |
-|------|---------------|
-| **Environmental Lead** | Overall register maintenance, significance evaluation, annual review |
-| **Facility Manager** | Office energy, waste, water data collection and controls |
-| **IT Manager** | IT equipment aspects, e-waste management, energy efficiency |
-| **Resource Manager** | Travel data collection, travel policy enforcement |
-| **CTO/CISO** | Cloud infrastructure environmental impacts |
-| **Delivery Manager** | Customer site impacts, remote delivery promotion |
-
----
-
-## 8. Review & Update Process
-
-This register shall be reviewed:
-
-- **Annually** as part of management review
-- When significant changes occur (new offices, services, equipment)
-- After incidents with environmental impact
-- When legal requirements change
-
----
-
-## Related Documents
-
-- **SW-EMS-POL-001**: Environmental Policy
-- **SW-IMS-PRO-002**: Risk Assessment Procedure
-- **SW-IMS-REG-001**: Integrated Risk Register
-
----
+The Environmental Lead re-rates with the measured figures once a year of data exists.
 
 ## Document Control
 
 | Version | Date | Author | Changes | Approved By |
 |---------|------|--------|---------|-------------|
 | 1.0 | [TBD] | Environmental Lead | Initial draft | [TBD] |
-
-**Next Review Date**: [TBD - typically 12 months from effective date]
+| 2.0 | 2026-11-02 | Environmental Lead (draft prepared for review) | One method (severity × frequency, with significance also by obligation or interested party) replacing three; unique ids EA-01–EA-30; control vs influence; life-cycle stages including use at the customer and end of life; own cloud platform and AI services added; planned changes; communication of significant aspects; owners by job; Entiros-hosted SaaS marked to confirm; references to non-existent documents replaced or marked [to write]. From the ISO 14001 text pilot (2026-11-02) | [TBD] |

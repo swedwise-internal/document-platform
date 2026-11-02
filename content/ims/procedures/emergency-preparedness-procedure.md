@@ -181,7 +181,7 @@ Each office maintains an emergency plan including:
 - **Building-specific information** (fire alarm panels, utility shutoffs, access codes)
 - **Special considerations** (hazardous materials on-site, accessibility needs for staff or visitors)
 
-**Template**: [TBD - SW-EMS-FRM-001: Office Emergency Plan Template]
+**Template**: [TBD - Office Emergency Plan Template, to be SW-EMS-FRM-005 (SW-EMS-FRM-001 is the environmental aspect assessment form)]
 
 **Responsibility**: Office Managers (create and maintain), Environmental Lead (review and approve)
 
@@ -749,7 +749,7 @@ After emergency is controlled:
 - [TBD - Business Continuity and Disaster Recovery Procedure]
 
 **Forms and Templates**:
-- [TBD - SW-EMS-FRM-001: Office Emergency Plan Template]
+- [TBD - Office Emergency Plan Template, to be SW-EMS-FRM-005]
 - [TBD - SW-EMS-FRM-002: Emergency Contact List Template]
 - [TBD - SW-EMS-FRM-003: Emergency Drill Report Template]
 - [TBD - SW-EMS-FRM-004: Emergency Incident Report Template]

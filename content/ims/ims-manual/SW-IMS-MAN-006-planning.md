@@ -167,72 +167,27 @@ As part of risk assessment, Swedwise systematically identifies environmental asp
 **Environmental Aspect Definition**:
 An environmental aspect is an element of Swedwise's activities, products, or services that interacts (or can interact) with the environment.
 
-**Aspect Identification Approach**:
+**Register and method**: the aspects, the one significance method, the significant aspects, the planned changes
+considered and how significant aspects are communicated are in the **Environmental Aspects Register (SW-EMS-REG-001)**.
+In short:
+- Aspects are identified per activity, with the life-cycle stage (purchase, own use, delivery, use at the customer,
+  end of life), the condition (normal, abnormal, emergency), and whether Swedwise controls the aspect or can only
+  influence it. The scope covers the offices, travel, IT equipment, Swedwise's own cloud platform and AI use, the
+  SaaS service, and the solutions Swedwise delivers in their use and end of life.
+- Score = severity × frequency (1–5 each). An aspect is significant at a score of 12 or more, or when a compliance
+  obligation (SW-IMS-REG-010) or an interested party's stated requirement (SW-IMS-REG-006) applies to it.
+- A new or changed aspect is assessed on SW-EMS-FRM-001 before it is entered in the register.
 
-Swedwise considers environmental aspects across:
+Significant aspects require operational controls (SW-IMS-MAN-008 8.9.1), are considered when objectives are set
+(6.2), are monitored (SW-IMS-REG-008) and are part of awareness training (SW-EMS-TRN-001).
 
-**Office Operations** (3 locations: Karlstad, Stockholm, Uddevalla):
-- Energy consumption (heating, cooling, lighting, IT equipment)
-- Water use
-- Waste generation (general, recyclable, electronic)
-- Paper consumption
-
-**Business Activities**:
-- Business travel (air, rail, car)
-- Consultant commuting (not fully controlled, but considered)
-- IT equipment procurement and lifecycle
-- Cloud infrastructure energy use (indirect, via suppliers)
-
-**Service Delivery**:
-- SaaS platform energy consumption (hosted at Entiros data center)
-- Customer site activities (limited environmental control)
-
-**Conditions Considered**:
-- **Normal operations**: Day-to-day activities
-- **Abnormal operations**: Peak periods, seasonal variations
-- **Emergency conditions**: Fire, power failure, equipment malfunction
-
-**Lifecycle Perspective**:
-- Procurement: Supplier environmental performance, product lifecycle
-- Use: Energy efficiency, consumables
-- Disposal: Recycling, e-waste management
-
-**Aspect Evaluation Criteria**:
-
-Environmental aspects are evaluated for significance using the risk matrix approach (likelihood × severity of impact):
-
-**Significance Factors**:
-- **Type of impact**: Climate change, resource depletion, pollution, biodiversity
-- **Scale**: Magnitude of impact (local, regional, global)
-- **Severity**: Potential harm to environment
-- **Frequency**: How often aspect occurs
-- **Reversibility**: Can impact be reversed?
-- **Stakeholder concern**: Regulatory, customer, or community interest
-
-**Significant Aspects**:
-Aspects scoring Medium risk or higher (≥5) are considered significant and require:
-- Operational controls to minimize impact
-- Objectives and targets for improvement
-- Monitoring and measurement
-- Awareness and training for relevant staff
-
-**Environmental Aspects Register**:
-
-Maintained as part of Integrated Risk Register (SW-IMS-REG-001) with environmental-specific details:
-
-Example significant aspects for Swedwise:
-
-| Aspect | Activity | Impact | Likelihood | Severity | Significance | Controls |
-|--------|----------|--------|------------|----------|--------------|----------|
-| Office energy use | Heating, cooling, IT | Climate change, resource depletion | 5 (Certain) | 2 (Minor) | 10 (High) | Energy-efficient equipment, remote work policy |
-| Business travel (flights) | Customer meetings, conferences | GHG emissions, air pollution | 5 (Certain) | 2 (Minor) | 10 (High) | Virtual meeting preference, travel approval |
-| E-waste disposal | Equipment end-of-life | Soil/water contamination | 3 (Possible) | 2 (Minor) | 6 (Medium) | Certified recycling partner |
-| Cloud infrastructure energy | SaaS hosting | Climate change (indirect) | 5 (Certain) | 2 (Minor) | 10 (High) | Supplier selection (renewable energy), resource optimization |
+Earlier editions of this section had their own risk-matrix method, with a threshold of 5 and an example table. That
+method is withdrawn, so that only one method is in use.
 
 **Environmental Aspects Review**:
-- Annually during comprehensive risk assessment
-- When new activities, products, or services introduced
-- When organizational changes affect environmental footprint
+- Yearly, before the management review
+- When new activities, products, services, offices or suppliers are introduced (change management, SW-IMS-PRO-008)
+- When SW-IMS-REG-010 records a new or changed compliance obligation
 
 ### 6.1.6 Compliance Obligations
 
@@ -731,7 +686,7 @@ This manual section is reviewed annually by the IMS Owner or when:
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | [TBD] | IMS Owner | Initial release |
-| 1.1 | 2026-11-02 | IMS Owner (drafted in session) | 6.1.6: the compliance obligations are SW-IMS-REG-010 (was the non-existent SW-IMS-REG-002, which is the document register); the list of categories replaced by the register |
+| 1.1 | 2026-11-02 | IMS Owner (drafted in session) | 6.1.5: the aspects and the one method are SW-EMS-REG-001 2.0 (the own risk-matrix method and example table withdrawn). 6.1.6: the compliance obligations are SW-IMS-REG-010 (was the non-existent SW-IMS-REG-002, which is the document register); the list of categories replaced by the register |
 
 **Next Review Date**: [TBD - typically 12 months from effective date]
 

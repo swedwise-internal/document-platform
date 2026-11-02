@@ -2,7 +2,7 @@
 document_id: SW-IMS-MAN-008
 title: "IMS Manual - Clause 8: Operation"
 doc_type: ims-manual
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: IMS Owner
@@ -606,13 +606,18 @@ Swedwise establishes, implements, and maintains processes to meet environmental 
 
 **Operational controls for significant environmental aspects**:
 
-| Environmental Aspect | Operational Control | Procedure/Guideline |
-|---------------------|---------------------|---------------------|
-| **Energy consumption** (offices) | Energy-efficient equipment, auto-shutdown policies, LED lighting | Office guidelines, procurement criteria |
-| **Business travel** (carbon emissions) | Virtual meetings encouraged, travel approval, carbon offset program | Travel policy, remote working policy |
-| **E-waste** (IT equipment disposal) | Certified recycler, data wiping before disposal, lifecycle replacement | Asset disposal procedure |
-| **Paper consumption** | Digital-first policy, double-sided printing, recycled paper | Document management policy |
-| **Cloud infrastructure** (SaaS platform energy) | Green data center selection (Entiros - renewable energy), efficient architecture | Data center SLA, architecture standards |
+| Significant aspect (SW-EMS-REG-001) | Operational control | Procedure / guideline |
+|--------------------------------------|---------------------|-----------------------|
+| **EA-03, EA-04 Business travel** (air, car) | Remote delivery first; travel approval | Travel guideline [to write: no travel policy exists] |
+| **EA-07 Equipment purchase** (embodied emissions) | Equipment kept for a set lifetime; reuse before replacement | Asset Management Procedure SW-ISMS-PRO-006 [to write: lifetime rule] |
+| **EA-08 E-waste** | Authorised collector, data erased before disposal, disposal authorised | Asset Management Procedure SW-ISMS-PRO-006; Asset Disposal Authorization SW-ISMS-FRM-009 |
+| **EA-09 Own cloud platform** | Sizing, autoscaling, workloads scheduled | Platform sizing and scheduling [to write] |
+| **EA-11 AI services** | Usage known per provider | [to decide] |
+| **EA-14 Office waste** | Sorting at source where the building offers it | [to write: office routine per office] |
+| **EA-20 Delivered solutions in use** | Sizing and retention as design inputs | Design and development (8.3) [to write: the design-input line] |
+
+Paper use, office energy and Entiros-hosted SaaS energy are not significant aspects in SW-EMS-REG-001 2.0 and need no
+operational control of their own.
 
 **See SW-EMS-REG-001** (Environmental Aspects Register) for complete environmental aspect evaluation.
 
@@ -663,6 +668,7 @@ Swedwise ensures compliance with environmental legal and regulatory requirements
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | [TBD] | [Author] | Initial release |
+| 1.1 | 2026-11-02 | IMS Owner (drafted in session) | 8.9.1: controls per significant aspect of SW-EMS-REG-001 2.0; references to a travel policy, office guidelines and an asset disposal procedure that do not exist replaced by existing documents or marked [to write]. 8.9.3: the legal register is SW-IMS-REG-010 |
 
 ---
 

@@ -540,7 +540,7 @@ Risk assessments are conducted when:
 - **SW-IMS-FRM-003** - Integrated Risk Register Template
 - **SW-IMS-FRM-004** - Risk Treatment Plan Template
 - **SW-ISMS-FRM-001** - Statement of Applicability Template
-- **SW-EMS-FRM-001** - Environmental Aspects Register Template
+- **SW-EMS-FRM-001** - Environmental Aspect Assessment Form (the register is SW-EMS-REG-001)
 
 ## 12. Continuous Improvement
 
