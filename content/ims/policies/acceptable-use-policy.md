@@ -307,10 +307,12 @@ Use of cloud services for Swedwise business:
 
 ### 7.3 AI and Emerging Technologies
 
-Use of AI tools and emerging technologies (e.g., ChatGPT, Copilot):
+Use of AI tools and emerging technologies (e.g., ChatGPT, Copilot) is governed by the AI and Generative AI
+Policy (SW-IMS-POL-007), which names the approved tools (ChatGPT Business first) and the information that may
+never go into a non-approved tool. In short:
 
 **Guidelines:**
-- Follow company guidance on approved AI tools
+- Follow the AI and Generative AI Policy on approved AI tools
 - Don't input confidential or customer data into unapproved AI services
 - Understand data usage and privacy policies of AI services
 - Verify and validate AI-generated content before use
@@ -604,7 +606,8 @@ Acknowledgment required:
 - SW-ISMS-POL-001: Information Security Policy
 - SW-ISMS-POL-002: Access Control Policy
 - SW-ISMS-POL-004: Data Protection Policy
-- [TBD - HR Code of Conduct]
+- SW-IMS-POL-007: AI and Generative AI Policy
+- Storskogen Code of Conduct (Uppförandekod), version 2024-11-06, signed by every employee (group policy, CO-075)
 
 **Procedures:**
 - [TBD - SW-ISMS-PRO-002: Incident Management Procedure]
