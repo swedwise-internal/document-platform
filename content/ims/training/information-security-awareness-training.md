@@ -209,9 +209,11 @@ The training teaches rules; it must not tell people that a control exists when i
 | 9 | "the VPN" (no Swedwise VPN exists) | The phone's hotspot |
 | quiz 7 | "locked and wiped" (no remote wipe without Intune) | The account and access are blocked |
 
-Slide 3 ("MFA on everything reachable from the internet") is a rule and stands. MFA is today required at elevated
-sign-in risk, for administrators and for Azure management; at every sign-in for the in-scope users by 2026-11-22 and
-for all users by 2026-12-31 (the commitment to Salesforce, TPSD-3520).
+Slide 3 ("MFA on everything reachable from the internet") is a rule and stands. Measured 2026-11-05 in Entra
+Conditional Access: MFA is today required for everyone, administrators included, only at medium or high sign-in
+risk ("MAF for all"; the Azure management policy is risk-gated too, and "MFA Administrators" targets the group
+SG.MFA Required, which has no members). The commitment to Salesforce (TPSD-3520) is MFA at every sign-in for the
+in-scope users by 2026-11-22 and for all users by 2026-12-31.
 
 ## Document control
 
