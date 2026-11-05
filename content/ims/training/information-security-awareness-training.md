@@ -118,7 +118,8 @@ tools; personal data: only what the task needs, deleted when done.
 
 - Some customers, Salesforce among them, require extra controls before we may touch their data.
 - From 22 November, your computer must be enrolled in Intune and compliant before you get access.
-- From 22 November, writing to USB storage is blocked and DLP checks e-mail, SharePoint, OneDrive and Teams.
+- From 22 November, writing to USB storage is blocked and DLP checks e-mail, SharePoint and OneDrive (including
+  files shared in Teams).
 - Follow the customer's own security rules as well as ours.
 - The engagement lead gives you a short briefing before you start.
 
@@ -206,6 +207,7 @@ The training teaches rules; it must not tell people that a control exists when i
 | 5 | "Use the password manager" (there is none; 1Password Business is "TBD" in the Password Guideline) | One unique, long password per service |
 | 6 | "BitLocker on, Defender running" (not measurable: no Intune or Defender on the current licences) | Being enforced through Intune |
 | 6, 8, quiz 8 | Intune, USB block and DLP stated as in place | "From 22 November", the date committed to Salesforce |
+| 8 | "DLP checks … Teams" (Business Premium has no DLP for Teams chat or endpoints; that needs the Purview Suite add-on) | E-mail, SharePoint and OneDrive, including files shared in Teams |
 | 9 | "the VPN" (no Swedwise VPN exists) | The phone's hotspot |
 | quiz 7 | "locked and wiped" (no remote wipe without Intune) | The account and access are blocked |
 

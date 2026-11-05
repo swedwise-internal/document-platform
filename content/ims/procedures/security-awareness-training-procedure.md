@@ -118,7 +118,8 @@ the following:
 - the customer's requirements;
 - that the person's computer must be enrolled in Intune and compliant;
 - that writing to USB storage is blocked;
-- that DLP applies to e-mail, SharePoint, OneDrive and Teams;
+- that DLP applies to e-mail, SharePoint and OneDrive, including files shared in Teams (not to Teams chat
+  messages);
 - that the customer's data stays in the systems the customer and Swedwise have approved.
 
 The person confirms in Microsoft Forms, and HR records it.
