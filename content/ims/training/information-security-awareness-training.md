@@ -86,7 +86,7 @@ then delete it. Clicked already? Report at once: speed matters more than blame.
 ### 5. MFA prompts and passwords
 
 - Never approve an MFA prompt you did not start yourself; report it: someone has your password.
-- Use a password manager; one unique password per service.
+- One unique, long password per service; never reuse your Swedwise password elsewhere.
 - Never share a password or a one-time code, not even with colleagues or "IT support".
 - New or reset credentials are sent securely, and changed at first sign-in.
 - Shared or system accounts only by exception, approved by the IT Manager.
@@ -95,11 +95,12 @@ then delete it. Clicked already? Report at once: speed matters more than blame.
 
 ### 6. Your work computer
 
-- **Encrypted and updated:** disk encryption on, updates installed, antimalware running. Restart when asked.
+- **Updated and protected:** install updates and restart when asked. Disk encryption and Defender are being enforced
+  through Intune.
 - **Lock it:** Windows+L every time you leave it. Never leave it in a car.
-- **USB and loss:** no company data on USB storage; blocked on engagement devices. Lost or stolen? Report it at once.
+- **USB and loss:** no company data on USB storage; from 22 November blocked on engagement devices. Lost or stolen? Report it at once.
 
-*Speaker notes:* Devices on engagements with customer requirements are enrolled in Intune: USB writing is blocked
+*Speaker notes:* From 22 November, devices on engagements with customer requirements are enrolled in Intune: USB writing is blocked
 and compliance is checked.
 
 ### 7. Customer data and personal data
@@ -116,8 +117,8 @@ tools; personal data: only what the task needs, deleted when done.
 ### 8. Engagements with customer security requirements
 
 - Some customers, Salesforce among them, require extra controls before we may touch their data.
-- Your computer must be enrolled in Intune and compliant before you get access.
-- Writing to USB storage is blocked; DLP checks e-mail, SharePoint, OneDrive and Teams.
+- From 22 November, your computer must be enrolled in Intune and compliant before you get access.
+- From 22 November, writing to USB storage is blocked and DLP checks e-mail, SharePoint, OneDrive and Teams.
 - Follow the customer's own security rules as well as ours.
 - The engagement lead gives you a short briefing before you start.
 
@@ -125,7 +126,7 @@ tools; personal data: only what the task needs, deleted when done.
 
 ### 9. Working remotely and travelling
 
-- Use a trusted network; on public Wi-Fi use the phone's hotspot.
+- Use a trusted network; never public Wi-Fi without your phone's hotspot.
 - Sit so nobody can read your screen; no customer names in public conversations.
 - Keep the computer with you: never in checked luggage or a parked car.
 - Print as little as possible; shred what you print.
@@ -181,12 +182,12 @@ required so that names are recorded. The correct answer is marked ✔.
    Yes, if you delete the chat afterwards · ✔ No: only ChatGPT Business, with data minimisation, and never customer or
    personal data in non-approved tools · Yes, if the customer's name is removed
 7. Your work computer is stolen from your car. What do you do first?
-   Buy a new one · ✔ Report it to the CISO at once, so that it can be locked and wiped · Report it at the next staff
+   Buy a new one · ✔ Report it to the CISO at once, so that the account and access can be blocked · Report it at the next staff
    meeting
 8. You join an engagement whose customer has security requirements. What must be in place before you get access to
    the customer's data?
-   Nothing, the customer handles it · ✔ Your computer is enrolled in Intune and compliant, and you have had the
-   engagement briefing · A private USB stick for backups
+   Nothing, the customer handles it · ✔ Your computer is enrolled in Intune and compliant (from 22 November), and you
+   have had the engagement briefing · A private USB stick for backups
 9. A personal data breach has happened. Within how long must the supervisory authority (IMY) be notified?
    7 days · ✔ 72 hours · 30 days
 10. A colleague asks for your password to finish a task while you are away. What do you do?
@@ -195,22 +196,26 @@ required so that names are recorded. The correct answer is marked ✔.
 **Acknowledgement** (last question, required): ✔ I have read and understood the Information Security Policy, the IT
 Policy and the Acceptable Use Policy, and I will report incidents at once.
 
-## Before the first session: what the deck claims and what is in place
+## Claims checked against the measured state
 
-The training teaches rules; it must not tell people that a control exists when it does not. Measured in CompanyIT
-2026-11-04 (controls page, read 13:26) and in the IMS:
+The training teaches rules; it must not tell people that a control exists when it does not. The deck was checked
+2026-11-05 against CompanyIT (controls page, read 2026-11-04 13:26) and the IMS, and corrected the same day:
 
-| Slide | Claim in the deck | State 2026-11-05 | Change before the session |
-|---|---|---|---|
-| 5 | "Use the password manager" | No company password manager; the Password Guideline names 1Password Business as "TBD" | Text above says "a password manager"; decide one, or keep the general wording in the deck |
-| 6 | "BitLocker on, Defender running" | Not measurable: no Intune or Defender for Business on the current licences | Text above states the rule (encryption, antimalware); the deck should do the same until the controls are measured |
-| 6, 8, quiz 8 | Intune enrolment, USB block and DLP on engagement devices | Committed to Salesforce for 2026-11-22 (remediation plan items 1–3), not yet built | Hold the session after these are in place, or say "from 22 November" in the deck |
-| 9 | "the VPN" | No Swedwise VPN exists | Text above drops the VPN; the deck should too |
-| 3 | "MFA on everything reachable from the internet" | A rule, and correct as a rule; MFA is not yet required at every sign-in (only at medium or high sign-in risk) | None for the deck; the gap is planned in CompanyIT |
+| Slide | Was | Now |
+|---|---|---|
+| 5 | "Use the password manager" (there is none; 1Password Business is "TBD" in the Password Guideline) | One unique, long password per service |
+| 6 | "BitLocker on, Defender running" (not measurable: no Intune or Defender on the current licences) | Being enforced through Intune |
+| 6, 8, quiz 8 | Intune, USB block and DLP stated as in place | "From 22 November", the date committed to Salesforce |
+| 9 | "the VPN" (no Swedwise VPN exists) | The phone's hotspot |
+| quiz 7 | "locked and wiped" (no remote wipe without Intune) | The account and access are blocked |
+
+Slide 3 ("MFA on everything reachable from the internet") is a rule and stands. MFA is today required at elevated
+sign-in risk, for administrators and for Azure management; at every sign-in for the in-scope users by 2026-11-22 and
+for all users by 2026-12-31 (the commitment to Salesforce, TPSD-3520).
 
 ## Document control
 
 | Version | Date | Author | Changes | Approved by |
 |---|---|---|---|---|
 | 1.0 | [TBD] | [TBD] | Initial generic course (LMS, 9 modules, 15 questions) | [TBD] |
-| 1.1 | 2026-11-05 | Claude for the IMS Owner | Replaced by the Swedwise deck of November 2026 (12 slides), the Microsoft Forms quiz (10 questions, 8 to pass) and the acknowledgement; the claims that do not match the measured state are listed for correction | [TBD – CEO] |
+| 1.1 | 2026-11-05 | Claude for the IMS Owner | Replaced by the Swedwise deck of November 2026 (12 slides), the Microsoft Forms quiz (10 questions, 8 to pass) and the acknowledgement; claims checked against the measured state and corrected (password manager, Defender/BitLocker, Intune/USB/DLP from 22 November, VPN, remote wipe) | [TBD – CEO] |

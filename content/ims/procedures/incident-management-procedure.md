@@ -2,7 +2,7 @@
 document_id: SW-ISMS-PRO-001
 title: Incident Management Procedure
 doc_type: procedure
-version: "1.1"
+version: "1.2"
 status: draft
 classification: internal
 owner: CISO
@@ -125,10 +125,9 @@ Incidents may be detected through:
 #### Reporting Mechanisms
 
 **Internal Reporting:**
-- Email: security@swedwise.se
-- Phone: [TBD - Security hotline number]
-- Microsoft Teams: #security-incidents channel
-- Direct contact to CISO or IT Operations
+- **The CISO, at once, by Slack or phone.** This is the channel until a security mailbox is decided (see
+  SW-ISMS-PRO-009, section 9); security@swedwise.se does not exist yet.
+- Personal data involved: the Privacy Lead as well.
 
 **External Reporting (Customers/Partners):**
 - Support portal: [TBD - Support system]
@@ -654,6 +653,7 @@ Review and update this procedure:
 |---------|------|--------|---------|-------------|
 | 1.0 | [TBD] | [TBD - CISO] | Initial procedure creation | [TBD - CEO] |
 | 1.1 | 2026-11-02 | IMS Owner (draft prepared for review) | 9.1 aligned with Storskogen Information security policy 2024-11-06, 4.7.1: every personal data breach reported immediately to the CEO and the group's IT lead; IMY within 72 h with reasons if later; every breach registered even when exempt from IMY notification; breach register marked required (12) | [TBD] |
+| 1.2 | 2026-11-05 | Claude for the IMS Owner | 7.2 internal reporting: the CISO by Slack or phone, the Privacy Lead for personal data; security@swedwise.se, the hotline and the Teams channel removed until a channel is decided | [TBD – CEO] |
 
 **Next Review Date**: [TBD - typically 12 months from effective date]
 

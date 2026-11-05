@@ -24,7 +24,7 @@ This form is used to document information security incidents, ensuring consisten
 ## Instructions
 
 1. **Complete immediately** when a security incident is identified
-2. **Report to** your line manager and security@swedwise.se
+2. **Report to** your line manager and the CISO (Slack or phone)
 3. **Update the form** as new information becomes available
 4. **Preserve evidence** - do not delete logs or files
 5. **Confidential** - share only with authorized personnel
@@ -417,7 +417,7 @@ List any attachments (screenshots, logs, reports, etc.):
 ## Contact Information
 
 **For incident reporting:**
-- **Email:** security@swedwise.se
+- **CISO:** Slack or phone (no security mailbox yet)
 - **CISO:** [Contact details]
 - **IT Operations:** [Contact details]
 - **After hours:** [Emergency contact]
