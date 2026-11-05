@@ -94,7 +94,7 @@ is then updated (version 1.1) so that Sentinel is the queue.
 
 | Evidence | Where | Kept |
 |---|---|---|
-| Incidents with classification and handling | Defender XDR (180 days); summaries in the monthly note | Monthly notes 3 years |
+| Incidents with classification and handling | Defender XDR (180 days, Microsoft's documented retention; advanced hunting keeps 30 days); summaries in the monthly note | Monthly notes 3 years |
 | Monthly review notes | Management System area | 3 years |
 | Incident records | SW-ISMS-PRO-001 | As incident records |
 | Measured state | CompanyIT controls page, control `security-monitoring` | Snapshot history in CompanyIT |
@@ -109,8 +109,7 @@ is then updated (version 1.1) so that Sentinel is the queue.
 
 ## 11. State on 2026-11-05 (claims check)
 
-- No Defender XDR monitoring: Defender for Business comes with Business Premium, decided on 2026-11-05 but not yet
-  bought.
+- No Defender XDR monitoring yet. Business Premium (Intune P1, Defender for Business with core vulnerability management, Defender for Office 365 P1, Entra ID P1) was bought on 2026-11-05 (39 seats, upgrading all Business Standard); only 1 user has it assigned so far (group `sw-lic-business-premium`), and no Intune policy of any kind is configured.
 - Entra sign-in and audit logs exist; nobody reviews them on a schedule today.
 - No deputy is named.
 - Sentinel does not exist; committed to Salesforce for 2027-03-31.

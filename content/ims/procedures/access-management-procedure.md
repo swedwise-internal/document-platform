@@ -523,10 +523,14 @@ account has an MFA method). An account without a method is fixed within 5 workin
 needed. The controls page, with its snapshot history, is the evidence.
 
 **State on 2026-11-05 (claims check).** Measured in Entra Conditional Access: MFA is required today only at medium or
-high sign-in risk, for everyone, administrators included; CIT-BL01, BL02 and BL03 are report-only, and one targeted
-policy (CIT-BL01a, for one administrator) is enforced. 13 people (1 employee, 12 subcontractors) and 19 non-person
-accounts have no MFA method (CompanyIT session, 2026-11-05). No break-glass account exists. Business Premium is
-decided (2026-11-05) but not yet bought.
+high sign-in risk, for everyone, administrators included. CIT-BL01, BL02 and BL03 are report-only; CIT-BL01a enforces
+MFA at every sign-in for one account only (the owner's), since 2026-11-05. **The exclusion rule above is not yet met:**
+the legacy policy "Kräv multifaktorautentisering för Azure-hantering" excludes a person (the owner), and both legacy
+policies ("MAF for all" too) still name a deleted account in their exclusions. Graph refused the edits of both on
+2026-11-05 (error 1039: they use sign-in risk, a P2 feature); they are retired when CIT-BL01 is enforced. 13 people
+(1 employee, 12 subcontractors) and 19 non-person accounts have no MFA method (CompanyIT session, 2026-11-05). No
+break-glass account exists. Business Premium (Entra ID P1 for everyone) was bought on 2026-11-05 (39 seats); only 1
+user has it assigned so far.
 
 ## 8. Access Reviews
 

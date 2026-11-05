@@ -55,7 +55,7 @@ On the computers, the USB write block (SW-ISMS-PRO-012 6.4) covers the main endp
 |---|---|
 | Swedish personal identity numbers (personnummer) | Microsoft sensitive information type *Sweden National ID* |
 | Payment card numbers | *Credit Card Number* |
-| Bank accounts | *International Banking Account Number (IBAN)* and *Sweden bank account number* where available |
+| Bank accounts | *International Banking Account Number (IBAN)*; Swedish domestic account numbers (clearing and account number) need a custom sensitive information type, to be built by the IT Manager |
 | Customer data | Documents and e-mails that carry the **Confidential** or **Restricted** sensitivity label (Classification Policy); until labels are published, a keyword dictionary of active customer names maintained by the CISO |
 
 Thresholds: one card number or IBAN, or five or more personal identity numbers in one item, or any item labelled
@@ -124,8 +124,9 @@ line in the management review.
 
 ## 11. State on 2026-11-05 (claims check)
 
-- No DLP policy exists; Business Premium is decided (2026-11-05) but not yet bought.
-- Sensitivity labels are not yet published; until they are, customer data is detected by the keyword dictionary.
+- No DLP policy exists. Business Premium (Intune P1, Defender for Business with core vulnerability management, Defender for Office 365 P1, Entra ID P1) was bought on 2026-11-05 (39 seats, upgrading all Business Standard); only 1 user has it assigned so far (group `sw-lic-business-premium`), and no Intune policy of any kind is configured.
+- Whether sensitivity labels are published is not measured (CompanyIT has no Purview read yet); until labels are in
+  use, customer data is detected by the keyword dictionary.
 - Teams chat DLP and Endpoint DLP are not licensed (measured by the CompanyIT session 2026-11-05).
 - The CompanyIT control `dlp-m365` is being added by the CompanyIT session.
 

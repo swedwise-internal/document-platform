@@ -142,7 +142,7 @@ is reused, and removes it from Intune and Entra ID. The asset register (SW-ISMS-
 | Intune compliance report (enrolled devices, compliant / non-compliant) | Exported monthly to the Management System area | 3 years |
 | USB exceptions | Decisions in CompanyIT | 3 years after the end date |
 | Lost-device actions | Incident record (SW-ISMS-PRO-001) | As incident records |
-| Measured state | CompanyIT controls page, control `endpoint-usb-write-block` (and an enrolment/compliance control, proposed) | Snapshot history in CompanyIT |
+| Measured state | CompanyIT controls page, controls `endpoint-compliance` (enrolment and compliance; thresholds of section 8) and `endpoint-usb-write-block` | Snapshot history in CompanyIT |
 
 ## 8. Measures
 
@@ -157,12 +157,14 @@ is reused, and removes it from Intune and Entra ID. The asset register (SW-ISMS-
 
 This procedure describes the target. Measured today, none of it is in place yet:
 
-- Business Premium (Intune, Defender for Business, Entra ID P1) is decided by the owner on 2026-11-05 but not yet
-  bought; today's licences (Business Standard and Basic) include neither Intune nor Defender.
+- Microsoft 365 Business Premium (Intune P1, Defender for Business with core vulnerability management, Defender for
+  Office 365 P1, Entra ID P1) was bought on 2026-11-05 (39 seats, upgrading all Business Standard); only 1 user has it
+  assigned so far (group `sw-lic-business-premium`), and no Intune policy of any kind is configured.
 - No computer is enrolled in Intune; the device state cannot be read (Graph `managedDevices` refused).
 - No compliance policy, no USB policy and no Conditional Access policy for devices exist.
-- The CompanyIT control `endpoint-usb-write-block` is being added by the CompanyIT session; an enrolment and
-  compliance control is proposed.
+- The CompanyIT controls `endpoint-compliance` and `endpoint-usb-write-block` are being added by the CompanyIT session.
+- The update rings, the 7-day grace period and running the device policy report-only first are design choices of
+  this procedure, not yet configured.
 - Committed to Salesforce: enrolment, BitLocker and the USB block on in-scope devices by 2026-11-22.
 
 ## 10. Related documents
