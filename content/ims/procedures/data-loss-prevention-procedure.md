@@ -37,7 +37,8 @@ through Microsoft 365, who handles what the rules catch, and how it is proven. I
 Teams (they are stored in SharePoint and OneDrive). Every user with a Swedwise account.
 
 **Out of scope (licence):** Teams chat and channel messages, and Endpoint DLP on the computers. Neither is part of
-Microsoft 365 Business Premium; both need the Purview Suite add-on. The CISO reconsiders this at the annual review.
+Microsoft 365 Business Premium; both need the Purview Suite add-on (list price USD 10 per user and month). The owner
+decided on 2026-11-05 to defer the add-on; the CISO reconsiders this at the annual review.
 On the computers, the USB write block (SW-ISMS-PRO-012 6.4) covers the main endpoint path.
 
 ## 3. Roles
@@ -127,7 +128,8 @@ line in the management review.
 - No DLP policy exists. Business Premium (Intune P1, Defender for Business with core vulnerability management, Defender for Office 365 P1, Entra ID P1) was bought on 2026-11-05 (39 seats, upgrading all Business Standard); only 1 user has it assigned so far (group `sw-lic-business-premium`), and no Intune policy of any kind is configured.
 - Whether sensitivity labels are published is not measured (CompanyIT has no Purview read yet); until labels are in
   use, customer data is detected by the keyword dictionary.
-- Teams chat DLP and Endpoint DLP are not licensed (measured by the CompanyIT session 2026-11-05).
+- Teams chat DLP and Endpoint DLP are not licensed (measured by the CompanyIT session 2026-11-05); the Purview Suite
+  add-on is deferred by the owner's decision of 2026-11-05.
 - The CompanyIT control `dlp-m365` is being added by the CompanyIT session.
 
 ## 12. Related documents
