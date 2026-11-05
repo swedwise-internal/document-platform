@@ -2,7 +2,7 @@
 document_id: SW-ISMS-PRO-002
 title: Access Management Procedure
 doc_type: procedure
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: CISO
@@ -136,10 +136,9 @@ Reference: [TBD - SW-ISMS-GUI-001: Information Classification Guideline]
 1. Create user accounts:
    - Microsoft 365 account (email, Teams, SharePoint)
    - Azure AD identity
-   - VPN access (if remote worker)
    - Other core systems based on role template
 2. Configure standard security settings:
-   - Multi-factor authentication (MFA) enabled
+   - Multi-factor authentication (MFA) required at every sign-in (section 7.8)
    - Conditional access policies applied
    - Password policy enforced
    - Device compliance requirements
@@ -493,6 +492,42 @@ Non-human accounts for applications, scripts, and automated processes.
    - Alerts for unexpected usage patterns
    - Quarterly review of service accounts
 
+### 7.8 Multi-Factor Authentication
+
+**The rule.** Every account that can sign in to Swedwise's Microsoft 365 tenant uses MFA at **every sign-in**: employees,
+temporary staff, subcontractors (`@ext.swedwise.se`) and administrators. This meets the Storskogen Information Security
+Policy (2024-11-06: MFA on every account reachable from the internet), ISO/IEC 27001:2022 Annex A 8.5, and the
+commitment to Salesforce (TPSD-3520): the users in scope by 2026-11-22 and all users by 2026-12-31.
+
+**How it is enforced.** The Conditional Access policy **CIT-BL01 MFA for everyone** (declared in CompanyIT) requires MFA
+for all users and all cloud apps, with no sign-in risk condition. It needs Entra ID P1 for every user, which Microsoft
+365 Business Premium gives. Administrators additionally use phishing-resistant MFA (CIT-BL03). The risk-based policies
+("MAF for all", "Kräv multifaktorautentisering för Azure-hantering") need Entra ID P2 and are retired when CIT-BL01 is
+enforced. Changes to these policies reach the tenant only through a plan approved in CompanyIT.
+
+**Who is excluded.** Only:
+- the break-glass accounts (section 7.6), once they exist;
+- system accounts that cannot do MFA, each approved by the IT Manager and **recorded as a decision in CompanyIT**
+  (account, system, reason, compensating control such as a named-location or workload-identity restriction, review
+  date at most 12 months ahead).
+
+No person is ever excluded, and an exclusion is never made for convenience.
+
+**Registration.** A new person registers MFA (Microsoft Authenticator, or a passkey) at first sign-in, using a
+Temporary Access Pass from the IT Manager; the account is not added to any engagement group (`sw-eng-*`) before that.
+A lost phone: the person tells the CISO, the IT Manager removes the old methods and issues a new Temporary Access Pass.
+
+**Monthly check.** In the first working week of each month the IT Manager reviews the CompanyIT controls page:
+`mfa-everyone` (the policy is enforced, nobody outside the recorded exclusions) and `mfa-registered` (every enabled
+account has an MFA method). An account without a method is fixed within 5 working days, or disabled if it is not
+needed. The controls page, with its snapshot history, is the evidence.
+
+**State on 2026-11-05 (claims check).** Measured in Entra Conditional Access: MFA is required today only at medium or
+high sign-in risk, for everyone, administrators included; CIT-BL01, BL02 and BL03 are report-only, and one targeted
+policy (CIT-BL01a, for one administrator) is enforced. 13 people (1 employee, 12 subcontractors) and 19 non-person
+accounts have no MFA method (CompanyIT session, 2026-11-05). No break-glass account exists. Business Premium is
+decided (2026-11-05) but not yet bought.
+
 ## 8. Access Reviews
 
 Regular verification that user access remains appropriate and necessary.
@@ -624,10 +659,10 @@ Regular verification that user access remains appropriate and necessary.
 All remote access to Swedwise network and systems:
 
 **Requirements:**
-- Corporate VPN mandatory for network access
-- MFA required for VPN authentication
-- Endpoint compliance verification (antivirus, OS patches, encryption)
-- Use of company-provided devices (BYOD with restrictions)
+- Swedwise has no corporate network or VPN: systems are cloud services reached over the internet
+- MFA at every sign-in (section 7.8)
+- A compliant, Intune-enrolled work computer (SW-ISMS-PRO-012)
+- Company work only on company devices (Acceptable Use Policy)
 - Acceptable use policy compliance
 
 **Approval:**
@@ -781,6 +816,7 @@ Exceptions to this procedure require:
 | Version | Date | Author | Changes | Approved By |
 |---------|------|--------|---------|-------------|
 | 1.0 | [TBD] | [TBD - CISO] | Initial procedure creation | [TBD - CEO] |
+| 1.1 | 2026-11-05 | Claude for the IMS Owner | New 7.8 Multi-Factor Authentication (every sign-in through CIT-BL01, exclusions only as recorded decisions, monthly check on the CompanyIT controls page, measured state); VPN removed from 7.1 and 9.3 (none exists); for the commitment to Salesforce (TPSD-3520) | [TBD – CEO] |
 
 **Next Review Date**: [TBD - typically 12 months from effective date]
 

@@ -721,7 +721,7 @@ Processes that enable operational effectiveness:
 | **Resource allocation** | CSO (Resource Management Lead) | Assign people to projects and activities | SW-QMS-PRO-006 |
 | **Purchasing and suppliers** | CFO | Buy what the company itself uses, and select and follow up those suppliers | SW-IMS-PRO-015, SW-IMS-POL-002, SW-IMS-POL-003, SW-ISMS-PRO-008, SW-ISMS-FRM-012, SW-ISMS-FRM-013, SW-ISMS-FRM-014 |
 | **Partners and product vendors** | CCO | Keep the partnerships whose products we sell and build on (for example OpenText and Salesforce): agreements, partner programmes, certifications, product terms and prices | SW-QMS-PRO-007, SW-IMS-POL-003, SW-ISMS-PRO-008 |
-| **IT infrastructure and information security operations** | COO (IT Manager; CISO proposed) | Run the company's IT: access, assets, backup, vulnerabilities and changes | SW-ISMS-POL-001, SW-ISMS-PRO-002, SW-ISMS-PRO-003, SW-ISMS-PRO-006, SW-ISMS-PRO-007, SW-ISMS-PRO-010, SW-IMS-PRO-008 |
+| **IT infrastructure and information security operations** | COO (IT Manager; CISO proposed) | Run the company's IT: access and MFA, assets, work computers, backup, vulnerabilities, data loss prevention, security monitoring, penetration testing and changes | SW-ISMS-POL-001, SW-ISMS-PRO-002, SW-ISMS-PRO-003, SW-ISMS-PRO-006, SW-ISMS-PRO-007, SW-ISMS-PRO-010, SW-ISMS-PRO-012, SW-ISMS-PRO-013, SW-ISMS-PRO-014, SW-ISMS-PRO-015, SW-IMS-PRO-008 |
 | **HR management** | HR / People & Culture (HR Lead) | Recruit, onboard and manage employees | SW-ISMS-POL-006, SW-IMS-TRN-006 (no procedure) |
 | **Emergency preparedness** | CFO (Environmental Lead) | Prepare for and respond to emergencies | SW-EMS-PRO-001, SW-EMS-FRM-002, SW-EMS-FRM-003, SW-EMS-FRM-004, SW-IMS-POL-005 |
 
