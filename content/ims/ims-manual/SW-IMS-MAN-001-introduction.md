@@ -254,7 +254,7 @@ Level 5: Records
 
 **Navigation**:
 - This manual references policies and procedures by document ID (e.g., SW-IMS-POL-001)
-- Policies and procedures are accessible via the IMS Repository (SharePoint/intranet)
+- Policies and procedures are accessible in the Management System area in xECM (SW-IMS-MAN-007 7.5.3)
 - Cross-references are hyperlinked in digital versions
 
 ### 3.4 Keeping the Manual Current
@@ -474,7 +474,7 @@ This IMS Manual is based on the following international standards:
 ### 6.3 Distribution
 
 This document is:
-- **Published** in IMS Repository (SharePoint/intranet)
+- **Published** in the Management System area in xECM (SW-IMS-MAN-007 7.5.3)
 - **Accessible** to all Swedwise employees
 - **Available** to external auditors and customers upon request
 - **Controlled** - only current version in IMS Repository is valid

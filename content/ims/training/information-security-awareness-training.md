@@ -36,7 +36,7 @@ training:
 This is the course that the Security Awareness Training Procedure (SW-ISMS-PRO-009) runs: at onboarding, every
 November for everyone, and as the base for the quarterly updates. It is held as a slide deck of 12 slides, with
 speaker notes, in the Swedwise PowerPoint template 2026 v.1. The text below is the deck's content, under document
-control here; the deck file itself is kept in the Management System area in SharePoint with the session recording
+control here; the deck file itself is kept in the Management System area (SW-IMS-MAN-007 7.5.3) with the session recording
 (it is not stored in this repository).
 
 The content rests on the Storskogen group policies adopted 2024-11-06, the Information Security Policy

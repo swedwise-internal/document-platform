@@ -2,7 +2,7 @@
 document_id: SW-IMS-MAN-007
 title: "IMS Manual - Clause 7: Support"
 doc_type: ims-manual
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: IMS Owner
@@ -185,7 +185,7 @@ Swedwise provides and maintains infrastructure necessary for IMS operation and s
 - **Microsoft 365**: Email, collaboration (Teams, SharePoint), productivity (Word, Excel, PowerPoint)
 - **CRM System**: [TBD - customer relationship management]
 - **ERP/Finance System**: [TBD - accounting, invoicing]
-- **Document Management**: SharePoint and/or Git repository (for IMS documentation)
+- **Document Management**: Swedwise's xECM ("Docs") for controlled documents; Nexta Hub for steering records (see 7.5.3)
 - **Project Management Tools**: [TBD - e.g., Jira, Azure DevOps]
 - **Monitoring and Security Tools**: [TBD - for SaaS operations]
 
@@ -1076,16 +1076,20 @@ related_documents:
 
 **Document Availability and Access**:
 
-**Master Repository**:
-- All IMS documents stored in Git repository (`/content/ims/`)
-- Version history maintained in Git
-- Git serves as authoritative source
+**Where the management system lives** (owner's decisions 2026-11-05 and 2026-11-06):
 
-**Web Platform**:
-- Documents rendered dynamically from Markdown
-- Accessible at [TBD - internal URL, e.g., ims.swedwise.se]
-- Search functionality and cross-linking
-- Access control based on classification
+| What | Where |
+|---|---|
+| Approved controlled documents (policies, procedures, the Statement of Applicability, role descriptions, forms) with version and approval | The **management system workspace in Swedwise's xECM** ("Docs"). In this manual and the procedures, "the Management System area" means this workspace. |
+| How the company is steered: goals, initiatives, decisions, escalations, risks, KPIs, meetings, reviews, audits, deviations and corrective actions | **Nexta Hub** (company Swedwise), which links to the documents in xECM |
+| Evidence that the IT controls work | **CompanyIT** (controls page) |
+| Drafts while they are written and reviewed | This Git repository (`/content/ims/`); a draft becomes controlled only when its approved version is in xECM |
+
+Responsibility for each document, process and record is held by a role (for example CFO), never by a named
+person; the current holder is shown where the role is used (owner 2026-11-07).
+
+State on 2026-11-07: the xECM workspace is planned in the move of Swedwise's documents to xECM and is not yet in use;
+until it is, approved documents stay in the existing SharePoint management-system site.
 
 **Document Register**:
 - **Document Register** (SW-IMS-REG-002) maintained by IMS Owner
@@ -1211,7 +1215,8 @@ Records provide evidence of:
 - Linked to relevant process or activity
 
 **Storage**:
-- Electronic records: Stored in designated locations (SharePoint, databases, LMS, file shares)
+- Electronic records: Stored in the Management System area in xECM, in Nexta Hub (steering records) or in CompanyIT
+  (IT evidence), as set out in 7.5.3; a record kept elsewhere is named in the procedure that creates it
 - Physical records: Stored in secure locations (locked cabinets if needed)
 - Backups: Electronic records backed up daily
 
@@ -1321,6 +1326,7 @@ This manual section is reviewed annually by the IMS Owner or when:
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | [TBD] | IMS Owner | Initial release |
+| 1.1 | 2026-11-07 | Claude for the IMS Owner | 7.5.3: where the management system lives — controlled documents in xECM (the Management System area), steering records in Nexta Hub, IT evidence in CompanyIT, drafts in Git; responsibility by role (owner 2026-11-05..07) |
 
 **Next Review Date**: [TBD - typically 12 months from effective date]
 
