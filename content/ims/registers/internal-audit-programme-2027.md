@@ -214,7 +214,7 @@ question: can the management system be run as written? The answer is input to th
 | Obsolete documents withdrawn | Document review log SW-IMS-FRM-001 | No log entries |
 | Every IMS role has a job and a named person | Appointment record, role descriptions, SW-IMS-MAN-005 | Jobs settled 2026-10-29 for all roles except CISO and communication owner (proposed). No role has a named person |
 | The manual names the IMS Owner | SW-IMS-MAN-005 section 4.2.3 | Says `[TBD]` and "may be the Quality Lead"; the organisation chart shows the 2025 units |
-| One nonconformity procedure | Decision record | SW-IMS-PRO-005 merged (draft); SW-IMS-PRO-009 a superseded stub awaiting the decision |
+| One nonconformity procedure | Decision record | SW-IMS-PRO-005 is the one procedure; SW-IMS-PRO-009 obsolete (owner 2026-11-07) |
 | Records have a home | Location column in each procedure's records table | `[TBD]` in every procedure checked |
 | Staff know where the documents are | Interviews with 3–5 people across units | Not yet checked |
 

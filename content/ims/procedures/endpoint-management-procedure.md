@@ -2,7 +2,7 @@
 document_id: SW-ISMS-PRO-012
 title: Endpoint Management Procedure
 doc_type: procedure
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: CISO
@@ -97,7 +97,7 @@ A device is compliant when all of these hold:
 | Operating system | A version still supported by the vendor; security updates no older than 30 days |
 | Antimalware | Microsoft Defender Antivirus on, real-time protection on, signatures current |
 | Firewall | On |
-| Screen lock | Password or Windows Hello; locks after at most 10 minutes of inactivity |
+| Screen lock | Password or Windows Hello; locks after at most 15 minutes of inactivity (owner 2026-11-07) |
 | Jailbreak / tamper | Defender tamper protection on |
 
 A device that fails a requirement gets 7 days' grace, with a notification to the user, then turns non-compliant.
@@ -163,8 +163,7 @@ Source: CompanyIT guide `docs/guides/how-swedwise-it-works.md` v0.69.0, dated 20
   to USB drives, firewall, screen lock after 15 minutes), *SW-UPD-WIN Uppdateringar*.
 - **Not shown yet:** how many computers are enrolled and compliant; macOS policies; phone app protection (6.6); the
   Conditional Access policy for a compliant device (6.3); USB exceptions.
-- **Differences to settle:** screen lock is 15 minutes in Intune, this procedure says at most 10 (6.2); one of the two
-  changes by decision. The owner's own Fedora computer is outside Intune for now (CompanyIT).
+- Screen lock: 15 minutes in Intune matches 6.2 (owner's decision 2026-11-07). The owner's own Fedora computer is outside Intune for now (CompanyIT).
 - Committed to Salesforce: enrolment, BitLocker and the USB block on in-scope devices by 2026-11-22.
 
 ## 10. Related documents
@@ -180,3 +179,4 @@ Source: CompanyIT guide `docs/guides/how-swedwise-it-works.md` v0.69.0, dated 20
 | Version | Date | Author | Changes | Approved by |
 |---|---|---|---|---|
 | 1.0 | 2026-11-05 | Claude for the IMS Owner | New: enrolment, compliance, Conditional Access, USB block and exceptions, lost devices, return; for the commitment to Salesforce (TPSD-3520) and the owner's decision that every computer is enrolled | [TBD – CEO] |
+| 1.1 | 2026-11-07 | Claude for the IMS Owner | Screen lock at most 15 minutes, as configured in Intune (owner 2026-11-07); state section brought to CompanyIT 2026-11-06 | [TBD – CEO] |

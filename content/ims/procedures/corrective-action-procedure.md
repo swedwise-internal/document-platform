@@ -2,8 +2,8 @@
 document_id: SW-IMS-PRO-009
 title: Corrective Action Procedure
 doc_type: procedure
-version: "1.1"
-status: draft
+version: "1.2"
+status: obsolete
 classification: internal
 owner: IMS Owner
 effective_date: [TBD]
@@ -24,7 +24,7 @@ related_documents:
 **Owner**: IMS Owner
 **Approved by**: [TBD]
 
-Superseded by SW-IMS-PRO-005 — proposal 2026-10-29, for the owner's check.
+Superseded by SW-IMS-PRO-005 — decided by the owner on 2026-11-07.
 
 ## 1. Why this procedure is superseded
 
@@ -55,3 +55,4 @@ SW-IMS-PRO-005 when they are next revised.
 |---------|------|--------|---------|
 | 1.0 | [TBD] | [Author] | Initial release |
 | 1.1 | 2026-10-29 | IMS Owner (draft) | Superseded by SW-IMS-PRO-005 — proposal for the owner's check; content merged there |
+| 1.2 | 2026-11-07 | Claude for the IMS Owner | Obsolete: the owner decided on 2026-11-07 that SW-IMS-PRO-005 is the one procedure; target sections in SW-IMS-PRO-005 checked (section 5, section 6 Step 4, section 9, Appendices A–C) |

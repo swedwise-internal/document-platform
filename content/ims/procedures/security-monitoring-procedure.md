@@ -2,7 +2,7 @@
 document_id: SW-ISMS-PRO-014
 title: Security Monitoring Procedure
 doc_type: procedure
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: CISO
@@ -61,13 +61,17 @@ alerts reach the CISO by e-mail and phone notification and are handled on a best
 
 | Severity (as Defender XDR rates it) | Notified | Triage started | Contained or closed |
 |---|---|---|---|
-| High | E-mail and phone notification at once | Within 4 working hours | Within 1 working day, or escalated as an incident |
-| Medium | E-mail | Within 1 working day | Within 5 working days |
+| High | E-mail to it@swedwise.se and notification to the CISO at once | Within 1 working day | Within 2 working days, or escalated as an incident |
+| Medium | E-mail to it@swedwise.se | At the weekly pass | Within 10 working days |
 | Low / informational | Queue only | At the weekly pass | At the weekly pass |
 
-- **Daily** (working days, morning): the CISO opens the Defender XDR incident queue and handles new incidents.
-- **Weekly** (Monday): low and informational items, risky sign-ins, DLP overrides.
-- **Monthly** (first working week): the review in section 7.
+- **When a high-severity alert arrives:** the CISO (or the deputy) takes it the same or the next working day.
+- **Weekly** (Monday): the Defender XDR incident queue, medium, low and informational items, risky sign-ins, DLP
+  overrides.
+- **Monthly** (first working week): vulnerabilities (SW-ISMS-PRO-007) and the review in section 7.
+
+The rhythm is the owner's decision of 2026-11-07 on Claude Code's recommendation: no SOC, so high-severity alerts are
+acted on when they arrive and the queue is gone through weekly, not daily.
 
 ## 6. How
 
@@ -103,7 +107,7 @@ is then updated (version 1.1) so that Sentinel is the queue.
 
 | Measure | Target |
 |---|---|
-| High-severity incidents triaged within 4 working hours | 100 % |
+| High-severity incidents triaged within 1 working day | 100 % |
 | Working days with the queue checked | ≥ 95 % |
 | Monthly review held | 12 of 12 |
 
@@ -112,9 +116,8 @@ is then updated (version 1.1) so that Sentinel is the queue.
 Source: CompanyIT guide `docs/guides/how-swedwise-it-works.md` v0.69.0, dated 2026-11-06 (CompanyIT's description of the configuration; device coverage not measured here).
 
 - **Configured (per CompanyIT):** Defender for Business connected to Intune; Defender's alerts go to it@swedwise.se.
-- **Differences to settle:** CompanyIT says incidents and vulnerabilities are **reviewed monthly**; this procedure says
-  the queue is checked **daily on working days** with high severity triaged within 4 working hours (section 5).
-  Alerts reach it@swedwise.se, not the CISO by e-mail and phone. One of the two changes by decision.
+- **To align with CompanyIT:** high-severity alerts must also notify the CISO (they go to it@swedwise.se today), and
+  the incident queue is gone through weekly (CompanyIT reviews incidents and vulnerabilities monthly).
 - Entra sign-in and audit logs exist; a scheduled review is not shown. No deputy is named. Sentinel does not exist;
   committed to Salesforce for 2027-03-31.
 
@@ -129,3 +132,4 @@ Source: CompanyIT guide `docs/guides/how-swedwise-it-works.md` v0.69.0, dated 20
 | Version | Date | Author | Changes | Approved by |
 |---|---|---|---|---|
 | 1.0 | 2026-11-05 | Claude for the IMS Owner | New: Defender XDR incident queue, response times by severity, monthly review, Sentinel from 2027-03-31; for the commitment to Salesforce (TPSD-3520) | [TBD – CEO] |
+| 1.1 | 2026-11-07 | Claude for the IMS Owner | Rhythm: high-severity alerts on arrival (triage within 1 working day), queue weekly, vulnerabilities monthly (owner 2026-11-07); state section brought to CompanyIT 2026-11-06 | [TBD – CEO] |
