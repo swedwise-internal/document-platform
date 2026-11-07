@@ -2,7 +2,7 @@
 document_id: SW-IMS-MAN-005
 title: IMS Manual - Leadership (Clause 5)
 doc_type: ims-manual
-version: "1.2"
+version: "1.3"
 status: draft
 classification: internal
 owner: CEO
@@ -369,21 +369,27 @@ All IMS policies are:
 In addition to the top-level IMS policies, Swedwise maintains functional policies supporting IMS implementation:
 
 **Information Security Functional Policies**:
-- SW-ISMS-POL-002: Acceptable Use Policy
-- SW-ISMS-POL-003: Data Protection and Privacy Policy
-- SW-ISMS-POL-004: Access Control Policy
-- SW-ISMS-POL-005: Business Continuity Policy
+- SW-ISMS-POL-002: Access Control Policy
+- SW-ISMS-POL-003: Acceptable Use Policy
+- SW-ISMS-POL-004: Data Protection Policy
 - SW-ISMS-POL-006: HR Security Policy
 - SW-ISMS-POL-007: Information Classification Policy
 - SW-ISMS-POL-008: Physical Security Policy
-- SW-ISMS-POL-009: Network Security Policy
-- SW-ISMS-POL-010: Cryptographic Controls Policy
+- SW-ISMS-POL-009: Cryptographic Controls Policy
+- SW-ISMS-POL-010: Network Security Policy
 - SW-ISMS-POL-011: Logging and Monitoring Policy
-- SW-ISMS-POL-012: Remote Working Policy
+- SW-ISMS-POL-012: Capacity Management Policy
+
+**Integrated Management System Functional Policies**:
+- SW-IMS-POL-002: Procurement and Asset Acquisition Policy
+- SW-IMS-POL-003: Supplier Management Policy
+- SW-IMS-POL-004: Remote Working Policy
+- SW-IMS-POL-005: Business Continuity Policy
+- SW-IMS-POL-006: Service Continuity Policy
+- SW-IMS-POL-007: AI and Generative AI Policy
 
 **Quality and Environmental Policies**:
 - SW-QMS-POL-002: Customer Communication Policy
-- SW-EMS-POL-002: [TBD if additional environmental policies needed]
 
 All policies are cross-referenced and aligned to ensure consistency across the IMS.
 
@@ -972,6 +978,7 @@ Role descriptions include:
 | 1.0 | [TBD] | IMS Owner | Initial creation for ISO certification | [TBD] |
 | 1.1 | 2026-10-29 | IMS Owner | Organisation chart replaced with today's units; IMS roles mapped to the jobs that hold them (4.1.2); role description ids filled in; authority matrix names the job-holders; Data Protection Officer replaced by the Privacy Lead (SW-IMS-ROLE-006, held by the CEO; never the same person as the CISO) | [TBD] |
 | 1.2 | 2026-11-02 | IMS Owner (draft prepared for review) | Aligned with Storskogen IT, Information security and IT continuity policies 2024-11-06: IT Manager role and responsibilities from the group (4.2.11); annual IT budget in the ordinary budget process (2.2.4); IT strategy principles: cloud first, standard processes, minimal customisation (2.2.9); CEO approves IT budget and strategy, makes the policies available, owns breach reporting (4.2.1); employees read the IT, information security and continuity policies annually, linked to the annual acknowledgment (4.2.10); security exceptions limited to Swedwise's own rules (4.3) | [TBD] |
+| 1.3 | 2026-11-07 | Claude for the IMS Owner | 3.3: the supporting policies listed with their real ids and titles (ISMS-POL-002 Access Control … ISMS-POL-012 Capacity Management; IMS-POL-002…007 incl. the AI policy); the non-existent ISMS-POL-005 and EMS-POL-002 removed | [TBD] |
 
 ### 5.3 Approval
 
