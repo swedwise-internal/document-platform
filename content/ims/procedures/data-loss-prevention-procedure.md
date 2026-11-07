@@ -123,14 +123,16 @@ line in the management review.
 | High-severity alerts handled the same working day | 100 % |
 | Monthly review held | 12 of 12 |
 
-## 11. State on 2026-11-05 (claims check)
+## 11. State on 2026-11-07 (claims check)
 
-- No DLP policy exists. Business Premium (Intune P1, Defender for Business with core vulnerability management, Defender for Office 365 P1, Entra ID P1) was bought on 2026-11-05 (39 seats, upgrading all Business Standard); only 1 user has it assigned so far (group `sw-lic-business-premium`), and no Intune policy of any kind is configured.
-- Whether sensitivity labels are published is not measured (CompanyIT has no Purview read yet); until labels are in
-  use, customer data is detected by the keyword dictionary.
-- Teams chat DLP and Endpoint DLP are not licensed (measured by the CompanyIT session 2026-11-05); the Purview Suite
-  add-on is deferred by the owner's decision of 2026-11-05.
-- The CompanyIT control `dlp-m365` is being added by the CompanyIT session.
+Source: CompanyIT guide `docs/guides/how-swedwise-it-works.md` v0.69.0, dated 2026-11-06 (CompanyIT's description of the configuration; device coverage not measured here).
+
+- **Configured (per CompanyIT):** *SW-DLP Personuppgifter och kortdata* (not `SW-DLP-M365` as section 5 names it):
+  Swedish personal identity numbers, card numbers and IBAN shared outside Swedwise in mail, SharePoint and OneDrive;
+  **test mode with notices since 2026-11-06**, blocking before 2026-11-22.
+- **Not shown yet:** the custom type for Swedish bank accounts and the customer-data rule (section 4); Restricted
+  without override (section 5); alert routing to the CISO; whether sensitivity labels are published.
+- Teams chat DLP and Endpoint DLP are not licensed; the Purview Suite add-on is deferred (owner 2026-11-05).
 
 ## 12. Related documents
 

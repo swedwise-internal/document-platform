@@ -107,13 +107,16 @@ is then updated (version 1.1) so that Sentinel is the queue.
 | Working days with the queue checked | ≥ 95 % |
 | Monthly review held | 12 of 12 |
 
-## 11. State on 2026-11-05 (claims check)
+## 11. State on 2026-11-07 (claims check)
 
-- No Defender XDR monitoring yet. Business Premium (Intune P1, Defender for Business with core vulnerability management, Defender for Office 365 P1, Entra ID P1) was bought on 2026-11-05 (39 seats, upgrading all Business Standard); only 1 user has it assigned so far (group `sw-lic-business-premium`), and no Intune policy of any kind is configured.
-- Entra sign-in and audit logs exist; nobody reviews them on a schedule today.
-- No deputy is named.
-- Sentinel does not exist; committed to Salesforce for 2027-03-31.
-- The CompanyIT control `security-monitoring` is being added by the CompanyIT session.
+Source: CompanyIT guide `docs/guides/how-swedwise-it-works.md` v0.69.0, dated 2026-11-06 (CompanyIT's description of the configuration; device coverage not measured here).
+
+- **Configured (per CompanyIT):** Defender for Business connected to Intune; Defender's alerts go to it@swedwise.se.
+- **Differences to settle:** CompanyIT says incidents and vulnerabilities are **reviewed monthly**; this procedure says
+  the queue is checked **daily on working days** with high severity triaged within 4 working hours (section 5).
+  Alerts reach it@swedwise.se, not the CISO by e-mail and phone. One of the two changes by decision.
+- Entra sign-in and audit logs exist; a scheduled review is not shown. No deputy is named. Sentinel does not exist;
+  committed to Salesforce for 2027-03-31.
 
 ## 12. Related documents
 

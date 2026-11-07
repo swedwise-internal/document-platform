@@ -153,18 +153,18 @@ is reused, and removes it from Intune and Entra ID. The asset register (SW-ISMS-
 | USB exceptions past their end date | 0 |
 | Lost devices locked within 4 working hours of the report | 100 % |
 
-## 9. State on 2026-11-05 (claims check)
+## 9. State on 2026-11-07 (claims check)
 
-This procedure describes the target. Measured today, none of it is in place yet:
+Source: CompanyIT guide `docs/guides/how-swedwise-it-works.md` v0.69.0, dated 2026-11-06 (CompanyIT's description of the configuration; device coverage not measured here).
 
-- Microsoft 365 Business Premium (Intune P1, Defender for Business with core vulnerability management, Defender for
-  Office 365 P1, Entra ID P1) was bought on 2026-11-05 (39 seats, upgrading all Business Standard); only 1 user has it
-  assigned so far (group `sw-lic-business-premium`), and no Intune policy of any kind is configured.
-- No computer is enrolled in Intune; the device state cannot be read (Graph `managedDevices` refused).
-- No compliance policy, no USB policy and no Conditional Access policy for devices exist.
-- The CompanyIT controls `endpoint-compliance` and `endpoint-usb-write-block` are being added by the CompanyIT session.
-- The update rings, the 7-day grace period and running the device policy report-only first are design choices of
-  this procedure, not yet configured.
+- **Configured (per CompanyIT):** Business Premium for every employee since 2026-11-05 (group `sw-lic-business-premium`);
+  Intune enrols the computers of that group; policies assigned to it: *SW-CMP-WIN Kravprofil* (BitLocker, Secure Boot,
+  Windows 11 23H2 or later, firewall, Defender real-time protection), *SW-CFG-WIN Säkerhetsbas* (BitLocker, no writing
+  to USB drives, firewall, screen lock after 15 minutes), *SW-UPD-WIN Uppdateringar*.
+- **Not shown yet:** how many computers are enrolled and compliant; macOS policies; phone app protection (6.6); the
+  Conditional Access policy for a compliant device (6.3); USB exceptions.
+- **Differences to settle:** screen lock is 15 minutes in Intune, this procedure says at most 10 (6.2); one of the two
+  changes by decision. The owner's own Fedora computer is outside Intune for now (CompanyIT).
 - Committed to Salesforce: enrolment, BitLocker and the USB block on in-scope devices by 2026-11-22.
 
 ## 10. Related documents
