@@ -2,8 +2,8 @@
 document_id: SW-ISMS-FRM-001
 title: Statement of Applicability Template
 doc_type: form
-version: "1.0"
-status: draft
+version: "1.1"
+status: obsolete
 classification: internal
 owner: CISO
 effective_date: 2024-01-15
@@ -16,6 +16,9 @@ related_documents:
 ---
 
 # Statement of Applicability Template
+
+> **Obsolete since 2026-11-07.** Swedwise has one Statement of Applicability: SW-ISMS-SOA-001
+> (`registers/statement-of-applicability.md`). This template is kept for reference only.
 
 ## Purpose
 
