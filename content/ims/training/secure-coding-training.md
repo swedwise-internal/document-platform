@@ -3368,3 +3368,12 @@ Response.Cookies.Append("SessionId", sessionId, new CookieOptions {
 **Owner**: CISO
 
 *This training is mandatory for all developers and engineers at Swedwise AB. Completion is tracked and required for annual compliance.*
+
+---
+
+## Document Control
+
+| Version | Date | Author | Changes | Approved by |
+|---|---|---|---|---|
+| 1.1 | 2026-10-29 | CISO | Swedwise adaptations | [TBD] |
+| 1.2 | 2026-11-08 | Claude for the CISO | Foundation course, taken once at start; the yearly refresh is SW-ISMS-TRN-005; `required_for` and validity changed accordingly (owner 2026-11-07) | [TBD] |

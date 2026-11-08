@@ -2129,6 +2129,7 @@ After completing this training:
 |---------|------|--------|---------|-------------|
 | 1.0 | [TBD] | [TBD - CISO name] | Initial training creation | [TBD - CEO name] |
 | 1.1 | 2026-10-29 | CISO | Document id changed from SW-ISMS-TRN-003 (duplicate) to SW-ISMS-TRN-005 | [TBD] |
+| 1.2 | 2026-11-08 | Claude for the CISO | Yearly refresh (foundation is SW-ISMS-TRN-003); section 8 split into what is checked in Swedwise repositories, proposed requirements and general guidance (owner 2026-11-07) | [TBD] |
 
 **Next Review Date**: [TBD - 12 months from effective date]
 
