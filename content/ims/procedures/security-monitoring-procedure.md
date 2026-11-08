@@ -108,7 +108,7 @@ is then updated (version 1.1) so that Sentinel is the queue.
 | Measure | Target |
 |---|---|
 | High-severity incidents triaged within 1 working day | 100 % |
-| Working days with the queue checked | ≥ 95 % |
+| Weekly queue reviews held | ≥ 95 % of weeks |
 | Monthly review held | 12 of 12 |
 
 ## 11. State on 2026-11-07 (claims check)

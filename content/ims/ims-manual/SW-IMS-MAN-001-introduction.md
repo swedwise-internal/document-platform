@@ -474,7 +474,8 @@ This IMS Manual is based on the following international standards:
 ### 6.3 Distribution
 
 This document is:
-- **Published** in the Management System area in xECM (SW-IMS-MAN-007 7.5.3)
+- **To be published**, once approved, in the Management System area in xECM (SW-IMS-MAN-007 7.5.3); that workspace is
+  planned and not yet in use, so today the document is a draft
 - **Accessible** to all Swedwise employees
 - **Available** to external auditors and customers upon request
 - **Controlled** - only current version in IMS Repository is valid

@@ -1085,8 +1085,9 @@ related_documents:
 | Evidence that the IT controls work | **CompanyIT** (controls page) |
 | Drafts while they are written and reviewed | This Git repository (`/content/ims/`); a draft becomes controlled only when its approved version is in xECM |
 
-Responsibility for each document, process and record is held by a role (for example CFO), never by a named
-person; the current holder is shown where the role is used (owner 2026-11-07).
+Responsibility for each part of the management system (a document, a process, a register) is held by a role (for
+example CFO), with the current holder shown beside it. Tasks are assigned to a person — the holder or someone
+assigned — and the people who actually created, changed or decided something stay recorded (owner 2026-11-07).
 
 State on 2026-11-07: the xECM workspace is planned in the move of Swedwise's documents to xECM and is not yet in use;
 until it is, approved documents stay in the existing SharePoint management-system site.
