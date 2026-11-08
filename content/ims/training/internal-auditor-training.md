@@ -2,7 +2,7 @@
 document_id: SW-IMS-TRN-007
 title: Internal Auditor Training
 doc_type: training
-version: "1.1"
+version: "1.2"
 status: draft
 classification: internal
 owner: IMS Owner
@@ -20,12 +20,12 @@ related_documents:
   - SW-IMS-POL-001  # Integrated Management System Policy
 training:
   course_id: internal-auditor-training
-  duration: 90
-  target_audience: [designated_auditors, quality_team, management]
-  required_for: [internal_auditors]
+  duration: 165  # 90 + Part 8 (45) + exercises 5–6 (30); to be re-timed when the course is run
+  target_audience: [designated_auditors, quality_team, management, internal_auditor_pool, quality_lead, ims_owner]
+  required_for: [internal_auditors, internal_auditor]
   assessment:
     enabled: true
-    passing_score: 75
+    passing_score: 80  # 12 of 15
     attempts_allowed: 3
   validity_period: 24  # Re-certification every 2 years
 ---
@@ -67,6 +67,7 @@ By the end of this training, you will be able to:
 5. Write clear, fact-based audit reports
 6. Maintain auditor independence and objectivity
 7. Support corrective action processes
+8. Audit the integrated management system across ISO 9001, ISO 14001 and ISO 27001, cross-referencing shared requirements
 
 ---
 
@@ -773,7 +774,195 @@ Independence is structural (who audits what). Objectivity is behavioral (how you
 
 ---
 
-## Part 8: Practical Exercises
+## Part 8: Auditing the Integrated Management System
+
+*Carried over from SW-IMS-TRN-005 Module 6 (2026-11-08).*
+
+Swedwise's IMS integrates three ISO standards: 9001 (Quality), 14001 (Environmental), 27001 (Information Security). You need to understand what's unique about each.
+
+### Auditing Integrated Systems
+
+**What is integrated?**
+- Single management review process
+- Unified internal audit program
+- Common document control procedure
+- Integrated risk assessment methodology
+- Shared training and awareness program
+
+**What is NOT integrated?**
+- Each standard has unique technical requirements
+- Different domain expertise needed (quality vs. security vs. environmental)
+- Different regulatory contexts
+
+**Audit approach**:
+- Some audits cover multiple standards (e.g., document control applies to all three)
+- Some audits are standard-specific (e.g., environmental aspects register is ISO 14001 only)
+- Cross-reference where appropriate
+
+---
+
+### ISO 9001 (Quality Management) - Key Audit Points
+
+**Focus**: Customer satisfaction, consistent delivery, continuous improvement
+
+**High-priority audit areas**:
+
+| ISO 9001 Clause | Focus | What to Check |
+|-----------------|-------|---------------|
+| **5.1.2** | Customer focus | Does management ensure customer requirements are understood? Evidence of customer communication? |
+| **6.2** | Quality objectives | Are quality objectives defined, measured, and tracked? |
+| **8.2** | Customer requirements | Are customer requirements documented? Reviewed before acceptance? |
+| **8.5** | Service delivery | Are services delivered per planned arrangements? Records maintained? |
+| **8.6** | Release of services | Are services verified before release to customer? Acceptance criteria met? |
+| **9.1.2** | Customer satisfaction | Is customer feedback monitored? Analyzed? Acted upon? |
+| **9.3** | Management review | Are management reviews conducted? Inputs/outputs documented? |
+| **10.2** | Nonconformity & corrective action | Are nonconformities identified, addressed, and root causes analyzed? |
+
+**Example audit questions** (ISO 9001):
+- "How do you capture customer requirements at the start of a project?"
+- "Can you show me the acceptance criteria for the SaaS onboarding service?"
+- "What happens if a customer reports an issue with service delivery?"
+- "Where are customer satisfaction results reported?"
+
+**Key evidence**:
+- Customer contracts, requirements documents
+- Project delivery records
+- Customer feedback surveys, NPS scores
+- Nonconformity logs, corrective action records
+- Management review minutes
+
+---
+
+### ISO 14001 (Environmental Management) - Key Audit Points
+
+**Focus**: Environmental impact, compliance, pollution prevention
+
+**High-priority audit areas**:
+
+| ISO 14001 Clause | Focus | What to Check |
+|------------------|-------|---------------|
+| **6.1.2** | Environmental aspects | Are significant environmental aspects identified? |
+| **6.1.3** | Compliance obligations | Are environmental legal requirements identified and tracked? |
+| **7.2** | Competence | Do staff understand their environmental responsibilities? |
+| **8.1** | Operational control | Are controls in place for significant aspects (travel, energy, waste)? |
+| **9.1.1** | Monitoring & measurement | Are environmental metrics monitored (energy use, travel emissions, waste)? |
+
+**Example audit questions** (ISO 14001):
+- "How do you identify the environmental impacts of your operations?"
+- "What are Swedwise's most significant environmental aspects?" (Answer: Travel, energy use, electronic waste)
+- "How do you monitor and reduce travel-related emissions?"
+- "How do you ensure compliance with waste disposal regulations?"
+
+**Key evidence**:
+- Environmental aspects register
+- Travel data, carbon footprint reports
+- Energy consumption logs
+- Waste disposal records, recycling logs
+- Environmental training records
+
+**Swedwise-specific context**:
+- As a consultancy, travel is the biggest environmental impact
+- Office energy use (electricity, heating)
+- Electronic waste (old hardware, servers)
+- SaaS operations (data center energy use - but this is Entiros's responsibility, not ours)
+
+---
+
+### ISO 27001 (Information Security) - Key Audit Points
+
+**Focus**: Protecting information assets, managing security risks
+
+**High-priority audit areas**:
+
+| ISO 27001 Clause | Focus | What to Check |
+|------------------|-------|---------------|
+| **5.1** | Information security policies | Are policies established, documented, communicated, and reviewed? |
+| **6.1.2** | Information security risk assessment | Are information security risks identified and assessed? |
+| **6.1.3** | Information security risk treatment | Are risk treatment plans implemented? |
+| **8.1** | Operational planning & control | Are Annex A controls implemented as defined in Statement of Applicability? |
+| **9.1** | Monitoring, measurement, analysis | Are security controls monitored? Incidents tracked? |
+
+**Annex A controls** (high-priority for Swedwise):
+
+| Control | Focus | What to Check |
+|---------|-------|---------------|
+| **A.5.1** | Policies | Information security policy exists and is communicated? |
+| **A.5.18** | Access rights | User access provisioning, review, removal process working? |
+| **A.5.23** | Cloud services | SaaS infrastructure security verified? Supplier agreements in place? |
+| **A.8.9** | Configuration management | Systems configured securely? Baseline configurations documented? |
+| **A.8.10** | Information deletion | Data deletion process for customer data, backups, archives? |
+| **A.8.16** | Monitoring | Logging and monitoring implemented? Logs reviewed? |
+
+**Example audit questions** (ISO 27001):
+- "How do you ensure only authorized personnel have access to customer data?"
+- "Can you show me evidence of the last access review?"
+- "What happens when an employee leaves - how is access removed?"
+- "How do you monitor for security incidents?"
+- "Where is customer data stored, and how is it protected?"
+
+**Key evidence**:
+- Information security policies
+- Risk register (information security risks)
+- Statement of Applicability (SoA)
+- Access logs, access review records
+- Incident logs
+- Security monitoring dashboards
+- Backup and recovery logs
+
+**Swedwise-specific context**:
+- Consultants work at client sites (bring-your-own-device, remote access risks)
+- SaaS operations (OpenText Communications infrastructure, customer data)
+- Customer data handling (confidentiality, GDPR)
+
+---
+
+### Cross-Referencing Requirements
+
+Some requirements apply across multiple standards:
+
+| Requirement | ISO 9001 | ISO 14001 | ISO 27001 | What to Check |
+|-------------|----------|-----------|-----------|---------------|
+| **Documented information** | 7.5 | 7.5 | 7.5 | Document control procedure applies to all three |
+| **Competence & training** | 7.2 | 7.2 | 6.2, A.6.3 | Training records cover quality, environmental, and security topics |
+| **Risk management** | 6.1 | 6.1 | 6.1 | Integrated risk register covers all risk types |
+| **Internal audit** | 9.2 | 9.2 | 9.2 | One audit program covers all three standards |
+| **Management review** | 9.3 | 9.3 | 9.3 | Single management review covers all three systems |
+| **Nonconformity & corrective action** | 10.2 | 10.2 | 10.2 | Unified corrective action process |
+
+**Audit efficiency tip**: When auditing document control, competence, or internal audits, verify conformity with all three standards simultaneously.
+
+---
+
+### Exercise: IMS Audit Checklist
+
+**Scenario**: You're assigned to audit "Risk Management" (covers all three standards).
+
+**Relevant requirements**:
+- ISO 9001:2015 Clause 6.1 (Actions to address risks and opportunities)
+- ISO 14001:2015 Clause 6.1 (Actions to address risks and opportunities)
+- ISO 27001:2022 Clause 6.1.2 (Information security risk assessment)
+- SW-IMS-PRO-002 (Risk Assessment Procedure)
+
+**Your task**: Create an integrated audit checklist with at least 6 check points covering all three standards.
+
+**Sample Answer**:
+
+| Requirement | Audit Question | Evidence Needed | ISO Standard |
+|-------------|----------------|-----------------|--------------|
+| ISO 9001 6.1 | Are risks to quality objectives identified and assessed? | Risk register (quality risks) | ISO 9001 |
+| ISO 14001 6.1 | Are environmental risks and opportunities identified? | Risk register (environmental risks) | ISO 14001 |
+| ISO 27001 6.1.2 | Is information security risk assessment conducted? | Risk register (information security risks) | ISO 27001 |
+| SW-IMS-PRO-002 | Is risk assessment conducted at least annually? | Risk register review dates | All 3 |
+| SW-IMS-PRO-002 | Are risk treatment plans documented? | Risk treatment actions in register | All 3 |
+| ISO 27001 6.1.3 | Are information security risk treatment plans implemented? | Evidence of control implementation (SoA, control records) | ISO 27001 |
+| ISO 9001 6.1 | Are risks reviewed and updated when changes occur? | Risk register change history, management review records | All 3 |
+| SW-IMS-PRO-002 | Are risk owners assigned? | Risk register shows ownership | All 3 |
+
+---
+
+---
+
+## Part 9: Practical Exercises
 
 ### Exercise 1: Classify the Finding
 
@@ -866,9 +1055,96 @@ You interview the IT Administrator (Marcus Holm, 2025-06-18). He explains: "We g
 
 ---
 
+*Exercises 5 and 6 are carried over from SW-IMS-TRN-005 (2026-11-08).*
+
+### Exercise 5: Scenario Analysis - What's the Finding?
+
+**Scenario 1**:
+You're auditing password management (ISO 27001 A.5.17). The password policy requires passwords to be at least 12 characters with complexity (upper, lower, numbers, symbols). You check 5 user accounts:
+- 4 accounts: Passwords meet policy
+- 1 account: Password is 8 characters (does not meet policy)
+
+**Question**: Is this a nonconformity? If yes, major or minor?
+
+**Answer**:
+**Yes, Minor Nonconformity.**
+
+**Reasoning**: One isolated instance (20% non-compliance). The policy and control exist; this is an isolated deviation. Not systemic.
+
+**Nonconformity statement**:
+- **Requirement**: ISO 27001 A.5.17 and SW-ISMS-POL-003 require passwords to be minimum 12 characters.
+- **Evidence**: Sampled 5 user accounts. Account "johan.svensson" has 8-character password (verified in system settings, 2024-12-15).
+- **Impact**: Weak passwords increase risk of unauthorized access.
+- **Classification**: Minor NC (isolated instance).
+
+---
+
+**Scenario 2**:
+You're auditing environmental aspects (ISO 14001 6.1.2). The procedure requires an Environmental Aspects Register to be maintained and reviewed annually. You ask the Environmental Lead for the register.
+
+Environmental Lead: "We don't have a register. We've just been discussing environmental impacts in management meetings."
+
+**Question**: Is this a nonconformity? If yes, major or minor?
+
+**Answer**:
+**Yes, Major Nonconformity.**
+
+**Reasoning**: Complete absence of a required document. ISO 14001 explicitly requires identification and evaluation of environmental aspects. No register = no evidence of conformity.
+
+**Nonconformity statement**:
+- **Requirement**: ISO 14001:2015 Clause 6.1.2 requires the organization to identify environmental aspects and determine which are significant. SW-EMS-PRO-001 requires an Environmental Aspects Register to be maintained.
+- **Evidence**: No Environmental Aspects Register found. Interviewed Environmental Lead (Anna, 2024-12-15) who confirmed no register exists. Environmental aspects discussed informally in management meetings but not documented.
+- **Impact**: Without documented environmental aspects, significant impacts may not be adequately controlled or monitored. Non-compliance with ISO 14001 certification requirement.
+- **Classification**: Major NC (complete absence of required documented information).
+
+---
+
+**Scenario 3**:
+You're auditing training records (ISO 9001 7.2). You check the training completion rate for "IMS Awareness Training" (required for all staff annually):
+- Total staff: 35
+- Completed training: 33
+- Not completed: 2 (both hired in the last month)
+
+**Question**: Is this a nonconformity?
+
+**Answer**:
+**No, this is conformity.**
+
+**Reasoning**: The 2 staff members who haven't completed training were hired in the last month. The procedure allows 30 days for new hire training. They are still within the allowable timeframe.
+
+**Audit note**: "Training completion rate is 94% (33 of 35). Two staff members are new hires (hired within last 30 days) and are scheduled to complete training within the required 30-day period. Conformity confirmed."
+
+---
+
+### Exercise 6: Role-Play - Closing Meeting
+
+**Scenario**: You've completed an audit of the "Backup and Recovery" process. Your findings:
+
+**Positive Findings**:
+- Backup procedure is well-documented and clear
+- Backups run automatically every night
+- Backup logs are reviewed weekly
+
+**Observations**:
+- Backup restoration testing is done annually, but quarterly testing would provide better assurance
+- Backup storage is on-site; consider off-site or cloud backup for disaster recovery
+
+**Nonconformities**:
+- **Minor NC**: One server (Stockholm file server) was not included in backup schedule (oversight during setup)
+
+**Your task**: Write a brief closing meeting statement (3-4 sentences) summarizing the audit.
+
+**Sample Answer**:
+
+> "Thank you for your cooperation during this audit. Overall, the backup and recovery process is well-managed. Backups are running as scheduled, logs are reviewed, and the procedure is clear. I identified one minor nonconformity - the Stockholm file server was not included in the backup schedule, which needs to be corrected. I also noted two observations: consider quarterly restoration testing instead of annual, and explore off-site backup options for disaster recovery. I'll send you the written report within 5 days. You'll have 4 weeks to submit a corrective action plan for the minor nonconformity. Any questions?"
+
+---
+
+---
+
 ## Check Your Understanding - Assessment
 
-**Instructions**: Answer all 12 questions. You need 9 or more correct (75%) to pass. You have 3 attempts.
+**Instructions**: Answer all 15 questions. You need 12 or more correct (80%) to pass. You have 3 attempts.
 
 ---
 
@@ -1018,6 +1294,42 @@ D. This is an observation - suggest improving time management during busy period
 
 ---
 
+### Question 13
+ISO 9001 focuses primarily on:
+
+a) Environmental impact
+b) Information security
+c) Customer satisfaction and quality
+d) Financial performance
+
+**Answer**: _________________
+
+---
+
+### Question 14
+ISO 14001 requires organizations to identify:
+
+a) Customer requirements
+b) Information assets
+c) Environmental aspects
+d) Financial risks
+
+**Answer**: _________________
+
+---
+
+### Question 15
+ISO 27001 Annex A.5.18 addresses:
+
+a) Physical security
+b) Access rights management
+c) Backup and recovery
+d) Environmental monitoring
+
+**Answer**: _________________
+
+---
+
 ## Assessment Answer Key
 
 (For LMS system - hidden from learners during assessment)
@@ -1034,6 +1346,9 @@ D. This is an observation - suggest improving time management during busy period
 10. **C** - Training records showing completion dates for all required staff
 11. **B** - Within 5 working days
 12. **B** - This is a minor nonconformity - isolated lapse in following the procedure, system generally working (while backups are critical, this is a 2-month gap with a reasonable explanation, not complete absence or systemic failure; however, it is still a nonconformity because the procedure wasn't followed)
+13. **C** - Customer satisfaction and quality
+14. **C** - Environmental aspects
+15. **B** - Access rights management
 
 ---
 
@@ -1154,12 +1469,27 @@ You've completed the Internal Auditor Training. You're now ready to:
 
 ---
 
+## Content carried over from SW-IMS-TRN-005 (2026-11-08)
+
+Swedwise has one internal auditor course. SW-IMS-TRN-005 (course `internal-auditor-ims`, 240 min, 85 %) is obsolete and
+points here. Its earlier course id and completions, if any exist, are kept with it and are not rewritten to this course.
+
+| SW-IMS-TRN-005 | Here | Note |
+|---|---|---|
+| Modules 1–5 (principles, planning, conducting, findings and reporting, follow-up) | Parts 1–6 | Already covered; TRN-007 adds nonconformity classification (Part 4) and independence (Part 7) |
+| Module 6 IMS-specific auditing (integrated systems, key audit points per standard, cross-referencing, checklist exercise) | Part 8 | Carried over as it was |
+| Exercise 1 scenario analysis, Exercise 2 closing-meeting role-play | Part 9, Exercises 5–6 | Carried over |
+| Assessment questions 13–15 (ISO 9001, ISO 14001, ISO 27001) | Questions 13–15 | Cover objective 8 |
+| Other assessment questions | — | Covered by questions 1–12 here |
+| Welcome, course structure, help, resources | — | Not needed; this course has its own |
+
 ## Document Control
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | [TBD] | IMS Owner | Initial release |
 | 1.1 | 2026-10-29 | IMS Owner | Document id changed from SW-IMS-TRN-005 (duplicate) to SW-IMS-TRN-007 |
+| 1.2 | 2026-11-08 | Claude for the IMS Owner | One internal auditor course: Module 6 and two exercises from SW-IMS-TRN-005 carried over (Part 8, Exercises 5–6), questions 13–15 added, pass mark 12/15 (80 %), duration 165 min; SW-IMS-TRN-005 obsolete |
 
 ---
 

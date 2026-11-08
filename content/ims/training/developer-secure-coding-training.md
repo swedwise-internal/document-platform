@@ -2,7 +2,7 @@
 document_id: SW-ISMS-TRN-005
 title: Developer Secure Coding Training
 doc_type: training
-version: "1.1"
+version: "1.2"
 status: draft
 classification: internal
 owner: CISO
@@ -16,7 +16,7 @@ training:
   course_id: developer-secure-coding
   duration: 60
   target_audience: [developers, technical_staff]
-  required_for: [developers, devops, technical_leads]
+  required_for: [annual_refresh_developer, annual_refresh_devops, annual_refresh_technical_lead]  # yearly refresh for developers, DevOps and technical leads; the foundation is SW-ISMS-TRN-003
   assessment:
     enabled: true
     passing_score: 80
@@ -25,6 +25,9 @@ training:
 ---
 
 # Developer Secure Coding Training
+
+> **Yearly refresh** (owner 2026-11-07) for developers, DevOps engineers and technical leads who have taken the
+> foundation course SW-ISMS-TRN-003.
 
 **Duration**: 60 minutes
 **Target**: Software developers and technical staff working on SaaS and customer projects
@@ -1363,7 +1366,27 @@ jobs:
 
 ---
 
-## 8. Swedwise-Specific Coding Standards
+## 8. Coding Standards: What Swedwise Does Today, and Guidance
+
+> **Read this first (2026-11-08).** This section mixes three kinds of content; they are kept apart here.
+>
+> **Checked in Swedwise's own repositories and rules:**
+> - A merge to `main` in the nine Matrix repositories (Factory, Coordinator, Platform, Deployment, Infrastructure,
+>   Generators, Helm, Framework, Packages) goes through the merge guard: a reviewer's verdict on the branch's head
+>   commit and a green test summary; a plain merge or `--no-verify` is refused (Platform
+>   `docs/reviews/merge-guard-on-procedure.md`).
+> - Secrets are never committed; they live in Azure Key Vault and reach the clusters through External Secrets
+>   (workspace rules, `CLAUDE.md`).
+>
+> **Proposed requirements, not yet in place or not shown:**
+> - Two-factor authentication required in every GitHub organisation (CompanyIT control `github-two-factor`, needs
+>   action).
+> - Automated security testing (SAST, dependency scanning, DAST) in the build pipelines and threat modelling at design;
+>   not shown for any repository.
+>
+> **General guidance:** the lifecycle diagram and the code examples in 8.1–8.5 below are good practice to learn from,
+> not a description of an established Swedwise flow.
+
 
 ### 8.1 Swedwise Secure Development Lifecycle
 

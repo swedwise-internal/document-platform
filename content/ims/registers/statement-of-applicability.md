@@ -164,4 +164,4 @@ Assessed by: Claude Code for the IMS Owner, 2026-11-07 (proposal); to be confirm
 |---|---|---|---|---|
 | 1.0 | 2025-01-01 | [TBD] | Generic first version | [TBD] |
 | 1.1 | 2026-11-02 | IMS Owner | Note that the SaaS parts are out of scope | [TBD] |
-| 2.0 | 2026-11-07 | Claude for the IMS Owner | Rewritten under the owner's principles of 2026-11-07: applicability and implementation separated, four implementation values, one row per control with source, gap and owner role; the unverified figures of 1.1 removed; A.8.16 and A.8.28 included; A.7.4, A.8.11, A.8.33 applicable pending assessment; reviewed by Codex (mailbox Ledningssystem 2026-11-07) | [TBD – CEO] |
+| 2.0 | 2026-11-07 | Claude for the IMS Owner | Rewritten under the owner's principles of 2026-11-07: applicability and implementation separated, four implementation values, one row per control with source, gap and owner role; the unverified figures of 1.1 removed; A.8.16 and A.8.28 included; A.7.4, A.8.11, A.8.33 applicable pending assessment; principles and draft reviewed by Codex (mailbox Ledningssystem 2026-11-07), not an approval of the row statuses | [TBD – CEO] |

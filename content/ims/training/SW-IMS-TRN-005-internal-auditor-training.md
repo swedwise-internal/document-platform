@@ -2,8 +2,8 @@
 document_id: SW-IMS-TRN-005
 title: Internal Auditor Training - IMS Audit Methodology
 doc_type: training
-version: "1.0"
-status: draft
+version: "1.1"
+status: obsolete
 classification: internal
 owner: IMS Owner
 effective_date: [TBD]
@@ -37,6 +37,10 @@ training:
 **Validity**: 24 months (refresher required)
 
 ---
+
+> **Obsolete since 2026-11-08.** Swedwise has one internal auditor course: SW-IMS-TRN-007
+> (`internal-auditor-training.md`), which carries this course's Module 6, exercises and ISO questions. The course id
+> `internal-auditor-ims` and any completions stay with this document.
 
 ## Welcome Future Auditors!
 

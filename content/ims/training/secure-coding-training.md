@@ -2,7 +2,7 @@
 document_id: SW-ISMS-TRN-003
 title: Secure Coding Training for Developers
 doc_type: training
-version: "1.1"
+version: "1.2"
 status: draft
 classification: internal
 owner: CISO
@@ -19,12 +19,12 @@ training:
   course_id: secure-coding-developers
   duration: 180  # 3 hours total (6 modules)
   target_audience: [developers, engineers, technical_staff]
-  required_for: [new_hire_developer, annual_refresh_developer]
+  required_for: [new_hire_developer, new_hire_devops, new_hire_technical_lead]  # the foundation course, once at start; the yearly refresh is SW-ISMS-TRN-005
   assessment:
     enabled: true
     passing_score: 80
     attempts_allowed: 3
-  validity_period: 12  # months
+  validity_period: null  # taken once; kept current by the yearly SW-ISMS-TRN-005
 ---
 
 # Secure Coding Training for Developers
@@ -36,6 +36,9 @@ training:
 **Passing Score**: 80% on final assessment
 
 ---
+
+> **Foundation course** (owner 2026-11-07): taken once, when starting as a developer, DevOps engineer or technical lead.
+> The yearly refresh is SW-ISMS-TRN-005 Developer Secure Coding Training.
 
 ## Why This Matters
 
