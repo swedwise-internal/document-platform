@@ -2,7 +2,7 @@
 document_id: SW-ISMS-SOA-001
 title: Statement of Applicability
 doc_type: register
-version: "2.0"
+version: "2.1"
 status: draft
 classification: confidential
 owner: CISO
@@ -46,14 +46,14 @@ points here. Only the control numbers and titles are used; no standard text.
 5. A.8.16 Monitoring activities and A.8.28 Secure coding, excluded in version 1.1, are applicable. A.7.4, A.8.11 and
    A.8.33 are applicable pending assessment.
 
-## 2. Summary of the worklist (2026-11-07)
+## 2. Summary of the worklist (2026-11-09)
 
 | Implementation | Rows |
 |---|---|
 | Verified implemented | 0 |
 | Partial | 36 |
-| Planned | 4 |
-| Not assessed | 53 |
+| Planned | 5 |
+| Not assessed | 52 |
 | **Total** | **93** |
 
 0 rows verified implemented means no row has shown evidence in this review — not that nothing is in place.
@@ -80,7 +80,7 @@ Assessed by: Claude Code for the IMS Owner, 2026-11-07 (proposal); to be confirm
 | A.5.14 | Information transfer | Yes | Partial | DLP for mail, SharePoint and OneDrive in test mode since 2026-11-06 (CompanyIT guide v0.69.0, 2026-11-06) | Blocking before 2026-11-22 | CISO |
 | A.5.15 | Access control | Yes | Partial | CompanyIT rule-kept access groups | SW-ISMS-POL-002 is a draft | COO |
 | A.5.16 | Identity management | Yes | Partial | CompanyIT organisation and accounts; organisation export schema 2 (2026-11-07) | Source of role holdings to be made unambiguous (Codex review 2026-11-07) | COO |
-| A.5.17 | Authentication information | Yes | Partial | MFA at risky sign-ins for everyone; CIT-BL01a enforced for the CEO (CompanyIT guide v0.69.0, 2026-11-06) | MFA at every sign-in: in-scope users by 2026-11-22, everyone by 2026-12-31 | COO |
+| A.5.17 | Authentication information | Yes | Partial | CIT-BL01 (MFA at every sign-in for everyone) enforced since 2026-11-08 14:14; exceptions: the two break-glass accounts and csp@ (Content Server SMTP). Measured by CompanyIT 2026-11-09 (control `mfa-everyone`) | Members without registered MFA: 3 subcontractors (deadline 2026-12-31), 5 test persons, demo@, spo.service; csp@ to move to OAuth | COO |
 | A.5.18 | Access rights | Yes | Not assessed | — | CIT `business-critical-user-review` needs action | COO |
 | A.5.19 | Information security in supplier relationships | Yes | Partial | ROPA 1.2 lists processors | SW-ISMS-PRO-008 is a draft | CFO |
 | A.5.20 | Addressing information security within supplier agreements | Yes | Partial | Processor agreements with customers (ROPA 1.1) | Swedwise's own supplier agreements not reviewed | CFO |
@@ -124,7 +124,7 @@ Assessed by: Claude Code for the IMS Owner, 2026-11-07 (proposal); to be confirm
 | A.7.13 | Equipment maintenance | Yes | Not assessed | — | Not assessed | COO |
 | A.7.14 | Secure disposal or re-use of equipment | Yes | Not assessed | Draft: SW-ISMS-PRO-012 6.7 | Draft only | COO |
 | A.8.1 | User endpoint devices | Yes | Partial | Intune enrolment and compliance profile assigned to everyone with Business Premium (CompanyIT guide v0.69.0, 2026-11-06) | Enrolled and compliant devices against the devices in scope not shown; the CEO's Fedora computer is outside | COO |
-| A.8.2 | Privileged access rights | Yes | Not assessed | — | Separate admin accounts and phishing-resistant MFA are planned (CIT controls need action) | COO |
+| A.8.2 | Privileged access rights | Yes | Partial | Two break-glass accounts since 2026-11-08 (CompanyIT read 2026-11-09, control `break-glass-accounts`) | 5 admin roles on everyday accounts (finding); the CEO's separate admin account parked; spo.service | COO |
 | A.8.3 | Information access restriction | Yes | Partial | Rule-kept groups (CompanyIT); xECM permissions through ABIM | Coverage not assessed | COO |
 | A.8.4 | Access to source code | Yes | Partial | Source code in GitHub organisations | CIT `github-two-factor` needs action | COO |
 | A.8.5 | Secure authentication | Yes | Partial | As A.5.17 | Legacy authentication block (CIT) needs action | COO |
@@ -138,7 +138,7 @@ Assessed by: Claude Code for the IMS Owner, 2026-11-07 (proposal); to be confirm
 | A.8.13 | Information backup | Yes | Not assessed | — | CIT `backup-restore-test` and `backup-offline-copy` need action | COO |
 | A.8.14 | Redundancy of information processing facilities | Yes | Not assessed | — | Not assessed | COO |
 | A.8.15 | Logging | Yes | Partial | Entra sign-in and audit logs exist | No scheduled review shown | CISO |
-| A.8.16 | Monitoring activities | Yes (earlier excluded; now included: Salesforce commitment, Business Premium) | Partial | Defender connected, alerts to it@swedwise.se (CompanyIT guide v0.69.0, 2026-11-06); rhythm decided 2026-11-07 (SW-ISMS-PRO-014) | Alerts must also reach the CISO; Sentinel by 2027-03-31 | CISO |
+| A.8.16 | Monitoring activities | Yes (earlier excluded; now included: Salesforce commitment, Business Premium) | Planned | Defender connected, alerts to it@swedwise.se (CompanyIT guide v0.69.0, 2026-11-06); rhythm decided 2026-11-07 (SW-ISMS-PRO-014); no review recorded (CompanyIT 2026-11-09) | Alerts must also reach the CISO; reviews to be recorded; Sentinel by 2027-03-31 | CISO |
 | A.8.17 | Clock synchronization | Yes | Not assessed | — | Not assessed | COO |
 | A.8.18 | Use of privileged utility programs | Yes | Not assessed | — | Not assessed | COO |
 | A.8.19 | Installation of software on operational systems | Yes | Partial | Update profile assigned (CompanyIT guide v0.69.0, 2026-11-06) | Installation restriction not shown | COO |
@@ -165,3 +165,4 @@ Assessed by: Claude Code for the IMS Owner, 2026-11-07 (proposal); to be confirm
 | 1.0 | 2025-01-01 | [TBD] | Generic first version | [TBD] |
 | 1.1 | 2026-11-02 | IMS Owner | Note that the SaaS parts are out of scope | [TBD] |
 | 2.0 | 2026-11-07 | Claude for the IMS Owner | Rewritten under the owner's principles of 2026-11-07: applicability and implementation separated, four implementation values, one row per control with source, gap and owner role; the unverified figures of 1.1 removed; A.8.16 and A.8.28 included; A.7.4, A.8.11, A.8.33 applicable pending assessment; principles and draft reviewed by Codex (mailbox Ledningssystem 2026-11-07), not an approval of the row statuses | [TBD – CEO] |
+| 2.1 | 2026-11-09 | Claude for the IMS Owner | A.5.17, A.8.2 and A.8.16 updated from CompanyIT's measurement of 2026-11-09 (MFA for everyone enforced since 2026-11-08; two break-glass accounts; no Defender review recorded) | [TBD – CEO] |
