@@ -3281,7 +3281,7 @@ You've completed the Secure Coding Training. You now understand:
 ### Certificate
 
 Upon passing the assessment (80%+), you'll receive:
-- Certificate of Completion (valid 12 months)
+- Certificate of Completion for the foundation course (taken once; the yearly refresh is SW-ISMS-TRN-005)
 - Record in training system
 - Badge on internal profile
 
@@ -3367,7 +3367,7 @@ Response.Cookies.Append("SessionId", sessionId, new CookieOptions {
 **Review Frequency**: Annual
 **Owner**: CISO
 
-*This training is mandatory for all developers and engineers at Swedwise AB. Completion is tracked and required for annual compliance.*
+*This is the foundation course: mandatory once for every developer, DevOps engineer and technical lead who starts at Swedwise AB. Completion is tracked. The yearly refresh is SW-ISMS-TRN-005 Developer Secure Coding Training.*
 
 ---
 

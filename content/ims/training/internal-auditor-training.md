@@ -32,7 +32,7 @@ training:
 
 # Internal Auditor Training
 
-**Duration**: 90 minutes
+**Duration**: 165 minutes (planned; not yet timed in a real run)
 **Target Audience**: Staff designated as internal auditors for ISO 9001, ISO 14001, and ISO 27001
 **Prerequisites**: Basic understanding of Swedwise's IMS and ISO standards
 
@@ -1448,7 +1448,7 @@ You've completed the Internal Auditor Training. You're now ready to:
 ✓ Support continuous improvement at Swedwise
 
 **Next steps**:
-1. Complete the assessment (75% required to pass)
+1. Complete the assessment (12 of 15 correct, 80 %, required to pass)
 2. Receive your Internal Auditor certification
 3. Shadow an experienced auditor on your first audit
 4. Be assigned your first audit as Lead Auditor
