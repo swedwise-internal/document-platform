@@ -2,7 +2,7 @@
 document_id: SW-ISMS-PRO-015
 title: Penetration Testing Procedure
 doc_type: procedure
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: CISO
@@ -79,7 +79,7 @@ how findings are fixed and proven. It meets:
 Through the Procurement Policy (SW-IMS-POL-002) and the supplier assessment (SW-ISMS-PRO-008). The provider must
 have testers with a recognised certification (for example CREST, OSCP or OSCE), carry professional liability
 insurance, sign a confidentiality agreement, and keep test data in the EU/EEA. The request for quotation is written
-and kept in CompanyIT, and points to this procedure for the scope.
+and kept in CompanyIT (`docs/security/penetration-test-rfq.md`), and points to this procedure for the scope.
 
 ### 5.2 Rules of engagement
 
@@ -127,7 +127,8 @@ retest status.
 ## 8. State on 2026-11-05 (claims check)
 
 - No penetration test has been done and no provider is engaged.
-- The request for quotation is being written by the CompanyIT session.
+- The first request for quotation is written (CompanyIT `docs/security/penetration-test-rfq.md`, 2026-11-09, answer by
+  2026-11-18). It is sent by the CEO; whether it has been sent is not recorded here.
 - The CompanyIT control `penetration-test-annual` is being added by the CompanyIT session.
 - Committed to Salesforce: provider by 2026-12-15, first test by 2027-03-31.
 
@@ -143,3 +144,4 @@ retest status.
 | Version | Date | Author | Changes | Approved by |
 |---|---|---|---|---|
 | 1.0 | 2026-11-05 | Claude for the IMS Owner | New: annual external and assumed-breach test, exclusions, provider choice, rules of engagement, remediation, retest and attestation; for the commitment to Salesforce (TPSD-3520) | [TBD – CEO] |
+| 1.1 | 2026-11-09 | Claude for the IMS Owner | The first request for quotation linked (CompanyIT `docs/security/penetration-test-rfq.md`, 2026-11-09) | [TBD – CEO] |
