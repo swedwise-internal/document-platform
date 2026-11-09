@@ -2,7 +2,7 @@
 document_id: SW-ISMS-PRO-002
 title: Access Management Procedure
 doc_type: procedure
-version: "1.1"
+version: "1.2"
 status: draft
 classification: internal
 owner: CISO
@@ -522,15 +522,13 @@ A lost phone: the person tells the CISO, the IT Manager removes the old methods 
 account has an MFA method). An account without a method is fixed within 5 working days, or disabled if it is not
 needed. The controls page, with its snapshot history, is the evidence.
 
-**State on 2026-11-05 (claims check).** Measured in Entra Conditional Access: MFA is required today only at medium or
-high sign-in risk, for everyone, administrators included. CIT-BL01, BL02 and BL03 are report-only; CIT-BL01a enforces
-MFA at every sign-in for one account only (the owner's), since 2026-11-05. **The exclusion rule above is not yet met:**
-the legacy policy "Kräv multifaktorautentisering för Azure-hantering" excludes a person (the owner), and both legacy
-policies ("MAF for all" too) still name a deleted account in their exclusions. Graph refused the edits of both on
-2026-11-05 (error 1039: they use sign-in risk, a P2 feature); they are retired when CIT-BL01 is enforced. 13 people
-(1 employee, 12 subcontractors) and 19 non-person accounts have no MFA method (CompanyIT session, 2026-11-05). No
-break-glass account exists. Business Premium (Entra ID P1 for everyone) was bought on 2026-11-05 (39 seats); only 1
-user has it assigned so far.
+**State on 2026-11-09 (claims check; CompanyIT's measurement of 2026-11-09).** CIT-BL01 (MFA at every sign-in for
+everyone) has been **enforced since 2026-11-08 14:14**. Its exclusions are the two break-glass accounts (in place since
+2026-11-08) and csp@, Content Server's SMTP account; csp@ is a non-person account that does not meet the exclusion rule
+above until it is recorded as a decision or moved to OAuth, which is planned. Accounts without a registered MFA method:
+3 subcontractors (told by e-mail, deadline 2026-12-31), 5 test persons (to be removed from the role groups), demo@ and
+spo.service. Whether the legacy policies ("MAF for all", "Kräv multifaktorautentisering för Azure-hantering") are
+retired is not stated in the measurement. Business Premium has been assigned to every employee since 2026-11-05.
 
 ## 8. Access Reviews
 
@@ -821,6 +819,7 @@ Exceptions to this procedure require:
 |---------|------|--------|---------|-------------|
 | 1.0 | [TBD] | [TBD - CISO] | Initial procedure creation | [TBD - CEO] |
 | 1.1 | 2026-11-05 | Claude for the IMS Owner | New 7.8 Multi-Factor Authentication (every sign-in through CIT-BL01, exclusions only as recorded decisions, monthly check on the CompanyIT controls page, measured state); VPN removed from 7.1 and 9.3 (none exists); for the commitment to Salesforce (TPSD-3520) | [TBD – CEO] |
+| 1.2 | 2026-11-09 | Claude for the IMS Owner | 7.8 state brought to CompanyIT's measurement of 2026-11-09: CIT-BL01 enforced since 2026-11-08, break-glass accounts in place, accounts without MFA listed | [TBD – CEO] |
 
 **Next Review Date**: [TBD - typically 12 months from effective date]
 
