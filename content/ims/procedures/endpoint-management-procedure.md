@@ -2,7 +2,7 @@
 document_id: SW-ISMS-PRO-012
 title: Endpoint Management Procedure
 doc_type: procedure
-version: "1.2"
+version: "1.3"
 status: draft
 classification: internal
 owner: CISO
@@ -113,8 +113,27 @@ policy only reports; the measured state is the CompanyIT control `endpoint-risk`
 
 ### 6.3 Conditional Access
 
-A Conditional Access policy requires a compliant (or Entra-joined and compliant) device for Microsoft 365. It is
-first run in report-only mode, then turned on once every computer is enrolled; the date is recorded in CompanyIT.
+A Conditional Access policy, **CIT-BL04 Compliant device for Microsoft 365**, requires a compliant device for every
+Microsoft 365 app on Windows and macOS. Excluded: the break-glass accounts, guests (they use MFA, CIT-BL01) and
+service accounts recorded as decisions in CompanyIT. Rollout (owner 2026-11-12):
+
+| Step | When | Who |
+|---|---|---|
+| Report-only | From 2026-11-12 | Everyone; CompanyIT shows per person who would be blocked and why |
+| Enforced, wave 1 | 2026-11-23 | The management team (`sw-role-management`), administrators and the Salesforce circle (`sw-eng-salesforce`) |
+| Enforced, wave 2 | 2026-12-01 | Everyone; all staff are told by e-mail one week before |
+
+A wave is enforced only when the report shows nobody in it would be blocked other than by a recorded decision; a
+slipped date is recorded in CompanyIT with the reason. CIT-BL03 (phishing-resistant MFA for administrators) is
+turned on with the report-only step.
+
+- **Computers that cannot be enrolled** (e.g. Linux distributions Intune does not support) do not reach Microsoft
+  365; the person uses an enrolled computer for it. The CEO's Fedora workstation is handled this way: Microsoft 365
+  is used from an Intune-enrolled Windows virtual machine on it (owner 2026-11-12), not by an exception.
+- **Workplace-registered computers** (registered, not managed) are checked one by one: a company computer is enrolled
+  properly; a private computer is blocked, since company work on private computers is not allowed (owner 2026-11-12).
+- **Macs** can only be enrolled once the Apple MDM push certificate is in place.
+
 Break-glass accounts are excluded. Customer systems that do not sign in through our Entra ID (Salesforce among them)
 are not covered by this policy; for those, access is granted only after 6.1 step 4.
 
@@ -190,3 +209,4 @@ Source: CompanyIT guide `docs/guides/how-swedwise-it-works.md` v0.69.0, dated 20
 | 1.0 | 2026-11-05 | Claude for the IMS Owner | New: enrolment, compliance, Conditional Access, USB block and exceptions, lost devices, return; for the commitment to Salesforce (TPSD-3520) and the owner's decision that every computer is enrolled | [TBD – CEO] |
 | 1.1 | 2026-11-07 | Claude for the IMS Owner | Screen lock at most 15 minutes, as configured in Intune (owner 2026-11-07); state section brought to CompanyIT 2026-11-06 | [TBD – CEO] |
 | 1.2 | 2026-11-12 | Claude for the IMS Owner | 6.2b device risk: at or under Medium, High non-compliant at once, no exceptions (owner 2026-11-12) | [TBD – CEO] |
+| 1.3 | 2026-11-12 | Claude for the IMS Owner | 6.3 CIT-BL04 rollout: report-only now, wave 1 2026-11-23, everyone 2026-12-01; non-enrollable computers (CEO's Fedora via an enrolled Windows VM), Workplace-registered computers, Macs (owner 2026-11-12) | [TBD – CEO] |
