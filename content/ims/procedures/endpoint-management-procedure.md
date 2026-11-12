@@ -2,7 +2,7 @@
 document_id: SW-ISMS-PRO-012
 title: Endpoint Management Procedure
 doc_type: procedure
-version: "1.1"
+version: "1.2"
 status: draft
 classification: internal
 owner: CISO
@@ -102,6 +102,15 @@ A device is compliant when all of these hold:
 
 A device that fails a requirement gets 7 days' grace, with a notification to the user, then turns non-compliant.
 
+### 6.2b Device risk (owner 2026-11-12)
+
+Microsoft Defender rates every onboarded device's risk from its active alerts: Clear, Low, Medium or High. A separate
+compliance policy, for Windows and macOS, requires the device to be **at or under Medium** machine risk score. A
+device rated High turns non-compliant **at once, with no grace period**, so that Conditional Access (6.3) shuts a
+probably compromised computer out of Microsoft 365 until the alert is investigated and resolved
+(SW-ISMS-PRO-014). There are no exceptions; access returns when Defender clears the alert. Until 6.3 is enforced the
+policy only reports; the measured state is the CompanyIT control `endpoint-risk`.
+
 ### 6.3 Conditional Access
 
 A Conditional Access policy requires a compliant (or Entra-joined and compliant) device for Microsoft 365. It is
@@ -180,3 +189,4 @@ Source: CompanyIT guide `docs/guides/how-swedwise-it-works.md` v0.69.0, dated 20
 |---|---|---|---|---|
 | 1.0 | 2026-11-05 | Claude for the IMS Owner | New: enrolment, compliance, Conditional Access, USB block and exceptions, lost devices, return; for the commitment to Salesforce (TPSD-3520) and the owner's decision that every computer is enrolled | [TBD – CEO] |
 | 1.1 | 2026-11-07 | Claude for the IMS Owner | Screen lock at most 15 minutes, as configured in Intune (owner 2026-11-07); state section brought to CompanyIT 2026-11-06 | [TBD – CEO] |
+| 1.2 | 2026-11-12 | Claude for the IMS Owner | 6.2b device risk: at or under Medium, High non-compliant at once, no exceptions (owner 2026-11-12) | [TBD – CEO] |
