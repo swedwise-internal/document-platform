@@ -83,7 +83,9 @@ The CISO and the IT Manager roles are both held by the COO (SW-IMS-MAN-005 4.1.2
    at first sign-in; automatic MDM enrolment puts them in Intune.
 2. **Existing Windows computers** are joined to Entra ID (or, where a computer cannot be rejoined, enrolled through
    *Settings → Accounts → Access work or school*) by the user with the IT Manager's instructions.
-3. **Mac computers** are enrolled through the Intune Company Portal.
+3. **Mac computers** are enrolled through the Intune Company Portal. This rests on the Apple MDM push certificate
+   (created 2026-11-12 under the Apple ID apple@swedwise.se, per the owner). It must be **renewed every year with the
+   same Apple ID**, or every Mac has to be enrolled again; CompanyIT warns 30 days before it expires.
 4. The IT Manager checks in Intune that the device shows as enrolled and compliant, and only then does the person get
    access to an engagement group (`sw-eng-*`).
 
