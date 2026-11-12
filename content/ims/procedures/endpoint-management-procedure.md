@@ -85,7 +85,9 @@ The CISO and the IT Manager roles are both held by the COO (SW-IMS-MAN-005 4.1.2
    *Settings → Accounts → Access work or school*) by the user with the IT Manager's instructions.
 3. **Mac computers** are enrolled through the Intune Company Portal. This rests on the Apple MDM push certificate
    (created 2026-11-12 under the Apple ID apple@swedwise.se, per the owner). It must be **renewed every year with the
-   same Apple ID**, or every Mac has to be enrolled again; CompanyIT warns 30 days before it expires.
+   same Apple ID**, or every Mac has to be enrolled again; CompanyIT warns 30 days before it expires. The Apple ID's
+   password is kept in the Key Vault `swedwise-companyit-kv` as `apple-mdm-appleid-password` (owner 2026-11-12); its
+   second factor (trusted phone number or device) belongs to the company, not to a person.
 4. The IT Manager checks in Intune that the device shows as enrolled and compliant, and only then does the person get
    access to an engagement group (`sw-eng-*`).
 
