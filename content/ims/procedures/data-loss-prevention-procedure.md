@@ -3,11 +3,13 @@ document_id: SW-ISMS-PRO-013
 title: Data Loss Prevention Procedure
 doc_type: procedure
 version: "1.0"
-status: draft
+status: approved
 classification: internal
 owner: CISO
-effective_date: "[TBD]"
-review_date: "[TBD]"
+effective_date: "2026-11-16"
+review_date: "2027-11-16"
+approved_by: "Jonas Kallin, CEO"
+approved_date: "2026-11-16"
 standard:
   - ISO 27001
 related_documents:
@@ -145,3 +147,4 @@ Source: CompanyIT guide `docs/guides/how-swedwise-it-works.md` v0.69.0, dated 20
 | Version | Date | Author | Changes | Approved by |
 |---|---|---|---|---|
 | 1.0 | 2026-11-05 | Claude for the IMS Owner | New: Purview DLP for Exchange, SharePoint and OneDrive, rollout, alerts, overrides, monthly review; for the commitment to Salesforce (TPSD-3520) | [TBD – CEO] |
+| 1.0 | 2026-11-16 | Jonas Kallin, CEO | Approved for use | Jonas Kallin, CEO |

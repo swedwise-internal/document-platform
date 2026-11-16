@@ -3,11 +3,13 @@ document_id: SW-ISMS-PRO-015
 title: Penetration Testing Procedure
 doc_type: procedure
 version: "1.1"
-status: draft
+status: approved
 classification: internal
 owner: CISO
-effective_date: "[TBD]"
-review_date: "[TBD]"
+effective_date: "2026-11-16"
+review_date: "2027-11-16"
+approved_by: "Jonas Kallin, CEO"
+approved_date: "2026-11-16"
 standard:
   - ISO 27001
 related_documents:
@@ -145,3 +147,4 @@ retest status.
 |---|---|---|---|---|
 | 1.0 | 2026-11-05 | Claude for the IMS Owner | New: annual external and assumed-breach test, exclusions, provider choice, rules of engagement, remediation, retest and attestation; for the commitment to Salesforce (TPSD-3520) | [TBD – CEO] |
 | 1.1 | 2026-11-09 | Claude for the IMS Owner | The first request for quotation linked (CompanyIT `docs/security/penetration-test-rfq.md`, 2026-11-09) | [TBD – CEO] |
+| 1.1 | 2026-11-16 | Jonas Kallin, CEO | Approved for use | Jonas Kallin, CEO |

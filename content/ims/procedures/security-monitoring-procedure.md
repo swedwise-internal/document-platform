@@ -3,11 +3,13 @@ document_id: SW-ISMS-PRO-014
 title: Security Monitoring Procedure
 doc_type: procedure
 version: "1.1"
-status: draft
+status: approved
 classification: internal
 owner: CISO
-effective_date: "[TBD]"
-review_date: "[TBD]"
+effective_date: "2026-11-16"
+review_date: "2027-11-16"
+approved_by: "Jonas Kallin, CEO"
+approved_date: "2026-11-16"
 standard:
   - ISO 27001
 related_documents:
@@ -133,3 +135,4 @@ Source: CompanyIT guide `docs/guides/how-swedwise-it-works.md` v0.69.0, dated 20
 |---|---|---|---|---|
 | 1.0 | 2026-11-05 | Claude for the IMS Owner | New: Defender XDR incident queue, response times by severity, monthly review, Sentinel from 2027-03-31; for the commitment to Salesforce (TPSD-3520) | [TBD – CEO] |
 | 1.1 | 2026-11-07 | Claude for the IMS Owner | Rhythm: high-severity alerts on arrival (triage within 1 working day), queue weekly, vulnerabilities monthly (owner 2026-11-07); state section brought to CompanyIT 2026-11-06 | [TBD – CEO] |
+| 1.1 | 2026-11-16 | Jonas Kallin, CEO | Approved for use | Jonas Kallin, CEO |

@@ -3,11 +3,13 @@ document_id: SW-ISMS-POL-007
 title: Information Classification Policy
 doc_type: policy
 version: "1.0"
-status: draft
+status: approved
 classification: internal
 owner: CISO
-effective_date: [TBD]
-review_date: [TBD]
+effective_date: "2026-11-16"
+review_date: "2027-11-16"
+approved_by: "Jonas Kallin, CEO"
+approved_date: "2026-11-16"
 standard:
   - ISO 27001
 related_documents:
@@ -699,7 +701,7 @@ This policy is:
 | Version | Date | Author | Changes | Approved By |
 |---------|------|--------|---------|-------------|
 | 1.0 | [TBD] | [TBD - CISO name] | Initial policy creation | [TBD - CEO name] |
-
+| 1.0 | 2026-11-16 | Jonas Kallin, CEO | Approved for use | Jonas Kallin, CEO |
 **Next Review Date**: [TBD - typically 12 months from effective date]
 
 **Document Classification**: Internal

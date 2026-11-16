@@ -3,11 +3,13 @@ document_id: SW-ISMS-PRO-009
 title: Security Awareness Training Procedure
 doc_type: procedure
 version: "1.1"
-status: draft
+status: approved
 classification: internal
 owner: CISO
-effective_date: "[TBD]"
-review_date: "[TBD]"
+effective_date: "2026-11-16"
+review_date: "2027-11-16"
+approved_by: "Jonas Kallin, CEO"
+approved_date: "2026-11-16"
 standard:
   - ISO 27001
 related_documents:
@@ -178,3 +180,4 @@ The CISO reports the measures to the management team after each annual training 
 |---|---|---|---|---|
 | 1.0 | [TBD] | [TBD] | Initial procedure (generic) | [TBD] |
 | 1.1 | 2026-11-05 | Claude for the IMS Owner | Rewritten for Swedwise: when, where and how; Microsoft Forms and the training register in place of an LMS; engagement briefing; phishing simulation and the security mailbox listed as not yet in place | [TBD – CEO] |
+| 1.1 | 2026-11-16 | Jonas Kallin, CEO | Approved for use | Jonas Kallin, CEO |

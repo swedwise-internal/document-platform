@@ -3,11 +3,13 @@ document_id: SW-ISMS-POL-001
 title: Information Security Policy
 doc_type: policy
 version: "1.1"
-status: draft
+status: approved
 classification: internal
 owner: CISO
-effective_date: [TBD]
-review_date: [TBD]
+effective_date: "2026-11-16"
+review_date: "2027-11-16"
+approved_by: "Jonas Kallin, CEO"
+approved_date: "2026-11-16"
 standard:
   - ISO 27001
 required_for_certification: true
@@ -356,7 +358,7 @@ This policy is:
 |---------|------|--------|---------|-------------|
 | 1.0 | [TBD] | [TBD - CISO name] | Initial policy creation | [TBD - CEO name] |
 | 1.1 | 2026-11-02 | IMS Owner (draft prepared for review) | Section 7: Storskogen group policies (2024-11-06) take precedence; a deviation from a group policy needs a written Storskogen board decision; local exceptions cover only Swedwise's additional rules | [TBD] |
-
+| 1.1 | 2026-11-16 | Jonas Kallin, CEO | Approved for use | Jonas Kallin, CEO |
 **Next Review Date**: [TBD - typically 12 months from effective date]
 
 **Document Classification**: Internal

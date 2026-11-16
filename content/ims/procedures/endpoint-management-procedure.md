@@ -3,11 +3,13 @@ document_id: SW-ISMS-PRO-012
 title: Endpoint Management Procedure
 doc_type: procedure
 version: "1.3"
-status: draft
+status: approved
 classification: internal
 owner: CISO
-effective_date: "[TBD]"
-review_date: "[TBD]"
+effective_date: "2026-11-16"
+review_date: "2027-11-16"
+approved_by: "Jonas Kallin, CEO"
+approved_date: "2026-11-16"
 standard:
   - ISO 27001
 related_documents:
@@ -214,3 +216,4 @@ Source: CompanyIT guide `docs/guides/how-swedwise-it-works.md` v0.69.0, dated 20
 | 1.1 | 2026-11-07 | Claude for the IMS Owner | Screen lock at most 15 minutes, as configured in Intune (owner 2026-11-07); state section brought to CompanyIT 2026-11-06 | [TBD – CEO] |
 | 1.2 | 2026-11-12 | Claude for the IMS Owner | 6.2b device risk: at or under Medium, High non-compliant at once, no exceptions (owner 2026-11-12) | [TBD – CEO] |
 | 1.3 | 2026-11-12 | Claude for the IMS Owner | 6.3 CIT-BL04 rollout: report-only now, wave 1 2026-11-23, everyone 2026-12-01; non-enrollable computers (CEO's Fedora via an enrolled Windows VM), Workplace-registered computers, Macs (owner 2026-11-12) | [TBD – CEO] |
+| 1.3 | 2026-11-16 | Jonas Kallin, CEO | Approved for use | Jonas Kallin, CEO |

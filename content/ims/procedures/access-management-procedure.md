@@ -3,11 +3,13 @@ document_id: SW-ISMS-PRO-002
 title: Access Management Procedure
 doc_type: procedure
 version: "1.2"
-status: draft
+status: approved
 classification: internal
 owner: CISO
-effective_date: "[TBD]"
-review_date: "[TBD]"
+effective_date: "2026-11-16"
+review_date: "2027-11-16"
+approved_by: "Jonas Kallin, CEO"
+approved_date: "2026-11-16"
 standard:
   - ISO 27001
 related_documents:
@@ -820,7 +822,7 @@ Exceptions to this procedure require:
 | 1.0 | [TBD] | [TBD - CISO] | Initial procedure creation | [TBD - CEO] |
 | 1.1 | 2026-11-05 | Claude for the IMS Owner | New 7.8 Multi-Factor Authentication (every sign-in through CIT-BL01, exclusions only as recorded decisions, monthly check on the CompanyIT controls page, measured state); VPN removed from 7.1 and 9.3 (none exists); for the commitment to Salesforce (TPSD-3520) | [TBD – CEO] |
 | 1.2 | 2026-11-09 | Claude for the IMS Owner | 7.8 state brought to CompanyIT's measurement of 2026-11-09: CIT-BL01 enforced since 2026-11-08, break-glass accounts in place, accounts without MFA listed | [TBD – CEO] |
-
+| 1.2 | 2026-11-16 | Jonas Kallin, CEO | Approved for use | Jonas Kallin, CEO |
 **Next Review Date**: [TBD - typically 12 months from effective date]
 
 **Document Classification**: Internal
