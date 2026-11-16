@@ -616,7 +616,7 @@ A breach of security leading to accidental or unlawful destruction, loss, altera
 **All Staff Responsibility:**
 - Report suspected breaches immediately
 - Don't delay reporting while investigating
-- Report to: the CISO at once, by Slack or phone, and to privacy@swedwise.se (SW-ISMS-PRO-001 7.2)
+- Report to: security@swedwise.se and privacy@swedwise.se; for an ongoing breach also the CISO at once by Slack or phone (SW-ISMS-PRO-001 7.2)
 
 **Reporting to the CEO and the group (every breach):**
 - Every personal data breach is reported immediately to the CEO and to the Storskogen group's IT lead (the IT Manager at group level), whether or not it must be notified to IMY (Storskogen Information security policy 2024-11-06, 4.7.1)
@@ -808,14 +808,14 @@ Data protection performance reviewed in management reviews:
 
 **Data Protection Queries:**
 - Privacy Lead: privacy@swedwise.se (shared mailbox; members: CEO and CFO)
-- CISO: it@swedwise.se (Swedwise IT)
+- CISO: security@swedwise.se (shared mailbox; CISO and deputy CISO)
 
 **Data Subject Rights Requests:**
 - Email: privacy@swedwise.se (shared mailbox)
 - Mail: Swedwise AB, Järnvägsgatan 7, 652 25 Karlstad, Sweden
 
 **Data Breach Reporting (Internal):**
-- The CISO, at once, by Slack or phone (SW-ISMS-PRO-001 7.2)
+- security@swedwise.se, and for an ongoing breach the CISO at once by Slack or phone (SW-ISMS-PRO-001 7.2)
 - The Privacy Lead: privacy@swedwise.se
 
 **Supervisory Authority:**
@@ -832,6 +832,7 @@ Data protection performance reviewed in management reviews:
 | 1.1 | 2026-10-29 | IMS Owner | Data Protection Officer replaced by the Privacy Lead (SW-IMS-ROLE-006, held by the CEO; never the same person as the CISO); contact privacy@swedwise.se; linked to the ROPA (SW-IMS-REG-009) and the privacy notices SW-ISMS-NOT-001, -002 and -003 | — |
 | 1.2 | 2026-11-02 | IMS Owner (draft prepared for review) | Aligned with Storskogen Information security policy 2024-11-06, 4.7.1: every personal data breach reported immediately to the CEO and to the group's IT lead; IMY within 72 h, with reasons if later; the GDPR Art. 33 exemption kept, but every breach still registered and reported internally and to the group; processor duty to notify the controller; the breach register is required (11.2-11.5) | — |
 | 1.3 | 2026-11-16 | IMS Owner | Filled in for Swedwise: all placeholders replaced | — |
+| 1.4 | 2026-11-16 | Claude for the IMS Owner | Breach reporting and the CISO contact point to security@swedwise.se (shared mailbox created 2026-11-16) instead of it@ and Slack or phone only | [TBD – CEO] |
 
 **Next Review Date**: 12 months from the effective date
 

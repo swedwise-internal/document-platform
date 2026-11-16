@@ -161,8 +161,6 @@ The CISO reports the measures to the management team after each annual training 
 
 - **Phishing simulation:** Swedwise has no simulation tool today. Microsoft Defender for Office 365 Plan 2 or an
   external service are the options; the CISO proposes one in the 2027 budget.
-- **A security mailbox:** the Incident Management Procedure names security@swedwise.se, which does not exist yet. Until
-  it does, incidents go to the CISO directly (section 7).
 
 ## 10. Related documents
 
