@@ -3,13 +3,11 @@ document_id: SW-ISMS-POL-004
 title: Data Protection Policy
 doc_type: policy
 version: "1.2"
-status: approved
+status: draft
 classification: internal
 owner: Privacy Lead
-effective_date: "2026-11-16"
-review_date: "2027-11-16"
-approved_by: "Jonas Kallin, CEO"
-approved_date: "2026-11-16"
+effective_date: "[TBD]"
+review_date: "[TBD]"
 standard:
   - ISO 27001
 related_documents:
@@ -832,7 +830,7 @@ Data protection performance reviewed in management reviews:
 | 1.0 | [TBD] | [TBD - CISO name] | Initial policy creation | [TBD - CEO name] |
 | 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Data Protection Officer replaced by the Privacy Lead (SW-IMS-ROLE-006, held by the CEO; never the same person as the CISO); contact privacy@swedwise.se; linked to the ROPA (SW-IMS-REG-009) and the privacy notices SW-ISMS-NOT-001, -002 and -003 | [TBD] |
 | 1.2 | 2026-11-02 | IMS Owner (draft prepared for review) | Aligned with Storskogen Information security policy 2024-11-06, 4.7.1: every personal data breach reported immediately to the CEO and to the group's IT lead; IMY within 72 h, with reasons if later; the GDPR Art. 33 exemption kept, but every breach still registered and reported internally and to the group; processor duty to notify the controller; the breach register is required (11.2-11.5) | [TBD] |
-| 1.2 | 2026-11-16 | Jonas Kallin, CEO | Approved for use | Jonas Kallin, CEO |
+
 **Next Review Date**: [TBD - typically 12 months from effective date]
 
 **Document Classification**: Internal
