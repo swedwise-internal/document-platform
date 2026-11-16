@@ -2,12 +2,12 @@
 document_id: SW-ISMS-POL-004
 title: Data Protection Policy
 doc_type: policy
-version: "1.2"
+version: "1.3"
 status: draft
 classification: internal
 owner: Privacy Lead
-effective_date: "[TBD]"
-review_date: "[TBD]"
+effective_date: ""
+review_date: ""
 standard:
   - ISO 27001
 related_documents:
@@ -152,7 +152,7 @@ Personal data is kept only as long as necessary:
 - Data deleted or anonymized when retention period expires
 - Regular review and purging of old data
 - Retention requirements balanced with legal obligations (e.g., accounting records)
-- Documented retention schedule [TBD - reference to retention schedule]
+- Documented retention schedule (section 12.2; per processing activity in the ROPA, SW-IMS-REG-009)
 
 ### 4.6 Integrity and Confidentiality (Security)
 
@@ -264,7 +264,7 @@ The Privacy Lead is accountable for data protection:
 - Maintain records of processing activities
 - Own the content of data protection training
 
-The Privacy Lead is not a Data Protection Officer under GDPR Articles 37–39. A DPO is not mandatory for Swedwise (decided by the owner 2026-10-29: «Vi måste inte ha ombud» (we do not have to have a DPO)); the assessment is recorded in SW-IMS-PRO-013 and re-assessed yearly, and if it changes an external DPO is designated. The CFO is the Privacy Lead's stand-in.
+The Privacy Lead is not a Data Protection Officer under GDPR Articles 37–39. A DPO is not mandatory for Swedwise; the assessment is recorded in SW-IMS-PRO-013 and re-assessed yearly, and if it changes an external DPO is designated. The CFO is the Privacy Lead's stand-in.
 
 ### 6.3a Chief Information Security Officer (CISO)
 
@@ -616,7 +616,7 @@ A breach of security leading to accidental or unlawful destruction, loss, altera
 **All Staff Responsibility:**
 - Report suspected breaches immediately
 - Don't delay reporting while investigating
-- Report to: privacy@swedwise.se and the CISO [to confirm: the security reporting address]
+- Report to: the CISO at once, by Slack or phone, and to privacy@swedwise.se (SW-ISMS-PRO-001 7.2)
 
 **Reporting to the CEO and the group (every breach):**
 - Every personal data breach is reported immediately to the CEO and to the Storskogen group's IT lead (the IT Manager at group level), whether or not it must be notified to IMY (Storskogen Information security policy 2024-11-06, 4.7.1)
@@ -683,16 +683,19 @@ Breach register maintained by the Privacy Lead for audit and review. The registe
 
 ### 12.2 Retention Schedule
 
-[TBD - Develop detailed retention schedule. Examples:]
+The main retention periods are set out below. The retention for each processing activity is recorded in the ROPA (SW-IMS-REG-009) and told to the people concerned in the privacy notices (SW-ISMS-NOT-001, -002 and -003). Where a period is set by law, the law is named.
 
 | Data Type | Retention Period | Legal Basis |
 |-----------|------------------|-------------|
-| Employee HR records | 2 years after employment end | Swedish labor law |
-| Accounting records | 7 years | Swedish Accounting Act |
-| Customer contracts | 3 years after contract end | Limitation periods |
-| Marketing consent records | Until consent withdrawn + 1 year | GDPR accountability |
+| Accounting records, including payroll records, invoicing basis and supplier invoices | 7 years after the end of the calendar year | Swedish Accounting Act (Bokföringslagen 1999:1078, chapter 7, section 2) |
+| Employee file (HR records) | The employment plus 2 years after it ends | Employment and labour law obligations (SW-ISMS-NOT-001) |
+| Applications from candidates not hired | 2 years after the recruitment decision | Time to bring a claim under the Swedish Discrimination Act (Diskrimineringslagen 2008:567) (SW-ISMS-NOT-002) |
+| Customer contracts | 10 years after the contract ends | General limitation period (Preskriptionslagen 1981:130) |
+| Business contacts and enquiries | While the business relationship lasts, plus 2 years after the last contact | Legitimate interest (SW-ISMS-NOT-003) |
+| Marketing consent records | Until consent is withdrawn, plus 1 year | GDPR accountability (SW-ISMS-NOT-003) |
+| User accounts (Entra ID) | Blocked on the last working day, deleted 90 days later | Running and protecting IT (ROPA-C-07; SW-ISMS-NOT-001) |
 | Access logs | 12 months | Security and audit |
-| CCTV footage (if applicable) | 30 days | Proportionality |
+| Security awareness training records | 3 years | Evidence of training (SW-ISMS-PRO-009) |
 
 ### 12.3 Secure Disposal
 
@@ -782,40 +785,38 @@ Data protection performance reviewed in management reviews:
 - SW-ISMS-POL-001: Information Security Policy
 - SW-ISMS-POL-002: Access Control Policy
 - SW-ISMS-POL-003: Acceptable Use Policy
+- SW-ISMS-POL-007: Information Classification Policy
 
 **Procedures:**
-- [TBD - SW-ISMS-PRO-002: Incident Management Procedure]
-- [TBD - SW-ISMS-PRO-007: Data Subject Rights Procedure]
-- [TBD - SW-ISMS-PRO-008: Data Breach Response Procedure]
-- [TBD - SW-HR-PRO-003: Data Retention and Disposal Procedure]
+- SW-ISMS-PRO-001: Incident Management Procedure (including personal data breach response, sections 9.1 and 12)
+- SW-ISMS-PRO-002: Access Management Procedure
+- SW-ISMS-PRO-006: Asset Management Procedure (section 8.5, decommissioning and disposal)
+- SW-ISMS-PRO-013: Data Loss Prevention Procedure
+- SW-IMS-PRO-013: Legal and Compliance Monitoring Procedure
 
 **Guidelines:**
-- [TBD - SW-ISMS-GUI-001: Information Classification Guideline]
-- [TBD - SW-ISMS-GUI-007: Privacy by Design Guideline]
+- SW-ISMS-GUI-001: Information Classification Guideline
 
 **Supporting Documents:**
-- SW-IMS-REG-009: Records of Processing Activities (ROPA)
-- [TBD - Data Retention Schedule]
-- [TBD - Data Protection Impact Assessment Template]
-- [TBD - Data Processing Agreement Template (Processor)]
+- SW-IMS-REG-009: Records of Processing Activities (ROPA), including the retention per processing activity
 - SW-ISMS-NOT-001: Privacy Notice for Employees
 - SW-ISMS-NOT-002: Privacy Notice for Job Candidates
 - SW-ISMS-NOT-003: Privacy Notice for Website Visitors and Marketing Contacts
-- [TBD - Customer Privacy Notice]
+- SW-IMS-TRN-004: GDPR and Data Protection Training
 
 ## 16. Contact Information
 
 **Data Protection Queries:**
 - Privacy Lead: privacy@swedwise.se (shared mailbox; members: CEO and CFO)
-- CISO: [TBD - email and phone]
+- CISO: it@swedwise.se (Swedwise IT)
 
 **Data Subject Rights Requests:**
 - Email: privacy@swedwise.se (shared mailbox)
-- Mail: Swedwise AB, [TBD - address]
+- Mail: Swedwise AB, Järnvägsgatan 7, 652 25 Karlstad, Sweden
 
 **Data Breach Reporting (Internal):**
-- Email: [TBD - security@swedwise.se]
-- Phone: [TBD - emergency contact]
+- The CISO, at once, by Slack or phone (SW-ISMS-PRO-001 7.2)
+- The Privacy Lead: privacy@swedwise.se
 
 **Supervisory Authority:**
 - Swedish Authority for Privacy Protection (IMY)
@@ -827,11 +828,12 @@ Data protection performance reviewed in management reviews:
 
 | Version | Date | Author | Changes | Approved By |
 |---------|------|--------|---------|-------------|
-| 1.0 | [TBD] | [TBD - CISO name] | Initial policy creation | [TBD - CEO name] |
-| 1.1 | 2026-10-29 | IMS Owner (drafted in session) | Data Protection Officer replaced by the Privacy Lead (SW-IMS-ROLE-006, held by the CEO; never the same person as the CISO); contact privacy@swedwise.se; linked to the ROPA (SW-IMS-REG-009) and the privacy notices SW-ISMS-NOT-001, -002 and -003 | [TBD] |
-| 1.2 | 2026-11-02 | IMS Owner (draft prepared for review) | Aligned with Storskogen Information security policy 2024-11-06, 4.7.1: every personal data breach reported immediately to the CEO and to the group's IT lead; IMY within 72 h, with reasons if later; the GDPR Art. 33 exemption kept, but every breach still registered and reported internally and to the group; processor duty to notify the controller; the breach register is required (11.2-11.5) | [TBD] |
+| 1.0 | 2025-12-15 | IMS Owner | Initial policy creation | — |
+| 1.1 | 2026-10-29 | IMS Owner | Data Protection Officer replaced by the Privacy Lead (SW-IMS-ROLE-006, held by the CEO; never the same person as the CISO); contact privacy@swedwise.se; linked to the ROPA (SW-IMS-REG-009) and the privacy notices SW-ISMS-NOT-001, -002 and -003 | — |
+| 1.2 | 2026-11-02 | IMS Owner (draft prepared for review) | Aligned with Storskogen Information security policy 2024-11-06, 4.7.1: every personal data breach reported immediately to the CEO and to the group's IT lead; IMY within 72 h, with reasons if later; the GDPR Art. 33 exemption kept, but every breach still registered and reported internally and to the group; processor duty to notify the controller; the breach register is required (11.2-11.5) | — |
+| 1.3 | 2026-11-16 | IMS Owner | Filled in for Swedwise: all placeholders replaced | — |
 
-**Next Review Date**: [TBD - typically 12 months from effective date]
+**Next Review Date**: 12 months from the effective date
 
 **Document Classification**: Internal
 

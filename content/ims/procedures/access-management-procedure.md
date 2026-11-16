@@ -2,12 +2,12 @@
 document_id: SW-ISMS-PRO-002
 title: Access Management Procedure
 doc_type: procedure
-version: "1.2"
+version: "1.3"
 status: draft
 classification: internal
 owner: CISO
-effective_date: "[TBD]"
-review_date: "[TBD]"
+effective_date: ""
+review_date: ""
 standard:
   - ISO 27001
 related_documents:
@@ -63,7 +63,7 @@ This procedure applies to:
 | Role | Responsibility |
 |------|---------------|
 | **CISO** | Overall accountability for access control framework, approval authority for privileged access |
-| **IT Operations** | Day-to-day access provisioning and de-provisioning, technical implementation |
+| **IT Operations** (the IT Manager role, held by the COO; SW-IMS-MAN-005 4.1.2) | Day-to-day access provisioning and de-provisioning, technical implementation, through approved plans in CompanyIT, Swedwise's configuration register for its own IT |
 | **Line Managers** | Requesting access for team members, approving access requests, conducting access reviews for their teams |
 | **HR** | Initiating joiner/mover/leaver processes, coordinating with IT and managers |
 | **System Owners** | Defining access requirements for their systems, approving access to their applications/data |
@@ -106,7 +106,7 @@ Access decisions consider information classification levels:
 | **Confidential** | Named individuals with documented business need; manager approval |
 | **Restricted** | Strictly limited access; CISO approval required; enhanced logging |
 
-Reference: [TBD - SW-ISMS-GUI-001: Information Classification Guideline]
+Reference: SW-ISMS-GUI-001: Information Classification Guideline
 
 ## 7. User Lifecycle Management
 
@@ -115,7 +115,7 @@ Reference: [TBD - SW-ISMS-GUI-001: Information Classification Guideline]
 #### Pre-Start (Before First Day)
 
 **HR initiates:**
-1. Create access request ticket [TBD - via IT service desk system]
+1. Send the joiner request to it@swedwise.se; the IT Manager sets it up in CompanyIT as a joiner plan that follows the job's profile
 2. Include:
    - New starter name and personal details
    - Start date
@@ -130,7 +130,7 @@ Reference: [TBD - SW-ISMS-GUI-001: Information Classification Guideline]
    - Select role-based access template (if available)
    - Specify any additional application access needed
    - Identify customer systems access (if applicable)
-2. Approve access request in service desk system
+2. Approve the access request by reply to it@swedwise.se
 
 **IT Operations provisions (1-2 days before start):**
 1. Create user accounts:
@@ -186,7 +186,7 @@ Reference: [TBD - SW-ISMS-GUI-001: Information Classification Guideline]
 #### Standard Access Request Process
 
 **User initiates request:**
-1. Submit request via [TBD - IT service desk/access request form]
+1. Submit the request to it@swedwise.se, using the Access Request Form (SW-ISMS-FRM-003)
 2. Provide:
    - System or application name
    - Access level required
@@ -239,7 +239,7 @@ Reference: [TBD - SW-ISMS-GUI-001: Information Classification Guideline]
 **Process:**
 
 **HR notifies IT Operations:**
-1. Submit role change request via [TBD - service desk]
+1. Submit the role change request to it@swedwise.se; the IT Manager sets it up in CompanyIT as a mover plan
 2. Include:
    - User name
    - Current role and new role
@@ -278,7 +278,7 @@ Reference: [TBD - SW-ISMS-GUI-001: Information Classification Guideline]
 #### Planned Departures
 
 **HR notifies IT Operations (minimum 3 days before departure):**
-1. Submit leaver request via [TBD - service desk]
+1. Submit the leaver request to it@swedwise.se; the IT Manager sets it up in CompanyIT as a leaver plan, which blocks sign-in on the last working day at 17:00
 2. Include:
    - User name
    - Last working day
@@ -430,7 +430,7 @@ For urgent business needs outside normal working hours or approval unavailable.
 **Process:**
 
 1. **User contacts:**
-   - IT Operations on-call [TBD - emergency contact]
+   - The IT Manager or the CISO, by Slack or phone (Swedwise has no IT on-call service; outside working hours requests are handled on a best-effort basis)
    - Explain urgent business need
    - Provide manager contact for verification
 
@@ -442,7 +442,7 @@ For urgent business needs outside normal working hours or approval unavailable.
    - Document justification thoroughly
 
 3. **Time-limited:**
-   - Emergency access granted for maximum [TBD - e.g., 24-48 hours]
+   - Emergency access expires at the end of the next working day unless the formal request (step 4) has been approved by then
    - Clearly documented expiry
 
 4. **Post-emergency:**
@@ -782,33 +782,36 @@ Exceptions to this procedure require:
 
 | Record | Retention Period | Location |
 |--------|------------------|----------|
-| Access request forms and approvals | 3 years after access revoked | [TBD - Service desk system] |
-| User access register | Current + 7 years | [TBD - Access management system] |
-| Access review certifications | 7 years | [TBD - Document repository] |
-| Privileged account logs | 24 months | [TBD - SIEM/log management] |
-| Leaver documentation | Per HR retention policy | [TBD - HR system] |
-| Service account register | Current + 3 years | [TBD - IT documentation system] |
+| Access request forms and approvals | 3 years after access revoked | it@swedwise.se and the approved plans in CompanyIT |
+| User access register | Current + 7 years | CompanyIT (organisation records and its read of Entra ID) |
+| Access review certifications | 7 years | Management System area, linked from the CompanyIT controls page |
+| Privileged account logs | 24 months | Entra ID audit and sign-in logs and Microsoft Defender XDR; Microsoft Sentinel from 2027-03-31 (SW-ISMS-PRO-014) |
+| Leaver documentation | As the employee file (SW-ISMS-POL-004 12.2) | The leaver plan in CompanyIT; the employee file |
+| Service account register | Current + 3 years | CompanyIT (accounts that are not people) |
 
 ## 15. Related Documents
 
 **Policies:**
 - SW-ISMS-POL-001: Information Security Policy
 - SW-IMS-POL-001: Integrated Management System Policy
-- [TBD - SW-ISMS-POL-002: Acceptable Use Policy]
+- SW-ISMS-POL-002: Access Control Policy
+- SW-ISMS-POL-003: Acceptable Use Policy
+- SW-ISMS-POL-006: HR Security Policy (onboarding, termination and change of employment)
 
 **Procedures:**
 - SW-IMS-PRO-001: Document Control Procedure
 - SW-ISMS-PRO-001: Incident Management Procedure
-- [TBD - SW-HR-PRO-001: Onboarding and Offboarding Procedure]
+- SW-ISMS-PRO-010: User Access Review Procedure
+- SW-ISMS-PRO-012: Endpoint Management Procedure
 
 **Guidelines:**
-- [TBD - SW-ISMS-GUI-001: Information Classification Guideline]
-- [TBD - SW-ISMS-GUI-003: Password and Authentication Guideline]
+- SW-ISMS-GUI-001: Information Classification Guideline
+- SW-ISMS-GUI-002: Password and Authentication Guideline
 
 **Forms:**
-- [TBD - SW-ISMS-FRM-003: Access Request Form]
-- [TBD - SW-ISMS-FRM-004: Access Review Certification Form]
-- [TBD - SW-ISMS-FRM-005: Privileged Access Justification Form]
+- SW-ISMS-FRM-003: Access Request Form
+- SW-ISMS-FRM-004: Access Review Certification Form
+- SW-ISMS-FRM-005: Privileged Access Justification Form
 
 **External:**
 - ISO 27001:2022 - Clause 5.15, 5.16, 5.17, 5.18 (Access control controls)
@@ -817,11 +820,12 @@ Exceptions to this procedure require:
 
 | Version | Date | Author | Changes | Approved By |
 |---------|------|--------|---------|-------------|
-| 1.0 | [TBD] | [TBD - CISO] | Initial procedure creation | [TBD - CEO] |
-| 1.1 | 2026-11-05 | Claude for the IMS Owner | New 7.8 Multi-Factor Authentication (every sign-in through CIT-BL01, exclusions only as recorded decisions, monthly check on the CompanyIT controls page, measured state); VPN removed from 7.1 and 9.3 (none exists); for the commitment to Salesforce (TPSD-3520) | [TBD – CEO] |
-| 1.2 | 2026-11-09 | Claude for the IMS Owner | 7.8 state brought to CompanyIT's measurement of 2026-11-09: CIT-BL01 enforced since 2026-11-08, break-glass accounts in place, accounts without MFA listed | [TBD – CEO] |
+| 1.0 | 2025-12-15 | IMS Owner | Initial procedure creation | — |
+| 1.1 | 2026-11-05 | IMS Owner | New 7.8 Multi-Factor Authentication (every sign-in through CIT-BL01, exclusions only as recorded decisions, monthly check on the CompanyIT controls page, measured state); VPN removed from 7.1 and 9.3 (none exists); for the commitment to Salesforce (TPSD-3520) | — |
+| 1.2 | 2026-11-09 | IMS Owner | 7.8 state brought to CompanyIT's measurement of 2026-11-09: CIT-BL01 enforced since 2026-11-08, break-glass accounts in place, accounts without MFA listed | — |
+| 1.3 | 2026-11-16 | IMS Owner | Filled in for Swedwise: all placeholders replaced | — |
 
-**Next Review Date**: [TBD - typically 12 months from effective date]
+**Next Review Date**: 12 months from the effective date
 
 **Document Classification**: Internal
 

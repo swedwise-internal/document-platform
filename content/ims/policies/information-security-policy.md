@@ -2,12 +2,12 @@
 document_id: SW-ISMS-POL-001
 title: Information Security Policy
 doc_type: policy
-version: "1.1"
+version: "1.2"
 status: draft
 classification: internal
 owner: CISO
-effective_date: [TBD]
-review_date: [TBD]
+effective_date: ""
+review_date: ""
 standard:
   - ISO 27001
 required_for_certification: true
@@ -47,8 +47,8 @@ Swedwise commits to:
 
 - Zero material security breaches per year
 - 100% staff completion of annual security awareness training
-- All high-risk vulnerabilities remediated within [TBD - e.g., 30 days]
-- Security incidents acknowledged within [TBD - e.g., 1 hour] of detection
+- All high-risk vulnerabilities remediated in time: actively exploited within 7 days, critical within 14 days, high within 30 days (SW-ISMS-PRO-007)
+- High-severity security alerts triaged within 1 working day of detection (SW-ISMS-PRO-014)
 
 ## 4. Management Commitment
 
@@ -219,7 +219,7 @@ Cryptographic standards and key management practices follow industry best practi
 
 ### Chief Information Security Officer (CISO)
 
-**Assigned to**: [TBD - name]
+**Held by**: COO (proposed) (SW-ISMS-ROLE-001; SW-IMS-MAN-005 4.1.2). Who holds the job is recorded in the HR and identity records.
 
 Responsibilities:
 - Overall accountability for information security management
@@ -257,7 +257,9 @@ Responsibilities:
 - Report security incidents and suspicious activity
 - Use company systems and assets responsibly
 
-### IT Operations [TBD - if separate team/role exists]
+### IT Operations
+
+IT operations are run by the IT Manager role, held by the COO (SW-IMS-MAN-005 4.1.2); Swedwise has no separate IT team. Changes to the Microsoft 365 tenant (accounts, groups, licences, security policies) are made through approved plans in CompanyIT, Swedwise's configuration register for its own IT.
 
 Responsibilities:
 - Implement and maintain technical security controls
@@ -267,9 +269,9 @@ Responsibilities:
 - Support incident response activities
 - Maintain security documentation and records
 
-### Security Champions [TBD - consider establishing]
+### Security Champions
 
-Optional role to promote security awareness:
+Swedwise has not appointed security champions. The CISO may appoint one in a unit or an engagement; a security champion would:
 - Act as security contact point in their teams
 - Promote security best practices
 - Provide feedback on security usability
@@ -290,7 +292,7 @@ Temporary exceptions to Swedwise's own additional rules in this policy may be gr
 
 - Business justification is documented
 - Compensating controls are identified
-- Risk is assessed and accepted by [TBD - CEO/CISO]
+- Risk is assessed by the CISO and accepted by the CEO (by the CISO where the residual risk is medium or low, as in SW-ISMS-PRO-007)
 - Exception is time-limited with review date
 - Exception is formally documented and tracked
 
@@ -322,42 +324,48 @@ This policy is:
   - Legal or regulatory requirements
   - Technology environment
   - Organizational structure
-- Approved by [TBD - CEO/Management Team]
+- Approved by the CEO
 - Communicated to all staff following updates
 
 ## 10. Related Documents
 
 **Policies:**
 - SW-IMS-POL-001: Integrated Management System Policy
-- [TBD - SW-ISMS-POL-002: Acceptable Use Policy]
-- [TBD - SW-ISMS-POL-003: Data Protection and Privacy Policy]
+- SW-ISMS-POL-002: Access Control Policy
+- SW-ISMS-POL-003: Acceptable Use Policy
+- SW-ISMS-POL-004: Data Protection Policy
+- SW-ISMS-POL-007: Information Classification Policy
+- SW-IMS-POL-005: Business Continuity Policy
 
 **Procedures:**
-- [TBD - SW-ISMS-PRO-001: Access Control Procedure]
-- [TBD - SW-ISMS-PRO-002: Incident Management Procedure]
-- [TBD - SW-ISMS-PRO-003: Risk Assessment Procedure]
-- [TBD - SW-ISMS-PRO-004: Change Management Procedure]
-- [TBD - SW-ISMS-PRO-005: Backup and Recovery Procedure]
+- SW-ISMS-PRO-001: Incident Management Procedure
+- SW-ISMS-PRO-002: Access Management Procedure
+- SW-IMS-PRO-002: Risk Assessment Procedure
+- SW-IMS-PRO-008: Change Management Procedure
+- SW-ISMS-PRO-003: Backup and Recovery Procedure
+- SW-ISMS-PRO-007: Vulnerability Management Procedure
+- SW-ISMS-PRO-014: Security Monitoring Procedure
 
 **Guidelines:**
-- [TBD - SW-ISMS-GUI-001: Information Classification Guideline]
-- [TBD - SW-ISMS-GUI-002: Remote Working Security Guideline]
-- [TBD - SW-ISMS-GUI-003: Password and Authentication Guideline]
+- SW-ISMS-GUI-001: Information Classification Guideline
+- SW-ISMS-GUI-006: Remote Working Guideline
+- SW-ISMS-GUI-002: Password and Authentication Guideline
 
 **Supporting Documents:**
-- [TBD - Statement of Applicability]
-- [TBD - Risk Assessment and Treatment Plan]
-- [TBD - Asset Inventory]
-- [TBD - Business Continuity Plan]
+- SW-ISMS-SOA-001: Statement of Applicability
+- SW-IMS-REG-001: Integrated Risk Register
+- SW-IMS-FRM-004: Risk Treatment Plan Template
+- SW-ISMS-REG-001: Information Asset Register
 
 ## 11. Document Control
 
 | Version | Date | Author | Changes | Approved By |
 |---------|------|--------|---------|-------------|
-| 1.0 | [TBD] | [TBD - CISO name] | Initial policy creation | [TBD - CEO name] |
-| 1.1 | 2026-11-02 | IMS Owner (draft prepared for review) | Section 7: Storskogen group policies (2024-11-06) take precedence; a deviation from a group policy needs a written Storskogen board decision; local exceptions cover only Swedwise's additional rules | [TBD] |
+| 1.0 | 2025-12-15 | IMS Owner | Initial policy creation | — |
+| 1.1 | 2026-11-02 | IMS Owner | Section 7: Storskogen group policies (2024-11-06) take precedence; a deviation from a group policy needs a written Storskogen board decision; local exceptions cover only Swedwise's additional rules | — |
+| 1.2 | 2026-11-16 | IMS Owner | Filled in for Swedwise: all placeholders replaced | — |
 
-**Next Review Date**: [TBD - typically 12 months from effective date]
+**Next Review Date**: 12 months from the effective date
 
 **Document Classification**: Internal
 

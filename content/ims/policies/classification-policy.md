@@ -2,12 +2,12 @@
 document_id: SW-ISMS-POL-007
 title: Information Classification Policy
 doc_type: policy
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: CISO
-effective_date: [TBD]
-review_date: [TBD]
+effective_date: ""
+review_date: ""
 standard:
   - ISO 27001
 related_documents:
@@ -619,7 +619,7 @@ All violations are investigated and addressed per SW-ISMS-POL-006 HR Security Po
 
 ### CISO
 
-**Assigned to**: [TBD - name]
+**Held by**: COO (proposed) (SW-ISMS-ROLE-001; SW-IMS-MAN-005 4.1.2). Who holds the job is recorded in the HR and identity records.
 
 Responsibilities:
 - Maintain and communicate this classification policy
@@ -648,7 +648,9 @@ Responsibilities:
 - Report suspected misclassification or violations
 - Complete required classification training
 
-### IT Department [TBD - if separate from CISO]
+### IT Department
+
+Swedwise has no separate IT department: the IT Manager role, held by the COO (SW-IMS-MAN-005 4.1.2), carries these responsibilities.
 
 Responsibilities:
 - Implement technical controls to support classification requirements
@@ -667,7 +669,7 @@ This policy is:
   - Threat landscape or security incidents
   - Organizational structure
   - ISO 27001 requirements
-- Approved by [TBD - CEO/Management Team]
+- Approved by the CEO
 - Communicated to all staff following updates
 
 ## 14. Related Documents
@@ -675,32 +677,33 @@ This policy is:
 **Policies:**
 - SW-IMS-POL-001: Integrated Management System Policy
 - SW-ISMS-POL-001: Information Security Policy
-- SW-ISMS-POL-002: Acceptable Use Policy
-- SW-ISMS-POL-003: Data Protection and Privacy Policy
-- SW-ISMS-POL-004: Access Control Policy
+- SW-ISMS-POL-002: Access Control Policy
+- SW-ISMS-POL-003: Acceptable Use Policy
+- SW-ISMS-POL-004: Data Protection Policy
 - SW-ISMS-POL-006: HR Security Policy
 
 **Procedures:**
-- [TBD - SW-ISMS-PRO-001: Access Control Procedure]
-- [TBD - SW-ISMS-PRO-007: Data Handling and Disposal Procedure]
-- [TBD - SW-IMS-PRO-001: Document Control Procedure]
+- SW-ISMS-PRO-002: Access Management Procedure
+- SW-ISMS-PRO-006: Asset Management Procedure (section 8.5, decommissioning and disposal)
+- SW-ISMS-PRO-013: Data Loss Prevention Procedure
+- SW-IMS-PRO-001: Document Control Procedure
 
 **Guidelines:**
-- [TBD - SW-ISMS-GUI-001: Classification Decision Tree]
-- [TBD - SW-ISMS-GUI-002: Remote Working Security Guideline]
-- [TBD - SW-ISMS-GUI-003: Secure Disposal Guideline]
+- SW-ISMS-GUI-001: Information Classification Guideline (including the classification decision tree)
+- SW-ISMS-GUI-006: Remote Working Guideline
+- SW-ISMS-GUI-003: Clean Desk and Clear Screen Guideline
 
 **Forms:**
-- [TBD - Information Classification Label Template]
-- [TBD - Declassification Request Form]
+- SW-ISMS-FRM-009: Asset Disposal Authorization Form
 
 ## 15. Document Control
 
 | Version | Date | Author | Changes | Approved By |
 |---------|------|--------|---------|-------------|
-| 1.0 | [TBD] | [TBD - CISO name] | Initial policy creation | [TBD - CEO name] |
+| 1.0 | 2025-12-15 | IMS Owner | Initial policy creation | — |
+| 1.1 | 2026-11-16 | IMS Owner | Filled in for Swedwise: all placeholders replaced | — |
 
-**Next Review Date**: [TBD - typically 12 months from effective date]
+**Next Review Date**: 12 months from the effective date
 
 **Document Classification**: Internal
 
