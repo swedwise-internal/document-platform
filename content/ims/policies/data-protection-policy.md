@@ -2,12 +2,14 @@
 document_id: SW-ISMS-POL-004
 title: Data Protection Policy
 doc_type: policy
-version: "1.3"
-status: draft
+version: "1.4"
+status: approved
 classification: internal
 owner: Privacy Lead
-effective_date: ""
-review_date: ""
+effective_date: "2026-11-17"
+review_date: "2027-11-17"
+approved_by: "Jonas Kallin, CEO"
+approved_date: "2026-11-17"
 standard:
   - ISO 27001
 related_documents:
@@ -688,13 +690,18 @@ The main retention periods are set out below. The retention for each processing 
 | Data Type | Retention Period | Legal Basis |
 |-----------|------------------|-------------|
 | Accounting records, including payroll records, invoicing basis and supplier invoices | 7 years after the end of the calendar year | Swedish Accounting Act (Bokföringslagen 1999:1078, chapter 7, section 2) |
-| Employee file (HR records) | The employment plus 2 years after it ends | Employment and labour law obligations (SW-ISMS-NOT-001) |
+| Employment contract and core employment data (period, position, extent) | 10 years after the employment ends | General limitation period (Preskriptionslagen 1981:130); needed for employer certificates (arbetsgivarintyg) and certificates of employment requested later (SW-ISMS-NOT-001) |
+| Working time records (overtime and additional hours) | 2 years | Working Hours Act (Arbetstidslagen 1982:673) |
+| Holiday records per employee (days taken, holiday pay, saved days), kept in Fortnox payroll | 2 years after the end of the holiday year | Annual Leave Act (Semesterlagen 1977:480) |
+| Shared holiday planning list (who is away when; never the reason) | The current holiday year; deleted when the year is closed | Planning; the lasting record is the holiday record in Fortnox payroll |
+| Other employee file content (reviews, certificates, training evidence) | The employment plus 2 years after it ends | Time to bring a claim under the Swedish Discrimination Act (Diskrimineringslagen 2008:567) (SW-ISMS-NOT-001) |
+| Sick leave and rehabilitation | While the case lasts, at most 2 years after it is closed | GDPR data minimisation; special category data (SW-ISMS-NOT-001) |
 | Applications from candidates not hired | 2 years after the recruitment decision | Time to bring a claim under the Swedish Discrimination Act (Diskrimineringslagen 2008:567) (SW-ISMS-NOT-002) |
 | Customer contracts | 10 years after the contract ends | General limitation period (Preskriptionslagen 1981:130) |
 | Business contacts and enquiries | While the business relationship lasts, plus 2 years after the last contact | Legitimate interest (SW-ISMS-NOT-003) |
 | Marketing consent records | Until consent is withdrawn, plus 1 year | GDPR accountability (SW-ISMS-NOT-003) |
 | User accounts (Entra ID) | Blocked on the last working day, deleted 90 days later | Running and protecting IT (ROPA-C-07; SW-ISMS-NOT-001) |
-| Access logs | 12 months | Security and audit |
+| Security and access logs | Entra ID sign-in and audit logs 30 days and Microsoft Defender XDR 180 days (as included in Microsoft 365 Business Premium); from 2027-03-31 Microsoft Sentinel keeps 90 days (its included retention). No further log storage is bought. | Security and audit (SW-ISMS-PRO-014) |
 | Security awareness training records | 3 years | Evidence of training (SW-ISMS-PRO-009) |
 
 ### 12.3 Secure Disposal
@@ -833,6 +840,7 @@ Data protection performance reviewed in management reviews:
 | 1.2 | 2026-11-02 | IMS Owner (draft prepared for review) | Aligned with Storskogen Information security policy 2024-11-06, 4.7.1: every personal data breach reported immediately to the CEO and to the group's IT lead; IMY within 72 h, with reasons if later; the GDPR Art. 33 exemption kept, but every breach still registered and reported internally and to the group; processor duty to notify the controller; the breach register is required (11.2-11.5) | — |
 | 1.3 | 2026-11-16 | IMS Owner | Filled in for Swedwise: all placeholders replaced | — |
 | 1.4 | 2026-11-16 | Claude for the IMS Owner | Breach reporting and the CISO contact point to security@swedwise.se (shared mailbox created 2026-11-16) instead of it@ and Slack or phone only | [TBD – CEO] |
+| 1.4 | 2026-11-17 | Jonas Kallin, CEO | Approved for use (retention schedule and log retention set as built) | Jonas Kallin, CEO |
 
 **Next Review Date**: 12 months from the effective date
 

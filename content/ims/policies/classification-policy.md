@@ -3,11 +3,13 @@ document_id: SW-ISMS-POL-007
 title: Information Classification Policy
 doc_type: policy
 version: "1.1"
-status: draft
+status: approved
 classification: internal
 owner: CISO
-effective_date: ""
-review_date: ""
+effective_date: "2026-11-17"
+review_date: "2027-11-17"
+approved_by: "Jonas Kallin, CEO"
+approved_date: "2026-11-17"
 standard:
   - ISO 27001
 related_documents:
@@ -702,6 +704,7 @@ This policy is:
 |---------|------|--------|---------|-------------|
 | 1.0 | 2025-12-15 | IMS Owner | Initial policy creation | — |
 | 1.1 | 2026-11-16 | IMS Owner | Filled in for Swedwise: all placeholders replaced | — |
+| 1.1 | 2026-11-17 | Jonas Kallin, CEO | Approved for use (retention schedule and log retention set as built) | Jonas Kallin, CEO |
 
 **Next Review Date**: 12 months from the effective date
 

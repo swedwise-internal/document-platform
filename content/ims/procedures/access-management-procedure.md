@@ -3,11 +3,13 @@ document_id: SW-ISMS-PRO-002
 title: Access Management Procedure
 doc_type: procedure
 version: "1.3"
-status: draft
+status: approved
 classification: internal
 owner: CISO
-effective_date: ""
-review_date: ""
+effective_date: "2026-11-17"
+review_date: "2027-11-17"
+approved_by: "Jonas Kallin, CEO"
+approved_date: "2026-11-17"
 standard:
   - ISO 27001
 related_documents:
@@ -736,7 +738,7 @@ All access management actions logged:
 - Failed access attempts
 - Password resets
 
-**Log retention:** Minimum 12 months, preferably 24 months
+**Log retention:** Entra ID sign-in and audit logs 30 days and Microsoft Defender XDR 180 days (as included in Microsoft 365 Business Premium); from 2027-03-31 Microsoft Sentinel keeps 90 days (its included retention). No further log storage is bought.
 
 ### 11.2 Internal Audit Testing
 
@@ -785,7 +787,7 @@ Exceptions to this procedure require:
 | Access request forms and approvals | 3 years after access revoked | it@swedwise.se and the approved plans in CompanyIT |
 | User access register | Current + 7 years | CompanyIT (organisation records and its read of Entra ID) |
 | Access review certifications | 7 years | Management System area, linked from the CompanyIT controls page |
-| Privileged account logs | 24 months | Entra ID audit and sign-in logs and Microsoft Defender XDR; Microsoft Sentinel from 2027-03-31 (SW-ISMS-PRO-014) |
+| Privileged account logs | Entra ID 30 days, Defender XDR 180 days; Sentinel 90 days from 2027-03-31 | Entra ID audit and sign-in logs and Microsoft Defender XDR; Microsoft Sentinel from 2027-03-31 (SW-ISMS-PRO-014) |
 | Leaver documentation | As the employee file (SW-ISMS-POL-004 12.2) | The leaver plan in CompanyIT; the employee file |
 | Service account register | Current + 3 years | CompanyIT (accounts that are not people) |
 
@@ -824,6 +826,7 @@ Exceptions to this procedure require:
 | 1.1 | 2026-11-05 | IMS Owner | New 7.8 Multi-Factor Authentication (every sign-in through CIT-BL01, exclusions only as recorded decisions, monthly check on the CompanyIT controls page, measured state); VPN removed from 7.1 and 9.3 (none exists); for the commitment to Salesforce (TPSD-3520) | — |
 | 1.2 | 2026-11-09 | IMS Owner | 7.8 state brought to CompanyIT's measurement of 2026-11-09: CIT-BL01 enforced since 2026-11-08, break-glass accounts in place, accounts without MFA listed | — |
 | 1.3 | 2026-11-16 | IMS Owner | Filled in for Swedwise: all placeholders replaced | — |
+| 1.3 | 2026-11-17 | Jonas Kallin, CEO | Approved for use (retention schedule and log retention set as built) | Jonas Kallin, CEO |
 
 **Next Review Date**: 12 months from the effective date
 

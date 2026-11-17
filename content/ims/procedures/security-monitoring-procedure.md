@@ -2,14 +2,14 @@
 document_id: SW-ISMS-PRO-014
 title: Security Monitoring Procedure
 doc_type: procedure
-version: "1.1"
+version: "1.2"
 status: approved
 classification: internal
 owner: CISO
 effective_date: "2026-11-16"
 review_date: "2027-11-16"
 approved_by: "Jonas Kallin, CEO"
-approved_date: "2026-11-16"
+approved_date: "2026-11-17"
 standard:
   - ISO 27001
 related_documents:
@@ -93,8 +93,8 @@ management review.
 ## 8. Sentinel (from 2027-03-31)
 
 By 2027-03-31 a Microsoft Sentinel workspace in Swedwise's own Azure subscription collects Entra ID, Microsoft 365
-and Defender XDR data. Retention, analytics rules and cost are decided in a plan the owner approves; this procedure
-is then updated (version 1.1) so that Sentinel is the queue.
+and Defender XDR data. Retention is Sentinel's included 90 days; no further log storage is bought. Analytics rules
+and cost are decided in a plan the CEO approves; this procedure is then updated so that Sentinel is the queue.
 
 ## 9. Evidence
 
@@ -136,3 +136,4 @@ Source: CompanyIT guide `docs/guides/how-swedwise-it-works.md` v0.69.0, dated 20
 | 1.0 | 2026-11-05 | Claude for the IMS Owner | New: Defender XDR incident queue, response times by severity, monthly review, Sentinel from 2027-03-31; for the commitment to Salesforce (TPSD-3520) | [TBD – CEO] |
 | 1.1 | 2026-11-07 | Claude for the IMS Owner | Rhythm: high-severity alerts on arrival (triage within 1 working day), queue weekly, vulnerabilities monthly (owner 2026-11-07); state section brought to CompanyIT 2026-11-06 | [TBD – CEO] |
 | 1.1 | 2026-11-16 | Jonas Kallin, CEO | Approved for use | Jonas Kallin, CEO |
+| 1.2 | 2026-11-17 | Jonas Kallin, CEO | Sentinel retention is its included 90 days; no further log storage is bought | Jonas Kallin, CEO |
