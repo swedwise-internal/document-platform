@@ -36,7 +36,7 @@ This register is Swedwise AB's record of processing activities under GDPR Articl
 processes as **controller** (section A) and as **processor** for customers (section B), which **processors** Swedwise
 itself uses (section C), why Swedwise has no Data Protection Officer (section D), and what needs a decision (section E).
 
-**Controller**: Swedwise AB, organisation number 556793-2354, Västra Torggatan 11, 652 25 Karlstad [to confirm: registered address; the address in signed contracts 2023–2025].
+**Controller**: Swedwise AB, organisation number 556793-2354, Järnvägsgatan 7, 652 25 Karlstad.
 **Contact**: the Privacy Lead, privacy@swedwise.se (shared mailbox created 2026-11-02; members CEO and CFO [to confirm: access granted]).
 **Data Protection Officer**: none; not required (section D).
 
