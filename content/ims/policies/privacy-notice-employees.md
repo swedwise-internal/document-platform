@@ -2,7 +2,7 @@
 document_id: SW-ISMS-NOT-001
 title: Privacy Notice for Employees
 doc_type: notice
-version: "1.0"
+version: "1.1"
 status: draft
 classification: internal
 owner: Privacy Lead
@@ -81,11 +81,20 @@ for details.
 
 - Accounting and payroll records: **7 years** after the end of the calendar year, as the Swedish Accounting Act
   (Bokföringslagen) requires.
-- Your employee file: during your employment and **2 years** after it ends [to confirm].
+- Your employment contract and core employment data (period, position, extent): **10 years** after the employment
+  ends, so that we can give you an employer certificate or a certificate of employment later (Preskriptionslagen).
+- Working time records: **2 years** (Arbetstidslagen). Your holiday records in our payroll system: **2 years** after the
+  end of the holiday year (Semesterlagen). The shared holiday list shows only who is away when, never why, and is
+  deleted when the holiday year is closed.
+- The rest of your employee file (reviews, certificates, training evidence): during your employment and **2 years**
+  after it ends (Diskrimineringslagen).
+- Sick leave and rehabilitation: while the case lasts and at most **2 years** after it is closed.
 - Your Swedwise account is blocked on your last day and deleted **90 days** later.
 - Your mailbox is converted to a shared mailbox for your manager when you leave, so that business mail is not lost
   [to confirm: how long it is kept]. Please do not keep private mail in your work mailbox.
-- Security logs: about **12 months** [to confirm].
+- Security logs: sign-in and audit logs **30 days**, Microsoft Defender **180 days**, and from 2027-03-31 Microsoft
+  Sentinel **90 days**.
+- The full schedule is in our Data Protection Policy (SW-ISMS-POL-004, section 12.2).
 - Other data: as long as needed for its purpose, as set out in our records of processing.
 
 ## 7. Your rights

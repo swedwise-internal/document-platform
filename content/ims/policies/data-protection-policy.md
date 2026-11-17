@@ -2,7 +2,7 @@
 document_id: SW-ISMS-POL-004
 title: Data Protection Policy
 doc_type: policy
-version: "1.4"
+version: "1.5"
 status: approved
 classification: internal
 owner: Privacy Lead
@@ -693,7 +693,7 @@ The main retention periods are set out below. The retention for each processing 
 | Employment contract and core employment data (period, position, extent) | 10 years after the employment ends | General limitation period (Preskriptionslagen 1981:130); needed for employer certificates (arbetsgivarintyg) and certificates of employment requested later (SW-ISMS-NOT-001) |
 | Working time records (overtime and additional hours) | 2 years | Working Hours Act (Arbetstidslagen 1982:673) |
 | Holiday records per employee (days taken, holiday pay, saved days), kept in Fortnox payroll | 2 years after the end of the holiday year | Annual Leave Act (Semesterlagen 1977:480) |
-| Shared holiday planning list (who is away when; never the reason) | The current holiday year; deleted when the year is closed | Planning; the lasting record is the holiday record in Fortnox payroll |
+| Shared holiday planning list (who is away when; never the reason) | The current holiday year and the three previous ones; older years are deleted | Planning, and seeing that holidays are shared fairly and evenly over the years; the payroll record is the holiday record in Fortnox payroll |
 | Other employee file content (reviews, certificates, training evidence) | The employment plus 2 years after it ends | Time to bring a claim under the Swedish Discrimination Act (Diskrimineringslagen 2008:567) (SW-ISMS-NOT-001) |
 | Sick leave and rehabilitation | While the case lasts, at most 2 years after it is closed | GDPR data minimisation; special category data (SW-ISMS-NOT-001) |
 | Applications from candidates not hired | 2 years after the recruitment decision | Time to bring a claim under the Swedish Discrimination Act (Diskrimineringslagen 2008:567) (SW-ISMS-NOT-002) |
@@ -841,6 +841,7 @@ Data protection performance reviewed in management reviews:
 | 1.3 | 2026-11-16 | IMS Owner | Filled in for Swedwise: all placeholders replaced | — |
 | 1.4 | 2026-11-16 | Claude for the IMS Owner | Breach reporting and the CISO contact point to security@swedwise.se (shared mailbox created 2026-11-16) instead of it@ and Slack or phone only | [TBD – CEO] |
 | 1.4 | 2026-11-17 | Jonas Kallin, CEO | Approved for use (retention schedule and log retention set as built) | Jonas Kallin, CEO |
+| 1.5 | 2026-11-17 | Jonas Kallin, CEO | Shared holiday list kept three previous holiday years, to see that holidays are shared fairly | Jonas Kallin, CEO |
 
 **Next Review Date**: 12 months from the effective date
 
