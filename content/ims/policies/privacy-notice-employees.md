@@ -85,7 +85,7 @@ for details.
   ends, so that we can give you an employer certificate or a certificate of employment later (Preskriptionslagen).
 - Working time records: **2 years** (Arbetstidslagen). Your holiday records in our payroll system: **2 years** after the
   end of the holiday year (Semesterlagen). The shared holiday list shows only who is away when, never why, and is
-  deleted when the holiday year is closed.
+  kept for the current holiday year and the **three** before it, so that we can see that holidays are shared fairly.
 - The rest of your employee file (reviews, certificates, training evidence): during your employment and **2 years**
   after it ends (Diskrimineringslagen).
 - Sick leave and rehabilitation: while the case lasts and at most **2 years** after it is closed.
@@ -124,7 +124,7 @@ We update this notice when our processing changes and tell you when we do.
 | Version | Date | Author | Changes |
 |---|---|---|---|
 | 1.0 | 2026-10-29 | Privacy Lead (drafted in session) | First employee privacy notice, from the records of processing SW-IMS-REG-009 |
-| 1.1 | 2026-11-17 | Claude for the Privacy Lead | Section 6 follows the retention schedule in SW-ISMS-POL-004 12.2 (approved 2026-11-17): contract and core data 10 years, working time and holiday records 2 years, the shared holiday list only the current year, the rest of the file 2 years, sick leave at most 2 years after closing; log times as built (30, 180 and 90 days) |
+| 1.1 | 2026-11-17 | Claude for the Privacy Lead | Section 6 follows the retention schedule in SW-ISMS-POL-004 12.2 (approved 2026-11-17): contract and core data 10 years, working time and holiday records 2 years, the shared holiday list the current and three previous holiday years (POL-004 1.5), the rest of the file 2 years, sick leave at most 2 years after closing; log times as built (30, 180 and 90 days) |
 
 ---
 
