@@ -29,7 +29,7 @@ have. It also applies to consultants and subcontractors who have a Swedwise acco
 
 ## 1. Who is responsible
 
-**Swedwise AB** (organisation number 556793-2354, Västra Torggatan 11, 652 25 Karlstad [to confirm: registered address; the address in signed contracts 2023–2025]) is the
+**Swedwise AB** (organisation number 556793-2354, Järnvägsgatan 7, 652 25 Karlstad) is the
 controller for the personal data in this notice.
 
 Questions about your personal data: **privacy@swedwise.se**. The mailbox is read by the Privacy Lead (our CEO) and the
@@ -48,7 +48,7 @@ protection.
 | IT accounts and equipment | To give you accounts, licences, access and equipment, and close them when you leave | The employment contract; our legitimate interest in running IT |
 | Security logging | To protect our systems and investigate incidents: we log sign-ins and certain activity in Microsoft 365, Entra and Azure | Our legitimate interest in information security. Logs are not used to follow your work performance |
 | Competence, CVs and certifications | To keep your CV and skills up to date, offer you for assignments, and record training and certifications | The employment contract; our legitimate interest in offering our consultants |
-| Employee surveys | To understand engagement and wellbeing and support your development plan | Our legitimate interest in developing the workplace [to confirm: whether answers are anonymous] |
+| Employee surveys | To understand engagement and wellbeing and support your development plan | Our legitimate interest in developing the workplace. The surveys run in Winningtemp and are anonymous: we see results for groups, never your own answers |
 | Communication and collaboration | Mail, chat, meetings and files for your daily work | The employment contract; our legitimate interest in running the business |
 
 ## 3. What data
@@ -65,7 +65,8 @@ or from customers (for example feedback on an assignment).
 
 - **Inside Swedwise:** HR, your manager, finance and IT — only what each needs.
 - **Authorities:** Skatteverket and Försäkringskassan, as the law requires.
-- **Pension, insurance and occupational health providers** and our bank [to confirm: which].
+- **Our banks**, Nordea (Nordea Corporate) and Storskogen Treasury, for salary payments.
+- **Pension, insurance and occupational health providers** [to confirm: which].
 - **Customers and partners:** your CV and relevant certifications when we offer you for an assignment.
 - **Our suppliers (processors)**, who handle data for us under our instructions: Microsoft (Microsoft 365, Entra, Azure),
   Fortnox (payroll and accounting), Nexta (Nexta Hub), TimeLog (time, until we move to Nexta Hub), Winningtemp
@@ -73,9 +74,10 @@ or from customers (for example feedback on an assignment).
 
 ## 5. Transfers outside the EU/EEA
 
-Some suppliers are US companies (for example Microsoft, Slack and LastPass). Where data may leave the EU/EEA, we rely
-on the EU–US Data Privacy Framework or the EU's standard contractual clauses [to confirm: per supplier]. You can ask us
-for details.
+We do not send your data outside the EU/EEA. Some of our suppliers are US companies (for example Microsoft, Slack and
+LastPass). We keep data in the EU where the supplier offers it, and if a supplier would still reach data from outside the
+EU/EEA, for example for support, its agreement with us relies on the EU–US Data Privacy Framework or the EU's standard
+contractual clauses. You can ask us for details.
 
 ## 6. How long we keep it
 
@@ -126,7 +128,7 @@ We update this notice when our processing changes and tell you when we do.
 | Version | Date | Author | Changes |
 |---|---|---|---|
 | 1.0 | 2026-10-29 | Privacy Lead (drafted in session) | First employee privacy notice, from the records of processing SW-IMS-REG-009 |
-| 1.1 | 2026-11-17 | Claude for the Privacy Lead | Section 6 follows the retention schedule in SW-ISMS-POL-004 12.2 (approved 2026-11-17): contract and core data 10 years, working time and holiday records 2 years, the shared holiday list the current and three previous holiday years (POL-004 1.5), the rest of the file 2 years, sick leave at most 2 years after closing; log times as built (30, 180 and 90 days); the leaver's mailbox as CompanyIT's leave plan does it (decision 2026-10-20: shared for the successor or deleted, 30 days in Exchange, no archive) |
+| 1.1 | 2026-11-17 | Claude for the Privacy Lead | Section 6 follows the retention schedule in SW-ISMS-POL-004 12.2 (approved 2026-11-17): contract and core data 10 years, working time and holiday records 2 years, the shared holiday list the current and three previous holiday years (POL-004 1.5), the rest of the file 2 years, sick leave at most 2 years after closing; log times as built (30, 180 and 90 days); the leaver's mailbox as CompanyIT's leave plan does it (decision 2026-10-20: shared for the successor or deleted, 30 days in Exchange, no archive); address Järnvägsgatan 7; Winningtemp anonymous; banks Nordea Corporate and Storskogen Treasury; no transfers outside the EU/EEA (owner 2026-11-17) |
 
 ---
 
