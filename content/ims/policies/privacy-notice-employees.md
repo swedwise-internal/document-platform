@@ -65,7 +65,7 @@ or from customers (for example feedback on an assignment).
 
 - **Inside Swedwise:** HR, your manager, finance and IT — only what each needs.
 - **Authorities:** Skatteverket and Försäkringskassan, as the law requires.
-- **Our banks**, Nordea (Nordea Corporate) and Storskogen Treasury, for salary payments.
+- **Our bank**, Nordea (Nordea Corporate), for salary payments.
 - **Pension, insurance and occupational health providers** [to confirm: which].
 - **Customers and partners:** your CV and relevant certifications when we offer you for an assignment.
 - **Our suppliers (processors)**, who handle data for us under our instructions: Microsoft (Microsoft 365, Entra, Azure),
@@ -128,7 +128,7 @@ We update this notice when our processing changes and tell you when we do.
 | Version | Date | Author | Changes |
 |---|---|---|---|
 | 1.0 | 2026-10-29 | Privacy Lead (drafted in session) | First employee privacy notice, from the records of processing SW-IMS-REG-009 |
-| 1.1 | 2026-11-17 | Claude for the Privacy Lead | Section 6 follows the retention schedule in SW-ISMS-POL-004 12.2 (approved 2026-11-17): contract and core data 10 years, working time and holiday records 2 years, the shared holiday list the current and three previous holiday years (POL-004 1.5), the rest of the file 2 years, sick leave at most 2 years after closing; log times as built (30, 180 and 90 days); the leaver's mailbox as CompanyIT's leave plan does it (decision 2026-10-20: shared for the successor or deleted, 30 days in Exchange, no archive); address Järnvägsgatan 7; Winningtemp anonymous; banks Nordea Corporate and Storskogen Treasury; no transfers outside the EU/EEA (owner 2026-11-17) |
+| 1.1 | 2026-11-17 | Claude for the Privacy Lead | Section 6 follows the retention schedule in SW-ISMS-POL-004 12.2 (approved 2026-11-17): contract and core data 10 years, working time and holiday records 2 years, the shared holiday list the current and three previous holiday years (POL-004 1.5), the rest of the file 2 years, sick leave at most 2 years after closing; log times as built (30, 180 and 90 days); the leaver's mailbox as CompanyIT's leave plan does it (decision 2026-10-20: shared for the successor or deleted, 30 days in Exchange, no archive); address Järnvägsgatan 7; Winningtemp anonymous; bank Nordea Corporate; no transfers outside the EU/EEA (owner 2026-11-17) |
 
 ---
 
