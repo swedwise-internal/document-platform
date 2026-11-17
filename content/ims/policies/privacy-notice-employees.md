@@ -90,8 +90,10 @@ for details.
   after it ends (Diskrimineringslagen).
 - Sick leave and rehabilitation: while the case lasts and at most **2 years** after it is closed.
 - Your Swedwise account is blocked on your last day and deleted **90 days** later.
-- Your mailbox is converted to a shared mailbox for your manager when you leave, so that business mail is not lost
-  [to confirm: how long it is kept]. Please do not keep private mail in your work mailbox.
+- Your mailbox, when you leave: it is either made a shared mailbox for the person who takes over your work, so that
+  business mail is not lost, and deleted when it is no longer needed, or deleted at once. A deleted mailbox is kept by
+  Microsoft for **30 days** and is then gone. It is not moved to any archive. Please do not keep private mail in your
+  work mailbox.
 - Security logs: sign-in and audit logs **30 days**, Microsoft Defender **180 days**, and from 2027-03-31 Microsoft
   Sentinel **90 days**.
 - The full schedule is in our Data Protection Policy (SW-ISMS-POL-004, section 12.2).
@@ -124,7 +126,7 @@ We update this notice when our processing changes and tell you when we do.
 | Version | Date | Author | Changes |
 |---|---|---|---|
 | 1.0 | 2026-10-29 | Privacy Lead (drafted in session) | First employee privacy notice, from the records of processing SW-IMS-REG-009 |
-| 1.1 | 2026-11-17 | Claude for the Privacy Lead | Section 6 follows the retention schedule in SW-ISMS-POL-004 12.2 (approved 2026-11-17): contract and core data 10 years, working time and holiday records 2 years, the shared holiday list the current and three previous holiday years (POL-004 1.5), the rest of the file 2 years, sick leave at most 2 years after closing; log times as built (30, 180 and 90 days) |
+| 1.1 | 2026-11-17 | Claude for the Privacy Lead | Section 6 follows the retention schedule in SW-ISMS-POL-004 12.2 (approved 2026-11-17): contract and core data 10 years, working time and holiday records 2 years, the shared holiday list the current and three previous holiday years (POL-004 1.5), the rest of the file 2 years, sick leave at most 2 years after closing; log times as built (30, 180 and 90 days); the leaver's mailbox as CompanyIT's leave plan does it (decision 2026-10-20: shared for the successor or deleted, 30 days in Exchange, no archive) |
 
 ---
 
